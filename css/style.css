@@ -423,93 +423,81 @@ blockquote {
 
 /*============ 2. Preloader  ============*/
 
+
 /* =========================
-   Preloader حرفه‌ای با ویدیو + دایره‌های شناور
+   لودینگ اسکرین (حرفه‌ای رنگی)
 ========================= */
-.preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5); /* پس‌زمینه نیمه‌شفاف */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    overflow: hidden;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000; /* پس‌زمینه مشکی */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.6s ease;
 }
 
-/* تصویر یا ویدیو پس‌زمینه */
+#loading-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
 #loading-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    filter: blur(5px) brightness(0.5);
-    z-index: 0;
+  width: 220px;
+  height: auto;
+  margin-bottom: 25px;
+  animation: float 2.2s ease-in-out infinite;
 }
 
-/* کلاس مخفی کردن */
-.preloader.loaded {
-    opacity: 0;
-    visibility: hidden;
-}
-
-/* Loader مرکزی روی ویدیو */
-.preloader .loader {
-    position: relative;
-    width: 90px;
-    height: 90px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 1;
-}
-
-/* دایره‌های شناور */
-.preloader .loader span {
-    display: block;
-    width: 22px;
-    height: 22px;
-    background: linear-gradient(45deg, #ff3d00, #00ffff);
-    border-radius: 50%;
-    animation: float 1.5s ease-in-out infinite;
-    box-shadow: 0 0 8px #ff3d00, 0 0 12px #00ffff;
-}
-
-/* اختلاف زمان برای هر دایره */
-.preloader .loader span:nth-child(1) { animation-delay: 0s; }
-.preloader .loader span:nth-child(2) { animation-delay: 0.25s; }
-.preloader .loader span:nth-child(3) { animation-delay: 0.5s; }
-
-/* انیمیشن شناور */
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-12px);}
 }
 
-/* Optional: خطوط محو روی ویدیو برای جلوه بیشتر */
-.preloader::after {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(255,255,255,0.02),
-        rgba(255,255,255,0.02) 2px,
-        transparent 2px,
-        transparent 20px
-    );
-    top: -50%;
-    left: -50%;
-    transform: rotate(45deg);
-    z-index: 0;
+/* کانتینر اسپینرها */
+.spinner-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+/* اسپینر پایه */
+.spinner {
+  width: 35px;
+  height: 35px;
+  border: 4px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.spinner.red {
+  color: #ff0055;
+  box-shadow: 0 0 10px #ff0055, 0 0 20px #ff3366, 0 0 30px #ff6688;
+}
+
+.spinner.blue {
+  color: #00d4ff;
+  box-shadow: 0 0 10px #00d4ff, 0 0 20px #33ddff, 0 0 30px #66e5ff;
+}
+
+.spinner.green {
+  color: #00ff88;
+  box-shadow: 0 0 10px #00ff88, 0 0 20px #33ffaa, 0 0 30px #66ffcc;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
 }
 
 /*============ 3. Navbar ============*/
