@@ -1,4 +1,3 @@
-  <script>
 document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("loading-screen");
   const mainContent = document.getElementById("main-content");
@@ -37,4 +36,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   handleLoading();
 });
-</script>
