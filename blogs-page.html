@@ -226,7 +226,8 @@
                </a> 
 
                <!-- دکمه هامیبرگر موبایل -->
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                  <span class="navbar-toggler-icon"></span>
                </button>
 
@@ -234,18 +235,19 @@
                    <ul class="navbar-nav align-items-center">
                        <!-- دکمه بازگشت -->
                        <li class="nav-item me-2">
-                         <a href="index.html" class="nav-link btn-back" data-fa="برگشت" data-ru="Назад" data-en="Back">برگشت</a>
+                         <a href="index.html" class="nav-link btn-back" data-fa="برگشت" data-ru="Назад" data-en="Back"
+                          aria-label="Back">برگشت</a>
                       </li>
 
                        <!-- منوی تغییر زبان -->
                        <li class="nav-item dropdown">
-                          <button id="langToggle" class="btn btn-sm btn-light dropdown-toggle" data-bs-toggle="dropdown">
+                          <button id="langToggle" class="btn btn-sm btn-light dropdown-toggle" data-bs-toggle="dropdown"
                              🌐
                           </button>
-                           <ul class="dropdown-menu dropdown-menu-end">
-                             <li><a class="dropdown-item" href="#" onclick="setLanguage('fa')">فارسی</a></li>
-                             <li><a class="dropdown-item" href="#" onclick="setLanguage('ru')">Русский</a></li>
-                             <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
+                           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langToggle">
+                            <li><a class="dropdown-item" href="#" onclick="setLanguage('fa')" aria-label="فارسی">فارسی</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="setLanguage('ru')" aria-label="Русский">Русский</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="setLanguage('en')" aria-label="English">English</a></li>
                            </ul>
                        </li>
                    </ul>
@@ -260,7 +262,7 @@
             <div id="particles-js"></div>
             <!--Banner Caption-->
             <div class="banner-caption text-center">
-                <h1 data-fa="وبلاگ" data-ru="Блог">وبلاگ</h1>
+                <h1 data-fa="وبلاگ" data-ru="Блог ivan.omgru">وبلاگ ivan.omgru</h1>
                 <div class="bread-crumb mt-10">
                     <a href="index.html"data-fa="خانه" data-ru="Главная"></a>
                     <a href="#"data-fa="وبلاگ" data-ru="Блог"></a>
@@ -623,7 +625,7 @@
             <!-- ستون اول: متن و اطلاعات نویسنده -->
             <div class="col-md-3 col-sm-6 mb-3">
                 <div class="contact-info">
-                    <h5>ivan.omgru</h5>
+                    <h4>ivan.omgru</h4>
                     <p class="footer-text lang" data-fa="«ممنون هستم از همراهی شما.»" data-ru="«Спасибо за вашу поддержку.»">«ممنون هستم از همراهی شما.»</p>
                     <p class="footer-text lang" data-fa="تمامی اطلاعات در دسترس عموم قرار می‌گیرد — ابوالفضل شهاب (ivan.omgru)" data-ru="Вся информация доступна для публики — Абульфазль Шахаб (ivan.omgru)">
                         تمامی اطلاعات در دسترس عموم قرار می‌گیرد — ابوالفضل شهاب (ivan.omgru)
@@ -690,8 +692,14 @@
                 © 2025 ابوالفضل شهاب | ivan.omgru. تمامی حقوق محفوظ است.
             </p>
             <p class="copy">
-                ivan.omgru <a href="https://www.instagram.com/ivan.omgru" style="color: dodgerblue;">instagram</a>
+                ivan.omgru 
+             <a href="https://www.instagram.com/ivan.omgru" 
+                style="color: dodgerblue; text-decoration: underline;" 
+                aria-label="Visit Ivan.omgru Instagram page">
+                instagram
+             </a>
             </p>
+
         </div>
     </div>
 </footer>
