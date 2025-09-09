@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://ivan-omgru.ir/sitemap.xml
