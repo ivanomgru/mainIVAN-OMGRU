@@ -89,124 +89,94 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://ivan-omgru.ir/#website",
+      "name": "ivan omgru",
+      "url": "https://ivan-omgru.ir",
+      "description": {
+        "fa": "سایت شخصی و حرفه‌ای ابوالفضل شهاب؛ مدرس زبان روسی، طراح وب و تولیدکننده محتوا",
+        "ru": "Профессиональный сайт Ивана Шахаба; преподаватель русского языка, веб-дизайнер и контент-мейкер",
+        "en": "Personal and professional site of Aboulfazl Shahab; Russian teacher, web designer, and content creator"
+      },
+      "publisher": {"@id": "https://ivan-omgru.ir/#person"},
+      "mainEntityOfPage": {"@id": "https://ivan-omgru.ir/#homepage"},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://ivan-omgru.ir/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "sameAs": [
+        "https://insta.ivan-omgru.ir",
+        "https://youtube.ivan-omgru.ir",
+        "https://resume.ivan-omgru.ir"
+      ]
+    },
+    {
       "@type": "Person",
       "@id": "https://ivan-omgru.ir/#person",
       "name": "ابوالفضل شهاب | Иван Шахаб | Ivan Omgru",
-      "alternateName": ["ivan omgru","ivan.omgru","Иван Омгру","ایوان امگرو"],
       "url": "https://ivan-omgru.ir",
-      "image": "https://media.ivan.omgru.ir/images/profile.jpg",
-      "jobTitle": "مدرس زبان روسی، طراح وب و تولیدکننده محتوا",
-      "description": {
-        "fa": "ابوالفضل شهاب — مدرس عملی وب و زبان روسی؛ طراح رابط کاربری و تولیدکنندهٔ محتوای آموزشی",
-        "ru": "Абульфазл Шахаб — практический преподаватель веба и русского языка; веб-дизайнер и создатель образовательного контента"
+      "alternateName": [
+        "ivan omgru",
+        "ivan.omgru",
+        "Иван Омгру",
+        "Иван.омгру",
+        "Аболфазл Шахаб",
+        "ایوان امگرو"
+      ],
+      "image": "https://ivan-omgru.ir/images/ivan44.jpg",
+      "jobTitle": {
+        "fa": "مدرس زبان روسی، طراح وب و تولیدکننده محتوا",
+        "ru": "Преподаватель русского языка, веб-дизайнер и контент-мейкер",
+        "en": "Russian teacher, web designer, and content creator"
       },
-      "knowsLanguage": ["fa","ru","en"],
+      "description": {
+        "fa": "ابوالفضل شهاب — مدرس عملی و پروژه‌محور وب و زبان روسی؛ طراح و توسعه‌دهندهٔ رابط‌های کاربری و تولیدکنندهٔ محتوای آموزشی.",
+        "ru": "Абульфазл Шахаб — практический преподаватель веба и русского языка; веб-дизайнер и создатель образовательного контента.",
+        "en": "Aboulfazl Shahab — hands-on instructor for web and Russian language; UI/UX designer and educational content creator."
+      },
       "sameAs": [
         "https://www.instagram.com/ivan.omgru",
         "https://www.youtube.com/@ivan.omgruss",
-        "https://github.com/ivanomgru",
         "https://www.linkedin.com/in/ivanomgru",
         "https://t.me/ivanomgru"
-      ]
+      ],
+      "knowsLanguage": ["fa", "ru", "en"],
+      "mainEntityOfPage": {"@id": "https://ivan-omgru.ir/#homepage"}
     },
     {
       "@type": "Organization",
       "@id": "https://ivan-omgru.ir/#org",
       "name": "ivan omgru",
       "url": "https://ivan-omgru.ir",
-      "founder": {"@id": "https://ivan-omgru.ir/#person"}
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://insta.ivan-omgru.ir/#website",
-      "name": "ivan.omgru.ir — Instagram posts",
-      "url": "https://insta.ivan-omgru.ir",
-      "description": "سایت اختصاصی آخرین پست‌های اینستاگرام و میکرو محتواهای ivan.omgru",
-      "publisher": {"@id": "https://ivan-omgru.ir/#person"},
-      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://insta.ivan-omgru.ir/#homepage"},
+      "logo": "https://ivan-omgru.ir/images/ivan44.jpg",
       "sameAs": [
-        "https://ivan-omgru.ir",
-        "https://youtube.ivan-omgru.ir",
-        "https://resume.ivan-omgru.ir"
+        "https://www.instagram.com/ivan.omgru",
+        "https://www.youtube.com/@ivan.omgruss",
+        "https://www.linkedin.com/in/ivanomgru",
+        "https://t.me/ivanomgru"
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://insta.ivan-omgru.ir/#homepage",
-      "url": "https://insta.ivan-omgru.ir",
-      "name": "آخرین پست‌های اینستاگرام — ivan.omgru.ir",
-      "inLanguage": ["fa","ru"],
+      "@id": "https://ivan-omgru.ir/#homepage",
+      "name": {
+        "fa": "صفحه اصلی ivan-omgru.ir",
+        "ru": "Главная страница ivan-omgru.ir",
+        "en": "Home page of ivan-omgru.ir"
+      },
+      "url": "https://ivan-omgru.ir",
+      "description": {
+        "fa": "سایت شخصی ابوالفضل شهاب؛ رزومه، دوره‌ها، پروژه‌ها و منابع آموزشی.",
+        "ru": "Личный сайт Ивана Шахаба; резюме, курсы, проекты и учебные материалы.",
+        "en": "Personal site of Aboulfazl Shahab; resume, courses, projects and learning resources."
+      },
+      "inLanguage": ["fa", "ru", "en"],
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://ivan-omgru.ir/images/ivan44.jpg"
+      },
       "mainEntity": {"@id": "https://ivan-omgru.ir/#person"}
-    },
-    {
-      "@type": "SocialMediaPosting",
-      "@id": "https://insta.ivan-omgru.ir/posts/insta-2025-01-01-post1",
-      "headline": "پست نمونه ۱ — نکتهٔ کوتاه طراحی وب",
-      "articleBody": "نمونه محتوای کوتاه آموزشی برای طراحی صفحه لندینگ واکنش‌گرا.",
-      "author": {"@id": "https://ivan-omgru.ir/#person"},
-      "datePublished": "2025-01-01",
-      "sharedContent": {
-        "@type": "ImageObject",
-        "url": "https://media.ivan.omgru.ir/images/insta-post-sample1.jpg"
-      },
-      "isPartOf": {"@id": "https://insta.ivan-omgru.ir/#homepage"},
-      "inLanguage": ["fa","ru"]
-    },
-    {
-      "@type": "SocialMediaPosting",
-      "@id": "https://insta.ivan-omgru.ir/posts/insta-2025-02-01-post2",
-      "headline": "پست نمونه ۲ — نکتهٔ کوتاه طراحی وب",
-      "articleBody": "نمونه دوم محتوای کوتاه برای آموزش CSS و HTML.",
-      "author": {"@id": "https://ivan-omgru.ir/#person"},
-      "datePublished": "2025-02-01",
-      "sharedContent": {
-        "@type": "ImageObject",
-        "url": "https://media.ivan.omgru.ir/images/insta-post-sample2.jpg"
-      },
-      "isPartOf": {"@id": "https://insta.ivan-omgru.ir/#homepage"},
-      "inLanguage": ["fa","ru"]
-    },
-    {
-      "@type": "SocialMediaPosting",
-      "@id": "https://insta.ivan-omgru.ir/posts/insta-2025-03-01-post3",
-      "headline": "پست نمونه ۳ — نکتهٔ کوتاه طراحی وب",
-      "articleBody": "نمونه سوم محتوای کوتاه برای آموزش JavaScript.",
-      "author": {"@id": "https://ivan-omgru.ir/#person"},
-      "datePublished": "2025-03-01",
-      "sharedContent": {
-        "@type": "ImageObject",
-        "url": "https://media.ivan.omgru.ir/images/insta-post-sample3.jpg"
-      },
-      "isPartOf": {"@id": "https://insta.ivan-omgru.ir/#homepage"},
-      "inLanguage": ["fa","ru"]
-    },
-    {
-      "@type": "SocialMediaPosting",
-      "@id": "https://insta.ivan-omgru.ir/posts/insta-2025-04-01-post4",
-      "headline": "پست نمونه ۴ — نکتهٔ کوتاه طراحی وب",
-      "articleBody": "نمونه چهارم محتوای کوتاه برای تمرین HTML و CSS.",
-      "author": {"@id": "https://ivan-omgru.ir/#person"},
-      "datePublished": "2025-04-01",
-      "sharedContent": {
-        "@type": "ImageObject",
-        "url": "https://media.ivan.omgru.ir/images/insta-post-sample4.jpg"
-      },
-      "isPartOf": {"@id": "https://insta.ivan-omgru.ir/#homepage"},
-      "inLanguage": ["fa","ru"]
-    },
-    {
-      "@type": "SocialMediaPosting",
-      "@id": "https://insta.ivan-omgru.ir/posts/insta-2025-05-01-post5",
-      "headline": "پست نمونه ۵ — نکتهٔ کوتاه طراحی وب",
-      "articleBody": "نمونه پنجم محتوای کوتاه برای تمرین جاوااسکریپت و طراحی وب.",
-      "author": {"@id": "https://ivan-omgru.ir/#person"},
-      "datePublished": "2025-05-01",
-      "sharedContent": {
-        "@type": "ImageObject",
-        "url": "https://media.ivan.omgru.ir/images/insta-post-sample5.jpg"
-      },
-      "isPartOf": {"@id": "https://insta.ivan-omgru.ir/#homepage"},
-      "inLanguage": ["fa","ru"]
     }
   ]
 }
@@ -1551,6 +1521,7 @@
   <script src="js/ivan2.js"defer></script>
 </body>
 </html>
+
 
 
 
