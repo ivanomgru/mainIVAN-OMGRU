@@ -603,38 +603,39 @@
 
             <!-- کنترل‌ها (بخش اول) -->
             <div class="video-controls" style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.6); display:flex; flex-direction:column; padding:0.5rem; box-sizing:border-box;">
-              <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;">
+              <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;" aria-label="Video progress">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.3rem; flex-wrap:wrap; gap:0.5rem;">
                 <div style="display:flex; gap:0.5rem; align-items:center;">
-                  <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">⏯</button>
-                  <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">🔊</button>
-                  <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">⏪ 10s</button>
-                  <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">10s ⏩</button>
+                  <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Play/Pause">⏯</button>
+                  <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Mute/Unmute">🔊</button>
+                  <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Rewind 10 seconds">⏪ 10s</button>
+                  <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Forward 10 seconds">10s ⏩</button>
                   <span id="currentTime" style="color:#fff; font-weight:700; font-size:0.9rem;">0:00</span> / 
                   <span id="duration" style="color:#ccc; font-size:0.9rem;">0:00</span>
+
                 </div>
 
                 <div style="display:flex; gap:0.5rem; align-items:center;">
-                  <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                  <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Video quality">
                     <option value="240p">240p</option>
                     <option value="480p">480p</option>
                     <option value="720p" selected>720p</option>
                   </select>
 
-                  <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                  <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Playback speed">
                     <option value="0.5">0.5x</option>
                     <option value="1" selected>1x</option>
                     <option value="1.5">1.5x</option>
                     <option value="2">2x</option>
                   </select>
 
-                  <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                  <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Subtitles">
                     <option value="off">زیرنویس خاموش</option>
                     <option value="fa">فارسی</option>
                     <option value="ru">русский</option>
                   </select>
 
-                  <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;">⛶</button>
+                  <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;" aria-label="Fullscreen">⛶</button>
                 </div>
               </div>
             </div>
@@ -695,38 +696,38 @@
             </div>
 
             <div class="video-controls" style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.6); display:flex; flex-direction:column; padding:0.5rem; box-sizing:border-box;">
-              <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;">
+              <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;" aria-label="Video progress">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.3rem; flex-wrap:wrap; gap:0.5rem;">
                 <div style="display:flex; gap:0.5rem; align-items:center;">
-                  <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">⏯</button>
-                  <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">🔊</button>
-                  <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">⏪ 10s</button>
-                  <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">10s ⏩</button>
+                  <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Play/Pause">⏯</button>
+                  <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Mute/Unmute">🔊</button>
+                  <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Rewind 10 seconds">⏪ 10s</button>
+                  <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Forward 10 seconds">10s ⏩</button>
                   <span id="currentTime" style="color:#fff; font-weight:700; font-size:0.9rem;">0:00</span> / 
                   <span id="duration" style="color:#ccc; font-size:0.9rem;">0:00</span>
                 </div>
 
                 <div style="display:flex; gap:0.5rem; align-items:center;">
-                  <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                  <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Video quality">
                     <option value="240p">240p</option>
                     <option value="480p">480p</option>
                     <option value="720p" selected>720p</option>
                   </select>
 
-                  <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                  <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Playback speed">
                     <option value="0.5">0.5x</option>
                     <option value="1" selected>1x</option>
                     <option value="1.5">1.5x</option>
                     <option value="2">2x</option>
                   </select>
 
-                  <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                  <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Subtitles">
                     <option value="off">زیرنویس خاموش</option>
                     <option value="fa">فارسی</option>
                     <option value="ru">русский</option>
                   </select>
 
-                  <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;">⛶</button>
+                  <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;" aria-label="Fullscreen">⛶</button>
                 </div>
               </div>
             </div>
@@ -791,38 +792,38 @@
             </div>
 
             <div class="video-controls" style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.6); display:flex; flex-direction:column; padding:0.5rem; box-sizing:border-box;">
-              <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;">
+              <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;" aria-label="Video progress">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.3rem; flex-wrap:wrap; gap:0.5rem;">
                 <div style="display:flex; gap:0.5rem; align-items:center;">
-                  <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">⏯</button>
-                  <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">🔊</button>
-                  <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">⏪ 10s</button>
-                  <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">10s ⏩</button>
+                  <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Play/Pause">⏯</button>
+                  <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Mute/Unmute">🔊</button>
+                  <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Rewind 10 seconds">⏪ 10s</button>
+                  <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Forward 10 seconds">10s ⏩</button>
                   <span id="currentTime" style="color:#fff; font-weight:700; font-size:0.9rem;">0:00</span> / 
                   <span id="duration" style="color:#ccc; font-size:0.9rem;">0:00</span>
                 </div>
 
                 <div style="display:flex; gap:0.5rem; align-items:center;">
-                  <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                  <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Video quality">
                     <option value="240p">240p</option>
                     <option value="480p">480p</option>
                     <option value="720p" selected>720p</option>
                   </select>
 
-                  <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                  <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Playback speed">
                     <option value="0.5">0.5x</option>
                     <option value="1" selected>1x</option>
                     <option value="1.5">1.5x</option>
                     <option value="2">2x</option>
                   </select>
 
-                  <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                  <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Subtitles">
                     <option value="off">زیرنویس خاموش</option>
                     <option value="fa">فارسی</option>
                     <option value="ru">русский</option>
                   </select>
 
-                  <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;">⛶</button>
+                  <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;" aria-label="Fullscreen">⛶</button>
                 </div>
               </div>
             </div>
@@ -855,10 +856,10 @@
                    box-shadow:0 4px 15px rgba(0,0,0,0.2); 
                    color:#000; margin:0 auto 30px auto; text-align:center; 
                    max-width: fit-content;">              
-                  <h6 data-fa="سرویس ها" data-ru="Услуги" 
+                  <h4 data-fa="سرویس ها" data-ru="Услуги" 
                    style="color:#000; margin-bottom:10px; font-weight:600;">
                    سرویس ها
-                  </h6>
+                  </h4>
                   <h2 data-fa="سایت های من" data-ru="Мои сайты" 
                    style="color:#000; font-weight:700;">
                    سایت های من
@@ -971,7 +972,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="heading text-center">
-                            <h6 data-fa="نمونه کارها" data-ru="Портфолио">نمونه کارها</h6>
+                            <h5 data-fa="نمونه کارها" data-ru="Портфолио">نمونه کارها</h5>
                             <h2 data-fa="کاری که انجام دادم" data-ru="Мои выполненные работы">کاری که انجام دادم</h2>
 
                             <!-- هشدار توسعه -->
@@ -1003,7 +1004,7 @@
                         <div class="item-content">
                             <img src="images/portfolio/img-.jpg" alt="">
                             <div class="item-overlay">
-                                <h6>اپلیکیشن</h6>
+                                <h5>اپلیکیشن</h5>
                                 <div class="icons">
                                     <span class="icon link">
                                         <a href="images/portfolio/img-.jpg" aria-label="تصویر پورتفولیو ۱">
@@ -1019,7 +1020,7 @@
                         <div class="item-content">
                             <img src="images/portfolio/insta.jpg" alt="insta-page کانال اینستاگرام ابوالفضل شهاب - ivan.omgru">
                             <div class="item-overlay">
-                                <h6>طراحی وب</h6>
+                                <h5>طراحی وب</h5>
                                 <div class="icons">
                                     <span class="icon link">
                                         <a href="images/portfolio/insta.jpg" aria-label="تصویر پورتفولیو اینستاگرام">
@@ -1036,7 +1037,7 @@
                         <div class="item-content">
                             <img src="images/portfolio/img-.jpg" alt="">
                             <div class="item-overlay">
-                                <h6>اپلیکیشن</h6>
+                                <h5>اپلیکیشن</h5>
                                 <div class="icons">
                                     <span class="icon link">
                                         <a href="images/portfolio/img-.jpg" aria-label="تصویر پورتفولیو ۲">
@@ -1053,7 +1054,7 @@
                         <div class="item-content">
                             <img src="images/portfolio/img-.jpg" alt="">
                             <div class="item-overlay">
-                                <h6>توسعه</h6>
+                                <h5>توسعه</h5>
                                 <div class="icons">
                                     <span class="icon link">
                                         <a href="images/portfolio/img-.jpg" aria-label="تصویر پورتفولیو ۳">
@@ -1070,7 +1071,7 @@
                         <div class="item-content">
                             <img src="images/portfolio/youtube.jpg" alt="youtube-kanal کانال یوتیوب ابوالفضل شهاب - ivan.omgru">
                             <div class="item-overlay">
-                                <h6>طراحی وب</h6>
+                                <h5>طراحی وب</h5>
                                 <div class="icons">
                                     <span class="icon link">
                                         <a href="images/portfolio/youtube.jpg" aria-label="تصویر پورتفولیو یوتیوب">
@@ -1086,7 +1087,7 @@
                         <div class="item-content">
                             <img src="images/portfolio/img-.jpg" alt="">
                             <div class="item-overlay">
-                                <h6>طراحی وب</h6>
+                                <h5>طراحی وب</h5>
                                 <div class="icons">
                                     <span class="icon link">
                                         <a href="images/portfolio/img-.jpg" aria-label="تصویر پورتفولیو ۴">
@@ -1281,41 +1282,41 @@
         <!-- کنترل‌ها -->
         <div class="video-controls" style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.6); display:flex; flex-direction:column; padding:0.5rem; box-sizing:border-box;">
           <!-- نوار پیشرفت -->
-          <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;">
+          <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;" aria-label="Video progress">
 
           <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.3rem; flex-wrap:wrap; gap:0.5rem;">
             <!-- کنترل‌های سمت چپ -->
             <div style="display:flex; gap:0.5rem; align-items:center;">
-              <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">⏯</button>
-              <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">🔊</button>
-              <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">⏪ 10s</button>
-              <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">10s ⏩</button>
-              <span id="currentTime" style="color:#fff; font-weight:700; font-size:0.9rem;">0:00</span> / 
-              <span id="duration" style="color:#ccc; font-size:0.9rem;">0:00</span>
+                  <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Play/Pause">⏯</button>
+                  <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Mute/Unmute">🔊</button>
+                  <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Rewind 10 seconds">⏪ 10s</button>
+                  <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="Forward 10 seconds">10s ⏩</button>
+                  <span id="currentTime" style="color:#fff; font-weight:700; font-size:0.9rem;">0:00</span> / 
+                  <span id="duration" style="color:#ccc; font-size:0.9rem;">0:00</span>
             </div>
 
             <!-- کنترل‌های سمت راست -->
             <div style="display:flex; gap:0.5rem; align-items:center;">
-              <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+              <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Video quality">
                 <option value="240p">240p</option>
                 <option value="480p">480p</option>
                 <option value="720p" selected>720p</option>
               </select>
 
-              <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+              <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Playback speed">
                 <option value="0.5">0.5x</option>
                 <option value="1" selected>1x</option>
                 <option value="1.5">1.5x</option>
                 <option value="2">2x</option>
               </select>
 
-              <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+              <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Subtitles">
                 <option value="off" data-fa="زیرنویس خاموش" data-ru="Субтитры выключены">زیرنویس خاموش</option>
                 <option value="fa" data-fa="فارسی" data-ru="Персидский">فارسی</option>
                 <option value="ru" data-fa="روسی" data-ru="Русский">روسی</option>
               </select>
 
-              <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;">⛶</button>
+              <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;" aria-label="Fullscreen">⛶</button>
             </div>
           </div>
         </div> 
@@ -1538,6 +1539,7 @@
   <script src="js/ivan2.js"defer></script>
 </body>
 </html>
+
 
 
 
