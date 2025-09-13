@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://ivan-omgru.ir/sitemap.xml</loc>
+    <loc>https://ivan-omgru.ir/sitemaps/sitemap.xml</loc>
+    <lastmod>2025-09-13</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://ivan-omgru.ir/sitemaps/sitemap-about.xml</loc>
+    <lastmod>2025-09-13</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://ivan-omgru.ir/sitemaps/sitemap-images.xml</loc>
     <lastmod>2025-09-13</lastmod>
   </sitemap>
   <sitemap>
