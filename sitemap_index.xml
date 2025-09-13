@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- سایت اصلی -->
   <sitemap>
     <loc>https://ivan-omgru.ir/sitemap.xml</loc>
-    <lastmod>2025-09-09</lastmod>
   </sitemap>
-
-  <!-- زیردامنه رزومه -->
-  <sitemap>
-    <loc>https://resume.ivan-omgru.ir/sitemap.xml</loc>
-    <lastmod>2025-09-09</lastmod>
-  </sitemap>
-
-  <!-- زیردامنه اینستاگرام -->
   <sitemap>
     <loc>https://insta.ivan-omgru.ir/sitemap.xml</loc>
-    <lastmod>2025-09-09</lastmod>
   </sitemap>
-
-  <!-- زیردامنه یوتیوب -->
+  <sitemap>
+    <loc>https://resume.ivan-omgru.ir/sitemap.xml</loc>
+  </sitemap>
   <sitemap>
     <loc>https://youtube.ivan-omgru.ir/sitemap.xml</loc>
-    <lastmod>2025-09-09</lastmod>
   </sitemap>
-
 </sitemapindex>
