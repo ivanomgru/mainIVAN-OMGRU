@@ -182,7 +182,7 @@
     } catch(e){ console.warn('parallax init error', e); }
 
 
-    /* ======= Universal video-player initializer (multiple players safe) ======= */
+    /* ======= Universal video-player initializer (multiple players safe + lazy load) ======= */
     (function initVideoPlayers(){
       try {
         function videoFormatTime(sec){
@@ -218,6 +218,19 @@
               return;
             }
 
+            // ---------- lazy-load setup ----------
+            let lazyLoaded = false;
+            function lazyLoadVideo() {
+              if(!lazyLoaded){
+                const source = video.querySelector('source');
+                if(source && !source.src){
+                  source.src = source.dataset.src;
+                  video.load();
+                  lazyLoaded = true;
+                }
+              }
+            }
+
             // helper to first try to find control inside this player, fallback to global selectors (legacy ids)
             const q = sel => player.querySelector(sel) || document.querySelector(sel);
 
@@ -242,6 +255,7 @@
             });
 
             safeAdd(playPauseBtn, 'click', ()=>{
+              lazyLoadVideo(); // lazy-load هنگام کلیک Play
               if(video.paused){ video.play().catch(()=>{}); if(playPauseBtn) playPauseBtn.textContent = '⏸️'; }
               else { video.pause(); if(playPauseBtn) playPauseBtn.textContent = '▶️'; }
             });
@@ -303,7 +317,6 @@
                 const tracks = video.textTracks || [];
                 for(let i=0;i<tracks.length;i++) tracks[i].mode = 'disabled';
                 if(val !== 'off'){
-                  // سعی کن با language یا با srclang تطابق بده
                   const trEls = Array.from(video.querySelectorAll('track'));
                   for(let i=0;i<trEls.length;i++){
                     const tr = trEls[i];
@@ -319,7 +332,6 @@
               } catch(e){ console.warn('subtitle change error', e); }
             });
 
-            // فشردن space وقتی فوکوس روی wrapper هست
             player.addEventListener('keydown', (ev)=>{
               if(ev.code === 'Space'){ ev.preventDefault(); if(video.paused) video.play().catch(()=>{}); else video.pause(); }
             });
