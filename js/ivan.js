@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tickerTrack.innerHTML += tickerTrack.innerHTML;
 
         let pos = 0;
-        const speed = 1; // سرعت حرکت پیکسل در فریم
+        const speed = 2; // سرعت حرکت پیکسل در فریم
 
         function animateTicker() {
             pos -= speed;
@@ -56,4 +56,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
         animateTicker();
     }
+
 });
