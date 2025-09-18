@@ -1487,16 +1487,16 @@
     </div>
 </section>
 <section id="contact" class="section bg-primary position-relative overflow-hidden" dir="rtl" lang="fa" data-scroll-index="6">
-  <!-- ویدیو پس‌زمینه -->
-  <video autoplay muted loop playsinline class="position-absolute w-100 h-100"
-         style="object-fit:cover; top:0; left:0; z-index:0;">
-    <source src="images/vid/10.mp4" type="video/mp4">
-    <span data-fa="مرورگر شما از ویدیو پشتیبانی نمی‌کند." data-ru="Ваш браузер не поддерживает видео.">مرورگر شما از ویدیو پشتیبانی نمی‌کند.</span>
-  </video>
+  
+  <!-- تصویر پس‌زمینه -->
+  <div class="position-absolute w-100 h-100" 
+       style="top:0; left:0; background: url('images/background/ivan.omgru.webp') center/cover no-repeat; z-index:0;">
+  </div>
 
-  <!-- لایه نیمه شفاف روی ویدیو -->
+  <!-- لایه نیمه شفاف روی تصویر -->
   <div class="position-absolute w-100 h-100"
        style="top:0; left:0; background:rgba(0,0,0,0.7); z-index:1;"></div>
+
 
   <!-- تمام محتوای روی ویدیو در یک لایه با z-index بالاتر -->
   <div class="position-relative" style="z-index:2;">
@@ -1619,22 +1619,22 @@
         <!-- سمت چپ: لینک‌ها و شبکه‌ها -->
         <div class="col-lg-6 ml-auto mt-5 mt-lg-0 social-section">
           <h2 class="section-title" style="
-            display:inline-block;
-            max-width:900px;
-            background-color: rgba(255,255,255,0.2);   
-            color:#000000;
-            font-weight:700; 
-            font-size:2.4rem;  
-            line-height:1.4;
-            padding:1rem 2rem;
-            border-radius:16px;
-            text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
-            backdrop-filter: blur(6px);
-            transition: all 0.3s ease;" data-fa="شبکه‌های اجتماعی و سایت‌ها" data-ru="Социальные сети и сайты">
-             شبکه‌های اجتماعی و سایت‌ها
+               display:inline-block;
+               max-width:900px;
+               background-color: rgba(255,255,255,0.2);   
+               color:#000000;
+               font-weight:700; 
+               font-size:2.4rem;  
+               line-height:1.4;
+               padding:1rem 2rem;
+               border-radius:16px;
+               text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+               backdrop-filter: blur(6px);
+               transition: all 0.3s ease;" data-fa="شبکه‌های اجتماعی و سایت‌ها" data-ru="Социальные сети и сайты">
+               شبکه‌های اجتماعی و سایت‌ها
           </h2>
           <p class="section-desc" data-fa="برای دسترسی سریع می‌توانید از لینک‌های زیر استفاده کنید:" data-ru="Для быстрого доступа используйте ссылки ниже:">
-           برای دسترسی سریع می‌توانید از لینک‌های زیر استفاده کنید:
+            برای دسترسی سریع می‌توانید از لینک‌های زیر استفاده کنید:
           </p>
 
           <ul class="social-links">
@@ -1649,7 +1649,7 @@
               </a>
             </li>
             <li>
-              <a href="https://insta.ivan-omgru.ir" target="_blank" rel="noopener noreferrer" class="social-btn instagram" data-fa="سایت اینستاگرام من" data-ru="мой Инстаграм site">
+              <a href="https://insta.ivan-omgru.ir" target="_blank" rel="noopener noreferrer" class="social-btn instagram" data-fa="صایت اینستاگرام من" data-ru="мой Инстаграм site">
                 <i class="fa-brands fa-instagram"></i> سایت اینستاگرام من
               </a>
             </li>
@@ -1665,8 +1665,6 @@
   </div> <!-- پایان position-relative -->
 </section>
 
-
-        <!--Contact Section End-->
         <!-- Footer Start -->
         <footer id="footer" class="pt-50 pb-50">
             <div class="container">
@@ -1706,7 +1704,6 @@
                         <div class="contact-info">
                           <h5 class="lang" data-fa="آدرس" data-ru="Адрес">آدرس</h5>
                            <p class="lang" data-fa="ارتباط با من:" data-ru="Связь со мной:">ارتباط با من:</p>
-                           <a href="https://ivan-omgru.ir" class="lang" data-fa="سایت اصلی" data-ru="Официальный сайт">سایت اصلی</a>
                            <a href="https://resume.ivan-omgru.ir" class="lang" data-fa="رزومه" data-ru="Резюме">رزومه</a> |
                            <a href="https://insta.ivan-omgru.ir" class="lang" data-fa="اینستاگرام" data-ru="Инстаграм">اینستاگرام</a> |
                            <a href="https://youtube.ivan-omgru.ir" class="lang" data-fa="یوتیوب" data-ru="YouTube">یوتیوب</a>
@@ -1718,19 +1715,14 @@
                 <div class="row justify-content-center pt-20 text-center">
                     <ul class="footer-logos list-inline">
                       <li class="list-inline-item">
-                         <a href="https://insta.ivan-omgru.ir" target="_blank">
+                         <a href="https://www.instagram.com/ivan.omgru/" target="_blank">
                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" />
                          </a>
                       </li>
                       <li class="list-inline-item">
-                         <a href="https://youtube.ivan-omgru.ir" target="_blank">
+                         <a href="https://youtube.com/@ivan.omgruss" target="_blank">
                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" />
                          </a>
-                      </li>
-                      <li class="list-inline-item">
-                       <a href="https://resume.ivan-omgru.ir" target="_blank">
-                          <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/File_icon.svg" alt="Resume" style="width:24px; height:24px;" />
-                       </a>
                       </li>
                       <li class="list-inline-item">
                           <a href="https://ivan-omgru.ir" target="_blank">
@@ -1759,7 +1751,7 @@
                 </div>
             </div>
         </footer>
-  <!--Footer End-->
+        <!-- Footer End -->
 
   <!--Jquery js-->
   <script src="js/jquery.min.js"></script>
@@ -1784,6 +1776,7 @@
   <script src="js/ivan2.js"defer></script>
 </body>
 </html>
+
 
 
 
