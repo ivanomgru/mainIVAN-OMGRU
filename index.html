@@ -1487,6 +1487,81 @@
     </div>
 </section>
 <section id="contact" class="section bg-primary position-relative overflow-hidden" dir="rtl" lang="fa" data-scroll-index="6">
+  <!-- ویدیو پس‌زمینه -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100"
+         style="object-fit:cover; top:0; left:0; z-index:0;">
+    <source src="images/vid/10.mp4" type="video/mp4">
+    <span data-fa="مرورگر شما از ویدیو پشتیبانی نمی‌کند." data-ru="Ваш браузер не поддерживает видео.">مرورگر شما از ویدیو پشتیبانی نمی‌کند.</span>
+  </video>
+
+  <!-- لایه نیمه شفاف روی ویدیو -->
+  <div class="position-absolute w-100 h-100"
+       style="top:0; left:0; background:rgba(0,0,0,0.7); z-index:1;"></div>
+
+  <!-- تمام محتوای روی ویدیو در یک لایه با z-index بالاتر -->
+  <div class="position-relative" style="z-index:2;">
+        <p class="text-center mb-2 wow fadeIn">
+          <span class="bg-primary text-dark px-2" data-fa="تماس با من" data-ru="Свяжитесь со мной">تماس با من</span>
+        </p>  
+    <div class="container">
+      <!-- 🎬 ویدیو معرفی شناور 16:9 با کنترل پیشرفته -->
+      <div class="video-player" style="position:relative; max-width:800px; margin:2rem auto; border-radius:15px; overflow:hidden; background:#000; font-family:sans-serif;">
+        <video id="introVideo" style="width:100%; display:block; object-fit:cover;" preload="metadata">
+          <source src="#" type="video/mp4" data-quality="720p">
+          <source src="Theme/video/about.mp4" type="video/mp4" data-quality="480p">
+          <source src="Theme/video/about.mp4" type="video/mp4" data-quality="240p">
+          <track label="فارسی" kind="subtitles" srclang="fa" src="Theme/video/subtitles-fa.vtt" default>
+          <track label="English" kind="subtitles" srclang="en" src="Theme/video/subtitles-en.vtt">
+          <span data-fa="مرورگر شما از ویدیو پشتیبانی نمی‌کند." data-ru="Ваш браузер не поддерживает видео.">مرورگر شما از ویدیو پشتیبانی نمی‌کند.</span>
+        </video>
+
+        <!-- Overlay متن -->
+        <div class="video-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; justify-content:center; align-items:center; color:#fff; font-size:1.5rem; font-weight:700; background:rgba(0,0,0,0.25); text-align:center; pointer-events:none;">  
+          🎬 <span data-fa="به آموزش‌های ابوالفضل شهاب | ivan.omgru خوش آمدید" data-ru="Добро пожаловать на уроки Абульфазля Шахаба | ivan.omgru">به آموزش‌های ابوالفضل شهاب | ivan.omgru خوش آمدید</span>
+        </div>
+
+        <!-- کنترل‌ها -->
+        <div class="video-controls" style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.6); display:flex; flex-direction:column; padding:0.5rem; box-sizing:border-box;">
+          <!-- نوار پیشرفت -->
+          <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;">
+
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.3rem; flex-wrap:wrap; gap:0.5rem;">
+            <!-- کنترل‌های سمت چپ -->
+            <div style="display:flex; gap:0.5rem; align-items:center;">
+              <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">⏯</button>
+              <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">🔊</button>
+              <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">⏪ 10s</button>
+              <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">10s ⏩</button>
+              <span id="currentTime" style="color:#fff; font-weight:700; font-size:0.9rem;">0:00</span> / 
+              <span id="duration" style="color:#ccc; font-size:0.9rem;">0:00</span>
+            </div>
+
+            <!-- کنترل‌های سمت راست -->
+            <div style="display:flex; gap:0.5rem; align-items:center;">
+              <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                <option value="240p">240p</option>
+                <option value="480p">480p</option>
+                <option value="720p" selected>720p</option>
+              </select>
+
+              <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+              </select>
+
+              <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                <option value="off" data-fa="زیرنویس خاموش" data-ru="Субтитры выключены">زیرنویس خاموش</option>
+                <option value="fa" data-fa="فارسی" data-ru="Персидский">فارسی</option>
+                <option value="ru" data-fa="روسی" data-ru="Русский">روسی</option>
+              </select>
+
+              <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;">⛶</button>
+            </div>
+          </div>
+        </div> 
+      </div>      
 
       <div class="row">
         <!-- سمت راست: اطلاعات تماس -->
@@ -1705,6 +1780,7 @@
   <script src="js/ivan2.js"defer></script>
 </body>
 </html>
+
 
 
 
