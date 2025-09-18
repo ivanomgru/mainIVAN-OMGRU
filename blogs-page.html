@@ -440,16 +440,16 @@
         </section>
         <!--Blog List Section End-->
 <section id="contact" class="section bg-primary position-relative overflow-hidden" dir="rtl" lang="fa" data-scroll-index="6">
-  <!-- ویدیو پس‌زمینه -->
-  <video autoplay muted loop playsinline class="position-absolute w-100 h-100"
-         style="object-fit:cover; top:0; left:0; z-index:0;">
-    <source src="images/vid/10.mp4" type="video/mp4">
-    <span data-fa="مرورگر شما از ویدیو پشتیبانی نمی‌کند." data-ru="Ваш браузер не поддерживает видео.">مرورگر شما از ویدیو پشتیبانی نمی‌کند.</span>
-  </video>
+  
+  <!-- تصویر پس‌زمینه -->
+  <div class="position-absolute w-100 h-100" 
+       style="top:0; left:0; background: url('images/background/ivan.omgru.webp') center/cover no-repeat; z-index:0;">
+  </div>
 
-  <!-- لایه نیمه شفاف روی ویدیو -->
+  <!-- لایه نیمه شفاف روی تصویر -->
   <div class="position-absolute w-100 h-100"
        style="top:0; left:0; background:rgba(0,0,0,0.7); z-index:1;"></div>
+
 
   <!-- تمام محتوای روی ویدیو در یک لایه با z-index بالاتر -->
   <div class="position-relative" style="z-index:2;">
@@ -618,91 +618,94 @@
   </div> <!-- پایان position-relative -->
 </section>
 
-<!--Footer Start-->
-<footer id="footer">
-    <div class="container">
-        <div class="row text-right">
-            <!-- ستون اول: متن و اطلاعات نویسنده -->
-            <div class="col-md-3 col-sm-6 mb-3">
-                <div class="contact-info">
-                    <h4>ivan.omgru</h4>
-                    <p class="footer-text lang" data-fa="«ممنون هستم از همراهی شما.»" data-ru="«Спасибо за вашу поддержку.»">«ممنون هستم از همراهی شما.»</p>
-                    <p class="footer-text lang" data-fa="تمامی اطلاعات در دسترس عموم قرار می‌گیرد — ابوالفضل شهاب (ivan.omgru)" data-ru="Вся информация доступна для публики — Абульфазль Шахаб (ivan.omgru)">
-                        تمامی اطلاعات در دسترس عموم قرار می‌گیرد — ابوالفضل شهاب (ivan.omgru)
-                    </p>
+        <!-- Footer Start -->
+        <footer id="footer" class="pt-50 pb-50">
+            <div class="container">
+                <div class="row text-right">
+                    <!-- ستون اول: متن و اطلاعات نویسنده -->
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="contact-info">
+                         <h4>ivan.omgru</h4>     
+                          <p class="footer-text lang" data-fa="«ممنون هستم از همراهی شما.»" data-ru="«Спасибо за вашу поддержку.»">
+                           «ممنون هستم از همراهی شما.»
+                          </p>
+                          <p class="footer-text lang" data-fa="تمامی اطلاعات در دسترس عموم قرار می‌گیرد — ابوالفضل شهاب (ivan.omgru)" data-ru="Вся информация доступна для публики — Абульфазль Шахаб (ivan.omgru)">
+                            تمامی اطلاعات در دسترس عموم قرار می‌گیرد — ابوالفضل شهاب (ivan.omgru)
+                          </p>
+                        </div>
+                    </div>
+                    <!-- ستون دوم: نویسنده و شماره تماس -->
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="contact-info">
+                           <h5 class="lang" data-fa="نویسنده" data-ru="Автор: ">نویسنده :</h5>
+                            <p class="footer-text lang" data-fa="ابوالفضل شهاب | IVAN.OMGRU" data-ru="Абульфазль Шахаб | IVAN.OMGRU">
+                               <a href="https://insta.ivan-omgru.ir" target="_blank" class="footer-link">ابوالفضل شهاب | IVAN.OMGRU</a>
+                            </p>
+                           <h5 class="lang" data-fa="تلفن" data-ru="Телефон">تلفن:</h5>
+                           <p class="lang" data-fa="(+98) 123 456 7890" data-ru="(+98) 123 456 7890">(+98) 123 456 7890</p>
+                        </div>
+                    </div>
+                    <!-- ستون سوم: ایمیل -->
+                    <div class="col-md-3 col-sm-6 mb-3">
+                       <div class="contact-info">
+                          <h5 class="lang" data-fa="ایمیل" data-ru="Эл. почта">ایمیل</h5>
+                            <p class="lang" data-fa="info@example.com" data-ru="info@example.com">info@example.com</p>
+                        </div>
+                    </div>
+                    <!-- ستون چهارم: آدرس -->
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="contact-info">
+                          <h5 class="lang" data-fa="آدرس" data-ru="Адрес">آدرس</h5>
+                           <p class="lang" data-fa="ارتباط با من:" data-ru="Связь со мной:">ارتباط با من:</p>
+                           <a href="https://ivan-omgru.ir" class="lang" data-fa="سایت اصلی" data-ru="Официальный сайт">سایت اصلی</a>
+                           <a href="https://resume.ivan-omgru.ir" class="lang" data-fa="رزومه" data-ru="Резюме">رزومه</a> |
+                           <a href="https://insta.ivan-omgru.ir" class="lang" data-fa="اینستاگرام" data-ru="Инстаграм">اینستاگرام</a> |
+                           <a href="https://youtube.ivan-omgru.ir" class="lang" data-fa="یوتیوب" data-ru="YouTube">یوتیوب</a>
+                       </div>
+                    </div>
+                </div>
+
+                <!-- شبکه‌های اجتماعی -->
+                <div class="row justify-content-center pt-20 text-center">
+                    <ul class="footer-logos list-inline">
+                      <li class="list-inline-item">
+                         <a href="https://www.instagram.com/ivan.omgru/" target="_blank">
+                           <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" />
+                         </a>
+                      </li>
+                      <li class="list-inline-item">
+                         <a href="https://youtube.com/@ivan.omgruss" target="_blank">
+                           <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" />
+                         </a>
+                      </li>
+                      <li class="list-inline-item">
+                          <a href="https://ivan-omgru.ir" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Website" style="width:24px; height:24px;" />
+                          </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="https://about.facebook.com/meta" target="_blank">
+                           <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+
+               <!-- خط جداکننده و کپی‌رایت -->
+               <div class="row text-center pt-20">
+                    <div class="col-md-12">
+                       <hr>
+                        <p class="copy lang pt-3" data-fa="© 2025 ابوالفضل شهاب | ivan.omgru. تمامی حقوق محفوظ است." data-ru="© 2025 Абульфазль Шахаб | ivan.omgru. Все права защищены.">
+                          © 2025 ابوالفضل شهاب | ivan.omgru. تمامی حقوق محفوظ است.
+                        </p>
+                        <p class="copy pt-3 lang" data-fa="سایت اصلی" data-ru="Официальный сайт">
+                           <a style="color: dodgerblue;" href="https://ivan-omgru.ir">IVAN OMGRU</a>
+                        </p>
+                    </div>
                 </div>
             </div>
-
-            <!-- ستون دوم: شماره تماس -->
-            <div class="col-md-3 col-sm-6 mb-3">
-                <div class="contact-info">
-                    <h5 class="lang" data-fa="نویسنده" data-ru="Автор: ">نویسنده :</h5>
-                    <p class="footer-text lang" data-fa="ابوالفضل شهاب | IVAN.OMGRU" data-ru="Абульфазль Шахаб | IVAN.OMGRU">
-                        <a href="https://www.instagram.com/ivan.omgru" target="_blank" class="footer-link">ابوالفضل شهاب | IVAN.OMGRU</a>
-                    </p>
-                </div>
-            </div>
-
-            <!-- ستون سوم: ایمیل -->
-            <!--<div class="col-md-3 col-sm-6 mb-3">
-                <div class="contact-info">
-                    <h5 class="lang" data-fa="ایمیل" data-ru="Эл. почта">ایمیل</h5>
-                    <p>Loverussian62@gmail.com</p>
-                </div>
-            </div>-->
-
-            <!-- ستون چهارم: آدرس -->
-            <!--<div class="col-md-3 col-sm-6 mb-3">
-                <div class="contact-info">
-                    <h5 class="lang" data-fa="آدرس" data-ru="Адрес">آدرس</h5>
-                    <p class="lang" data-fa="russian" data-ru="Иран, Тегеран,"></p>
-                </div>
-            </div>-->
-        </div>
-
-        <!-- شبکه‌های اجتماعی -->
-        <div class="row justify-content-center pt-20">
-            <ul class="footer-logos">
-                <li>
-                    <a href="https://www.instagram.com/ivan.omgru" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/ivan.omgruss" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.google.com/" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://about.facebook.com/meta" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- خط جداکننده و کپی‌رایت -->
-        <div class="footer-bottom text-center pt-20">
-            <p class="copy lang" data-fa="© 2025 ابوالفضل شهاب | ivan.omgru. تمامی حقوق محفوظ است." data-ru="© 2025 Абульфазль Шахаб | ivan.omgru. Все права защищены.">
-                © 2025 ابوالفضل شهاب | ivan.omgru. تمامی حقوق محفوظ است.
-            </p>
-            <p class="copy">
-                ivan.omgru 
-             <a href="https://www.instagram.com/ivan.omgru" 
-                style="color: dodgerblue; text-decoration: underline;" 
-                aria-label="Visit Ivan.omgru Instagram page">
-                instagram
-             </a>
-            </p>
-
-        </div>
-    </div>
-</footer>
+        </footer>
+        <!-- Footer End -->
 
         <!--Footer End-->
 
@@ -731,6 +734,7 @@
         <script src="js/mainivan.omgru.js"defer></script>
     </body>
 </html>
+
 
 
 
