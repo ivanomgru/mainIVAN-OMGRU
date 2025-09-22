@@ -5,7 +5,7 @@
 
   <!-- صفحه اصلی اینستاگرام -->
   <url>
-    <loc>https://insta.ivan-omgru.ir/</loc>
+    <loc>https://ivan-omgru.ir/insta/</loc>
     <lastmod>2025-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -13,47 +13,13 @@
 
   <!-- پست‌های آرشیوی -->
   <url>
-    <loc>https://insta.ivan-omgru.ir/posts/instagram1.html</loc>  
+    <loc>https://ivan-omgru.ir/insta/posts/instagram1.html</loc>  
     <lastmod>2025-01-01</lastmod>  
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://insta.ivan-omgru.ir/media/instagram/1.jpg</image:loc>
+      <image:loc>https://ivan-omgru.ir/insta/media/instagram/1.jpg</image:loc>
       <image:caption>fa: اولین پست آموزشی ابوالفضل شهاب | ru: Первый обучающий пост Абульфазля Шахаба</image:caption>
     </image:image>
   </url>
-
-  <url>
-    <loc>https://insta.ivan-omgru.ir/media/instagram/insta-2025-02-01-post2</loc>
-    <lastmod>2025-02-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://insta.ivan-omgru.ir/media/instagram/2.jpg</image:loc>
-      <image:caption>fa: دومین پست آموزشی ابوالفضل شهاب | ru: Второй обучающий пост Абульфазля Шахаба</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://insta.ivan-omgru.ir/media/instagram/insta-2025-03-01-post3</loc>
-    <lastmod>2025-03-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://insta.ivan-omgru.ir/media/instagram/3.jpg</image:loc>
-      <image:caption>fa: سومین پست آموزشی ابوالفضل شهاب | ru: Третий обучающий пост Абульфазля Шахаба</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://insta.ivan-omgru.ir/media/instagram/insta-2025-04-01-post4</loc>
-    <lastmod>2025-04-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://insta.ivan-omgru.ir/media/instagram/4.jpg</image:loc>
-      <image:caption>fa: چهارمین پست آموزشی ابوالفضل شهاب | ru: Четвёртый обучающий пост Абульфазля Шахаба</image:caption>
-    </image:image>
-  </url>
-
 </urlset>
