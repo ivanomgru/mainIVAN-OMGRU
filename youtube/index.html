@@ -5,7 +5,9 @@
 <meta name="google-site-verification" content="DzHck3SHWuRnC8HBsED-6XEL3vvs6TyR07q_MAF-ots" />        
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- ===================== SEO BASE ===================== -->
-<title>آخرین ویدیوهای یوتیوب ابوالفضل شهاب | Последние видео YouTube Абульфазль Шахаб | Иван омгру | ivan omgru</title>
+<title id="pageTitle"data-fa="آخرین ویدیوهای یوتیوب ابوالفضل شهاب | ivan omgru"data-ru="Последние видео YouTube Абульфазль Шахаб | Иван омгру | ivan omgru">
+    آخرین ویدیوهای یوتیوب ابوالفضل شهاب | Последние видео YouTube Абульфазль Шахаб | Иван омгру | ivan omgru
+</title>
 <meta name="description" content="آخرین پست‌ها و ویدیوهای یوتیوب ابوالفضل شهاب | Последние видео YouTube Абульфазль Шахаб | ivan.omgru | Иван омгру | ivan omgru">
 <meta name="keywords" content="ابوالفضل شهاب, Абульфазль Шахаб, Иван омгру, ivan.omgru, آموزش آنلاین, ویدیو آموزشی, обучающие видео, YouTube, Instagram">
 <meta name="author" content="ابوالفضل شهاب | Абульфазль Шахаб | Иван омгру | ivan omgru">
@@ -379,8 +381,24 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/11.js" defer></script>
 <script src="js/12.js" defer></script>
+<script>
+(function(){
+  const titleEl = document.getElementById('pageTitle');
+  const userLang = navigator.language || navigator.userLanguage; // zh-CN, fa-IR, ru-RU, ...
+
+  if(userLang.startsWith('fa')){
+    titleEl.textContent = titleEl.getAttribute('data-fa');
+  } else if(userLang.startsWith('ru')){
+    titleEl.textContent = titleEl.getAttribute('data-ru');
+  } else {
+    // زبان پیشفرض انگلیسی یا ترکیبی
+    titleEl.textContent = titleEl.getAttribute('data-fa') + " | " + titleEl.getAttribute('data-ru');
+  }
+})();
+</script>        
 </body>
 </html>
+
 
 
 
