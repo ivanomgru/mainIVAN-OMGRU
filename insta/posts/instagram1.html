@@ -8,8 +8,10 @@
     <meta name="description" content="سایت شخصی و حرفه‌ای ابوالفضل شهاب | Иван Шахаб | Ivan Omgru | Kalvin Portfolio Template">
     <meta name="author" content="ابوالفضل شهاب | Иван Шахаб | Ivan Omgru">
 
-    <title>پست‌های اینستاگرام ابوالفضل شهاب | ivan.omgru | Блоги и посты Иван Шахаб</title>
-
+    <title data-fa="پست‌ اینستاگرام ابوالفضل شهاب | ivan.omgru" 
+          data-ru="Пост в Instagram Абульфаз Шахаб | ivan.omgru">
+       پست‌ اینستاگرام ابوالفضل شهاب | ivan.omgru | Блоги и посты Иван Шахаб
+    </title>
     <!-- Favicon for browsers (classic) -->
     <link rel="icon" href="https://ivan-omgru.ir/images/logoman/favicon.ico" type="image/x-icon">
     <!-- Modern browsers (PNG) -->
@@ -614,6 +616,20 @@
                 console.log('particles loaded');
             });
         </script>
+        <script>
+        (function(){
+          const titleEl = document.getElementById('pageTitle');
+          const userLang = navigator.language || navigator.userLanguage; // zh-CN, fa-IR, ru-RU, ...
 
+          if(userLang.startsWith('fa')){
+            titleEl.textContent = titleEl.getAttribute('data-fa');
+          } else if(userLang.startsWith('ru')){
+            titleEl.textContent = titleEl.getAttribute('data-ru');
+          } else {
+            // زبان پیشفرض انگلیسی یا ترکیبی
+            titleEl.textContent = titleEl.getAttribute('data-fa') + " | " + titleEl.getAttribute('data-ru');
+          }
+        })();
+        </script>
     </body>
 </html>
