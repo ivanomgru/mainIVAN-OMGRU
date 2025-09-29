@@ -447,19 +447,15 @@ blockquote {
   opacity: 0;
   visibility: hidden;
 }
-
 #loading-video {
-  width: 220px;
-  height: auto;
-  margin-bottom: 25px;
-  animation: float 2.2s ease-in-out infinite;
+  position: absolute;   /* روی کل صفحه قرار می‌گیرد */
+  top: 0;
+  left: 0;
+  width: 100%;          /* عرض کل صفحه */
+  height: 100%;         /* ارتفاع کل صفحه */
+  object-fit: cover;    /* بدون کشیدگی ویدیو را پر می‌کند */
+  z-index: -1;          /* پشت متن و اسپینرها */
 }
-
-@keyframes float {
-  0%, 100% { transform: translateY(0);}
-  50% { transform: translateY(-12px);}
-}
-
 /* کانتینر اسپینرها */
 .spinner-container {
   display: flex;
@@ -2784,9 +2780,9 @@ html body .portfolio-overlay-details h5{
     position: absolute;
     top: 100%;
     right: 0;
-    background: #303030a6;
+    background: hsla(0, 0%, 100%, 0);
     border-radius: 5px;
-    box-shadow: 0 5px 15px #ffffff;
+    box-shadow: 0 5px 15px #000000;
     min-width: 120px;
     z-index: 1000;
     padding: 0.5rem 0;
@@ -2799,13 +2795,13 @@ html body .portfolio-overlay-details h5{
 
 .dropdown-item {
     padding: 0.5rem 1rem;
-    color: #ffffff;
+    color: hsl(14, 98%, 40%);
     text-align: right;
     cursor: pointer;
 }
 
 .dropdown-item:hover {
-    background-color: #e41b1b;
+    background-color: hsla(189, 100%, 66%, 0.397);
 }
 
 /* موبایل: فعال شدن با لمس */
