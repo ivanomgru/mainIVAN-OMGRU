@@ -2598,100 +2598,6 @@ hr {
 .list-style-2.list-style-light > li {
   border-bottom: 1px solid rgba(250, 250, 250, 0.12);
 }
-
-/* =================================== */
-/*  6. Footer
-/* =================================== */
-#footer {
-  background: #fff;
-  color: #252b33;
-  padding: 66px 0px;
-  padding: 4.125rem 0;
-}
-#footer .nav .nav-item {
-  display: inline-block;
-  line-height: 12px;
-  margin: 0;
-}
-#footer .nav .nav-item .nav-link {
-  color: #252b33;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-#footer .nav .nav-item .nav-link:focus {
-  color: #f5df4e;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-#footer .nav .nav-item:first-child .nav-link {
-  padding-left: 0px;
-}
-#footer .nav .nav-item:last-child .nav-link {
-  padding-right: 0px;
-}
-#footer .nav .nav-link:hover {
-  color: #f5df4e;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-#footer .footer-copyright {
-  border-top: 1px solid #e2e8ea;
-  padding: 0px 0px;
-  color: #67727c;
-}
-#footer .footer-copyright .nav .nav-item .nav-link {
-  color: #67727c;
-}
-#footer .footer-copyright .nav .nav-link:hover {
-  color: #f5df4e;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-#footer .nav.flex-column .nav-item {
-  padding: 0px;
-}
-#footer .nav.flex-column .nav-item .nav-link {
-  margin: 0.7rem 0px;
-}
-#footer.footer-text-light {
-  color: rgba(250, 250, 250, 0.8);
-}
-#footer.footer-text-light .nav .nav-item .nav-link {
-  color: rgba(250, 250, 250, 0.8);
-}
-#footer.footer-text-light .nav .nav-item .nav-link:hover {
-  color: #fafafa;
-}
-#footer.footer-text-light .footer-copyright {
-  border-color: rgba(250, 250, 250, 0.15);
-  color: rgba(250, 250, 250, 0.5);
-}
-#footer.footer-text-light:not(.bg-primary) .social-icons-light.social-icons li a {
-  color: rgba(250, 250, 250, 0.8);
-}
-#footer.footer-text-light:not(.bg-primary) .social-icons-light.social-icons li a:hover {
-  color: #fafafa;
-}
-#footer.footer-text-light.bg-primary {
-  color: #fff;
-}
-#footer.footer-text-light.bg-primary .nav .nav-item .nav-link {
-  color: #fff;
-}
-#footer.footer-text-light.bg-primary .nav .nav-item .nav-link:hover {
-  color: rgba(250, 250, 250, 0.7);
-}
-#footer.footer-text-light.bg-primary .footer-copyright {
-  border-color: rgba(250, 250, 250, 0.15);
-  color: rgba(250, 250, 250, 0.9);
-}
-#footer.footer-text-light.bg-primary :not(.social-icons) a {
-  color: #fff;
-}
-#footer.footer-text-light.bg-primary :not(.social-icons) a:hover {
-  color: rgba(250, 250, 250, 0.7);
-}
-
 /*=== 6.1 Social Icons ===*/
 .social-icons {
   margin: 0;
@@ -4172,7 +4078,7 @@ html body .portfolio-overlay-details h5{
     text-transform: uppercase;
     font-size: 2rem;
     text-align: center;
-    animation: blinkHeading 1.8s infinite alternate;
+    animation: none !important; /* انیمیشن رو حذف می‌کنه */
     margin-bottom: 2rem;
 }
 
