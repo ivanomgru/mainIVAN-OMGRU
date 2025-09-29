@@ -7,15 +7,21 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ivan-omgru.ir/resume/Theme/images/</loc>
+    <loc>https://ivan-omgru.ir/resume/Theme/images/insta.jpg</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ivan-omgru.ir/resume/contact</loc>
+    <loc>https://ivan-omgru.ir/resume/Theme/images/ivan44.jpg</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://ivan-omgru.ir/resume/Theme/images/youtube.jpg</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  
 </urlset>
