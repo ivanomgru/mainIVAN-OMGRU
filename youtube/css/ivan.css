@@ -119,7 +119,7 @@ ol {
   z-index: 1;
 }
 /* =========================
-   لودینگ اسکرین (حرفه‌ای)
+   لودینگ اسکرین تمام صفحه
 ========================= */
 #loading-screen {
   position: fixed;
@@ -132,10 +132,9 @@ ol {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 9999;   /* بالاتر از همه */
   color: #fff;
   text-align: center;
-  pointer-events: none; /* جلوگیری از کلیک روی لودینگ */
   overflow: hidden;
 
   /* انیمیشن fade-out هنگام حذف */
@@ -145,32 +144,34 @@ ol {
 
 #loading-screen.hide {
   opacity: 0;
-  pointer-events: none;
   visibility: hidden;
 }
 
+/* ویدیو تمام صفحه */
 #loading-video {
-  width: 200px;
-  height: auto;
-  margin-bottom: 20px;
-  animation: float 2s ease-in-out infinite;
-
-  /* شفاف و بدون مات بودن */
-  filter: none;
-  background: transparent;
+  position: absolute; /* پشت متن و اسپینر */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* بدون کشیدگی ویدیو را پر می‌کند */
+  z-index: -1;       /* پشت محتوا */
 }
 
+/* انیمیشن شناور اسپینر */
 @keyframes float {
   0%, 100% { transform: translateY(0);}
   50% { transform: translateY(-10px);}
 }
 
+/* کانتینر اسپینرها */
 .spinner-container {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
 
+/* اسپینرها */
 .spinner {
   width: 15px;
   height: 15px;
@@ -178,8 +179,6 @@ ol {
   border-top: 3px solid transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-
-  /* افکت سایه و حجم */
   box-shadow: 0 0 5px #fff, 0 0 10px #ff0055, 0 0 15px #ff0055;
 }
 
@@ -187,6 +186,7 @@ ol {
   0% { transform: rotate(0deg);}
   100% { transform: rotate(360deg);}
 }
+
 /* =========================
    بخش شبکه‌های اجتماعی انتهای صفحه (حرفه‌ای)
 ========================= */
