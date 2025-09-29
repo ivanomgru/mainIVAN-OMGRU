@@ -44,12 +44,15 @@ body {
   opacity: 0;
   visibility: hidden;
 }
-
 #loading-video {
-  width: 220px;
-  height: auto;
-  margin-bottom: 25px;
-  animation: float 2.2s ease-in-out infinite;
+  position: absolute;     /* روی کل صفحه قرار گیرد */
+  top: 0;
+  left: 0;
+  width: 100%;            /* تمام عرض */
+  height: 100%;           /* تمام ارتفاع */
+  object-fit: cover;      /* کشیده شدن کامل بدون تغییر نسبت تصویر */
+  z-index: -1;            /* پشت متن و اسپینرها */
+  animation: float 2.2s ease-in-out infinite;  /* حفظ انیمیشن شناور */
 }
 
 @keyframes float {
