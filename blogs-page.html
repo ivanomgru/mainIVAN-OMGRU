@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="Personal, Portfolio, Creative">
+        <meta name="description" content="Kalvin Portfolio Template">
+        <meta name="author" content="cosmos-themes">
+
+        <title>وبلاگ ابوالفضل شهاب | ivan.omgru | Блоги иван.омгру | ivan omgru</title>
+        <!-- Favicon for browsers (classic) -->
+        <link rel="icon" href="images/logoman/favicon.ico" type="image/x-icon">
+        <!-- Modern browsers (PNG) -->
+        <link rel="icon" href="images/logoman/favicon.png" type="image/png" sizes="32x32">
+        <link rel="icon" href="images/logoman/favicon-64.png" type="image/png" sizes="64x64">
+
+       <!-- Apple devices -->
+       <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+       <!-- Android / Chrome -->
+       <link rel="icon" sizes="192x192" href="images/logoman/android-chrome-192.png">
+       <link rel="icon" sizes="512x512" href="images/logoman/android-chrome-512.png">
+
+       <!-- Safari pinned tab (اختیاری) -->
+       <link rel="mask-icon" href="images/logoman/safari-pinned-tab.svg" color="#000000">
+
+       <!-- Windows (اختیاری) -->
+       <meta name="msapplication-TileImage" content="images/logoman/mstile-150x150.png">
+       <meta name="msapplication-TileColor" content="#ffffff">
+
+        <!-- Theme color (برای موبایل‌ها رنگ نوار بالای مرورگر) -->
+       <meta name="theme-color" content="#ffffff">
+        <!--Font Awesome css-->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
+        <!--Bootstrap css-->
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <!--Owl Carousel css-->
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+        <!--Magnific Popup css-->
+        <link rel="stylesheet" href="css/magnific-popup.css">
+
+        <!-- Font Awesome 6.5.2 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+...==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="mobile-web-app-capable" content="yes">      
+        <!--Site Main Style css-->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Preload تصویر اصلی -->
+        <link rel="preload" as="image" href="images/ivan44.jpg">
+
+        <!-- Open Graph / شبکه‌های اجتماعی دو زبانه -->
+        <meta property="og:title" content="سایت وبلاگ ابوالفضل شهاب - Иван Шахаб | Ivan Omgru">
+        <meta property="og:description" content="سایت شخصی و حرفه‌ای وبلاگ ابوالفضل شهاب | Иван Шахаб | Ivan Omgru | Портфолио и личный блог сайт Ивана">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://ivan.omgru.ir/">
+        <meta property="og:image" content="images/logoman/cover-image.jpg">
+        <meta property="og:locale" content="fa_IR">
+        <meta property="og:locale:alternate" content="ru_RU">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="سایت اصلی ابوالفضل شهاب - Иван Шахаб | Ivan Omgru">
+        <meta name="twitter:description" content="سایت شخصی و حرفه‌ای ابوالفضل شهاب | Иван Шахаб | Ivan Omgru | Портфолио и личный сайт Ивана">
+        <meta name="twitter:image" content="images/logoman/cover-image.jpg">
+
+       <!-- فونت وزیر و پیش‌اتصال برای سرعت -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
+<style>
+    /* 🎨 رنگ‌های دستی */
+:root {
+  --brand-color1: #FFD700; /* زرد طلایی */
+  --brand-color2: #FFA500; /* نارنجی */
+  --brand-color3: #FF4500; /* قرمز-نارنجی */
+}
+
+/* ====== Navbar شفاف ====== */
+.navbar {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* ====== لوگو برجسته ====== */
+.highlight-brand {
+  font-weight: bold;
+  font-size: 1.7em;
+  background: linear-gradient(90deg, var(--brand-color1), var(--brand-color2), var(--brand-color3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  text-shadow: 0 0 10px var(--brand-color1), 0 0 20px var(--brand-color2), 0 0 30px var(--brand-color3);
+  animation: glowPulse 2.5s infinite, shine 6s infinite linear;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.highlight-brand:hover {
+  transform: scale(1.25);
+  text-shadow: 0 0 20px var(--brand-color1), 0 0 40px var(--brand-color2), 0 0 60px var(--brand-color3);
+  animation: glowPulseFast 1.2s infinite, shine 3s infinite linear;
+}
+
+/* ====== دکمه بازگشت ====== */
+.btn-back {
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, var(--brand-color1), var(--brand-color2), var(--brand-color3));
+  color: #fff !important;
+  text-shadow: 0 0 10px #000;
+  background-size: 300%;
+  animation: shine 6s infinite linear, glowPulse 2.5s infinite;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.btn-back:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px var(--brand-color1), 0 0 40px var(--brand-color2), 0 0 60px var(--brand-color3);
+  animation: shine 3s infinite linear, glowPulseFast 1.2s infinite;
+}
+
+/* ====== دکمه زبان شفاف ====== */
+#langToggle {
+  background: transparent !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+#langToggle:hover {
+  background: rgba(255, 255, 255, 0.877) !important;
+  border-color: #fff;
+}
+
+/* ====== افکت‌ها ====== */
+@keyframes glowPulse {
+  0%   { text-shadow: 0 0 10px var(--brand-color1), 0 0 20px var(--brand-color2), 0 0 30px var(--brand-color3); } 
+  50%  { text-shadow: 0 0 25px var(--brand-color1), 0 0 40px var(--brand-color2), 0 0 60px var(--brand-color3); }
+  100% { text-shadow: 0 0 10px var(--brand-color1), 0 0 20px var(--brand-color2), 0 0 30px var(--brand-color3); }
+}
+@keyframes glowPulseFast {
+  0%   { text-shadow: 0 0 20px var(--brand-color1), 0 0 40px var(--brand-color2), 0 0 60px var(--brand-color3); }
+  50%  { text-shadow: 0 0 40px var(--brand-color1), 0 0 60px var(--brand-color2), 0 0 80px var(--brand-color3); }
+  100% { text-shadow: 0 0 20px var(--brand-color1), 0 0 40px var(--brand-color2), 0 0 60px var(--brand-color3); }
+}
+@keyframes shine {
+  0% { background-position: -200px center; }
+  100% { background-position: 200px center; }
+}
+
+/* ====== Dropdown زبان ====== */
+.nav-item.dropdown {
+    position: relative;
+}
+
+.nav-item .dropdown-menu {
+    display: none; /* ابتدا مخفی */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #303030a6;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px #ffffff40;
+    min-width: 120px;
+    z-index: 1000;
+    padding: 0.5rem 0;
+}
+
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown.show .dropdown-menu {
+    display: block; /* هنگام هاور یا کلاس show باز می‌شود */
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    text-align: right;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #e41b1b;
+}
+
+/* ====== موبایل: تمام عرض و فعال شدن با لمس ====== */
+@media (max-width: 767px) {
+    .dropdown-menu {
+        width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        position: relative;
+        top: 0;
+        box-shadow: none;
+    }
+    .dropdown-item {
+        text-align: center;
+    }
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+</style>
+    </head>
+    <body>
+
+        <div class="preloader">
+            <div class="loader "></div>
+        </div>
+
+        <!--Navbar Start-->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+           <div class="container">
+               <!-- LOGO -->
+               <a class="navbar-brand logo" href="https://ivan-omgru.ir">
+                  <span data-fa="کمپانی" data-ru="Компания" data-en="Company">کمپانی</span>
+                 <span class="highlight-brand" data-fa="ivan omgru" data-ru="ivan omgru" data-en="ivan.omgru">ivan omgru</span>
+               </a> 
+
+               <!-- دکمه هامیبرگر موبایل -->
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+               </button>
+
+               <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                   <ul class="navbar-nav align-items-center">
+                       <!-- دکمه بازگشت -->
+                       <li class="nav-item me-2">
+                         <a href="index.html" class="nav-link btn-back" data-fa="برگشت" data-ru="Назад" data-en="Back"
+                          aria-label="Back">برگشت</a>
+                      </li>
+
+                       <!-- منوی تغییر زبان -->
+                       <li class="nav-item dropdown">
+                           <button id="langToggle" class="btn btn-sm btn-light dropdown-toggle" data-bs-toggle="dropdown">
+                             🌐Language
+                           </button>
+                           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langToggle">
+                            <li><a class="dropdown-item" href="https://ivan-omgru.ir/blogs-page.html" onclick="setLanguage('fa')" aria-label="فارسی">فارسی</a></li>
+                            <li><a class="dropdown-item" href="https://ivan-omgru.ir/blogs-page.html" onclick="setLanguage('ru')" aria-label="Русский">Русский</a></li>
+                            <li><a class="dropdown-item" href="https://ivan-omgru.ir/blogs-page.html" onclick="setLanguage('en')" aria-label="English">English</a></li>
+                           </ul>
+                       </li>
+                   </ul>
+               </div>
+           </div> 
+       </nav>
+<!--Navbar End-->
+
+        <!--Navbar End-->
+
+        <section class="banner-blog">
+            <div id="particles-js"></div>
+            <!--Banner Caption-->
+            <div class="banner-caption text-center">
+                <h1 data-fa="وبلاگ" data-ru="Блог ivan.omgru">وبلاگ ivan.omgru</h1>
+                <div class="bread-crumb mt-10">
+                    <a href="https://ivan-omgru.ir"data-fa="خانه" data-ru="Главная"></a>
+                    <a href="https://ivan-omgru.ir/blogs-page.html"data-fa="وبلاگ" data-ru="Блог"></a>
+                </div>
+
+            </div>
+        </section>
+
+        <!--Blog List Section Starts-->
+        <section class="blogs blog-list pt-100 pb-50" data-scroll-index="4"  style="
+            background-image: url('https://ivan-omgru.ir/images/background/ivanomgru.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <!--Blogs Item-->
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href="https://ivan-omgru.ir/youtube/">
+                                    <img src="images/blog/img-1.webp" alt="سایت و یوتیوب ابوالفضل شهاب ivan.omgru - ivan-omgru.ir">
+                                </a>
+                            </div>
+                            <div class="blog-content">
+                                    <h3 data-fa="دورهای تخصصی با تدریس ابوالفضل شهاب ivan.omgru"
+                                    data-ru="Специализированные курсы ivan.omgru от Абульфазла Шахаба">
+                                    دورهای تخصصی با تدریس ابوالفضل شهاب ivan.omgru
+                                    </h3>
+                                    <p data-fa="آموزش‌های عملی، ویدیوهای کوتاه و پروژه‌محور برای پیشرفت سریع."
+                                     data-ru="Практические уроки, короткие видео и проекты для быстрого прогресса.">
+                                     آموزش‌های عملی، ویدیوهای کوتاه و پروژه‌محور برای پیشرفت سریع.
+                                    </p>
+                                <div class="blog-meta">     
+                                   <span class="more">
+                                        <a href="https://www.youtube.com/@ivan.omgru"data-fa="مطالعه بیشتر" data-ru="Читать далее">مطالعه بیشتر</a>
+                                    </span>
+                                    <span class="date" data-fa="11 شهریور 1404" data-ru="2 сентября 2025">11 شهریور 1404</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <!--Blogs Item-->
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href="https://www.instagram.com/ivan.omgru">
+                                    <img src="images/blog/img-0.webp" alt="سایت و اینستاگرام ابوالفضل شهاب ivan.omgru - ivan-omgru.ir">
+                                </a>
+                            </div>
+                            <div class="blog-content">
+                                    <h3 data-fa="دوره پایه زبان روسی با ابوالفضل شهاب ivan.omgru"
+                                      data-ru="Базовый курс русского на ivan.omgru с Абульфазлом Шахабом">
+                                      دوره پایه زبان روسی با ابوالفضل شهاب ivan.omgru
+                                    </h3>
+                                    <p data-fa="آشنایی با الفبا، تلفظ و جملات ساده برای شروع مطمئن."
+                                     data-ru="Знакомство с алфавитом, произношением и простыми фразами.">
+                                     آشنایی با الفبا، تلفظ و جملات ساده برای شروع مطمئن.
+                                    </p>
+                                <div class="blog-meta">                                    
+                                    <span class="more">
+                                        <a href="https://www.instagram.com/ivan.omgru" data-fa="مطالعه بیشتر" data-ru="Читать далее">مطالعه بیشتر</a>
+                                    </span>
+                                    <span class="date" data-fa="11 شهریور 1404" data-ru="2 сентября 2025">11 شهریور 1404</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <!--Blogs Item-->
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href="https://ivan-omgru.ir/insta/">
+                                    <img src="images/blog/img-4.webp" alt="آموزش های کوتاه اما مفید ابوالفضل شهاب ivan.omgru - ivan-omgru.ir">
+                                </a>
+                            </div>
+                            <div class="blog-content">
+                                <h3 data-fa="بهینه سازی UXوUI با تکنیک مدرس ابوالفضل شهاب ivan.omgru"
+                                  data-ru="Техники UI/UX и оптимизация от ivan.omgru и Абульфазла Шахаба">
+                                  بهینه سازی UXوUI با تکنیک مدرس ابوالفضل شهاب ivan.omgru
+                                </h3>
+                                <p data-fa="یاد بگیرید تجربه کاربری بهتر بسازید و سایت‌های سریع تحویل دهید."
+                                   data-ru="Научитесь создавать лучший UX и делать быстрые сайты.">
+                                  یاد بگیرید تجربه کاربری بهتر بسازید و سایت‌های سریع تحویل دهید.
+                                </p>
+                                <div class="blog-meta">
+                                    <span class="more">
+                                        <a href="https://ivan-omgru.ir/insta/" data-fa="مطالعه بیشتر" data-ru="Читать далее">مطالعه بیشتر</a>
+                                    </span>
+                                    <span class="date" data-fa="11 شهریور 1404" data-ru="2 сентября 2025">11 شهریور 1404</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <!--Blogs Item-->
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href="https://ivan-omgru.ir/youtube/">
+                                    <img src="images/blog/img-3.webp" alt="سایت ویدیو های آموزشی ابوالفضل شهاب ivan.omgru - ivan-omgru.ir">
+                                </a>
+                            </div>
+                            <div class="blog-content">
+                                <h3 data-fa="گرامر های جامع زبان روسی با مدرس ابوالفضل شهاب ivan.omgru"
+                                   data-ru="Полный курс грамматики русского на ivan.omgru с Абульфазлом Шахабом">
+                                   گرامر های جامع زبان روسی با مدرس ابوالفضل شهاب ivan.omgru
+                                </h3>
+                                <p data-fa="قواعد ضروری و تمرین‌های ساختاری برای تسلط کامل بر زبان."
+                                   data-ru="Необходимая грамматика и структурированные упражнения для владения.">
+                                  قواعد ضروری و تمرین‌های ساختاری برای تسلط کامل بر زبان.
+                                </p>
+                                <div class="blog-meta">
+                                    <span class="more">
+                                        <a href="https://ivan-omgru.ir/youtube/" data-fa="مطالعه بیشتر" data-ru="Читать далее">مطالعه بیشتر</a>
+                                    </span>
+                                    <span class="date" data-fa="11 شهریور 1404" data-ru="2 сентября 2025">11 شهریور 1404</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <!--Blogs Item-->
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href="https://ivan-omgru.ir/insta/">
+                                    <img src="images/blog/img-5.webp" alt="سایت ویدیو های کوتاه اما مفید با ابوالفضل شهاب ivan.omgru - ivan-omgru.ir">
+                                </a>
+                            </div>
+                            <div class="blog-content">
+                                <h3 data-fa="منابع رایگان و درس های آغازین با ابوالفضل شهاب ivan.omgru"
+                                  data-ru="Бесплатные материалы и вводный урок от ivan.omgru и Абульфазла Шахаба">
+                                  منابع رایگان و درس های آغازین با ابوالفضل شهاب ivan.omgru
+                                </h3>
+                                <p data-fa="دسترسی به فایل‌ها و پشتیبانی کوتاه‌مدت — شروع آسان و نتیجه‌محور."
+                                  data-ru="Доступ к файлам и краткая поддержка — простой и эффективный старт.">
+                                  دسترسی به فایل‌ها و پشتیبانی کوتاه‌مدت — شروع آسان و نتیجه‌محور.
+                                </p>
+                                <div class="blog-meta">
+                                    <span class="more">
+                                        <a href="https://ivan-omgru.ir/insta/" data-fa="مطالعه بیشتر" data-ru="Читать далее">مطالعه بیشتر</a>
+                                    </span>
+                                    <span class="date" data-fa="11 شهریور 1404" data-ru="2 сентября 2025">11 شهریور 1404</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <!--Blogs Item-->
+                        <div class="blog-item">
+                           <div class="blog-img">
+                             <a href="https://ivan-omgru.ir/insta/">
+                               <img src="images/blog/img-2.webp" 
+                               alt="آموزش طراحی سایت مدرن با ابوالفضل شهاب ivan.omgru - ivan-omgru.ir">
+                             </a>
+                           </div>
+                           <div class="blog-content">
+                              <h3 data-fa="دوره طراحی سایت حرفه‌ای با ابوالفضل شهاب ivan.omgru"
+                                data-ru="Профессиональный курс веб-дизайна на ivan.omgru с Абульфазлом Шахабом">
+                                دوره طراحی سایت حرفه‌ای با ابوالفضل شهاب ivan.omgru
+                              </h3>
+                                <p data-fa="یادگیری HTML، CSS، جاوااسکریپت و پروژه‌های عملی برای ورود به دنیای طراحی وب."
+                                  data-ru="Изучение HTML, CSS, JavaScript и практических проектов для входа в мир веб-дизайна.">
+                                   یادگیری HTML، CSS، جاوااسکریپت و پروژه‌های عملی برای ورود به دنیای طراحی وب.
+                                </p>
+                                <div class="blog-meta">
+                                  <span class="more">
+                                    <a href="https://ivan-omgru.ir/insta/" data-fa="شروع آموزش" data-ru="Начать обучение">شروع آموزش</a>
+                                  </span>
+                                  <span class="date" data-fa="11 شهریور 1404" data-ru="2 сентября 2025">11 شهریور 1404</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Blog List Section End-->
+<section id="contact" class="section bg-primary position-relative overflow-hidden" dir="rtl" lang="fa" data-scroll-index="6">
+  
+  <!-- تصویر پس‌زمینه -->
+  <div class="position-absolute w-100 h-100" 
+       style="top:0; left:0; background: url('images/background/ivan.omgru.webp') center/cover no-repeat; z-index:0;">
+  </div>
+
+  <!-- لایه نیمه شفاف روی تصویر -->
+  <div class="position-absolute w-100 h-100"
+       style="top:0; left:0; background:rgba(0,0,0,0.7); z-index:1;"></div>
+
+
+  <!-- تمام محتوای روی ویدیو در یک لایه با z-index بالاتر -->
+  <div class="position-relative" style="z-index:2;">
+        <p class="text-center mb-2 wow fadeIn">
+          <span class="bg-primary text-dark px-2" data-fa="تماس با من" data-ru="Свяжитесь со мной">تماس با من</span>
+        </p>  
+    <div class="container">
+      <!-- 🎬 ویدیو معرفی شناور 16:9 با کنترل پیشرفته -->
+      <div class="video-player" style="position:relative; max-width:800px; margin:2rem auto; border-radius:15px; overflow:hidden; background:#000; font-family:sans-serif;">
+        <video id="introVideo" style="width:100%; display:block; object-fit:cover;" preload="metadata">
+          <source src="images/background/ivan-omgru_22.mp4" type="video/mp4" data-quality="1080p">
+          <source src="images/background/ivan-omgru_22.mp4" type="video/mp4" data-quality="720p">
+          <source src="images/background/ivan-omgru_22.mp4" type="video/mp4" data-quality="480p">
+          <track label="فارسی" kind="subtitles" srclang="fa" src="Theme/video/subtitles-fa.vtt" default>
+          <track label="English" kind="subtitles" srclang="en" src="Theme/video/subtitles-en.vtt">
+          <span data-fa="مرورگر شما از ویدیو پشتیبانی نمی‌کند." data-ru="Ваш браузер не поддерживает видео.">مرورگر شما از ویدیو پشتیبانی نمی‌کند.</span>
+        </video>
+
+        <!-- Overlay متن -->
+        <div class="video-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; justify-content:center; align-items:center; color:#fff; font-size:1.5rem; font-weight:700; background:rgba(0,0,0,0.25); text-align:center; pointer-events:none;">  
+          🎬 <span data-fa="به آموزش‌های ابوالفضل شهاب | ivan.omgru خوش آمدید" data-ru="Добро пожаловать на уроки Абульфазля Шахаба | ivan.omgru">به آموزش‌های ابوالفضل شهاب | ivan.omgru خوش آمدید</span>
+        </div>
+
+        <!-- کنترل‌ها -->
+        <div class="video-controls" style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.6); display:flex; flex-direction:column; padding:0.5rem; box-sizing:border-box;">
+          <!-- نوار پیشرفت -->
+          <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;">
+
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.3rem; flex-wrap:wrap; gap:0.5rem;">
+            <!-- کنترل‌های سمت چپ -->
+            <div style="display:flex; gap:0.5rem; align-items:center;">
+              <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">⏯</button>
+              <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">🔊</button>
+              <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">⏪ 10s</button>
+              <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;">10s ⏩</button>
+              <span id="currentTime" style="color:#fff; font-weight:700; font-size:0.9rem;">0:00</span> / 
+              <span id="duration" style="color:#ccc; font-size:0.9rem;">0:00</span>
+            </div>
+
+            <!-- کنترل‌های سمت راست -->
+            <div style="display:flex; gap:0.5rem; align-items:center;">
+              <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                <option value="480p">480p</option>
+                <option value="720p">720p</option>
+                <option value="1080p" selected>1080p</option>
+              </select>
+
+              <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+              </select>
+
+              <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;">
+                <option value="off" data-fa="زیرنویس" data-ru="Субтитры">زیرنویس</option>
+                <option value="fa" data-fa="ir" data-ru="Персидский">ir</option>
+                <option value="ru" data-fa="ru" data-ru="Русский">ru</option>
+              </select>
+
+              <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;">⛶</button>
+            </div>
+          </div>
+        </div> 
+      </div>      
+
+      <div class="row">
+        <!-- سمت راست: اطلاعات تماس -->
+        <div class="col-lg-5 text-center text-lg-right" style="animation: fadeInUp 1s ease forwards;">
+          <h2 class="wow fadeIn" style="
+               display:inline-block;
+               max-width:900px;
+               background-color: rgba(255,255,255,0.2);   
+               color:#000000;
+               font-weight:700; 
+               font-size:2.4rem;  
+               line-height:1.4;
+               padding:1rem 2rem;
+               border-radius:16px;
+               text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+               backdrop-filter: blur(6px);
+               transition: all 0.3s ease;" 
+               data-fa="بیایید تماس بگیریم" data-ru="Давайте свяжемся">
+               بیایید تماس بگیریم  
+          </h2>
+
+          <p style="font-size:1rem; line-height:1.6; color:#ffffff; text-shadow:0 2px 10px rgba(0,0,0,0.75); margin-bottom:2rem;"
+             data-fa="از نظرات و بازخورد شما لذت می‌بریم. لطفاً تا آنجا که ممکن است اطلاعات دقیق ارائه دهید تا ابوالفضل شهاب | ivan.omgru بتواند بهترین پاسخ و راهنمایی را ارائه کند."
+             data-ru="Нам нравятся ваши отзывы. Пожалуйста, предоставьте как можно более точную информацию, чтобы Абульфазль Шахаб | ivan.omgru мог дать лучший ответ и руководство.">
+            از نظرات و بازخورد شما لذت می‌بریم. لطفاً تا آنجا که ممکن است اطلاعات دقیق ارائه دهید تا ابوالفضل شهاب | ivan.omgru بتواند بهترین پاسخ و راهنمایی را ارائه کند.
+          </p>
+
+          <h3 style="font-size:1.2rem; font-weight:400; margin-top:1.5rem; margin-bottom:0.5rem; color:#00FF00; text-shadow:0 2px 8px rgba(0,0,0,0.7);"
+              data-fa="زندگی در:" data-ru="Живу в:">زندگی در:</h3>
+          <address style="color:#ffffff; text-shadow:0 2px 10px rgba(0,0,0,0.75);" data-fa="ایران و روسیه" data-ru="Иран и Россия">ایران و روسیه</address>
+
+          <h3 style="font-size:1.2rem; font-weight:400; margin-top:1.5rem; margin-bottom:0.5rem; color:#00FF00; text-shadow:0 2px 8px rgba(0,0,0,0.7);"
+              data-fa="تلفن و اطلاعات تماس:" data-ru="Телефон и контактные данные:">تلفن و اطلاعات تماس:</h3>
+          <p style="color:#ffffff; text-shadow:0 2px 10px rgba(0,0,0,0.75);" data-fa="تمامی اطلاعات در دسترس عموم قرار می‌گیرد – ابوالفضل شهاب | ivan.omgru" data-ru="Вся информация доступна для публики – Абульфазль Шахаб | ivan.omgru">
+            تمامی اطلاعات در دسترس عموم قرار می‌گیرد – ابوالفضل شهاب | ivan.omgru
+          </p>
+
+          <!-- آیکون‌های اجتماعی -->
+          <ul class="social-icons d-flex justify-content-center justify-content-lg-start" style="margin-top:2rem; padding:0; gap:1rem; list-style:none;">
+            <li>
+              <a href="https://youtube.com/@ivan.omgruss" target="_blank" rel="noopener noreferrer"
+                 style="display:inline-flex; align-items:center; justify-content:center; width:50px; height:50px; border-radius:50%; background:#FF0000; color:#fff; font-size:1.2rem; text-decoration:none;">
+                <i class="fab fa-youtube" aria-label="YouTube"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/ivan.omgru/" target="_blank" rel="noopener noreferrer"
+                 style="display:inline-flex; align-items:center; justify-content:center; width:50px; height:50px; border-radius:50%; background:#E1306C; color:#fff; font-size:1.2rem; text-decoration:none;">
+                <i class="fab fa-instagram" aria-label="Instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- سمت چپ: لینک‌ها و شبکه‌ها -->
+        <div class="col-lg-6 ml-auto mt-5 mt-lg-0 social-section">
+          <h2 class="section-title" style="
+               display:inline-block;
+               max-width:900px;
+               background-color: rgba(255,255,255,0.2);   
+               color:#000000;
+               font-weight:700; 
+               font-size:2.4rem;  
+               line-height:1.4;
+               padding:1rem 2rem;
+               border-radius:16px;
+               text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+               backdrop-filter: blur(6px);
+               transition: all 0.3s ease;" data-fa="شبکه‌های اجتماعی و سایت‌ها" data-ru="Социальные сети и сайты">
+               شبکه‌های اجتماعی و سایت‌ها
+          </h2>
+          <p class="section-desc" data-fa="برای دسترسی سریع می‌توانید از لینک‌های زیر استفاده کنید:" data-ru="Для быстрого доступа используйте ссылки ниже:">
+            برای دسترسی سریع می‌توانید از لینک‌های زیر استفاده کنید:
+          </p>
+
+          <ul class="social-links">
+            <li>  
+              <a href="https://ivan-omgru.ir/resume/" target="_blank" rel="noopener noreferrer" class="social-btn website" data-fa="وب‌سایت رزومه" data-ru="мой resume сайт">
+                <i class="fa-solid fa-globe"></i> وب‌سایت رزومه
+              </a>
+            </li> 
+            <li>
+              <a href="https://ivan-omgru.ir/youtube/" target="_blank" rel="noopener noreferrer" class="social-btn youtube" data-fa="سایت یوتیوب من" data-ru="мой  Ютуб site">
+                <i class="fa-brands fa-youtube"></i> سایت یوتیوب من
+              </a>
+            </li>
+            <li>
+              <a href="https://ivan-omgru.ir/insta/" target="_blank" rel="noopener noreferrer" class="social-btn instagram" data-fa="سایت اینستاگرام من" data-ru="мой Инстаграм site">
+                <i class="fa-brands fa-instagram"></i> سایت اینستاگرام من
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/ivan-omgru.ir" target="_blank" rel="noopener noreferrer" class="social-btn telegram" data-fa="کانال تلگرام" data-ru="Канал Телеграм">
+                <i class="fa-brands fa-telegram"></i> کانال تلگرام
+              </a>
+            </li>
+          </ul>  
+        </div>
+      </div> <!-- پایان row -->
+    </div> <!-- پایان container -->
+  </div> <!-- پایان position-relative -->
+</section>
+        <!-- Footer Start -->
+        <footer id="footer" class="pt-50 pb-50">
+            <div class="container">
+                <div class="row text-right">
+                    <!-- ستون اول: متن و اطلاعات نویسنده -->
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="contact-info">
+                         <h4 style="color:white;transition:all 0.3s;" onmouseover="this.style.color='green';this.style.fontWeight='bold';" onmouseout="this.style.color='white';this.style.fontWeight='';">ivan.omgru</h4>  
+                          <p class="footer-text lang" data-fa="«ممنون هستم از همراهی شما.»" data-ru="«Спасибо за вашу поддержку.»">
+                           «ممنون هستم از همراهی شما.»
+                          </p>
+                          <p class="footer-text lang" data-fa="تمامی اطلاعات در دسترس عموم قرار می‌گیرد — ابوالفضل شهاب (ivan.omgru)" data-ru="Вся информация доступна для публики — Абульфазль Шахаб (ivan.omgru)">
+                            تمامی اطلاعات در دسترس عموم قرار می‌گیرد — ابوالفضل شهاب (ivan.omgru)
+                          </p>
+                        </div>
+                    </div>
+                    <!-- ستون دوم: نویسنده و شماره تماس -->
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="contact-info">
+                           <h5 class="lang" data-fa="نویسنده" data-ru="Автор: ">نویسنده :</h5>
+                            <p class="footer-text lang" data-fa="ابوالفضل شهاب | IVAN.OMGRU" data-ru="Абульфазль Шахаб | IVAN.OMGRU">
+                               <a href="https://ivan-omgru.ir/" target="_blank" class="footer-link">ابوالفضل شهاب | IVAN.OMGRU</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- ستون سوم: ایمیل -->
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="contact-info">
+                            <h5 class="lang" data-fa="ایمیل" data-ru="Эл. почта">ایمیل</h5>
+                            <p class="lang" data-fa="loverussian62@gmail.com" data-ru="loverussian62@gmail.com">
+                                <a href="mailto:loverussian62@gmail.com"
+                                  style="transition: all 0.3s;"
+                                   onmouseover="this.style.color='green'; this.style.fontWeight='bold';"
+                                   onmouseout="this.style.color=''; this.style.fontWeight='';">
+                                    loverussian62@gmail.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ستون چهارم: آدرس -->
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="contact-info">
+                            <h5 class="lang" data-fa="آدرس" data-ru="Адрес">آدرس</h5>
+                            <p class="lang" data-fa="ارتباط با من:" data-ru="Связь со мной:">ارتباط با من:</p>
+                            <a href="https://ivan-omgru.ir" class="lang"
+                             style="transition: all 0.3s;"
+                             onmouseover="this.style.color='green'; this.style.fontWeight='bold';"
+                             onmouseout="this.style.color=''; this.style.fontWeight='';">
+                               سایت اصلی
+                            </a> |
+                            <a href="https://ivan-omgru.ir/resume/" class="lang"
+                             style="transition: all 0.3s;"
+                             onmouseover="this.style.color='green'; this.style.fontWeight='bold';"
+                             onmouseout="this.style.color=''; this.style.fontWeight='';">
+                               رزومه
+                            </a> |
+                            <a href="https://insta.ivan-omgru.ir/" class="lang"
+                             style="transition: all 0.3s;"
+                             onmouseover="this.style.color='green'; this.style.fontWeight='bold';"
+                             onmouseout="this.style.color=''; this.style.fontWeight='';">
+                             اینستاگرام
+                            </a> |
+                            <a href="https://youtube.ivan-omgru.ir/" class="lang"
+                             style="transition: all 0.3s;"
+                             onmouseover="this.style.color='green'; this.style.fontWeight='bold';"
+                             onmouseout="this.style.color=''; this.style.fontWeight='';">
+                               یوتیوب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- شبکه‌های اجتماعی -->
+                <div class="row justify-content-center pt-20 text-center">
+                    <ul class="footer-logos list-inline">
+                      <li class="list-inline-item">
+                         <a href="https://www.instagram.com/ivan.omgru/" target="_blank">
+                           <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" />
+                         </a>
+                      </li>
+                      <li class="list-inline-item">
+                         <a href="https://youtube.com/@ivan.omgruss" target="_blank">
+                           <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" />
+                         </a>
+                      </li>
+                      <li class="list-inline-item">
+                          <a href="https://ivan-omgru.ir" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Website" style="width:24px; height:24px;" />
+                          </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="https://about.facebook.com/meta" target="_blank">
+                           <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+
+               <!-- خط جداکننده و کپی‌رایت -->
+               <div class="row text-center pt-20">
+                    <div class="col-md-12">
+                       <hr>
+                        <p class="copy lang pt-3" data-fa="© 2025 ابوالفضل شهاب | ivan.omgru. تمامی حقوق محفوظ است." data-ru="© 2025 Абульфазль Шахаб | ivan.omgru. Все права защищены.">
+                          © 2025 ابوالفضل شهاب | ivan.omgru. تمامی حقوق محفوظ است.
+                        </p>
+                        <p class="copy pt-3 lang" data-fa="سایت اصلی" data-ru="Официальный сайт">
+                           <a style="color: dodgerblue;" href="https://ivan-omgru.ir/">IVAN OMGRU</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Jquery js-->
+        <script src="js/jquery.min.js"></script>
+        <!--Bootstrap js-->
+        <script src="js/bootstrap.min.js"></script>
+        <!--Stellar js-->
+        <script src="js/jquery.stellar.js"></script>
+        <!--Animated Headline js-->
+        <script src="js/animated.headline.js"></script>
+        <!--Owl Carousel js-->
+        <script src="js/owl.carousel.min.js"></script>
+        <!--ScrollIt js-->
+        <script src="js/scrollIt.min.js"></script>
+        <!--Isotope js-->
+        <script src="js/isotope.pkgd.min.js"></script>
+        <!--Magnific Popup js-->
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <!--Particles js-->
+        <script src="js/particles.min.js"></script>
+        <!-- Bootstrap JS Bundle (شامل Popper برای Dropdown) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+        <!--Site Main js-->
+        <script src="js/main.js"></script>
+        <script src="js/mainivan.omgru.js"defer></script>
+    </body>
+</html>
