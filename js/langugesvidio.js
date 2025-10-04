@@ -217,6 +217,7 @@
               console.warn('video not found in .video-player', player);
               return;
             }
+            const seekSeconds=10,lastClickTime=0,handleClick=e=>{const rect=player.getBoundingClientRect(),x=e.clientX-rect.left,width=rect.width,third=width/3;if(x>third&&x<2*third){video.paused?video.play().catch(()=>{}):video.pause();flashOverlay(video.paused?'paused':'play')}},handleDbl=e=>{const rect=player.getBoundingClientRect(),x=e.clientX-rect.left,width=rect.width,third=width/3;if(x<=third){if(!isNaN(video.duration))video.currentTime=Math.min(video.duration,video.currentTime+seekSeconds);flashOverlay('forward')}else if(x>=2*third){video.currentTime=Math.max(0,video.currentTime-seekSeconds);flashOverlay('backward')}else{!document.fullscreenElement?(player.requestFullscreen?player.requestFullscreen():player.webkitRequestFullscreen?player.webkitRequestFullscreen():null):document.exitFullscreen?document.exitFullscreen():document.webkitExitFullscreen?document.webkitExitFullscreen():null}},flashOverlay=t=>{let e=player.querySelector('.flash-overlay');e||(e=document.createElement('div'),e.className='flash-overlay',Object.assign(e.style,{position:'absolute',top:'0',left:'0',width:'100%',height:'100%',pointerEvents:'none',display:'flex',justifyContent:'center',alignItems:'center',color:'#fff',fontSize:'3rem',fontWeight:'bold',textShadow:'0 0 8px rgba(0,0,0,0.7)',opacity:'0',transition:'opacity 0.3s ease'}),player.appendChild(e)),e.textContent=t==='forward'?'⏩':t==='backward'?'⏪':t==='paused'?'⏸️':'▶️',e.style.opacity='1',setTimeout(()=>e.style.opacity='0',400)};player.addEventListener('click',handleClick);player.addEventListener('dblclick',handleDbl);
 
             // ---------- lazy-load setup ----------
             let lazyLoaded = false;
@@ -259,7 +260,16 @@
               if(video.paused){ video.play().catch(()=>{}); if(playPauseBtn) playPauseBtn.textContent = '⏸️'; }
               else { video.pause(); if(playPauseBtn) playPauseBtn.textContent = '▶️'; }
             });
-
+            // هماهنگی آیکن پخش/توقف با وضعیت واقعی ویدیو
+            video.addEventListener('play', ()=> {
+             if (playPauseBtn) playPauseBtn.textContent = '⏸️';
+            });
+            video.addEventListener('pause', ()=> {
+             if (playPauseBtn) playPauseBtn.textContent = '▶️';
+            });
+            video.addEventListener('ended', ()=> {
+             if (playPauseBtn) playPauseBtn.textContent = '▶️';
+            });
             safeAdd(muteBtn, 'click', ()=>{
               video.muted = !video.muted;
               if(muteBtn) muteBtn.textContent = video.muted ? '🔇' : '🔊';
