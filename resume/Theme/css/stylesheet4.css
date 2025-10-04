@@ -3484,33 +3484,12 @@ html body .portfolio-overlay-details h5{
   z-index: -1;
 }
 
-/* افکت خطوط نورانی در پس‌زمینه */
-.stats::after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: -50%;
-  left: -50%;
-  background: conic-gradient(
-    from 0deg,
-    rgba(255, 111, 97, 0.2),
-    rgba(255, 221, 87, 0.2),
-    transparent 70%
-  );
-  animation: rotateBg 12s linear infinite;
-  z-index: -2;
-}
-@keyframes rotateBg {
-  100% { transform: rotate(360deg); }
-}
-
 /* کارت آمار */
 .single-stat {
   text-align: center;
   padding: 50px 30px;
   border-radius: 25px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 140, 255, 0.562);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35),
               inset 0 1px 1px rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -3527,7 +3506,7 @@ html body .portfolio-overlay-details h5{
   left: -100%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(120deg, transparent, rgb(255, 3, 3), transparent);
   transform: rotate(25deg);
   transition: all 0.6s;
 }
@@ -3539,7 +3518,7 @@ html body .portfolio-overlay-details h5{
 /* هاور کارت */
 .single-stat:hover {
   transform: translateY(-15px) scale(1.05);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 15px 35px rgba(0, 162, 255, 0.6);
 }
 
 /* آیکون */
@@ -3585,7 +3564,7 @@ html body .portfolio-overlay-details h5{
   transform: translateX(-50%);
   width: 60%;
   height: 4px;
-  background: linear-gradient(90deg, #ffdd57, #ff6f61);
+  background: linear-gradient(90deg, #745c00, #ff6f61);
   border-radius: 3px;
   box-shadow: 0 0 12px rgba(255, 111, 97, 0.6);
 }
@@ -3594,12 +3573,12 @@ html body .portfolio-overlay-details h5{
 .single-stat p {
   font-size: 18px;
   margin-top: 35px;
-  color: #ccc;
+  color: #ffffff;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 1.3s ease;
 }
 .single-stat:hover p {
-  color: #fff;
+  color: #000000;
 }
 
 /* ریسپانسیو */
