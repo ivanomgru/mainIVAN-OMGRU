@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ivan-omgru.ir/insta/sitemap.xml
+Sitemap: https://ivan-omgru.ir/insta/sitemapindex2.xml
