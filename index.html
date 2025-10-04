@@ -41,7 +41,6 @@
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS -->
-<link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/owl.carousel.min.css">
 <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -52,7 +51,6 @@
 <!-- فونت وزیر -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet"> -->
 
 <!-- Preload -->
 <link rel="preload" as="image" href="images/ivan44.jpg">
@@ -96,7 +94,7 @@
 <link rel="alternate" hreflang="fa" href="https://ivan-omgru.ir" data-fa="صفحه اصلی فارسی">
 <link rel="alternate" hreflang="ru" href="https://ivan-omgru.ir" data-ru="Главная страница на русском">
 <link rel="alternate" hreflang="x-default" href="https://ivan-omgru.ir">
-<link rel="canonical" href="https://ivan-omgru.ir/">
+<link rel="canonical" href="https://ivan-omgru.ir">
     <!-- Schema.org JSON-LD دو زبانه -->
 <script type="application/ld+json">
 {
@@ -504,7 +502,7 @@
 
 </head>
 <body>
-    <!--لودینگ من -->
+    <!-- لودینگ من
     <div id="loading-screen">
       <video autoplay muted loop playsinline id="loading-video">
        <source src="images/background/ivan-omgru_22.mp4" type="video/mp4">
@@ -517,7 +515,7 @@
       </div>
       <p>ivan omgru در حال بارگذاری...</p>
       <p>ivan omgru Загрузка...</p>
-    </div>
+    </div>-->
     <!--Navbar Start-->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
@@ -559,7 +557,7 @@
                     <!-- سویچ زبان -->
                     <li class="nav-item dropdown">
                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"aria-haspopup="true" aria-expanded="false">
-                           انتخاب زبان / Language
+                          Language
                        </a>
                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown">
                          <li><a class="dropdown-item" href="#" onclick="setLanguage('fa'); return false;">فارسی</a></li>
@@ -570,9 +568,6 @@
             </div>
         </div>
     </nav>
-
-        <!--Navbar End-->
-    
         <!--Home Section Start-->
         <section id="home" class="banner banner-centered" style="background-image: url('images/background/RUSSIANIVAN.OMGRU.webp')" data-stellar-background-ratio=".7" data-scroll-index="0">
                 <div class="banner-caption">
@@ -721,7 +716,7 @@
               <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;" aria-label="Video progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.3rem; flex-wrap:wrap; gap:0.5rem;">
                 <div style="display:flex; gap:0.5rem; align-items:center;">
-                  <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="پخش / توقف">⏯</button>
+                  <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="پخش / توقف">▶️</button>
                   <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="قطع / وصل صدا">🔊</button>
                   <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="بازگشت ۱۰ ثانیه‌ای">⏪ 10s</button>
                   <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="جلو رفتن ۱۰ ثانیه‌ای">10s ⏩</button>
@@ -730,45 +725,38 @@
                 </div>
 
                 <div style="display:flex; gap:0.5rem; align-items:center;">
-                     <!-- کیفیت ویدیو -->
-                     <label for="qualitySelect" class="sr-only">انتخاب کیفیت ویدیو</label>
-                     <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Video quality">
-                        <option value="480p">480p</option>
-                        <option value="720p">720p</option>
-                        <option value="1080p" selected>1080p</option>
-                     </select>
-
-                      <!-- سرعت پخش -->
-                     <label for="speedSelect" class="sr-only">انتخاب سرعت پخش</label>
-                     <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Playback speed">
-                       <option value="0.5">0.5x</option>
-                       <option value="1" selected>1x</option>
-                       <option value="1.5">1.5x</option>
-                       <option value="2">2x</option>
-                     </select>
-
-                     <!-- زیرنویس -->
-                     <label for="subtitleSelect" class="sr-only">انتخاب زبان زیرنویس</label>
-                     <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Subtitle language">
-                         <option value="off" data-fa="خاموش" data-ru="Субтитры">زیرنویس خاموش</option>
-                         <option value="fa" data-fa="ir" data-ru="Персидский">ir</option>
-                          <option value="ru" data-fa="ru" data-ru="Русский">ru</option>
-                     </select>
-
-                     <!-- دکمه تمام صفحه -->
-                     <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;" aria-label="Full screen">⛶ <span class="sr-only">Full screen</span></button>
+                    <!-- کیفیت ویدیو -->
+                   <label for="qualitySelect" class="sr-only">انتخاب کیفیت ویدیو</label>
+                   <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Video quality">
+                      <option value="480p">480p</option>
+                      <option value="720p">720p</option>
+                      <option value="1080p" selected>1080p</option>
+                   </select>
+                    <!-- سرعت پخش -->
+                   <label for="speedSelect" class="sr-only">انتخاب سرعت پخش</label>
+                   <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Playback speed">
+                     <option value="0.5">0.5x</option>
+                     <option value="1" selected>1x</option>
+                     <option value="1.5">1.5x</option>
+                     <option value="2">2x</option>
+                   </select>
+                    <!-- زیرنویس -->
+                   <label for="subtitleSelect" class="sr-only">انتخاب زبان زیرنویس</label>
+                   <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Subtitle language">
+                       <option value="off" data-fa="خاموش" data-ru="Субтитры">زیرنویس خاموش</option>
+                       <option value="fa" data-fa="ir" data-ru="Персидский">ir</option>
+                        <option value="ru" data-fa="ru" data-ru="Русский">ru</option>
+                   </select>
+                    <!-- دکمه تمام صفحه -->
+                   <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;" aria-label="Full screen">⛶ <span class="sr-only">Full screen</span></button>
                 </div>
-
               </div>
             </div> <!-- پایان video-controls (1) -->
-
             <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}</style>
-
+          </div> <!-- پایان video-player (1) -->
             <span class="about-button">
               <a class="main-btn" href="https://ivan-omgru.ir/resume/" data-fa="رزومه من" data-ru="Моё резюме" aria-label="رزومه من" lang="fa">رزومه من</a>
             </span>
-          </div> <!-- پایان video-player (1) -->
-
         </div> <!-- پایان about-content -->
       </div> <!-- پایان col -->
     </div> <!-- پایان row (بخش اول) -->
@@ -831,7 +819,7 @@
               <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;" aria-label="Video progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.3rem; flex-wrap:wrap; gap:0.5rem;">
                 <div style="display:flex; gap:0.5rem; align-items:center;">
-                  <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="پخش / توقف">⏯</button>
+                  <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="پخش / توقف">▶️</button>
                   <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="قطع / وصل صدا">🔊</button>
                   <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="بازگشت ۱۰ ثانیه‌ای">⏪ 10s</button>
                   <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="جلو رفتن ۱۰ ثانیه‌ای">10s ⏩</button>
@@ -840,41 +828,40 @@
                 </div>
 
                 <div style="display:flex; gap:0.5rem; align-items:center;">
-                     <!-- کیفیت ویدیو -->
-                     <label for="qualitySelect" class="sr-only">انتخاب کیفیت ویدیو</label>
-                     <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Video quality">
-                        <option value="480p">480p</option>
-                        <option value="720p">720p</option>
-                        <option value="1080p" selected>1080p</option>
-                     </select>
+                  <!-- کیفیت ویدیو -->
+                  <label for="qualitySelect" class="sr-only">انتخاب کیفیت ویدیو</label>
+                  <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Video quality">
+                    <option value="480p">480p</option>
+                    <option value="720p">720p</option>
+                    <option value="1080p" selected>1080p</option>
+                  </select>
 
-                      <!-- سرعت پخش -->
-                     <label for="speedSelect" class="sr-only">انتخاب سرعت پخش</label>
-                     <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Playback speed">
-                       <option value="0.5">0.5x</option>
-                       <option value="1" selected>1x</option>
-                       <option value="1.5">1.5x</option>
-                       <option value="2">2x</option>
-                     </select>
+                  <!-- سرعت پخش -->
+                  <label for="speedSelect" class="sr-only">انتخاب سرعت پخش</label>
+                  <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Playback speed">
+                     <option value="0.5">0.5x</option>
+                     <option value="1" selected>1x</option>
+                     <option value="1.5">1.5x</option>
+                     <option value="2">2x</option>
+                  </select>
 
-                     <!-- زیرنویس -->
-                     <label for="subtitleSelect" class="sr-only">انتخاب زبان زیرنویس</label>
-                     <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Subtitle language">
-                         <option value="off" data-fa="خاموش" data-ru="Субтитры">زیرنویس خاموش</option>
-                         <option value="fa" data-fa="ir" data-ru="Персидский">ir</option>
-                          <option value="ru" data-fa="ru" data-ru="Русский">ru</option>
-                     </select>
+                  <!-- زیرنویس -->
+                  <label for="subtitleSelect" class="sr-only">انتخاب زبان زیرنویس</label>
+                  <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Subtitle language">
+                     <option value="off" data-fa="خاموش" data-ru="Субтитры">زیرنویس خاموش</option>
+                     <option value="fa" data-fa="ir" data-ru="Персидский">ir</option>
+                     <option value="ru" data-fa="ru" data-ru="Русский">ru</option>
+                  </select>
 
-                     <!-- دکمه تمام صفحه -->
-                     <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;" aria-label="Full screen">⛶ <span class="sr-only">Full screen</span></button>
+                  <!-- دکمه تمام صفحه -->
+                  <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;" aria-label="Full screen">⛶ <span class="sr-only">Full screen</span></button>
                 </div>
               </div>
             </div> <!-- پایان video-controls (2) -->
+          </div> <!-- پایان video-player (2) -->
             <span class="about-button">
               <a class="main-btn" href="https://ivan-omgru.ir/insta/" data-fa="بیشتر بدانید" data-ru="Узнать больше" data-ir="Learn more" aria-label="بیشتر بدانید" lang="fa">بیشتر بدانید</a>
             </span>
-          </div> <!-- پایان video-player (2) -->
-
         </div> <!-- پایان about-content -->
       </div> <!-- پایان col -->
     </div> <!-- پایان row (بخش دوم) -->
@@ -937,7 +924,7 @@
               <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;" aria-label="Video progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.3rem; flex-wrap:wrap; gap:0.5rem;">
                 <div style="display:flex; gap:0.5rem; align-items:center;">
-                  <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="پخش / توقف">⏯</button>
+                  <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="پخش / توقف">▶️</button>
                   <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="قطع / وصل صدا">🔊</button>
                   <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="بازگشت ۱۰ ثانیه‌ای">⏪ 10s</button>
                   <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="جلو رفتن ۱۰ ثانیه‌ای">10s ⏩</button>
@@ -946,45 +933,48 @@
                 </div>
 
                 <div style="display:flex; gap:0.5rem; align-items:center;">
-                     <!-- کیفیت ویدیو -->
-                     <label for="qualitySelect" class="sr-only">انتخاب کیفیت ویدیو</label>
-                     <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Video quality">
-                        <option value="480p">480p</option>
-                        <option value="720p">720p</option>
-                        <option value="1080p" selected>1080p</option>
-                     </select>
+                  <!-- کیفیت ویدیو -->
+                  <label for="qualitySelect" class="sr-only">انتخاب کیفیت ویدیو</label>
+                  <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Video quality">
+                    <option value="480p">480p</option>
+                    <option value="720p">720p</option>
+                    <option value="1080p" selected>1080p</option>
+                  </select>
 
-                      <!-- سرعت پخش -->
-                     <label for="speedSelect" class="sr-only">انتخاب سرعت پخش</label>
-                     <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Playback speed">
-                       <option value="0.5">0.5x</option>
-                       <option value="1" selected>1x</option>
-                       <option value="1.5">1.5x</option>
-                       <option value="2">2x</option>
-                     </select>
-
-                     <!-- زیرنویس -->
-                     <label for="subtitleSelect" class="sr-only">انتخاب زبان زیرنویس</label>
-                     <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Subtitle language">
-                         <option value="off" data-fa="خاموش" data-ru="Субтитры">زیرنویس خاموش</option>
-                         <option value="fa" data-fa="ir" data-ru="Персидский">ir</option>
-                          <option value="ru" data-fa="ru" data-ru="Русский">ru</option>
-                     </select>
-
-                     <!-- دکمه تمام صفحه -->
-                     <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;" aria-label="Full screen">⛶ <span class="sr-only">Full screen</span></button>
-                </div> <!-- پایان video-player (3) -->
+                  <!-- سرعت پخش -->
+                  <label for="speedSelect" class="sr-only">انتخاب سرعت پخش</label>
+                  <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Playback speed">
+                   <option value="0.5">0.5x</option>
+                   <option value="1" selected>1x</option>
+                   <option value="1.5">1.5x</option>
+                   <option value="2">2x</option>
+                  </select>
+                  <!-- زیرنویس -->
+                  <label for="subtitleSelect" class="sr-only">انتخاب زبان زیرنویس</label>
+                  <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Subtitle language">
+                    <option value="off" data-fa="خاموش" data-ru="Субтитры">زیرنویس خاموش</option>
+                    <option value="fa" data-fa="ir" data-ru="Персидский">ir</option>
+                    <option value="ru" data-fa="ru" data-ru="Русский">ru</option>
+                  </select>
+                  <!-- دکمه تمام صفحه -->
+                   <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;" aria-label="Full screen">⛶ <span class="sr-only">Full screen</span></button>
+                </div>
+              </div>
+            </div>
+          </div> <!-- پایان video-player (3) -->                
+            <span class="about-button">
+              <a class="main-btn" href="https://ivan-omgru.ir/youtube/" data-fa="شروع به یادگیری کنید" data-ru="начинаете" data-ir="start to learn" aria-label="شروع به یادگیری کنید" lang="fa">شروع به یادگیری کنید</a>
+            </span>
         </div> <!-- پایان about-content -->
       </div> <!-- پایان col -->
     </div> <!-- پایان row (بخش سوم) -->
-
   </div> <!-- پایان container -->
 </section>
 
         <!--About Section End-->
 <!--Services Section End-->
 <!-- Stats Section Start -->
-<section class="stats pt-100 pb-100"style="background-image:url('images/background/ivan.omgru.webp');" data-scroll-index="3">
+<section class="stats pt-100 pb-100" data-scroll-index="2">
     <div class="container">
         <div class="row justify-content-center mt-4">
             <div class="col">
@@ -995,10 +985,10 @@
                    box-shadow:0 4px 15px rgba(0,0,0,0.2); 
                    color:#000; margin:0 auto 30px auto; text-align:center; 
                    max-width: fit-content;">              
-                  <h4 data-fa="سرویس ها" data-ru="Услуги" 
+                  <h6 data-fa="سرویس ها" data-ru="Услуги" 
                    style="color:#000; margin-bottom:10px; font-weight:600;">
                    سرویس ها
-                  </h4>
+                  </h6>
                   <h2 data-fa="سایت های من" data-ru="Мои сайты" 
                    style="color:#000; font-weight:700;">
                    سایت های من
@@ -1064,7 +1054,7 @@
                     <span class="stat-icon">
                         <i class="fas fa-users" aria-hidden="true"></i>
                     </span>
-                    <h2 class="counter" data-count="3000">10</h2>
+                    <h2 class="counter" data-count="3000">3000</h2>
                     <p data-fa="مشترکان" data-ru="Подписчики">مشترکان</p>
                 </div>
             </div>
@@ -1074,7 +1064,7 @@
                   <span class="stat-icon">
                     <i class="fas fa-thumbs-up" aria-hidden="true"></i>
                   </span>
-                  <h2 class="counter" data-count="152">20</h2>
+                  <h2 class="counter" data-count="152">152</h2>
                   <p data-fa="پروژه های تکمیل شده" data-ru="Завершенные проекты">پروژه های تکمیل شده</p>
                 </div>
             </div>
@@ -1084,7 +1074,7 @@
                   <span class="stat-icon">
                     <i class="fas fa-code" aria-hidden="true"></i>
                   </span>
-                  <h2 class="counter" data-count="150000">10</h2>
+                  <h2 class="counter" data-count="150000">150000</h2>
                   <p data-fa="خطوط کد" data-ru="Строки кода">خطوط کد</p>
                 </div>
             </div>
@@ -1094,7 +1084,7 @@
                   <span class="stat-icon">
                     <i class="fas fa-trophy" aria-hidden="true"></i>
                   </span>
-                  <h2 class="counter" data-count="152">15</h2>
+                  <h2 class="counter" data-count="152">152</h2>
                  <p data-fa="موفقیت ها" data-ru="Достижения">موفقیت ها</p>
                 </div>
             </div>
@@ -1108,7 +1098,7 @@
         <div class="row">
             <div class="col">
                 <div class="heading text-center">
-                    <h5 data-fa="نمونه کارها" data-ru="Портфолио">نمونه کارها</h5>
+                    <h6 data-fa="نمونه کارها" data-ru="Портфолио">نمونه کارها</h6>
                     <h2 data-fa="کاری که انجام دادم" data-ru="Мои выполненные работы">کاری که انجام دادم</h2>
 
                     <!-- هشدار توسعه -->
@@ -1141,7 +1131,7 @@
                 <div class="item-content">
                     <img src="https://ivan-omgru.ir/images/blog/img-2.webp" alt="آموزش طراحی سایت با ابوالفضل شهاب ivan omgru">
                     <div class="item-overlay">
-                        <h5>اپلیکیشن</h5>
+                        <h6>اپلیکیشن</h6>
                         <div class="icons">
                             <span class="icon link">
                                 <a href="https://ivan-omgru.ir/images/blog/img-2.webp" aria-label="تصویر پورتفولیو ۱">
@@ -1158,7 +1148,7 @@
                 <div class="item-content">
                     <img src="https://ivan-omgru.ir/images/portfolio/insta.jpg" alt="insta-page کانال اینستاگرام ابوالفضل شهاب - ivan.omgru">
                     <div class="item-overlay">
-                        <h5>طراحی وب</h5>
+                        <h6>طراحی وب</h6>
                         <div class="icons">
                             <span class="icon link">
                                 <a href="https://ivan-omgru.ir/images/portfolio/insta.jpg" aria-label="تصویر پورتفولیو اینستاگرام">
@@ -1175,7 +1165,7 @@
                 <div class="item-content">
                     <img src="https://ivan-omgru.ir/images/blog/img-5.webp" alt="آموزش های جامع با ابوالفضل شهاب ivan omgru">
                     <div class="item-overlay">
-                        <h5>اپلیکیشن</h5>
+                        <h6>اپلیکیشن</h6>
                         <div class="icons">
                             <span class="icon link">
                                 <a href="https://ivan-omgru.ir/images/blog/img-5.webp" aria-label="تصویر پورتفولیو ۲">
@@ -1192,7 +1182,7 @@
                 <div class="item-content">
                     <img src="https://ivan-omgru.ir/images/blog/img-4.webp" alt="آموزش های جامع با ابوالفضل شهاب ivan omgru">
                     <div class="item-overlay">
-                        <h5>توسعه</h5>
+                        <h6>توسعه</h6>
                         <div class="icons">
                             <span class="icon link">
                                 <a href="https://ivan-omgru.ir/images/blog/img-4.webp" aria-label="تصویر پورتفولیو ۳">
@@ -1209,7 +1199,7 @@
                 <div class="item-content">
                     <img src="https://ivan-omgru.ir/images/portfolio/youtube.jpg" alt="youtube-kanal کانال یوتیوب ابوالفضل شهاب - ivan.omgru">
                     <div class="item-overlay">
-                        <h5>طراحی وب</h5>
+                        <h6>طراحی وب</h6>
                         <div class="icons">
                             <span class="icon link">
                                 <a href="https://ivan-omgru.ir/images/portfolio/youtube.jpg" aria-label="تصویر پورتفولیو یوتیوب">
@@ -1226,7 +1216,7 @@
                 <div class="item-content">
                     <img src="https://ivan-omgru.ir/images/blog/img-3.webp" alt="آموزش های جامع با ابوالفضل شهاب ivan omgru">
                     <div class="item-overlay">
-                        <h5>طراحی وب</h5>
+                        <h6>طراحی وب</h6>
                         <div class="icons">
                             <span class="icon link">
                                 <a href="https://ivan-omgru.ir/images/blog/img-3.webp" aria-label="تصویر پورتفولیو ۴">
@@ -1255,7 +1245,6 @@
                 </div> 
                 <div class="row">
                     <div class="owl-carousel owl-theme">
-
                         <!--Blogs Item 1 (عمومی آموزشی)-->
                         <div class="blog-item">
                             <div class="blog-img">
@@ -1409,7 +1398,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="row">
@@ -1435,7 +1423,6 @@
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="owl-carousel owl-theme text-center">
-
                     <!-- فارسی: کاربر اینستاگرام -->
                     <div class="testimonial-item">
                         <div class="author-img">
@@ -1555,300 +1542,177 @@
                         <span>Пользователь Instagram</span>
                         <p data-fa="با آموزش‌های ivan.omgru توانستم مهارت‌های دیجیتال و زبان روسی را همزمان افزایش دهم." data-ru="С помощью обучений ivan.omgru я смог одновременно улучшить цифровые и русскоязычные навыки.">با آموزش‌های ivan.omgru توانستم مهارت‌های دیجیتال و زبان روسی را همزمان افزایش دهم.</p>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </section>
 <section id="contact" class="section bg-primary position-relative overflow-hidden" dir="rtl" lang="fa" data-scroll-index="6">
-  
-  <!-- تصویر پس‌زمینه -->
-  <div class="position-absolute w-100 h-100" 
-       style="top:0; left:0; background: url('images/background/ivan.omgru.webp') center/cover no-repeat; z-index:0;">
-  </div>
-
-  <!-- لایه نیمه شفاف روی تصویر -->
-  <div class="position-absolute w-100 h-100"
-       style="top:0; left:0; background:rgba(0,0,0,0.7); z-index:1;"></div>
-
-
-  <!-- تمام محتوای روی ویدیو در یک لایه با z-index بالاتر -->
+  <div class="position-absolute w-100 h-100" style="top:0; left:0; background:url('images/background/ivan.omgru.webp') center/cover no-repeat; z-index:0;"></div>
+  <div class="position-absolute w-100 h-100" style="top:0; left:0; background:rgba(0,0,0,0.7); z-index:1;"></div>
   <div class="position-relative" style="z-index:2;">
-        <p class="text-center wow fadeIn" style="margin-bottom:1rem;"><span style="display:inline-block; max-width:900px; background-color:rgba(255,255,255,0.2); color:#000; font-weight:700; font-size:2.4rem; line-height:1.4; padding:1rem 2rem; border-radius:16px; text-shadow:1px 1px 6px rgba(0,0,0,0.3); backdrop-filter:blur(6px); transition:all 0.3s ease;" data-fa="بیایید تماس بگیریم" data-ru="Давайте свяжемся">بیایید تماس بگیریم</span></p>
     <div class="container">
-      <!-- 🎬 ویدیو معرفی شناور 16:9 با کنترل پیشرفته -->
       <div class="video-player" style="position:relative; max-width:800px; margin:2rem auto; border-radius:15px; overflow:hidden; background:#000; font-family:sans-serif;">
         <video id="introVideo" style="width:100%; display:block; object-fit:cover;" preload="metadata">
           <source src="images/background/ivan-omgru_22.mp4" type="video/mp4" data-quality="1080p">
           <source src="images/background/ivan-omgru_22.mp4" type="video/mp4" data-quality="720p">
           <source src="images/background/ivan-omgru_22.mp4" type="video/mp4" data-quality="480p">
-          <!--<track label="فارسی" kind="subtitles" srclang="fa" src="Theme/video/subtitles-fa.vtt" default>
-          <track label="English" kind="subtitles" srclang="en" src="Theme/video/subtitles-en.vtt">-->
           <span data-fa="مرورگر شما از ویدیو پشتیبانی نمی‌کند." data-ru="Ваш браузер не поддерживает видео.">مرورگر شما از ویدیو پشتیبانی نمی‌کند.</span>
         </video>
-
-        <!-- Overlay متن -->
-        <div class="video-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; justify-content:center; align-items:center; color:#fff; font-size:1.5rem; font-weight:700; background:rgba(0,0,0,0.25); text-align:center; pointer-events:none;">  
-          🎬 <span data-fa="به آموزش‌های ابوالفضل شهاب | ivan.omgru خوش آمدید" data-ru="Добро пожаловать на уроки Абульфазля Шахаба | ivan.omgru">به آموزش‌های ابوالفضل شهاب | ivan.omgru خوش آمدید</span>
-        </div>
-
-        <!-- کنترل‌ها -->
+        <div class="video-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; justify-content:center; align-items:center; color:#fff; font-size:1.5rem; font-weight:700; background:rgba(0,0,0,0.25); text-align:center; pointer-events:none;">🎬 <span data-fa="به آموزش‌های ابوالفضل شهاب | ivan.omgru خوش آمدید" data-ru="Добро пожаловать на уроки Абульфазля Шахаба | ivan.omgru">به آموزش‌های ابوالفضل شهاب | ivan.omgru خوش آمدید</span></div>
         <div class="video-controls" style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.6); display:flex; flex-direction:column; padding:0.5rem; box-sizing:border-box;">
-          <!-- نوار پیشرفت -->
           <input type="range" id="progressBar" min="0" max="100" value="0" style="width:100%; cursor:pointer;" aria-label="نوار پیشرفت ویدیو">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.3rem; flex-wrap:wrap; gap:0.5rem;">
-            <!-- کنترل‌های سمت چپ -->
             <div style="display:flex; gap:0.5rem; align-items:center;">
               <button id="playPauseBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="پخش / توقف">⏯</button>
               <button id="muteBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="قطع / وصل صدا">🔊</button>
               <button id="backBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="بازگشت ۱۰ ثانیه‌ای">⏪ 10s</button>
               <button id="forwardBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem;" aria-label="جلو رفتن ۱۰ ثانیه‌ای">10s ⏩</button>
-              <span id="currentTime" style="color:#fff; font-weight:700; font-size:0.9rem;">0:00</span> / 
-              <span id="duration" style="color:#ccc; font-size:0.9rem;">0:00</span>
+              <span id="currentTime" style="color:#fff; font-weight:700; font-size:0.9rem;">0:00</span> / <span id="duration" style="color:#ccc; font-size:0.9rem;">0:00</span>
             </div>
-
-            <!-- کنترل‌های سمت راست -->
             <div style="display:flex; gap:0.5rem; align-items:center;">
-                     <!-- کیفیت ویدیو -->
-                     <label for="qualitySelect" class="sr-only">انتخاب کیفیت ویدیو</label>
-                     <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Video quality">
-                        <option value="480p">480p</option>
-                        <option value="720p">720p</option>
-                        <option value="1080p" selected>1080p</option>
-                     </select>
-
-                      <!-- سرعت پخش -->
-                     <label for="speedSelect" class="sr-only">انتخاب سرعت پخش</label>
-                     <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Playback speed">
-                       <option value="0.5">0.5x</option>
-                       <option value="1" selected>1x</option>
-                       <option value="1.5">1.5x</option>
-                       <option value="2">2x</option>
-                     </select>
-
-                     <!-- زیرنویس -->
-                     <label for="subtitleSelect" class="sr-only">انتخاب زبان زیرنویس</label>
-                     <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Subtitle language">
-                         <option value="off" data-fa="خاموش" data-ru="Субтитры">زیرنویس خاموش</option>
-                         <option value="fa" data-fa="ir" data-ru="Персидский">ir</option>
-                          <option value="ru" data-fa="ru" data-ru="Русский">ru</option>
-                     </select>
-
-                     <!-- دکمه تمام صفحه -->
-                     <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;" aria-label="Full screen">⛶ <span class="sr-only">Full screen</span></button>
+              <label for="qualitySelect" class="sr-only">انتخاب کیفیت ویدیو</label>
+              <select id="qualitySelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Video quality">
+                <option value="480p">480p</option>
+                <option value="720p">720p</option>
+                <option value="1080p" selected>1080p</option>
+              </select>
+              <label for="speedSelect" class="sr-only">انتخاب سرعت پخش</label>
+              <select id="speedSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Playback speed">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+              </select>
+              <label for="subtitleSelect" class="sr-only">انتخاب زبان زیرنویس</label>
+              <select id="subtitleSelect" style="padding:0.2rem; border-radius:5px; border:none; font-weight:600; cursor:pointer;" aria-label="Subtitle language">
+                <option value="off" data-fa="خاموش" data-ru="Субтитры">زیرنویس خاموش</option>
+                <option value="fa" data-fa="ir" data-ru="Персидский">ir</option>
+                <option value="ru" data-fa="ru" data-ru="Русский">ru</option>
+              </select>
+              <button id="fullscreenBtn" style="background:none; border:none; cursor:pointer; color:white; font-size:1.3rem;" aria-label="Full screen">⛶ <span class="sr-only">Full screen</span></button>
             </div>
           </div>
-        </div> 
-      </div>      
-
+        </div>
+      </div>
       <div class="row">
-        <!-- سمت راست: اطلاعات تماس -->
         <div class="col-lg-5 text-center text-lg-right" style="animation: fadeInUp 1s ease forwards;">
-          <h2 class="wow fadeIn" style="
-               display:inline-block;
-               max-width:900px;
-               background-color: rgba(255,255,255,0.2);   
-               color:#000000;
-               font-weight:700; 
-               font-size:2.4rem;  
-               line-height:1.4;
-               padding:1rem 2rem;
-               border-radius:16px;
-               text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
-               backdrop-filter: blur(6px);
-               transition: all 0.3s ease;" 
-               data-fa="بیایید تماس بگیریم" data-ru="Давайте свяжемся">
-               بیایید تماس بگیریم  
-          </h2>
-
-          <p style="font-size:1rem; line-height:1.6; color:#ffffff; text-shadow:0 2px 10px rgba(0,0,0,0.75); margin-bottom:2rem;"
-             data-fa="از نظرات و بازخورد شما لذت می‌بریم. لطفاً تا آنجا که ممکن است اطلاعات دقیق ارائه دهید تا ابوالفضل شهاب | ivan.omgru بتواند بهترین پاسخ و راهنمایی را ارائه کند."
-             data-ru="Нам нравятся ваши отзывы. Пожалуйста, предоставьте как можно более точную информацию, чтобы Абульфазль Шахаб | ivan.omgru мог дать лучший ответ и руководство.">
-            از نظرات و بازخورد شما لذت می‌بریم. لطفاً تا آنجا که ممکن است اطلاعات دقیق ارائه دهید تا ابوالفضل شهاب | ivan.omgru بتواند بهترین پاسخ و راهنمایی را ارائه کند.
-          </p>
-
-          <h3 style="font-size:1.2rem; font-weight:400; margin-top:1.5rem; margin-bottom:0.5rem; color:#00FF00; text-shadow:0 2px 8px rgba(0,0,0,0.7);"
-              data-fa="زندگی در:" data-ru="Живу в:">زندگی در:</h3>
+          <h2 class="wow fadeIn" style="display:inline-block; max-width:900px; background-color: rgba(255,255,255,0.2); color:#000; font-weight:700; font-size:2.4rem; line-height:1.4; padding:1rem 2rem; border-radius:16px; text-shadow: 1px 1px 6px rgba(0,0,0,0.3); backdrop-filter: blur(6px); transition: all 0.3s ease;" data-fa="بیایید تماس بگیریم" data-ru="Давайте свяжемся">بیایید تماس بگیریم</h2>
+          <p style="font-size:1rem; line-height:1.6; color:#ffffff; text-shadow:0 2px 10px rgba(0,0,0,0.75); margin-bottom:2rem;" data-fa="از نظرات و بازخورد شما لذت می‌بریم. لطفاً تا آنجا که ممکن است اطلاعات دقیق ارائه دهید تا ابوالفضل شهاب | ivan.omgru بتواند بهترین پاسخ و راهنمایی را ارائه کند." data-ru="Нам нравятся ваши отзывы. Пожалуйста, предоставьте как можно более точную информацию, чтобы Абульфазль Шахаб | ivan.omgru мог дать лучший ответ и руководство.">از نظرات و بازخورد شما لذت می‌بریم. لطفاً تا آنجا که ممکن است اطلاعات دقیق ارائه دهید تا ابوالفضل شهاب | ivan.omgru بتواند بهترین پاسخ و راهنمایی را ارائه کند.</p>
+          <h3 style="font-size:1.2rem; font-weight:400; margin-top:1.5rem; margin-bottom:0.5rem; color:#00FF00; text-shadow:0 2px 8px rgba(0,0,0,0.7);" data-fa="زندگی در:" data-ru="Живу в:">زندگی در:</h3>
           <address style="color:#ffffff; text-shadow:0 2px 10px rgba(0,0,0,0.75);" data-fa="ایران و روسیه" data-ru="Иран и Россия">ایران و روسیه</address>
-
-          <h3 style="font-size:1.2rem; font-weight:400; margin-top:1.5rem; margin-bottom:0.5rem; color:#00FF00; text-shadow:0 2px 8px rgba(0,0,0,0.7);"
-              data-fa="تلفن و اطلاعات تماس:" data-ru="Телефон и контактные данные:">تلفن و اطلاعات تماس:</h3>
-          <p style="color:#ffffff; text-shadow:0 2px 10px rgba(0,0,0,0.75);" data-fa="تمامی اطلاعات در دسترس عموم قرار می‌گیرد – ابوالفضل شهاب | ivan.omgru" data-ru="Вся информация доступна для публики – Абульфазль Шахаб | ivan.omgru">
-            تمامی اطلاعات در دسترس عموم قرار می‌گیرد – ابوالفضل شهاب | ivan.omgru
-          </p>
-
-          <!-- آیکون‌های اجتماعی -->
+          <h3 style="font-size:1.2rem; font-weight:400; margin-top:1.5rem; margin-bottom:0.5rem; color:#00FF00; text-shadow:0 2px 8px rgba(0,0,0,0.7);" data-fa="تلفن و اطلاعات تماس:" data-ru="Телефон и контактные данные:">تلفن و اطلاعات تماس:</h3>
+          <p style="color:#ffffff; text-shadow:0 2px 10px rgba(0,0,0,0.75);" data-fa="تمامی اطلاعات در دسترس عموم قرار می‌گیرد – ابوالفضل شهاب | ivan.omgru" data-ru="Вся информация доступна для публики – Абульфазль Шахаб | ivan.omgru">تمامی اطلاعات در دسترس عموم قرار می‌گیرد – ابوالفضل شهاب | ivan.omgru</p>
           <ul class="social-icons d-flex justify-content-center justify-content-lg-start" style="margin-top:2rem; padding:0; gap:1rem; list-style:none;">
-            <li>
-              <a href="https://youtube.com/@ivan.omgruss" target="_blank" rel="noopener noreferrer"
-                 style="display:inline-flex; align-items:center; justify-content:center; width:50px; height:50px; border-radius:50%; background:#FF0000; color:#fff; font-size:1.2rem; text-decoration:none;">
-                <i class="fab fa-youtube" aria-label="YouTube"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/ivan.omgru/" target="_blank" rel="noopener noreferrer"
-                 style="display:inline-flex; align-items:center; justify-content:center; width:50px; height:50px; border-radius:50%; background:#E1306C; color:#fff; font-size:1.2rem; text-decoration:none;">
-                <i class="fab fa-instagram" aria-label="Instagram"></i>
-              </a>
-            </li>
+            <li><a href="https://youtube.com/@ivan.omgruss" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; justify-content:center; width:50px; height:50px; border-radius:50%; background:#FF0000; color:#fff; font-size:1.2rem; text-decoration:none;"><i class="fab fa-youtube" aria-label="YouTube"></i></a></li>
+            <li><a href="https://www.instagram.com/ivan.omgru/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; justify-content:center; width:50px; height:50px; border-radius:50%; background:#E1306C; color:#fff; font-size:1.2rem; text-decoration:none;"><i class="fab fa-instagram" aria-label="Instagram"></i></a></li>
           </ul>
         </div>
-
-        <!-- سمت چپ: لینک‌ها و شبکه‌ها -->
         <div class="col-lg-6 ml-auto mt-5 mt-lg-0 social-section">
-          <h2 class="section-title" style="
-               display:inline-block;
-               max-width:900px;
-               background-color: rgba(255,255,255,0.2);   
-               color:#000000;
-               font-weight:700; 
-               font-size:2.4rem;  
-               line-height:1.4;
-               padding:1rem 2rem;
-               border-radius:16px;
-               text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
-               backdrop-filter: blur(6px);
-               transition: all 0.3s ease;" data-fa="شبکه‌های اجتماعی و سایت‌ها" data-ru="Социальные сети и сайты">
-               شبکه‌های اجتماعی و سایت‌ها
-          </h2>
-          <p class="section-desc" data-fa="برای دسترسی سریع می‌توانید از لینک‌های زیر استفاده کنید:" data-ru="Для быстрого доступа используйте ссылки ниже:">
-            برای دسترسی سریع می‌توانید از لینک‌های زیر استفاده کنید:
-          </p>
-
+          <h2 class="section-title" style="display:inline-block; max-width:900px; background-color: rgba(255,255,255,0.2); color:#000; font-weight:700; font-size:2.4rem; line-height:1.4; padding:1rem 2rem; border-radius:16px; text-shadow: 1px 1px 6px rgba(0,0,0,0.3); backdrop-filter: blur(6px); transition: all 0.3s ease;" data-fa="شبکه‌های اجتماعی و سایت‌ها" data-ru="Социальные сети и сайты">شبکه‌های اجتماعی و سایت‌ها</h2>
+          <p class="section-desc" data-fa="برای دسترسی سریع می‌توانید از لینک‌های زیر استفاده کنید:" data-ru="Для быстрого доступа используйте ссылки ниже:">برای دسترسی سریع می‌توانید از لینک‌های زیر استفاده کنید:</p>
           <ul class="social-links">
-            <li>  
-              <a href="https://ivan-omgru.ir/resume/" target="_blank" rel="noopener noreferrer" class="social-btn website" data-fa="وب‌سایت رزومه" data-ru="мой resume сайт">
-                <i class="fa-solid fa-globe"></i> وب‌سایت رزومه
-              </a>
-            </li> 
-            <li>
-              <a href="https://ivan-omgru.ir/youtube/" target="_blank" rel="noopener noreferrer" class="social-btn youtube" data-fa="سایت یوتیوب من" data-ru="мой  Ютуб site">
-                <i class="fa-brands fa-youtube"></i> سایت یوتیوب من
-              </a>
-            </li>
-            <li>
-              <a href="https://ivan-omgru.ir/insta/" target="_blank" rel="noopener noreferrer" class="social-btn instagram" data-fa="سایت اینستاگرام من" data-ru="мой Инстаграм site">
-                <i class="fa-brands fa-instagram"></i> سایت اینستاگرام من
-              </a>
-            </li>
-            <li>
-              <a href="https://t.me/ivan-omgru.ir" target="_blank" rel="noopener noreferrer" class="social-btn telegram" data-fa="کانال تلگرام" data-ru="Канал Телеграм">
-                <i class="fa-brands fa-telegram"></i> کانال تلگرام
-              </a>
-            </li>
-          </ul>  
+            <li><a href="https://ivan-omgru.ir/resume/" target="_blank" rel="noopener noreferrer" class="social-btn website" data-fa="وب‌سایت رزومه" data-ru="мой resume сайт"><i class="fa-solid fa-globe"></i> وب‌سایت رزومه</a></li>
+            <li><a href="https://ivan-omgru.ir/youtube/" target="_blank" rel="noopener noreferrer" class="social-btn youtube" data-fa="سایت یوتیوب من" data-ru="мой  Ютуб site"><i class="fa-brands fa-youtube"></i> سایت یوتیوب من</a></li>
+            <li><a href="https://ivan-omgru.ir/insta/" target="_blank" rel="noopener noreferrer" class="social-btn instagram" data-fa="سایت اینستاگرام من" data-ru="мой Инстаграм site"><i class="fa-brands fa-instagram"></i> سایت اینستاگرام من</a></li>
+            <li><a href="https://t.me/ivan-omgru.ir" target="_blank" rel="noopener noreferrer" class="social-btn telegram" data-fa="کانال تلگرام" data-ru="Канал Телеграм"><i class="fa-brands fa-telegram"></i> کانال تلگرام</a></li>
+          </ul>
         </div>
-      </div> <!-- پایان row -->
-    </div> <!-- پایان container -->
-  </div> <!-- پایان position-relative -->
+      </div>
+    </div>
+  </div>
 </section>
-        <!-- Footer Start -->
-        <footer id="footer" class="pt-50 pb-50">
-            <div class="container">
-                <div class="row text-right">
-                    <!-- ستون اول: متن و اطلاعات نویسنده -->
-                    <div class="col-md-3 col-sm-6 mb-3">
-                        <div class="contact-info">
-                         <h4 style="color:white;transition:all 0.3s;" onmouseover="this.style.color='green';this.style.fontWeight='bold';" onmouseout="this.style.color='white';this.style.fontWeight='';">ivan.omgru</h4>  
-                          <p class="footer-text lang" data-fa="«ممنون هستم از همراهی شما.»" data-ru="«Спасибо за вашу поддержку.»">
-                           «ممنون هستم از همراهی شما.»
-                          </p>
-                          <p class="footer-text lang" data-fa="تمامی اطلاعات در دسترس عموم قرار می‌گیرد — ابوالفضل شهاب (ivan.omgru)" data-ru="Вся информация доступна для публики — Абульфазль Шахаб (ivan.omgru)">
-                            تمامی اطلاعات در دسترس عموم قرار می‌گیرد — ابوالفضل شهاب (ivan.omgru)
-                          </p>
-                        </div>
-                    </div>
-                    <!-- ستون دوم: نویسنده و شماره تماس -->
-                    <div class="col-md-3 col-sm-6 mb-3">
-                        <div class="contact-info">
-                           <h5 class="lang" data-fa="نویسنده" data-ru="Автор: ">نویسنده :</h5>
-                            <p class="footer-text lang" data-fa="ابوالفضل شهاب | IVAN.OMGRU" data-ru="Абульфазль Шахаб | IVAN.OMGRU">
-                               <a href="https://ivan-omgru.ir" target="_blank" class="footer-link">ابوالفضل شهاب | IVAN.OMGRU</a>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- ستون سوم: ایمیل -->
-                    <div class="col-md-3 col-sm-6 mb-3">
-                        <div class="contact-info">
-                            <h5 class="lang" data-fa="ایمیل" data-ru="Эл. почта">ایمیل</h5>
-                            <p class="lang" data-fa="loverussian62@gmail.com" data-ru="loverussian62@gmail.com">
-                                <a href="mailto:loverussian62@gmail.com"
-                                  style="transition: all 0.3s;"
-                                   onmouseover="this.style.color='green'; this.style.fontWeight='bold';"
-                                   onmouseout="this.style.color=''; this.style.fontWeight='';">
-                                    loverussian62@gmail.com
-                                </a>
-                            </p>
-                        </div>
-                    </div>
+<!-- Footer Start -->
+<footer id="footer" class="pt-50 pb-50">
+  <div class="container">
+    <div class="row text-right">
+      <!-- ستون اول: متن و اطلاعات نویسنده -->
+      <div class="col-md-3 col-sm-6 mb-3">
+        <div class="contact-info">
+          <h5 class="footer-title">ivan.omgru</h5>
+          <p class="footer-text lang" data-fa="«ممنون هستم از همراهی شما.»" data-ru="«Спасибо за вашу поддержку.»">
+            «ممنون هستم از همراهی شما.»
+          </p>
+          <p class="footer-text lang" data-fa="تمامی اطلاعات در دسترس عموم قرار می‌گیرد — ابوالفضل شهاب (ivan.omgru)" data-ru="Вся информация доступна для публики — Абульфазль Шахаб (ivan.omgru)">
+            تمامی اطلاعات در دسترس عموم قرار می‌گیرد — ابوالفضل شهاب (ivan.omgru)
+          </p>
+        </div>
+      </div>
 
-                    <!-- ستون چهارم: آدرس -->
-                    <div class="col-md-3 col-sm-6 mb-3">
-                        <div class="contact-info">
-                            <h5 class="lang" data-fa="آدرس" data-ru="Адрес">آدرس</h5>
-                            <p class="lang" data-fa="ارتباط با من:" data-ru="Связь со мной:">ارتباط با من:</p>
-                            <a href="https://ivan-omgru.ir/resume/" class="lang"
-                             style="transition: all 0.3s;"
-                             onmouseover="this.style.color='green'; this.style.fontWeight='bold';"
-                             onmouseout="this.style.color=''; this.style.fontWeight='';">
-                               رزومه
-                            </a> |
-                            <a href="https://ivan-omgru.ir/insta/" class="lang"
-                             style="transition: all 0.3s;"
-                             onmouseover="this.style.color='green'; this.style.fontWeight='bold';"
-                             onmouseout="this.style.color=''; this.style.fontWeight='';">
-                             اینستاگرام
-                            </a> |
-                            <a href="https://ivan-omgru.ir/youtube/" class="lang"
-                             style="transition: all 0.3s;"
-                             onmouseover="this.style.color='green'; this.style.fontWeight='bold';"
-                             onmouseout="this.style.color=''; this.style.fontWeight='';">
-                               یوتیوب
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- شبکه‌های اجتماعی -->
-                <div class="row justify-content-center pt-20 text-center">
-                    <ul class="footer-logos list-inline">
-                      <li class="list-inline-item">
-                         <a href="https://www.instagram.com/ivan.omgru/" target="_blank">
-                           <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" />
-                         </a>
-                      </li>
-                      <li class="list-inline-item">
-                         <a href="https://youtube.com/@ivan.omgruss" target="_blank">
-                           <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" />
-                         </a>
-                      </li>
-                      <li class="list-inline-item">
-                          <a href="https://ivan-omgru.ir" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Website" style="width:24px; height:24px;" />
-                          </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="https://about.facebook.com/meta" target="_blank">
-                           <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />
-                        </a>
-                      </li>
-                    </ul>
-                </div>
+      <!-- ستون دوم: نویسنده -->
+      <div class="col-md-3 col-sm-6 mb-3">
+        <div class="contact-info">
+          <h5 class="lang" data-fa="نویسنده" data-ru="Автор: ">نویسنده :</h5>
+          <p class="footer-text lang" data-fa="ابوالفضل شهاب | IVAN.OMGRU" data-ru="Абульфазль Шахаб | IVAN.OMGRU">
+            <a href="https://ivan-omgru.ir" target="_blank" class="footer-link">ابوالفضل شهاب | IVAN.OMGRU</a>
+          </p>
+        </div>
+      </div>
 
-               <!-- خط جداکننده و کپی‌رایت -->
-               <div class="row text-center pt-20">
-                    <div class="col-md-12">
-                       <hr>
-                        <p class="copy lang pt-3" data-fa="© 2025 ابوالفضل شهاب | ivan.omgru. تمامی حقوق محفوظ است." data-ru="© 2025 Абульфазль Шахаб | ivan.omgru. Все права защищены.">
-                          © 2025 ابوالفضل شهاب | ivan.omgru. تمامی حقوق محفوظ است.
-                        </p>
-                        <p class="copy pt-3 lang" data-fa="سایت اصلی" data-ru="Официальный сайт">
-                           <a style="color: dodgerblue;" href="https://ivan-omgru.ir">IVAN OMGRU</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+      <!-- ستون سوم: ایمیل -->
+      <div class="col-md-3 col-sm-6 mb-3">
+        <div class="contact-info">
+          <h5 class="lang" data-fa="ایمیل" data-ru="Эл. почта">ایمیل</h5>
+          <p class="lang" data-fa="loverussian62@gmail.com" data-ru="loverussian62@gmail.com">
+            <a href="mailto:loverussian62@gmail.com" class="footer-link">loverussian62@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- ستون چهارم: آدرس -->
+      <div class="col-md-3 col-sm-6 mb-3">
+        <div class="contact-info">
+          <h5 class="lang" data-fa="آدرس" data-ru="Адрес">آدرس</h5>
+          <p class="lang" data-fa="ارتباط با من:" data-ru="Связь со мной:">ارتباط با من:</p>
+          <a href="https://ivan-omgru.ir/resume/" class="footer-link lang">رزومه</a> |
+          <a href="https://ivan-omgru.ir/insta/" class="footer-link lang">اینستاگرام</a> |
+          <a href="https://ivan-omgru.ir/youtube/" class="footer-link lang">یوتیوب</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- شبکه‌های اجتماعی -->
+    <div class="row justify-content-center pt-20 text-center">
+      <ul class="footer-logos list-inline">
+        <li class="list-inline-item">
+          <a href="https://www.instagram.com/ivan.omgru/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" />
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://youtube.com/@ivan.omgruss" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" />
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://ivan-omgru.ir" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Website" class="footer-icon-small" />
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://about.facebook.com/meta" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- کپی‌رایت -->
+    <div class="row text-center pt-20">
+      <div class="col-md-12">
+        <hr>
+        <p class="copy lang pt-3" data-fa="© 2025 ابوالفضل شهاب | ivan.omgru. تمامی حقوق محفوظ است." data-ru="© 2025 Абульфазль Шахаб | ivan.omgru. Все права защищены.">
+          © 2025 ابوالفضل شهاب | ivan.omgru. تمامی حقوق محفوظ است.
+        </p>
+        <p class="copy pt-3 lang" data-fa="سایت اصلی" data-ru="Официальный сайт">
+          <a href="https://ivan-omgru.ir" class="footer-main-link">IVAN OMGRU</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer End -->
+
   <!--Jquery js-->
   <script src="js/jquery.min.js"></script>
   <!--Bootstrap js-->
@@ -1870,49 +1734,7 @@
   <script src="js/ivan.js"></script>
   <script src="js/langugesvidio.js" defer></script>
   <script src="js/ivan2.js"defer></script>
-  <script>
-    // تابع برای تغییر زبان متا و عنوان
-    function switchLanguage(lang) {
-      // تغییر عنوان صفحه
-      const titleEl = document.querySelector('title');
-      if (titleEl && titleEl.dataset[lang]) {
-        titleEl.textContent = titleEl.dataset[lang];
-      }
-      // تغییر متا description
-      const desc = document.querySelector('meta[name="description"]');
-      if (desc && desc.dataset[lang]) {
-        desc.setAttribute('content', desc.dataset[lang]);
-      }
-      // تغییر متا keywords
-      const keywords = document.querySelector('meta[name="keywords"]');
-      if (keywords && keywords.dataset[lang]) {
-        keywords.setAttribute('content', keywords.dataset[lang]);
-      }
-      // تغییر متا author (اختیاری)
-      const author = document.querySelector('meta[name="author"]');
-      if (author && author.dataset[lang]) {
-        author.setAttribute('content', author.dataset[lang]);
-      }
-      // تغییر Open Graph title و description
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      const ogDesc = document.querySelector('meta[property="og:description"]');
-      if (ogTitle && ogTitle.dataset[lang]) ogTitle.setAttribute('content', ogTitle.dataset[lang]);
-      if (ogDesc && ogDesc.dataset[lang]) ogDesc.setAttribute('content', ogDesc.dataset[lang]);
-      // تغییر Twitter Card title و description
-      const twTitle = document.querySelector('meta[name="twitter:title"]');
-      const twDesc = document.querySelector('meta[name="twitter:description"]');
-      if (twTitle && twTitle.dataset[lang]) twTitle.setAttribute('content', twTitle.dataset[lang]);
-      if (twDesc && twDesc.dataset[lang]) twDesc.setAttribute('content', twDesc.dataset[lang]);
-      // تغییر hreflang
-      document.querySelectorAll('link[hreflang][data-' + lang + ']').forEach(link => {
-        link.setAttribute('title', link.dataset[lang]);
-      });
-    }
-    // مثال: تغییر زبان به روسی
-    document.addEventListener('DOMContentLoaded', () => {
-      // می‌توانید 'fa' یا 'ru' انتخاب کنید
-      switchLanguage('fa');
-    });
-  </script>
+  <script>function switchLanguage(lang){const t=document.querySelector('title');if(t&&t.dataset[lang])t.textContent=t.dataset[lang];const d=document.querySelector('meta[name="description"]');if(d&&d.dataset[lang])d.setAttribute('content',d.dataset[lang]);const k=document.querySelector('meta[name="keywords"]');if(k&&k.dataset[lang])k.setAttribute('content',k.dataset[lang]);const a=document.querySelector('meta[name="author"]');if(a&&a.dataset[lang])a.setAttribute('content',a.dataset[lang]);const o=document.querySelector('meta[property="og:title"]'),od=document.querySelector('meta[property="og:description"]');if(o&&o.dataset[lang])o.setAttribute('content',o.dataset[lang]);if(od&&od.dataset[lang])od.setAttribute('content',od.dataset[lang]);const twt=document.querySelector('meta[name="twitter:title"]'),twd=document.querySelector('meta[name="twitter:description"]');if(twt&&twt.dataset[lang])twt.setAttribute('content',twt.dataset[lang]);if(twd&&twd.dataset[lang])twd.setAttribute('content',twd.dataset[lang]);document.querySelectorAll('link[hreflang][data-'+lang+']').forEach(l=>l.setAttribute('title',l.dataset[lang]));}document.addEventListener('DOMContentLoaded',()=>switchLanguage('fa'));</script>
+  <script>document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("navbarCollapse"),t=document.getElementById("languageDropdown"),n=t.closest(".nav-item.dropdown");if(e&&t&&n){t.addEventListener("click",e=>{e.preventDefault(),e.stopPropagation(),window.innerWidth<=991.98&&e.stopImmediatePropagation(),n.classList.toggle("show")}),document.addEventListener("click",e=>{n.contains(e.target)||n.classList.remove("show")})}});</script>
 </body>
 </html>
