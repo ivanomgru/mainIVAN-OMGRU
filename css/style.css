@@ -810,7 +810,7 @@ nav.fixed-top .nav-item .nav-link:before {
 
 /* جلوه و انیمیشن موج دوم */
 #home-svg .p-curve-second {
-    fill: #f5f5f5; /* ← رنگ موج دوم */
+    fill: #cceeff; /* ← رنگ موج دوم */
     animation: curveWaveSecond 8s ease-in-out infinite alternate;
     filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
 }
@@ -1377,14 +1377,14 @@ section.portfolio .portfolio-items .item .item-content:hover .item-overlay .icon
 
 .testimonials .testimonial-item p {
     word-spacing: 2px;
-    color: #ffffff;
+    color: #000000;
 }
 
 .testimonials .testimonial-item h5 {
     font-size: 24px;
     font-weight: 600;
     margin: 20px 0 5px;
-    color: #ffffff;
+    color: #2600ff;
 }
 
 .testimonials .testimonial-item span {
@@ -1400,8 +1400,8 @@ section.portfolio .portfolio-items .item .item-content:hover .item-overlay .icon
   position: relative;
   overflow: hidden;
   padding: 2rem 1rem;
-  background-color: #0b0b0b;
-  color: #f5f5f5;
+  background-color: #70bfff;
+  color: #000000;
   font-family: "Vazir", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: right;
   line-height: 1.5;
@@ -1416,7 +1416,7 @@ section.portfolio .portfolio-items .item .item-content:hover .item-overlay .icon
 
 /* ستون اطلاعات نویسنده */
 footer .contact-info h5 {
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 0.3rem;
@@ -1425,13 +1425,13 @@ footer .contact-info h5 {
 }
 
 footer .contact-info h5:hover {
-  color: #00ff80;
+  color: #008500;
   font-weight: bold;
 }
 
 /* متن‌ها */
 footer .contact-info p {
-  color: #fff;
+  color: #292929;
   font-size: 14px;
   margin: 0.2rem 0;
 }
@@ -1446,20 +1446,21 @@ footer .contact-info p {
 
 #footer .footer-text:hover {
   transform: scale(1.05);
-  color: #00ff80;
+  color: #ff0000;
 }
 
 /* لینک‌ها */
 #footer .footer-link {
   text-decoration: none;
-  color: #00ff80;
+  color: #ffffff;
   font-weight: 500;
+  font-size: 20px;
   transition: transform 0.3s, color 0.3s;
 }
 
 #footer .footer-link:hover {
   transform: scale(1.05);
-  color: #ffffff;
+  color: #00ff80;
   font-weight: bold;
 }
 
@@ -1494,7 +1495,7 @@ footer .contact-info p {
 
 #footer .footer-logos li a:hover {
   transform: scale(1.15);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 10px rgba(0, 162, 255, 0.5);
 }
 
 #footer .footer-logos li a:hover img {
@@ -1509,13 +1510,13 @@ footer .contact-info p {
 
 /* خطوط جداکننده */
 #footer hr {
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(0, 0, 0, 0.685);
 }
 
 /* متن کپی‌رایت */
 #footer .copy {
   font-size: 0.85rem;
-  color: #ccc;
+  color: #000000;
   margin: 0.2rem 0;
 }
 
@@ -1763,7 +1764,7 @@ section.banner-blog .banner-caption h1 {
 /*---- تیکر خبر سبک و حرفه‌ای ----*/
 .news-ticker {
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #cceeff;
   color: #000;
   font-family: 'Vazir', sans-serif;
   font-size: 16px;
@@ -1842,42 +1843,8 @@ section.banner-blog .banner-caption h1 {
   font-family: "Vazirmatn", sans-serif;/* فونت فارسی وزیر */
   overflow: hidden;                     /* هیچ چیزی بیرون سکشن نمایش داده نشود */
 }
+/* .stats::before { content:""; position:absolute; inset:0; background:linear-gradient(135deg, rgba(255,255,255,0), rgba(255,255,255,0)); z-index:-1; } .stats::after { content:""; position:absolute; width:200%; height:200%; top:-50%; left:-50%; background:conic-gradient(from 0deg, rgba(255,21,0,0.747), rgb(38,0,255), transparent 70%); animation:rotateBg 12s linear infinite; z-index:-2; } @keyframes rotateBg { 100% { transform: rotate(360deg); } } */
 
-/* لایه تیره + گرادینت */
-.stats::before {
-  content: "";
-  position: absolute;
-  inset: 0; /* پوشش کامل سکشن */
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0)
-  );
-  z-index: -1; /* پشت محتوای اصلی */
-}
-
-/* افکت خطوط نورانی در پس‌زمینه */
-.stats::after {
-  content: "";
-  position: absolute;
-  width: 200%;       /* بزرگ‌تر از سکشن برای پوشش کامل */
-  height: 200%;
-  top: -50%;         /* مرکز چرخش */
-  left: -50%;        /* مرکز چرخش */
-  background: conic-gradient(
-    from 0deg,
-    rgba(255, 21, 0, 0.747),
-    rgb(38, 0, 255),
-    transparent 70%
-  );
-  animation: rotateBg 12s linear infinite; /* چرخش مداوم */
-  z-index: -2;       /* پشت لایه قبل */
-}
-
-/* انیمیشن چرخش */
-@keyframes rotateBg {
-  100% { transform: rotate(360deg); }
-}
 /* کارت آمار */
 .single-stat {
   text-align: center;
@@ -2547,4 +2514,103 @@ html body .portfolio-overlay-details h5{
   -webkit-background-clip: text !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
+}
+/* پس‌زمینه ثابت سکشن تماس */
+#contact .contact-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/background/Untitled-1.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* تصویر ثابت روی صفحه */
+  z-index: 0;
+}
+
+/* ===== Headings & Text ===== */
+#contact h2, 
+#contact .section-title {
+  display: inline-block;
+  max-width: 900px;
+  background-color: rgba(255,255,255,0.2);
+  color: #000;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.4;
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+#contact p,
+#contact address {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000;
+  text-shadow: 0 2px 10px rgba(255,255,255,0.75);
+  margin-bottom: 2rem;
+}
+
+#contact h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ff9100;
+  text-shadow: 0 2px 8px rgba(255,255,255,0.75);
+}
+/* ===== Social Icons ===== */
+#contact .social-icons {
+  display: flex;
+  justify-content: center;
+  justify-content-lg: flex-start;
+  margin-top: 2rem;
+  padding: 0;
+  gap: 1rem;
+  list-style: none;
+}
+
+#contact .social-icons li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background: rgba(0,0,0,0.3); /* پس‌زمینه نیمه شفاف برای برجستگی */
+  transition: all 0.3s ease;
+}
+
+/* ===== Hover Effect ===== */
+#contact .social-icons li a:hover {
+  transform: scale(1.2); /* بزرگ‌تر شدن */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5), 0 0 10px rgba(255,255,255,0.2); /* سایه سه‌بعدی */
+  background: rgba(0,0,0,0.6); /* رنگ پس‌زمینه کمی تیره‌تر */
+}
+
+#contact .social-icons li a.youtube { background: #FF0000; }
+#contact .social-icons li a.instagram { background: #E1306C; }
+
+/* ===== Animations ===== */
+#contact .text-fade {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  #contact .video-player {
+    margin: 1rem auto;
+  }
+  #contact h2, #contact .section-title {
+    font-size: 2rem;
+    padding: 0.8rem 1.5rem;
+  }
 }
