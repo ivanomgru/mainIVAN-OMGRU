@@ -655,12 +655,6 @@
   <svg class="about-bg" viewBox="0 0 800 200" preserveAspectRatio="none"
        style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; transform: rotateX(180deg);">
     <path fill="#cceeff" d="M0,150 C200,100 400,200 600,150 C700,120 800,160 800,150 L800,200 L0,200 Z">
-      <animate attributeName="d" dur="20s" repeatCount="indefinite"
-        values="
-          M0,150 C200,100 400,200 600,150 C700,120 800,160 800,150 L800,200 L0,200 Z;
-          M0,160 C220,120 380,180 620,160 C680,140 820,170 800,160 L800,200 L0,200 Z;
-          M0,150 C200,100 400,200 600,150 C700,120 800,160 800,150 L800,200 L0,200 Z
-        "/>
     </path>
   </svg>
 
@@ -1803,4 +1797,5 @@
   <script>document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("navbarCollapse"),t=document.getElementById("languageDropdown"),n=t.closest(".nav-item.dropdown");if(e&&t&&n){t.addEventListener("click",e=>{e.preventDefault(),e.stopPropagation(),window.innerWidth<=991.98&&e.stopImmediatePropagation(),n.classList.toggle("show")}),document.addEventListener("click",e=>{n.contains(e.target)||n.classList.remove("show")})}});</script>
 </body>
 </html>
+
 
