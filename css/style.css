@@ -556,7 +556,7 @@ nav.navbar .nav-item .nav-link:before {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #ff0000;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     -ms-transform: scaleX(0);
@@ -585,8 +585,8 @@ nav.fixed-top {
     padding-top: 13px;
     padding-bottom: 13px;
     background-color: #fff;
-    -webkit-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 18px 1px rgba(255, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(63, 63, 63, 0.438);
 }
 
 nav.fixed-top .logo {
@@ -611,7 +611,7 @@ nav.fixed-top .nav-item .nav-link {
 }
 
 nav.fixed-top .nav-item .nav-link:before {
-    background-color: #000;
+    background-color: #00aeff;
 }
 
 
@@ -805,14 +805,14 @@ nav.fixed-top .nav-item .nav-link:before {
 #home-svg .p-curve {
     fill: #f5f5f55e; /* ← رنگ موج اصلی */
     animation: curveWave 6s ease-in-out infinite alternate;
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 0 20px rgb(0, 0, 0));
 }
 
 /* جلوه و انیمیشن موج دوم */
 #home-svg .p-curve-second {
     fill: #cceeff; /* ← رنگ موج دوم */
     animation: curveWaveSecond 8s ease-in-out infinite alternate;
-    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 0 15px rgb(0, 0, 0));
 }
 
 /* انیمیشن حرکت ملایم موج اصلی */
@@ -848,8 +848,29 @@ nav.fixed-top .nav-item .nav-link:before {
   left: 0;
   height: 100vh;
   width: 100%;
-  z-index: 15;
+  z-index: 5;
 }
+/*----*/
+.cloud-separator,
+.testimonials {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.cloud-separator svg,
+.testimonials svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  line-height: 0;
+  border: none;
+}
+
+.cloud-separator {
+  margin-bottom: -5px; /* باعث میشه دو SVG کاملاً به هم بچسبن */
+}
+
 /*============ 5. About Section ============*/
 /* ======= ساختار تصویر درباره من ======= */
 section.about .about-img {
@@ -1120,7 +1141,7 @@ section.about .about-content .about-button {
 
 /* انیمیشن‌ها */
 @keyframes pulseIcon {
-  0%, 100% { transform: scale(1); opacity: 1; }
+  10%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.15); opacity: 0.8; }
 }
 
@@ -1568,7 +1589,7 @@ footer .contact-info p {
 
 section.banner-blog {
     height: 50vh;
-    background-color: #222;
+    background-color: #70bfff;
     position: relative;
     overflow: hidden;
 }
@@ -1633,7 +1654,7 @@ section.banner-blog .banner-caption h1 {
 .blog-detail ul.post-comment li {
     width: 100%;
     float: left;
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid #70bfff;
     padding: 15px 0;
     list-style: none;
 }
@@ -1661,7 +1682,7 @@ section.banner-blog .banner-caption h1 {
     float: right;
     font-size: 13px;
     font-weight: 800;
-    color: #222;
+    color: #ff0000;
 }
 
 .blog-detail ul.post-comment li .comment-info span {
@@ -1698,7 +1719,7 @@ section.banner-blog .banner-caption h1 {
     width: 100%;
     border: 0;
     font-size: 14px;
-    border-bottom: 2px solid #222;
+    border-bottom: 2px solid #ff0000;
     padding: 20px 0 0 10px;
     margin-bottom: 15px;
     height: 150px;
@@ -1764,68 +1785,45 @@ section.banner-blog .banner-caption h1 {
 /*---- تیکر خبر سبک و حرفه‌ای ----*/
 .news-ticker {
   width: 100%;
-  background-color: #cceeff;
-  color: #000;
+  background: #cceeff;
+  color: #000000;
   font-family: 'Vazir', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   overflow: hidden;
   white-space: nowrap;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
-  padding: 10px 0;
-  position: relative;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  direction: ltr;       /* همیشه LTR */
-  unicode-bidi: plaintext;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  padding: 8px 0;
+  direction: ltr;
 }
 
 .ticker-track {
   display: inline-flex;
   white-space: nowrap;
-  direction: ltr;       /* همیشه LTR */
-  unicode-bidi: plaintext;
   will-change: transform;
 }
 
 .ticker-track span {
   display: inline-block;
-  padding-left: 50px;   /* فاصله از چپ */
-  padding-right: 0;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.ticker-track span b, 
-.ticker-track span i {
-  text-shadow: 1px 1px 4px rgba(255, 0, 0, 0.6);
-}
-
-.ticker-track span:hover {
-  color: #ff4500;
-  transform: scale(1.1);
+  padding-left: 40px;
+  transition: color 0.2s ease;
 }
 
 .ticker-track span::before {
-  content: "📢";
-  margin-right: 5px;
-  animation: flash 1.5s infinite alternate;
+  content: "•";
+  color: #ccc900;
+  margin-right: 6px;
+  font-size: 18px;
+  vertical-align: middle;
 }
 
-@keyframes flash {
-  0% { color: #ff0000; }
-  50% { color: #ffae00; }
-  100% { color: #ff0000; }
+.ticker-track span:hover {
+  color: #ff0000;
 }
 
-@media (max-width: 768px){
-  .news-ticker { font-size: 14px; padding: 8px 0; }
-}
-
-@media (max-width: 480px){
-  .ticker-track span {
-    font-size: 13px;
-    padding-left: 30px;  /* فاصله از چپ */
-    padding-right: 0;
-  }
+@media (max-width: 768px) {
+  .news-ticker { font-size: 14px; padding: 6px 0; }
+  .ticker-track span { padding-left: 25px; }
 }
 
 /* ================================
@@ -1963,7 +1961,7 @@ section.banner-blog .banner-caption h1 {
   background: #000;
   aspect-ratio: 16 / 9;
   font-family: 'Vazir', sans-serif;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  /* box-shadow: 0 8px 24px rgba(204, 238, 255, 1); */
 }
 
 /* ویدیو */
