@@ -250,13 +250,12 @@ header.scrolled {
 header h1:hover {
   transform: scale(1.05); /* جلوه subtle hover */
 }
-
 .lang-switch {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
+/* کمی گردتر برای مدرن بودن زبان*/
 .lang-switch button {
   margin-left: 10px;
   padding: 6px 12px;
@@ -264,7 +263,7 @@ header h1:hover {
   border-radius: 8px; /* کمی گردتر برای مدرن بودن */
   cursor: pointer;
   background: #fff;
-  color: #007bff;
+  color: #00d4ff; /* رنگ متن فیروزه‌ای روشن برای تضاد بهتر */
   font-weight: 600;
   font-size: clamp(0.8rem, 1vw + 0.5rem, 1rem);
   transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
@@ -272,11 +271,12 @@ header h1:hover {
 }
 
 .lang-switch button:hover {
-  background: #007bff;
-  color: #fff;
+  background: #00d4ff; /* هاور متنفیروزه‌ای */
+  color: #fff; /* متن سفید روی پس‌زمینه فیروزه‌ای */
   transform: scale(1.1) rotate(-2deg);
-  box-shadow: 0 4px 15px rgba(0,123,255,0.4);
+  box-shadow: 0 4px 15px rgba(0,212,255,0.4);
 }
+
 /* =========================
    کانتینر و عنوان بخش‌ها (حرفه‌ای)
 ========================= */
@@ -914,3 +914,4 @@ footer .footer-copy {
   box-shadow: 0 0 6px rgba(0,212,255,0.35);
   outline: none;
 }
+
