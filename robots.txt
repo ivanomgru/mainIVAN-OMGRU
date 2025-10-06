@@ -7,3 +7,6 @@ Allow: /
 
 # Sitemap must use absolute URL
 Sitemap: https://ivan-omgru.ir/sitemap_index.xml
+Sitemap: https://ivan-omgru.ir/youtube/sitemapindex3.xml
+Sitemap: https://ivan-omgru.ir/resume/sitemap.xml
+Sitemap: https://ivan-omgru.ir/insta/sitemapindex2.xml
