@@ -1,4 +1,9 @@
+# robots.txt for ivan-omgru.ir
+# Last update: 2025-10-06
+# Allow all crawlers to access all pages
+
 User-agent: *
 Allow: /
 
+# Sitemap must use absolute URL
 Sitemap: https://ivan-omgru.ir/sitemap_index.xml
