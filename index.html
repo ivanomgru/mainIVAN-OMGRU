@@ -503,18 +503,19 @@
 </head>
 <body>
     <!-- لودینگ من-->
-<div id="loading-screen">
-  <img src="https://ivan-omgru.ir/images/background/Untitled-1.png" alt="Loading Background" id="loading-image">
-
-  <div class="spinner-container">
-    <div class="spinner red"></div>
-    <div class="spinner blue"></div>
-    <div class="spinner green"></div>
-  </div>
-
-  <p>ivan omgru در حال بارگذاری...</p>
-  <p>ivan omgru Загрузка...</p>
-</div>
+    <div id="loading-screen">
+      <video autoplay muted loop playsinline id="loading-video">
+       <source src="images/background/ivan-omgru_22.mp4" type="video/mp4">
+       مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+      </video>
+      <div class="spinner-container">
+        <div class="spinner red"></div>
+        <div class="spinner blue"></div>
+        <div class="spinner green"></div>
+      </div>
+      <p>ivan omgru در حال بارگذاری...</p>
+      <p>ivan omgru Загрузка...</p>
+    </div>
 
     <!--Navbar Start-->
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -1797,6 +1798,7 @@
   <script>document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("navbarCollapse"),t=document.getElementById("languageDropdown"),n=t.closest(".nav-item.dropdown");if(e&&t&&n){t.addEventListener("click",e=>{e.preventDefault(),e.stopPropagation(),window.innerWidth<=991.98&&e.stopImmediatePropagation(),n.classList.toggle("show")}),document.addEventListener("click",e=>{n.contains(e.target)||n.classList.remove("show")})}});</script>
 </body>
 </html>
+
 
 
 
