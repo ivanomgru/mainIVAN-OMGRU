@@ -336,19 +336,20 @@
 </style>
 
     <body>
-
-    <!-- لودینگ من-->
-    <div id="loading-screen">
-      <div class="spinner-container">
-        <div class="spinner red"></div>
-        <div class="spinner blue"></div>
-        <div class="spinner green"></div>
-      </div>
-      <p>ivan omgru در حال بارگذاری...</p>
-      <p>ivan omgru Загрузка...</p>
-    </div>
-
-        <!--Preloader End-->
+<div id="loading-screen">
+  <video autoplay muted loop playsinline id="loading-video">
+    <source src="https://ivan-omgru.ir/images/background/ivan-omgru_22.mp4" type="video/mp4">
+    مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+  </video>
+  <div class="spinner-container">
+    <div class="spinner"></div>
+    <div class="spinner"></div>
+    <div class="spinner"></div>
+  </div>
+  <p>در حال بارگذاری...</p>
+  <p>Загрузка...</p>
+</div>       
+      <!--Preloader End-->
 
         <!--Navbar Start-->
         <nav class="navbar navbar-expand-lg navbar-dark">
