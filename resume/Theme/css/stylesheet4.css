@@ -728,7 +728,7 @@ hr {
 
 /*=== 4.1 Navigation ===*/
 .navbar-light .navbar-nav .active > .nav-link {
-  color: #0c2f55;
+  color: #550c0c;
 }
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show {
   color: #0c2f55;
@@ -755,7 +755,7 @@ hr {
   left: 0;
   width: 100%;
   box-shadow: none;
-  border-bottom: 1px solid rgba(250, 250, 250, 0.3);
+  border-bottom: 1px solid rgba(255, 0, 0, 0.3);
 }
 .primary-menu.sticky-on {
   position: fixed;
@@ -3261,8 +3261,8 @@ input:-internal-autofill-selected {
   position: relative;
   overflow: hidden;
   padding: 3rem 1rem;
-  background-color: #0b0b0b; /* سیاه عمیق‌تر */
-  color: #f5f5f5;
+  background-color: #e7f7ff; /* سیاه عمیق‌تر */
+  color: #000000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: right;
   line-height: 1.6;
@@ -3284,20 +3284,20 @@ input:-internal-autofill-selected {
 
 #footer .footer-text:hover {
   transform: scale(1.05);
-  color: #00ff80;
+  color: #76d100;
 }
 
 /* لینک‌ها */
 #footer .footer-link {
   text-decoration: none;
-  color: #00ff80;
+  color: #000000;
   font-weight: 500;
   transition: transform 0.3s, color 0.3s;
 }
 
 #footer .footer-link:hover {
   transform: scale(1.05);
-  color: #ffffff;
+  color: #76d100;
 }
 
 /* شبکه‌های اجتماعی */
@@ -4299,5 +4299,116 @@ html body .portfolio-overlay-details h5{
     display: block;
     opacity: 1;
     visibility: visible;
+  }
+}
+/* پس‌زمینه ثابت سکشن تماس */
+
+  /* تصویر پس‌زمینه یک‌تکه */
+  #contact .contact-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    background-image: url('/images/background/Untitle8-1.jpg');
+    background-size: contain;       /* اندازه کل بخش */
+    background-position: center;  /* مرکز تصویر */
+    background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
+    z-index: 0;
+  }
+
+  /* محتوای روی تصویر */
+  #contact .position-relative {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* اگر بخوای سایز کامل 1920×1080 مناسب بشه */
+  #contact {
+    min-height: 1080px; /* ارتفاع حداقل 1080 */
+  }
+
+/* ===== Headings & Text ===== */
+#contact h2, 
+#contact .section-title {
+  display: inline-block;
+  max-width: 900px;
+  background-color: rgba(255,255,255,0.2);
+  color: #000;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.4;
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+#contact p,
+#contact address {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000000;
+  text-shadow: 0 2px 10px rgba(255,255,255,0.75);
+  margin-bottom: 2rem;
+}
+
+#contact h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ff9100;
+  text-shadow: 0 2px 8px rgba(255,255,255,0.75);
+}
+/* ===== Social Icons ===== */
+#contact .social-icons {
+  display: flex;
+  justify-content: center;
+  justify-content-lg: flex-start;
+  margin-top: 2rem;
+  padding: 0;
+  gap: 1rem;
+  list-style: none;
+}
+
+#contact .social-icons li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background: rgba(0,0,0,0.3); /* پس‌زمینه نیمه شفاف برای برجستگی */
+  transition: all 0.3s ease;
+}
+
+/* ===== Hover Effect ===== */
+#contact .social-icons li a:hover {
+  transform: scale(1.2); /* بزرگ‌تر شدن */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5), 0 0 10px rgba(255,255,255,0.2); /* سایه سه‌بعدی */
+  background: rgba(0,0,0,0.6); /* رنگ پس‌زمینه کمی تیره‌تر */
+}
+
+#contact .social-icons li a.youtube { background: #FF0000; }
+#contact .social-icons li a.instagram { background: #E1306C; }
+
+/* ===== Animations ===== */
+#contact .text-fade {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  #contact .video-player {
+    margin: 1rem auto;
+  }
+  #contact h2, #contact .section-title {
+    font-size: 2rem;
+    padding: 0.8rem 1.5rem;
   }
 }
