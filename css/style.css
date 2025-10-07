@@ -17,30 +17,21 @@
         15. Mobile Responsive
 ==================================*/
 /*============ 1. Body and Core Css ============*/
-/* ===== Font Face Vazir ===== */
+
 @font-face {
     font-family: "Vazir";
-    src: url("../fonts/Vazir.woff2") format("woff2"),
-         url("../fonts/Vazir.woff") format("woff"),
-         url("../fonts/Vazir.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+    src: url(../fonts/Vazir.ttf);
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none !important;
+    list-style: none !important;
+    outline: none !important;
 }
 
-/* ===== Font Awesome Webfont ===== */
-@font-face {
-    font-family: "FontAwesome";
-    src: url("../fonts/fontawesome-webfont.eot");
-    src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/fontawesome-webfont.woff2") format("woff2"),
-         url("../fonts/fontawesome-webfont.woff") format("woff"),
-         url("../fonts/fontawesome-webfont.ttf") format("truetype"),
-         url("../fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 h1,
 h2,
 h3,
@@ -2329,7 +2320,7 @@ section.banner-blog .banner-caption h1 {
 
 /* دکمه اصلی زبان */
 .nav-link.dropdown-toggle {
-  color: #22222200;
+  color: #f8000000;
   font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -2352,9 +2343,9 @@ section.banner-blog .banner-caption h1 {
   min-width: 140px;
   padding: 0.4rem 0;
   background: #fffdfd00;
-  border: 1px solid rgba(255, 0, 0, 0.911);
+  border: 1px solid rgb(255, 0, 0);
   border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(224, 6, 6, 0.993);
+  box-shadow: 0 8px 20px rgba(0, 174, 255, 0.993);
   z-index: 1000;
 }
 
@@ -2367,7 +2358,7 @@ section.banner-blog .banner-caption h1 {
 
 /* آیتم‌های داخل منو */
 .dropdown-item {
-  color: #ff0202;
+  color: #ffffff;
   padding: 0.6rem 1rem;
   text-align: center;
   font-weight: 500;
@@ -2376,8 +2367,8 @@ section.banner-blog .banner-caption h1 {
 
 /* افکت hover روی آیتم‌ها */
 .dropdown-item:hover {
-  background: #f8f9fa;
-  color: #000000;
+  background: #ffffff;
+  color: #00e1ff;
 }
 
 /* افکت باز شدن منو */
