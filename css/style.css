@@ -1,21 +1,3 @@
-/*==================================
-        Table of Content
-        1. Body and Core Css
-        2. Preloader
-        3. Navbar
-        4. Banner Section
-        5. About Section
-        6. Services Section
-        7. Stats Section
-        8. Portfolio Section
-        9. Blogs Section
-        10. Testimonial Section
-        11. Contact Form Section
-        12. Footer
-        13. Blogs Page
-        14. Single Blog Page
-        15. Mobile Responsive
-==================================*/
 /*============ 1. Body and Core Css ============*/
 
 @font-face {
@@ -2130,7 +2112,7 @@ section.banner-blog .banner-caption h1 {
   font-weight: 600;
   font-size: 1rem;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   transition: all 0.35s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   position: relative;
@@ -2358,7 +2340,7 @@ section.banner-blog .banner-caption h1 {
 
 /* آیتم‌های داخل منو */
 .dropdown-item {
-  color: #ffffff;
+  color: #ff0000;
   padding: 0.6rem 1rem;
   text-align: center;
   font-weight: 500;
