@@ -180,10 +180,12 @@
         }, { passive: true });
       });
     } catch(e){ console.warn('parallax init error', e); }
-
-
     /* ======= Universal video-player initializer (multiple players safe + lazy load) ======= */
     (function initVideoPlayers(){
+      if (!document.querySelector('.video-player')) {
+       console.log('Video player not found — skipping init.');
+       return;
+      }
       try {
         function videoFormatTime(sec){
           if(isNaN(sec) || !isFinite(sec)) return '0:00';
@@ -358,10 +360,7 @@
         });
       } catch(e){ console.warn('video players init error', e); }
     })(); // initVideoPlayers end
-
   }); // DOMContentLoaded end
-
   // expose setLanguage globally
   window.setLanguage = setLanguage;
-
 })(); // IIFE end
