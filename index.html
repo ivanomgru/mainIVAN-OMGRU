@@ -503,7 +503,7 @@
 </head>
 <body>
     <!-- لودینگ من-->
-    <div id="loading-screen">
+    <!-- <div id="loading-screen">
       <video autoplay muted loop playsinline id="loading-video">
        <source src="https://ivan-omgru.ir/images/background/ivan-omgru_22.mp4" type="video/mp4">
        مرورگر شما از ویدیو پشتیبانی نمی‌کند.
@@ -515,7 +515,7 @@
       </div>
       <p>ivan omgru در حال بارگذاری...</p>
       <p>ivan omgru Загрузка...</p>
-    </div>
+    </div> -->
     <!--Navbar Start-->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
@@ -1699,8 +1699,8 @@
       <div class="col-md-3 col-sm-6 mb-3">
         <div class="contact-info">
           <h5 class="lang" data-fa="ایمیل" data-ru="Эл. почта">ایمیل</h5>
-          <p class="lang" data-fa="loverussian62@gmail.com" data-ru="loverussian62@gmail.com">
-            <a href="mailto:loverussian62@gmail.com" class="footer-link">loverussian62@gmail.com</a>
+          <p class="lang" style="transition:color .25s ease" onmouseover="this.style.color='red'" onmouseout="this.style.color=''">
+            <a href="https://mail.google.com/mail/?view=cm&to=loverussian62@gmail.com" target="_blank">loverussian62@gmail.com</a>
           </p>
         </div>
       </div>
@@ -1709,10 +1709,10 @@
       <div class="col-md-3 col-sm-6 mb-3">
         <div class="contact-info">
           <h5 class="lang" data-fa="آدرس" data-ru="Адрес">آدرس</h5>
-          <p class="lang" data-fa="ارتباط با من:" data-ru="Связь со мной:">ارتباط با من:</p>
-          <a href="https://ivan-omgru.ir/resume/" class="footer-link lang">رزومه</a> |
-          <a href="https://ivan-omgru.ir/insta/" class="footer-link lang">اینستاگرام</a> |
-          <a href="https://ivan-omgru.ir/youtube/" class="footer-link lang">یوتیوب</a>
+          <p class="lang" data-fa="ارتباط با من:" data-ru="Связь со мной:" style="transition:color .25s ease;" onmouseover="this.style.color='red'" onmouseout="this.style.color=''">ارتباط با من:</p>
+          <a href="https://ivan-omgru.ir/resume/" class="footer-link lang" data-fa="(رزومه)" data-ru="(Резюме)">رزومه</a>
+          <a href="https://ivan-omgru.ir/insta/" class="footer-link lang" data-fa="(اینستاگرام)" data-ru="(Инстаграм)">اینستاگرام</a>
+          <a href="https://ivan-omgru.ir/youtube/" class="footer-link lang" data-fa="(یوتیوب)" data-ru="(Ютуб)">یوتیوب</a>
         </div>
       </div>
     </div>
@@ -1784,5 +1784,4 @@
   <script>document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("navbarCollapse"),t=document.getElementById("languageDropdown"),n=t.closest(".nav-item.dropdown");if(e&&t&&n){t.addEventListener("click",e=>{e.preventDefault(),e.stopPropagation(),window.innerWidth<=991.98&&e.stopImmediatePropagation(),n.classList.toggle("show")}),document.addEventListener("click",e=>{n.contains(e.target)||n.classList.remove("show")})}});</script>
 </body>
 </html>
-
 
