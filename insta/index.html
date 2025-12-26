@@ -260,7 +260,7 @@
 <body>
 <!-- ویدیو پس‌زمینه -->
 <div class="video-background">
-  <video autoplay muted loop playsinline>
+  <video autoplay muted loop playsinline id="bg-video">
     <source src="media/back/background.mp4" type="video/mp4">
     مرورگر شما از ویدیو پشتیبانی نمی‌کند.
   </video>
@@ -498,7 +498,21 @@ document.addEventListener('click', function(e) {
   }
 });       
 </script>       
+<script>
+function resizeVideo() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  
+  const videoBg = document.getElementById('bg-video');
+  videoBg.style.height = `${window.innerHeight}px`;
+}
+
+window.addEventListener('resize', resizeVideo);
+window.addEventListener('orientationchange', resizeVideo);
+window.addEventListener('load', resizeVideo);
+</script>       
 </body>
 </html>
+
 
 
