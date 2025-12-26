@@ -14,13 +14,18 @@
     outline: none !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #222;
+/* همه‌ی متن‌ها */
+h1, h2, h3, h4, h5, h6,
+p, a, li {
+    color: #000;
+    transition: transform 0.25s ease, font-weight 0.25s ease;
+}
+
+/* افکت هاور: بزرگ و پررنگ */
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover,
+p:hover, span:hover, a:hover, li:hover {
+    transform: scale(1.05);
+    font-weight: 700;
 }
 
 img {
@@ -1406,7 +1411,7 @@ section.portfolio .portfolio-items .item .item-content:hover .item-overlay .icon
   background-color: #70bfff;
   color: #000000;
   font-family: "Vazir", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: right;
+  text-align: center;
   line-height: 1.5;
 }
 
@@ -1434,7 +1439,7 @@ footer .contact-info h5:hover {
 
 /* متن‌ها */
 footer .contact-info p {
-  color: #292929;
+  color: #000000;
   font-size: 14px;
   margin: 0.2rem 0;
 }
@@ -1475,7 +1480,7 @@ footer .contact-info p {
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 #footer .footer-logos li a {
@@ -2398,103 +2403,6 @@ section.banner-blog .banner-caption h1 {
   }
 }
 
-/* ==================================================================
-   Global base (کاهش تکرار)
-   ==================================================================*/
-html,body{height:100%;}
-body{
-  font-family: var(--font-main);
-  color: var(--text-light);
-  background-attachment: scroll; /* اگر نیاز ندارید، می‌توانید آن را حذف کنید */
-}
-
-/* Prefers-reduced-motion: احترام به تنظیمات کاربر */
-@media (prefers-reduced-motion: reduce){
-  *{animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important;}
-}
-
-/* Mobile/perf fallback: خاموش کردن انیمیشن‌های سنگین روی صفحه‌های کوچک */
-@media (max-width: 768px){
-  /* انیمیشن‌های پس‌زمینه و rotate های سنگین را کاهش یا حذف کن */
-  .stats::after, .edu-section::after, #portfolio::after{ animation: none !important; }
-  .single-stat:hover, .edu-card:hover, .portfolio-box:hover{ transform: none !important; box-shadow: none !important; }
-}
-
-@keyframes rotateBg-optimized {
-  0%{ transform: rotate(0deg); }
-  100%{ transform: rotate(360deg); }
-}
-@keyframes pulseIcon-optimized{
-  0%,100%{ transform: scale(1); opacity:1; }
-  50%{ transform: scale(1.12); opacity:0.9; }
-}
-@keyframes fadeInUp-optimized{
-  0%{ opacity:0; transform: translateY(18px); }
-  100%{ opacity:1; transform: translateY(0); }
-}
-/* ==================================================================
-   Vendor prefixes and shared helpers
-   ==================================================================*/
-/* helper for gradient text cross-browser */
-.gradient-text{ 
-  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text; /* non-standard for some browsers but harmless */
-}
-html body .stats::after,
-html body .edu-section::after,
-html body #portfolio::after{
-  animation-name: rotateBg-optimized !important;
-  animation-duration: 12s !important;
-  animation-timing-function: linear !important;
-  animation-iteration-count: infinite !important;
-}
-
-/* آیکون‌ها و پالس */
-html body .stat-icon,
-html body .portfolio-overlay-details p,
-html body .edu-card h3{
-  animation-name: pulseIcon-optimized !important;
-  animation-duration: 2s !important;
-  animation-iteration-count: infinite !important;
-}
-
-/* fadeInUp عمومی */
-html body .edu-title,
-html body .edu-intro,
-html body .edu-card,
-html body #portfolio h2{
-  animation-name: fadeInUp-optimized !important;
-  animation-duration: 1s !important;
-  animation-fill-mode: both !important;
-}
-
-/* Reduce motion intensity on lower-power devices using prefers-reduced-motion media query */
-@media (prefers-reduced-motion: reduce){
-  html body .stats::after,
-  html body .edu-section::after,
-  html body #portfolio::after{ animation: none !important; }
-  html body .stat-icon, html body .portfolio-overlay-details p, html body .edu-card h3{ animation: none !important; }
-}
-
-/* ==================================================================
-   Additional breakpoint for tablets
-   ==================================================================*/
-@media (max-width: 768px){
-  .single-stat h2{ font-size: 44px !important; }
-  .stat-icon{ font-size: 52px !important; }
-}
-
-.reduce-animations *{ animation: none !important; transition: none !important; }
-/*=====================*/
-html body .stat-icon,
-html body .edu-card h3,
-html body #portfolio h2,
-html body .portfolio-overlay-details h5{
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-}
 /* پس‌زمینه ثابت سکشن تماس */
 #contact .contact-bg {
   position: absolute;
