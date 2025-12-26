@@ -83,31 +83,78 @@
 <link rel="stylesheet" href="https://ivan-omgru.ir/youtube/css/ivan.css">
 <link rel="stylesheet" href="https://ivan-omgru.ir/youtube/css/ivan.1.css">
 <style>
-/* 🚀 جلوگیری از بهم ریختن قالب در موبایل فارسی */
+/* 🌐 تنظیمات عمومی ویدیو بک‌گراند */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  background: #000; /* پیش‌زمینه سیاه برای جلوگیری از لبه سفید */
+}
+
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.7);
+  transition: filter 0.3s;
+}
+
+.video-background .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+/* 📱 مخصوص موبایل فارسی */
+html[lang="fa"], body[lang="fa"] {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* حذف اسکرول افقی */
+  overflow-y: auto;   /* اسکرول عمودی فعال */
+}
+
+[dir="rtl"] * {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* تصحیح اندازه ویدیو در موبایل */
 @media only screen and (max-width: 768px) {
-  html[lang="fa"], body[lang="fa"] {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    overflow-x: hidden !important; /* حذف اسکرول افقی */
-  }
-
-  [dir="rtl"] * {
-    max-width: 100% !important;
-    box-sizing: border-box;
-    word-wrap: break-word;
-  }
-
-  /* مخصوص سوایپر که توی RTL قالبو می‌ندازه بیرون */
-  [dir="rtl"] .swiper {
-    direction: ltr !important;
-  }
-  [dir="rtl"] .swiper-slide {
-    direction: rtl !important;
+  .video-background {
+    height: 100vh; /* اولیه */
   }
 }
-        
 </style>
+
+<script>
+// 🚀 تصحیح ارتفاع واقعی ویدیو در موبایل فارسی
+function fixVideoHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  const videoBg = document.querySelector('.video-background');
+  if(videoBg){
+    videoBg.style.height = `${window.innerHeight}px`;
+  }
+}
+
+window.addEventListener('resize', fixVideoHeight);
+window.addEventListener('load', fixVideoHeight);
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -501,3 +548,4 @@ document.addEventListener('click', function(e) {
 </script>       
 </body>
 </html>
+
