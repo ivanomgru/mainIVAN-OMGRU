@@ -17,7 +17,6 @@
 /* همه‌ی متن‌ها */
 h1, h2, h3, h4, h5, h6,
 p, a, li {
-    color: #000;
     transition: transform 0.25s ease, font-weight 0.25s ease;
 }
 
@@ -44,12 +43,12 @@ body {
     position: relative;
     font-size: 16px;
     line-height: 1.65;
-    color: #484848;
     -webkit-font-smoothing: antialiased;
+    text-align: start;
 }
 
 p {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.65;
     font-family: "Vazir";
 }
@@ -57,7 +56,6 @@ p {
 span {
     display: inline-block;
 }
-
 
 /*===========Margin And Paddings============*/
 
@@ -333,7 +331,7 @@ span {
 /*===========Helpers Css============*/
 
 .heading {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .heading h6 {
@@ -359,9 +357,11 @@ span {
 
 .main-btn {
     display: inline-block;
-    background-color: #222;
-    padding: 10px 20px;
-    border: 2px solid #222;
+    background-color: hsl(342, 75%, 55%);
+    padding: 10px 25px;
+    border: 2px solid #0077ff;
+    border-radius: 10px;
+    border-end-end-radius: 20px;
     color: #fff;
     text-transform: uppercase;
     -webkit-transition: .2s background-color ease;
@@ -407,9 +407,7 @@ blockquote {
 
 
 /*============ 2. Preloader  ============*/
-
-
-/* =========================
+/* ========================
    لودینگ اسکرین (حرفه‌ای رنگی)
 ========================= */
 #loading-screen {
@@ -418,7 +416,7 @@ blockquote {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000; /* پس‌زمینه مشکی */
+  background: #000000; /* پس‌زمینه مشکی */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -453,9 +451,9 @@ blockquote {
 
 /* اسپینر پایه */
 .spinner {
-  width: 35px;
-  height: 35px;
-  border: 4px solid transparent;
+  width: 45px;
+  height: 45px;
+  border: 5px solid transparent;
   border-top-color: currentColor;
   border-radius: 50%;
   animation: spin 1s linear infinite;
@@ -477,8 +475,115 @@ blockquote {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg);}
+  10% { transform: rotate(0deg);}
   100% { transform: rotate(360deg);}
+}
+
+/* ==============================
+   🌐 منوی زبان (Language Dropdown)
+   ============================== */
+
+/* ظاهر کلی آیتم منوی زبان */
+.nav-item.dropdown {
+  position: relative;
+}
+
+/* دکمه اصلی زبان */
+.nav-link.dropdown-toggle {
+  color: #f80000;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* افکت hover روی دکمه زبان */
+.nav-link.dropdown-toggle:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #ffffff, #ff9900);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* منوی بازشونده */
+.dropdown-menu {
+  display: none; /* در حالت عادی مخفی */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 140px;
+  padding: 0.4rem 0;
+  background: #71ade6;
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 174, 255, 0.993);
+  z-index: 1000;
+}
+
+/* باز شدن منو با hover یا کلاس show */
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown.show .dropdown-menu {
+  display: block;
+  animation: fadeInMenu 0.25s ease;
+}
+
+/* آیتم‌های داخل منو */
+.dropdown-item {
+  color: #ff0000;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* افکت hover روی آیتم‌ها */
+.dropdown-item:hover {
+  background: #ff0000;
+  color: #00e1ff;
+}
+
+/* افکت باز شدن منو */
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   📱 حالت موبایل (زیر 768px)
+   =============================== */
+@media (max-width: 767px) {
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    background: #ffffff00;
+  }
+
+  .dropdown-item {
+    text-align: center;
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .dropdown-item:last-child {
+    border-bottom: none;
+  }
+
+  /* افکت لمس */
+  .dropdown-item:active {
+    background: #ffecd2;
+    color: #d35400;
+  }
 }
 
 /*============ 3. Navbar ============*/
@@ -487,7 +592,7 @@ nav.navbar {
     position: absolute;
     width: 100%;
     top: 0;
-    z-index: 999;
+    z-index: 99;
     padding-top: 30px;
     padding-bottom: 20px;
     -webkit-transition: all .5s ease;
@@ -496,11 +601,11 @@ nav.navbar {
 }
 
 nav.navbar .logo {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #fff;
+    letter-spacing: 2px;
+    color: hsl(342, 75%, 55%);
     font-family: "Vazir";
 }
 
@@ -514,9 +619,9 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
 
 nav.navbar .nav-item {
     font-size: 13px;
-    font-weight: 400;
-    padding-right: 13px;
-    padding-left: 13px;
+    font-weight: 500;
+    padding-right: 15px;
+    padding-left: 15px;
     color: #fff;
     text-transform: uppercase;
 }
@@ -530,7 +635,9 @@ nav.navbar .nav-item:last-child {
 }
 
 nav.navbar .nav-item .nav-link {
-    color: #fff;
+    color: hsl(342, 75%, 55%);
+    background-color: #c6daf4;
+    border-radius: 7px;
     position: relative;
     text-decoration: none;
     padding: 0;
@@ -571,9 +678,9 @@ nav.fixed-top {
     position: fixed;
     padding-top: 13px;
     padding-bottom: 13px;
-    background-color: #fff;
+    background: #71ade693;
     -webkit-box-shadow: 0px 0px 18px 1px rgba(255, 0, 0, 0.1);
-    box-shadow: 0 8px 20px rgba(63, 63, 63, 0.438);
+    box-shadow: 0 8px 20px rgba(63, 63, 63, 0.445);
 }
 
 nav.fixed-top .logo {
@@ -620,7 +727,7 @@ nav.fixed-top .nav-item .nav-link:before {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #000;
+    background-color: #0000001a;
     z-index: 2;
     opacity: .5;
 }
@@ -637,15 +744,15 @@ nav.fixed-top .nav-item .nav-link:before {
 }
 
 .banner .banner-caption h1 {
-    font-size: 88px;
-    font-weight: 900;
-    color: #fff;
+    font-size: 45px;
+    font-weight: 700;
+    color: #111;
 }
 
 .banner .banner-caption p {
     font-size: 24px;
     font-family: "Vazir";
-    color: #eee;
+    color: hsl(342, 75%, 55%);
 }
 
 .cd-headline {
@@ -700,9 +807,9 @@ nav.fixed-top .nav-item .nav-link:before {
     position: absolute;
     top: 10%;
     right: 0;
-    width: 2px;
+    width: 3px;
     height: 70%;
-    background-color: #aebcb9;
+    background-color: #00ffc8;
 }
 
 .cd-headline.clip b {
@@ -723,7 +830,7 @@ nav.fixed-top .nav-item .nav-link:before {
 }
 
 .arrow a {
-    color: #fff;
+    color: #000000;
 }
 
 .bounce {
@@ -779,42 +886,42 @@ nav.fixed-top .nav-item .nav-link:before {
     z-index: -1;
 }
 /*===Creative Page===*/
-#home-svg {
+/* #home-svg {
     position: absolute;
-    bottom: -3px;
+    bottom: 0;
     left: 0;
     width: 100vw;
     height: 200px;
     z-index: 3;
-}
+} */
 
 /* جلوه و انیمیشن موج اصلی */
-#home-svg .p-curve {
-    fill: #f5f5f55e; /* ← رنگ موج اصلی */
+/* #home-svg .p-curve {
+    fill: #95c3ff8f;
     animation: curveWave 6s ease-in-out infinite alternate;
     filter: drop-shadow(0 0 20px rgb(0, 0, 0));
-}
+} */
 
 /* جلوه و انیمیشن موج دوم */
-#home-svg .p-curve-second {
-    fill: #cceeff; /* ← رنگ موج دوم */
+/* #home-svg .p-curve-second {
+    fill: #cceeff;
     animation: curveWaveSecond 8s ease-in-out infinite alternate;
     filter: drop-shadow(0 0 15px rgb(0, 0, 0));
-}
+} */
 
 /* انیمیشن حرکت ملایم موج اصلی */
-@keyframes curveWave {
+/* @keyframes curveWave {
     30% { transform: translateY(5px); }
     50% { transform: translateY(-10px); }
-    100% { transform: translateY(3px); }
-}
+    100% { transform: translateY(5px); }
+} */
 
 /* انیمیشن حرکت ملایم موج دوم با تاخیر */
-@keyframes curveWaveSecond {
+/* @keyframes curveWaveSecond {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-22px); }
     100% { transform: translateY(3px); }
-}
+} */
 
 /*===Center Banner Captions===*/
 .banner-centered .banner-caption {
@@ -877,19 +984,18 @@ section.about .about-img:before {
     z-index: 0;
     transform: rotate(-2deg);
 }
-
 section.about .about-img img {
     position: relative;
     width: 100%;
     z-index: 1;
     -webkit-box-shadow: 0 0 85px 0 rgba(0, 0, 0, 0.14);
-    box-shadow: 0 0 85px 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 0 0 85px 0 rgba(255, 0, 0, 0.14);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 section.about .about-img img:hover {
     transform: scale(1.05) rotate(1deg);
-    box-shadow: 0 15px 50px rgba(0,0,0,0.25);
+    box-shadow: 0 15px 50px rgba(255, 0, 0, 0.25);
 }
 
 /* ======= محتوای درباره من ======= */
@@ -958,7 +1064,7 @@ section.about .about-content .social-icons a {
 }
 
 section.about .about-content .social-icons a .fa {
-    color: #fff;
+    color: #ffffff;
     transition: 0.3s all ease;
 }
 
@@ -978,7 +1084,7 @@ section.about .about-content .about-button {
 
 /* ======= بلوک مستقل برای هر بخش درباره من ======= */
 .about-block {
-    margin-bottom: 60px;
+    margin-bottom: 1px;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s ease;
@@ -1116,8 +1222,8 @@ section.about .about-content .about-button {
   border-radius: 25px;
   font-weight: 600;
   text-decoration: none;
-  background: linear-gradient(45deg, #ff6f61, #ffdd57);
-  color: #000;
+  background: linear-gradient(45deg, #ff6f61, #ab5fe9);
+  color: #000000;
   transition: all 0.3s ease;
 }
 .service-item a:hover {
@@ -1281,8 +1387,8 @@ section.portfolio .portfolio-items .item .item-content:hover .item-overlay .icon
 }
 
 .blogs .blog-item {
-    -webkit-box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 30px -4px rgba(255, 93, 93, 0.1);
+    box-shadow: 0px 0px 30px -4px rgba(83, 83, 83, 0.507);
 }
 
 .blogs .blog-item .blog-img {
@@ -1418,8 +1524,8 @@ section.portfolio .portfolio-items .item .item-content:hover .item-overlay .icon
 /* Reset ستون و container */
 #footer .container,
 #footer .row {
-  margin: 0;
-  padding: 0;
+  margin: 1;
+  padding: 0px;
 }
 
 /* ستون اطلاعات نویسنده */
@@ -1576,7 +1682,7 @@ footer .contact-info p {
 
 section.banner-blog {
     height: 50vh;
-    background-color: #70bfff;
+    background-color: #3a3a3a;
     position: relative;
     overflow: hidden;
 }
@@ -1780,7 +1886,7 @@ section.banner-blog .banner-caption h1 {
   white-space: nowrap;
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
-  padding: 8px 0;
+  padding: 5px 0;
   direction: ltr;
 }
 
@@ -1937,133 +2043,7 @@ section.banner-blog .banner-caption h1 {
   .single-stat { padding: 35px 20px; }
   .single-stat h2 { font-size: 34px; }
 }
-/* --- سبک کلی ویدیوپلیر (مدرن شبیه یوتیوب) --- */
-.video-player {
-  position: relative;
-  width: 80%;
-  max-width: 960px;
-  margin: 2rem auto;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #000;
-  aspect-ratio: 16 / 9;
-  font-family: 'Vazir', sans-serif;
-  /* box-shadow: 0 8px 24px rgba(204, 238, 255, 1); */
-}
 
-/* ویدیو */
-.video-player video {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-/* متن/overlay روی ویدیو */
-.video-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 600;
-  text-align: center;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.05));
-  pointer-events: none;
-  padding: 1rem;
-}
-
-/* کنترل‌ها */
-.video-controls {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem 0.8rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.video-player:hover .video-controls {
-  opacity: 1;
-}
-
-/* نوار پیشرفت */
-#progressBar {
-  width: 100%;
-  cursor: pointer;
-  -webkit-appearance: none;
-  appearance: none;
-  height: 5px;
-  border-radius: 5px;
-  background: #555;
-}
-#progressBar::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #ff0000; /* رنگ قرمز یوتیوب */
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-#progressBar::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-}
-
-/* ردیف دکمه‌ها */
-.controls-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.3rem;
-  gap: 0.5rem;
-}
-
-/* دکمه‌ها */
-.controls-left, .controls-right {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.controls-left button, .controls-right button {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.15s ease, color 0.2s ease;
-}
-
-.controls-left button:hover, .controls-right button:hover {
-  transform: scale(1.2);
-  color: #ff0000; /* قرمز یوتیوبی روی hover */
-}
-.video-bg {
-  position: fixed;       /* ثابت پشت کل صفحه */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;           /* پشت همه محتوا */
-}
-
-.video-bg video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
 /* ==== بخش شبکه‌های اجتماعی ==== */
 .social-section {
   animation: fadeInUp 1s ease forwards;
@@ -2252,7 +2232,7 @@ section.banner-blog .banner-caption h1 {
     }
 }
 
-/* ======= افکت Ultra هنگام Scroll ======= */
+/* ======= افکت Ultra هنگام Scroll =======
 .portfolio-warning-ultra.show-ultra {
     animation: ultraPulse 1.5s infinite;
 }
@@ -2261,7 +2241,7 @@ section.banner-blog .banner-caption h1 {
     animation: ultraGlow 2s infinite alternate;
 }
 
-/* پالس و نور افکت */
+ پالس و نور افکت 
 @keyframes ultraPulse {
     0% { transform: scale(1); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
     50% { transform: scale(1.08); box-shadow: 0 15px 45px rgba(0,0,0,0.3); }
@@ -2272,7 +2252,7 @@ section.banner-blog .banner-caption h1 {
     0% { text-shadow: 0 0 10px #ff3333, 0 0 20px #ff6666; color: #ff3333; }
     50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff6666; color: #ff0000; }
     100% { text-shadow: 0 0 10px #ff3333, 0 0 20px #ff6666; color: #ff3333; }
-}
+} */
 
 /* ======= هشدار برای موبایل سبک شده ======= */
 @media (max-width: 480px) {
@@ -2296,113 +2276,6 @@ section.banner-blog .banner-caption h1 {
         animation: none !important;  /* غیرفعال کردن همه انیمیشن‌ها */
     }
 }
-/* ==============================
-   🌐 منوی زبان (Language Dropdown)
-   ============================== */
-
-/* ظاهر کلی آیتم منوی زبان */
-.nav-item.dropdown {
-  position: relative;
-}
-
-/* دکمه اصلی زبان */
-.nav-link.dropdown-toggle {
-  color: #f8000000;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-/* افکت hover روی دکمه زبان */
-.nav-link.dropdown-toggle:hover {
-  color: #fff;
-  background: linear-gradient(135deg, #ff6600, #ff9900);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-/* منوی بازشونده */
-.dropdown-menu {
-  display: none; /* در حالت عادی مخفی */
-  position: absolute;
-  top: 100%;
-  right: 0;
-  min-width: 140px;
-  padding: 0.4rem 0;
-  background: #fffdfd00;
-  border: 1px solid rgb(255, 0, 0);
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0, 174, 255, 0.993);
-  z-index: 1000;
-}
-
-/* باز شدن منو با hover یا کلاس show */
-.nav-item.dropdown:hover .dropdown-menu,
-.nav-item.dropdown.show .dropdown-menu {
-  display: block;
-  animation: fadeInMenu 0.25s ease;
-}
-
-/* آیتم‌های داخل منو */
-.dropdown-item {
-  color: #ff0000;
-  padding: 0.6rem 1rem;
-  text-align: center;
-  font-weight: 500;
-  transition: all 0.25s ease;
-}
-
-/* افکت hover روی آیتم‌ها */
-.dropdown-item:hover {
-  background: #ffffff;
-  color: #00e1ff;
-}
-
-/* افکت باز شدن منو */
-@keyframes fadeInMenu {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===============================
-   📱 حالت موبایل (زیر 768px)
-   =============================== */
-@media (max-width: 767px) {
-  .dropdown-menu {
-    position: relative;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    box-shadow: none;
-    border: none;
-    border-radius: 0;
-    background: #ffffff00;
-  }
-
-  .dropdown-item {
-    text-align: center;
-    padding: 0.8rem;
-    border-bottom: 1px solid #eee;
-  }
-
-  .dropdown-item:last-child {
-    border-bottom: none;
-  }
-
-  /* افکت لمس */
-  .dropdown-item:active {
-    background: #ffecd2;
-    color: #d35400;
-  }
-}
-
 /* پس‌زمینه ثابت سکشن تماس */
 #contact .contact-bg {
   position: absolute;
