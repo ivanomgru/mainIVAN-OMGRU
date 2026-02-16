@@ -1,0 +1,165 @@
+/*--------------------------------------------------------------
+# Faq Page - Glassmorphism Style
+--------------------------------------------------------------*/
+.faq-page {
+    position: relative;
+    display: block;
+    padding: 120px 0 133px;
+    background: linear-gradient(-92.7deg, #c6e4ff70 0.48%, #f0d6ff91 56.21%, #babfff 100%);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+.faq-page__left {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.faq-page__right {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.faq-page .faq-one-accrodion .accrodion {
+    position: relative;
+    display: block;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(27, 38, 188, 0.15);
+    -webkit-transition: all 500ms ease;
+    border-radius: 20px;
+    transition: all 500ms ease;
+}
+
+.faq-page .faq-one-accrodion .accrodion:hover {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.754);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+.faq-page .faq-one-accrodion .accrodion.active {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.3);
+}
+
+.faq-page .faq-one-accrodion .accrodion-title {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding: 22px 35px 19px;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    padding-right: 45px;
+    text-align: left;
+}
+
+.faq-page .faq-one-accrodion .accrodion-title h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #1e1e2f;
+    position: relative;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    text-align: right;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.faq-page .faq-one-accrodion .accrodion.active .accrodion-title h4 {
+    color: #2a2a4a;
+    font-weight: 600;
+}
+
+.faq-page .faq-one-accrodion .accrodion+.accrodion {
+    margin-top: 20px;
+}
+
+.faq-page .faq-one-accrodion .accrodion-title h4::before {
+    content: "\e928";
+    font-family: 'icomoon' !important;
+    font-weight: 700;
+    font-size: 14px;
+    color: #5a4abd;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    line-height: 14px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    width: 28px;
+    height: 28px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faq-page .faq-one-accrodion .accrodion.active .accrodion-title h4::before {
+    content: "\e926";
+    color: #ffffff;
+    background: #5a4abd;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.faq-page .faq-one-accrodion .accrodion-content {
+    position: relative;
+    padding-bottom: 32px;
+    padding-left: 35px;
+    padding-right: 55px;
+    margin-top: -8px;
+}
+
+.faq-page .faq-one-accrodion .accrodion-content p {
+    margin: 0;
+    color: #2d2d44;
+    font-size: 16px;
+    line-height: 30px;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.faq-page .faq-one-accrodion .accrodion-title::before {
+    display: none;
+}
+
+/* Responsive adjustments for glass effect */
+@media (max-width: 768px) {
+    .faq-page .faq-one-accrodion .accrodion {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(8px);
+    }
+    
+    .faq-page .faq-one-accrodion .accrodion-title {
+        padding: 18px 25px 16px;
+    }
+    
+    .faq-page .faq-one-accrodion .accrodion-title h4 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/
