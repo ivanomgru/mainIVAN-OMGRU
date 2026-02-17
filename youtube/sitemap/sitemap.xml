@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="https://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- صفحه اصلی -->
+  <url>
+    <loc>https://ivan-omgru.ir/</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- صفحه YouTube سایت -->
+  <url>
+    <loc>https://ivan-omgru.ir/youtube/</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- پست YouTube -->
+  <url>
+    <loc>https://ivan-omgru.ir/youtube/post/youtube1.html</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    
+    <!-- تصویر پست -->
+    <image:image>
+      <image:loc>https://ivan-omgru.ir/youtube/media/youtube/1.jpg</image:loc>
+      <image:caption>ویدیو معرفی سایت ivan_omgru / Видео: Введение в сайт ivan_omgru</image:caption>
+    </image:image>
+
+    <!-- ویدیو پست -->
+    <video:video>
+      <video:thumbnail_loc>https://ivan-omgru.ir/youtube/media/youtube/1.jpg</video:thumbnail_loc>
+      <video:title>ویدیو معرفی سایت ivan_omgru / Видео: Введение в сайт ivan_omgru</video:title>
+      <video:description>تصویر شاخص و معرفی ویدیو سایت ivan_omgru / Изображение и описание видео сайта ivan_omgru</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=lxFBVd7SeQY</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/lxFBVd7SeQY</video:player_loc>
+      <video:duration>52</video:duration>
+      <video:publication_date>2025-09-27T00:00:00+03:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+    </video:video>
+  </url>
+
+</urlset>
