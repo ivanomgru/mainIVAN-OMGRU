@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- صفحه اصلی -->
+  <url>
+    <loc>https://ivan-omgru.ir/insta/</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- صفحه اینستاگرام -->
+  <url>
+    <loc>https://ivan-omgru.ir/insta/posts/instagram1.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://ivan-omgru.ir/insta/media/instagram/1.jpg</image:loc>
+      <image:caption>اولین پست آموزشی ابوالفضل شهاب - Первый обучающий пост Абульфазля Шахаба</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
