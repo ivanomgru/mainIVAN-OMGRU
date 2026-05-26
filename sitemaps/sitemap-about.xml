@@ -1,63 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-
-    <url>
-        <loc>https://ivan-omgru.ir/#about</loc>
-
-        <!-- تصاویر بخش درباره -->
-        <image:image>
-            <image:loc>https://ivan-omgru.ir/images/about-img1.jpg</image:loc>
-            <image:caption lang="fa">ابوالفضل شهاب، مدرس و طراح وب، برنامه نویس و محقق فناوری اطلاعات</image:caption>
-            <image:caption lang="ru">Абульфазл Шахаб, преподаватель и веб-дизайнер, программист и исследователь информационных технологий</image:caption>
-        </image:image>
-
-        <image:image>
-            <image:loc>https://ivan-omgru.ir/images/about-img2.jpg</image:loc>
-            <image:caption lang="fa">سایت کوتاه — آموزش کوتاه حرفه‌ای</image:caption>
-            <image:caption lang="ru">Короткий сайт — краткое профессиональное обучение</image:caption>
-        </image:image>
-
-        <image:image>
-            <image:loc>https://ivan-omgru.ir/images/about-img3.jpg</image:loc>
-            <image:caption lang="fa">سایت تولید محتوا حرفه‌ای — تولید محتوا جامع و کامل</image:caption>
-            <image:caption lang="ru">Профессиональный сайт контента — полное и профессиональное создание контента</image:caption>
-        </image:image>
-
-        <!-- ویدیوها -->
-        <video:video>
-            <video:thumbnail_loc>https://ivan-omgru.ir/images/about-img1.jpg</video:thumbnail_loc>
-            <video:title lang="fa">🎬 خوش آمدید به آموزش‌های ابوالفضل شهاب | ivan.omgru</video:title>
-            <video:title lang="ru">🎬 Добро пожаловать на уроки Абульфазла Шахаба | ivan.omgru</video:title>
-            <video:description lang="fa">ویدیو معرفی ابوالفضل شهاب، مدرس و طراح وب، برنامه نویس و محقق فناوری اطلاعات</video:description>
-            <video:description lang="ru">Видео о Абульфазле Шахабе, преподавателе и веб-дизайнере, программисте и исследователе информационных технологий</video:description>
-            <video:content_loc>https://ivan-omgru.ir/Theme/video/about.mp4</video:content_loc>
-            <video:player_loc>https://ivan-omgru.ir/Theme/video/about.mp4</video:player_loc>
-            <video:duration>120</video:duration>
-        </video:video>
-
-        <video:video>
-            <video:thumbnail_loc>https://ivan-omgru.ir/images/about-img2.jpg</video:thumbnail_loc>
-            <video:title lang="fa">🎬 سایت کوتاه | آموزش کوتاه حرفه‌ای</video:title>
-            <video:title lang="ru">🎬 Короткий сайт | Краткое профессиональное обучение</video:title>
-            <video:description lang="fa">سایت کوتاه — آموزش کوتاه حرفه‌ای برای تولید محتوا</video:description>
-            <video:description lang="ru">Короткий сайт — краткое профессиональное обучение по созданию контента</video:description>
-            <video:content_loc>https://ivan-omgru.ir/Theme/video/about.mp4</video:content_loc>
-            <video:player_loc>https://ivan-omgru.ir/Theme/video/about.mp4</video:player_loc>
-            <video:duration>120</video:duration>
-        </video:video>
-
-        <video:video>
-            <video:thumbnail_loc>https://ivan-omgru.ir/images/about-img3.jpg</video:thumbnail_loc>
-            <video:title lang="fa">🎬 سایت تولید محتوا حرفه‌ای | آموزش جامع</video:title>
-            <video:title lang="ru">🎬 Профессиональный сайт контента | Полное обучение</video:title>
-            <video:description lang="fa">آموزش کامل و جامع تولید محتوای حرفه‌ای، برنامه‌ریزی، طراحی، تولید و انتشار</video:description>
-            <video:description lang="ru">Полное профессиональное обучение по созданию контента, планирование, дизайн, производство и публикация</video:description>
-            <video:content_loc>https://ivan-omgru.ir/Theme/video/about.mp4</video:content_loc>
-            <video:player_loc>https://ivan-omgru.ir/Theme/video/about.mp4</video:player_loc>
-            <video:duration>120</video:duration>
-        </video:video>
-
-    </url>
-</urlset>
