@@ -1,0 +1,162 @@
+/*--------------------------------------------------------------
+# Testimonial Three
+--------------------------------------------------------------*/
+.testimonial-three {
+    position: relative;
+    display: block;
+    padding: 120px 0 0;
+    z-index: 1;
+}
+
+.testimonial-three__wrap {
+    position: relative;
+    display: block;
+}
+
+.testimonial-three__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: fit-content;
+    margin: 0 -15px;
+}
+
+.testimonial-three__list li {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 0 15px;
+}
+
+.testimonial-three__single {
+    text-align: right;
+    position: relative;
+    display: block;
+    background-color: #FCFCFF;
+    border: 1px solid var(--fistudy-bdr-color);
+    border-radius: 20px;
+    padding: 45px 40px 45px;
+    direction: rtl;
+}
+
+.testimonial-three__rating {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.testimonial-three__rating span {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    color: var(--fistudy-base);
+}
+
+.testimonial-three__text {
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+
+.testimonial-three__client-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.testimonial-three__client-img {
+    position: relative;
+    display: block;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonial-three__client-img img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.testimonial-three__client-content {
+    position: relative;
+    display: block;
+    flex: 1;
+}
+
+.testimonial-three__client-name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 9px;
+}
+
+.testimonial-three__client-name a {
+    color: var(--fistudy-black);
+}
+
+.testimonial-three__client-name a:hover {
+    color: var(--fistudy-base);
+}
+
+.testimonial-three__client-sub-title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.testimonial-three__list--two {
+    margin-top: 30px;
+}
+
+/*--------------------------------------------------------------
+# Testimonials Page
+--------------------------------------------------------------*/
+.testimonials-page {
+    position: relative;
+    display: block;
+    padding: 120px 0 119px;
+    z-index: 1;
+}
+
+.testimonials-page .testimonial-three__single {
+    margin-bottom: 24px;
+}
+
+.testimonials-page .testimonial-three__text br {
+    display: none;
+}
+
+
+/*--------------------------------------------------------------
+# Blog Carousel Page
+--------------------------------------------------------------*/
+.testimonials-carousel-page {
+    position: relative;
+    display: block;
+    padding: 120px 0 170px;
+}
+
+.testimonials-carousel-page .testimonial-three__single {
+    margin-bottom: 0;
+}
+
+.testimonials-carousel-page .testimonial-three__text br {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/
