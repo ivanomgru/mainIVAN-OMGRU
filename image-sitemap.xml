@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <url>
+    <loc>https://ivan-omgru.ir/Mypageruir/gallery.html</loc>
+    <image:image>
+      <image:loc>https://ivan-omgru.ir/Mypageruir/assets/images/gallery/gallery-page-1-1.jpg</image:loc>
+      <image:title>ابوالفضل شهاب - بلاگر ایرانی-روسی</image:title>
+      <image:caption>لحظه‌ای از زندگی بلاگری دو فرهنگی ایران و روسیه</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ivan-omgru.ir/Mypageruir/assets/images/gallery/gallery-page-1-2.jpg</image:loc>
+      <image:title>لحظات بلاگری ابوالفضل شهاب</image:title>
+      <image:caption>پشت صحنه تولید محتوا در IVAN OMGRU</image:caption>
+    </image:image>
+    <!-- به همین ترتیب برای ۹ عکس دیگر تکرار کنید -->
+  </url>
+  
+  <!-- اگر در صفحات دیگر (مثل about, blog) هم تصویر دارید، آن‌ها را هم اضافه کنید -->
+  
+</urlset>
