@@ -38,12 +38,12 @@
     <priority>0.6</priority>
   </url>
 
-  <url>
+  <!-- <url>
     <loc>https://ivan-omgru.ir/Mypageruir/gallery.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
+  </url> -->
 
   <url>
     <loc>https://ivan-omgru.ir/Mypageruir/instructor-details.html</loc>
@@ -95,12 +95,12 @@
     <priority>0.6</priority>
   </url>
 
-  <url>
+  <!-- <url>
     <loc>https://ivan-omgru.ir/ru/gallery.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
+  </url> -->
 
   <url>
     <loc>https://ivan-omgru.ir/ru/instructor-details.html</loc>
