@@ -2,5 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ivan-omgru.ir/sitemap.xml
-Sitemap: https://ivan-omgru.ir/image-sitemap.xml
-
