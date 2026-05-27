@@ -43,7 +43,7 @@ const blogPosts = [
     authorName: "ابوالفضل شهاب",
     authorImage: "assets/images/resources/courses-two-client-img-3.jpg",
     authorFollowers: 3420,
-    image: "/Mypageruir/assets/images/blog/blog-1-1.jpg",
+    image: "/Mypageruir/assets/images/blog/blog-1-2 -.jpg",
     link: "/Mypageruir/blog-detalis/aya-zaban-rusi-sakhte.html",
     text: "آیا زبان روسی سخته؟ روسی به دلیل الفبای سیریلیک، دستور زبان پیچیده و تلفظ خاص خود شهرت «سخت بودن» را دارد."
   },
