@@ -393,6 +393,7 @@
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="blog-details__img-box-img">
                                             <img src="/Mypageruir/assets/images/blog/blog-details-img-box-img-1.jpg" loading="lazy" alt="متن روسی و کتاب">
+                                            <div class="img-caption" style="text-align: center; font-size: 50px; color: #000;">IVAN OMGRU</div>
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6">
@@ -694,15 +695,11 @@
     <script src="/Mypageruir/assets/js/gsap/ScrollTrigger.min.js"></script>
     <script src="/Mypageruir/assets/js/gsap/SplitText.min.js"></script>
 
-
-
-
     <!-- template js -->
     <script src="/Mypageruir/assets/js/script.min.js"></script>
 
 <script>!function(){const STORAGE_KEY='onlineViewersCount';let e;const saved=localStorage.getItem(STORAGE_KEY);if(saved!==null&&!isNaN(parseInt(saved))){e=parseInt(saved);e=Math.max(26,Math.min(e,450))}else{e=Math.floor(Math.random()*(450-26+1)+26)}function updateViewers(){const viewerElement=document.getElementById("online-viewers");if(viewerElement){let change=Math.floor(Math.random()*11)-5;e=e+change;e=Math.max(26,Math.min(e,450));viewerElement.textContent=e;viewerElement.style.color="#ff2222";viewerElement.style.fontWeight="700";localStorage.setItem(STORAGE_KEY,e);setTimeout(()=>{if(viewerElement)viewerElement.style.color="#ff2222"},100)}}const style=document.createElement("style");style.textContent=` .blog-details__client-meta li:last-child { animation: blinkText 1s ease-in-out infinite; } #online-viewers { color: #ff2222; font-weight: 700; } @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } `;document.head.appendChild(style);updateViewers();setInterval(updateViewers,480000)}();</script>
 
 </body>
-
 
 </html>
