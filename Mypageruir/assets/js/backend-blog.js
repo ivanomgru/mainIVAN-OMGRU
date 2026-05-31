@@ -69,7 +69,19 @@ const blogPosts = [
     authorFollowers: 3420,
     image: "/Mypageruir/assets/images/blog/blog-1-1-2.jpg",
     link: "/Mypageruir/blog-detalis/story-love.html",
-    text: "راهنمای جامع کلمات و جملات عاشقانه به سه زبان روسی، انگلیسی و فارسی از ابراز علاقه تا عشق ابدی به همراه نکات فرهنگی و اشتباهات رایج."
+    text: "راهنمای جامع کلمات و جملات عاشقانه به سه زبان روسی، انگلیسی و فارسی از ابراز علاقه تا عشق ابدی."
+  },
+  {
+    title: "همکاری ایران و روسیه؛ فرصت‌ها، چالش‌ها و چشم‌انداز آینده (تحلیل جامع روابط راهبردی)",
+    category: "ژئوپلیتیک",
+    date: "۲ خرداد، ۱۴۰۴",
+    readingTime: "۸ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/blog-1-3-3.jpg",
+    link: "/Mypageruir/blog-detalis/hamkari-iran-va-rusye.html",
+    text: "تحلیل جامع همکاری ایران و روسیه در حوزه‌های اقتصادی، نظامی، سیاسی و انرژی. بررسی"
   }
 ];
 
