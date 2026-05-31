@@ -12,28 +12,28 @@ const blogPosts = [
   //   text: ""
   // }
   {
-      "title": "اشتباهات رایج فارسی‌زبانان در زبان روسی",
-      "category": "زبان روسی",
-      "date": "1 فروردین، 1402",
-      "readingTime": "مطالعه ۷ دقیقه",
-      "authorName": "ابوالفضل شهاب",
-      "authorImage": "assets/images/resources/courses-two-client-img-3.jpg",
-      "authorFollowers": 3420,
-      "image": "/Mypageruir/assets/images/blog/blog-1-3.jpg",
-      "link": "/Mypageruir/blog-detalis/common-mistakes-persian-russian.html",
-      "text": "بررسی اشتباهات متداول در تلفظ و گرامر زبان روسی و راهکارهایی که به یادگیری دقیق‌تر کمک می‌کند. از حروف سیریلیک و تلفظ غلط تا حالت‌های شش‌گانه و افعال."
+    title: "اشتباهات رایج فارسی‌زبانان در زبان روسی",
+    category: "زبان روسی",
+    date: "1 فروردین، 1402",
+    readingTime: "مطالعه ۷ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "assets/images/resources/courses-two-client-img-3.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/blog-1-3.jpg",
+    link: "/Mypageruir/blog-detalis/common-mistakes-persian-russian.html",
+    text: "بررسی اشتباهات متداول در تلفظ و گرامر زبان روسی و راهکارهایی که به یادگیری دقیق‌تر کمک می‌کند. از حروف سیریلیک و تلفظ غلط تا حالت‌های شش‌گانه و افعال."
   },
   {
-      "title": "فرهنگ مردم روسیه؛ نکاتی که دانستن آن‌ها مهم است",
-      "category": "فرهنگ روسیه",
-      "date": "۱۸ خرداد، ۱۴۰۲",
-      "readingTime": "مطالعه ۸ دقیقه",
-      "authorName": "ابوالفضل شهاب",
-      "authorImage": "assets/images/resources/courses-two-client-img-3.jpg",
-      "authorFollowers": 3420,
-      "image": "/Mypageruir/assets/images/blog/blog-1-2.jpg",
-      "link": "/Mypageruir/blog-detalis/culture-of-russia.html",
-      "text": "آشنایی با رفتارهای اجتماعی، سبک زندگی و تفاوت‌های فرهنگی در روسیه که برای مهاجران کاربردی است. "
+    title: "فرهنگ مردم روسیه؛ نکاتی که دانستن آن‌ها مهم است",
+    category: "فرهنگ روسیه",
+    date: "۱۸ خرداد، ۱۴۰۲",
+    readingTime: "مطالعه ۸ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "assets/images/resources/courses-two-client-img-3.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/blog-1-2.jpg",
+    link: "/Mypageruir/blog-detalis/culture-of-russia.html",
+    text: "آشنایی با رفتارهای اجتماعی، سبک زندگی و تفاوت‌های فرهنگی در روسیه که برای مهاجران کاربردی است. "
   },
   {
     title: "آیا زبان روسی سخته؟ تحلیل جامع چالش‌ها و شیرینی‌های یادگیری روسی",
@@ -48,16 +48,28 @@ const blogPosts = [
     text: "آیا زبان روسی سخته؟ روسی به دلیل الفبای سیریلیک، دستور زبان پیچیده و تلفظ خاص خود شهرت «سخت بودن» را دارد."
   },
   {
-    "title": "آیا مهاجرت به روسیه خوبه؟ واقعیت‌های اقتصاد، کار و زندگی برای یک مهاجر",
-    "category": "مهاجرت و اقتصاد",
-    "date": "۳۰ اردیبهشت ۱۴۰۴",
-    "readingTime": "۶ دقیقه",
-    "authorName": "ابوالفضل شهاب",
-    "authorImage": "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
-    "authorFollowers": 3420,
-    "image": "/Mypageruir/assets/images/blog/blog-1-1.jpg",
-    "link": "/Mypageruir/blog-detalis/emigrate-to-russia-work-opportunities.html",
-    "text": "تحلیل صفرتاصد مهاجرت کاری به روسیه: فرصت‌های شغلی، درآمد ماهیانه، هزینه‌ها و چالش‌های تحریم. بروزرسانی ۲۰۲۵"
+    title: "آیا مهاجرت به روسیه خوبه؟ واقعیت‌های اقتصاد، کار و زندگی برای یک مهاجر",
+    category: "مهاجرت و اقتصاد",
+    date: "۳۰ اردیبهشت ۱۴۰۴",
+    readingTime: "۶ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/blog-1-1.jpg",
+    link: "/Mypageruir/blog-detalis/emigrate-to-russia-work-opportunities.html",
+    text: "تحلیل صفرتاصد مهاجرت کاری به روسیه: فرصت‌های شغلی، درآمد ماهیانه، هزینه‌ها و چالش‌های تحریم. بروزرسانی ۲۰۲۵"
+  },
+  {
+    title: "کلمات عاشقانه به سه زبان روسی، انگلیسی و فارسی؛ راهنمای جامع ابراز احساسات",
+    category: "زبان و فرهنگ",
+    date: "۳۱ اردیبهشت، ۱۴۰۴",
+    readingTime: "۸ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/blog-1-1-2.jpg",
+    link: "/Mypageruir/blog-detalis/story-love.html",
+    text: "راهنمای جامع کلمات و جملات عاشقانه به سه زبان روسی، انگلیسی و فارسی از ابراز علاقه تا عشق ابدی به همراه نکات فرهنگی و اشتباهات رایج."
   }
 ];
 
