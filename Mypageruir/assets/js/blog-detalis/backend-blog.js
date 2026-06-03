@@ -98,7 +98,7 @@ const blogPosts = [
   {
     title: "آموزش الفبای سیریلیک روسی در یک هفته (روش تصویری برای فارسی‌زبانان)",
     category: "آموزش زبان روسی",
-    date: "۲۵ خرداد ۱۴۰۴",
+    date: "۱۰ خرداد ۱۴۰۴",
     readingTime: "۱۸ دقیقه",
     authorName: "ابوالفضل شهاب",
     authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
@@ -106,6 +106,18 @@ const blogPosts = [
     image: "/Mypageruir/assets/images/blog/blog-1-8-3.jpg",
     link: "/Mypageruir/blog-detalis/cyrillic-alphabet-guide.html",
     text: " جدول کامل ۳۳ حرف، تلفظ دقیق، برنامه روزانه و تمرینات عملی. پایه‌ی زبان روسی را محکم بنا کنید."
+  },
+  {
+    title: "صرف افعال روسی را یک‌بار برای همیشه یاد بگیر (روش قالب‌های طلایی)",
+    category: "دستور زبان روسی",
+    date: "۱۰ خرداد ۱۴۰۴",
+    readingTime: "۱۶ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/russian-verbs-main.jpg",
+    link: "/Mypageruir/blog-detalis/russian-verb-conjugation-guide.html",
+    text: "آموزشی با روش الگو (قالب‌های طلایی). دسته اول و دوم، جدول ۲۰ فعل پرکاربرد، نکات استثنائات و تمرینات عملی."
   }
 ];
 
