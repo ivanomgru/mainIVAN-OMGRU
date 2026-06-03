@@ -82,6 +82,18 @@ const blogPosts = [
     image: "/Mypageruir/assets/images/blog/blog-1-3-3.jpg",
     link: "/Mypageruir/blog-detalis/hamkari-iran-va-rusye.html",
     text: "تحلیل جامع همکاری ایران و روسیه در حوزه‌های اقتصادی، نظامی، سیاسی و انرژی. بررسی"
+  },
+  {
+    title: "راهنمای کامل سفر به روسیه برای ایرانیان ",
+    category: "راهنمای سفر",
+    date: "۱۰ خرداد ۱۴۰۴",
+    readingTime: "۱۲ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/blog-travel-russia-main.jpg",
+    link: "/Mypageruir/blog-detalis/russia-travel-guide-2025.html",
+    text: "راهنمای گام به گام دریافت ویزای الکترونیک روسیه، مدارک و هزینه‌ها، پروازهای مستقیم از ایران، بهترین جاهای دیدنی (مسکو، سن‌پترزبورگ، کازان)، نکات  ضروری برای سفر."
   }
 ];
 
