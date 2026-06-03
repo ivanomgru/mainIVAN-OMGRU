@@ -94,6 +94,18 @@ const blogPosts = [
     image: "/Mypageruir/assets/images/blog/blog-travel-russia-main.jpg",
     link: "/Mypageruir/blog-detalis/russia-travel-guide-2025.html",
     text: "راهنمای گام به گام دریافت ویزای الکترونیک روسیه، مدارک و هزینه‌ها، پروازهای مستقیم از ایران، بهترین جاهای دیدنی (مسکو، سن‌پترزبورگ، کازان)، نکات  ضروری برای سفر."
+  },
+  {
+    title: "آموزش الفبای سیریلیک روسی در یک هفته (روش تصویری برای فارسی‌زبانان)",
+    category: "آموزش زبان روسی",
+    date: "۲۵ خرداد ۱۴۰۴",
+    readingTime: "۱۸ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/blog-1-8-3.jpg",
+    link: "/Mypageruir/blog-detalis/cyrillic-alphabet-guide.html",
+    text: " جدول کامل ۳۳ حرف، تلفظ دقیق، برنامه روزانه و تمرینات عملی. پایه‌ی زبان روسی را محکم بنا کنید."
   }
 ];
 
