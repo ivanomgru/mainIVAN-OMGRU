@@ -266,7 +266,7 @@
 
 .banner-one__udemy-review {
   position: absolute;
-    background: linear-gradient(-92.7deg, #ffffffd2 0.48%, #e4b5ffcb 56.21%, #babfffcb 100%);
+    background: linear-gradient(-92.7deg, #ffffffd2 0.48%, #f4e1ffcb 56.21%, #e5e7ffcb 100%);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
   border-radius: 16px;
   padding: 18px 15px 18px;
@@ -440,7 +440,7 @@
 }
 
 .banner-one__category-select-box .select-box .nice-select {
-    background: linear-gradient(-92.7deg, #c6e4ff4d 0.48%, #f0d6ff60 56.21%, #babfff6c 100%);
+  background: #ffffff;
   color: var(--fistudy-gray);
   font-size: 16px;
   font-weight: 400;
@@ -476,7 +476,7 @@
   font-weight: 400;
   height: 60px;
   width: 100%;
-      background: linear-gradient(92.7deg, #c6e4ff 0.48%, #f0d6ff 56.21%, #babfff6c 100%);
+  background: #ffffff;
   border: none;
   border-right: 1px solid var(--fistudy-bdr-color);
   outline: none;
@@ -491,7 +491,7 @@
   top: 7px;
   left: 7px;
   border: none;
-  background: linear-gradient(-92.7deg, #0088ff70 0.48%, #e5b7ff91 56.21%, #babfff 100%);
+  background: linear-gradient(-92.7deg, #0088ff70 0.48%, #d283ff91 56.21%, #babfff 100%);
   font-size: 18px;
   line-height: 18px;
   color: var(--fistudy-white);
@@ -504,7 +504,7 @@
 }
 
 .banner-one__category-btn:hover {
-    background: linear-gradient(92.7deg, #c6e4ff70 0.48%, #f0d6ff91 56.21%, #babfff 100%);
+    background: linear-gradient(-92.7deg, #5db3ff6e 0.48%, #bf50ff81 56.21%, #6b75ff9f 100%);
 }
 
 .banner-one__tags {
