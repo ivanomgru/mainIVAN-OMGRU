@@ -14,7 +14,7 @@ const blogPosts = [
   {
     title: "اشتباهات رایج فارسی‌زبانان در زبان روسی",
     category: "زبان روسی",
-    date: "1 فروردین، 1402",
+    date: "1 فروردین، ۱۴۰۴",
     readingTime: "مطالعه ۷ دقیقه",
     authorName: "ابوالفضل شهاب",
     authorImage: "assets/images/resources/courses-two-client-img-3.jpg",
@@ -26,7 +26,7 @@ const blogPosts = [
   {
     title: "فرهنگ مردم روسیه؛ نکاتی که دانستن آن‌ها مهم است",
     category: "فرهنگ روسیه",
-    date: "۱۸ خرداد، ۱۴۰۲",
+    date: "۱۸ فروردین، ۱۴۰۴",
     readingTime: "مطالعه ۸ دقیقه",
     authorName: "ابوالفضل شهاب",
     authorImage: "assets/images/resources/courses-two-client-img-3.jpg",
@@ -130,6 +130,18 @@ const blogPosts = [
     image: "/Mypageruir/assets/images/blog/russian-50-verbs-1main.jpg",
     link: "/Mypageruir/blog-detalis/50-russian-verbs.html",
     text: "جدول کامل ۵۰ فعل پرکاربرد روسی با صرف اول شخص و سوم شخص، مثال روزمره،  مکالمه روسی را سریع شروع کن."
+  },
+  {
+    title: "افعال حرکت روسی رو قورت بده (راهنمای جامع для فارسی‌زبانان) | ",
+    category: "دستور زبان روسی",
+    date: "۱۵ خرداد، ۱۴۰۵",
+    readingTime: "۲۰ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/russian-verbs-of-motion-main1.jpg",
+    link: "/Mypageruir/blog-detalis/russian-verbs-of-motion.html",
+    text: "آموزش جامع افعال حرکت روسی: یک‌جهته و چندجهته، جفت‌های اصلی، پیشوندهای طلایی (при, у, вы, в, ,...)."
   }
 ];
 
