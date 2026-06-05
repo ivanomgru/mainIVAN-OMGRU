@@ -118,6 +118,18 @@ const blogPosts = [
     image: "/Mypageruir/assets/images/blog/russian-verbs-main.jpg",
     link: "/Mypageruir/blog-detalis/russian-verb-conjugation-guide.html",
     text: "آموزشی با روش الگو (قالب‌های طلایی). دسته اول و دوم، جدول ۲۰ فعل پرکاربرد، نکات استثنائات و تمرینات عملی."
+  },
+  {
+    title: "۵۰ فعل طلایی روسی که باید اول یاد بگیری (همراه با صرف، مثال و تلفظ)",
+    category: "واژگان روسی",
+    date: "۱۵ خرداد ۱۴۰۵",
+    readingTime: "۲۲ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/russian-50-verbs-1main.jpg",
+    link: "/Mypageruir/blog-detalis/50-russian-verbs.html",
+    text: "جدول کامل ۵۰ فعل پرکاربرد روسی با صرف اول شخص و سوم شخص، مثال روزمره،  مکالمه روسی را سریع شروع کن."
   }
 ];
 
