@@ -1,120 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- ==================== صفحه اصلی (ریشه) ==================== -->
   <url>
-    <loc>https://ivan-omgru.ir/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- ==================== صفحات فارسی (Mypageruir) ==================== -->
-  <url>
-    <loc>https://ivan-omgru.ir/Mypageruir/about.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ivan-omgru.ir/Mypageruir/blog.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ivan-omgru.ir/Mypageruir/contact.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ivan-omgru.ir/Mypageruir/faq.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://ivan-omgru.ir/Mypageruir/blog-detalis/50-russian-verbs.html</loc>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- <url>
-    <loc>https://ivan-omgru.ir/Mypageruir/gallery.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url> -->
-
   <url>
-    <loc>https://ivan-omgru.ir/Mypageruir/instructor-details.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ivan-omgru.ir/Mypageruir/pricing.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://ivan-omgru.ir/Mypageruir/blog-detalis/aya-zaban-rusi-sakhte.html</loc>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
-    <loc>https://ivan-omgru.ir/Mypageruir/coming-soon.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <!-- ==================== صفحات روسی (ru) ==================== -->
-  <url>
-    <loc>https://ivan-omgru.ir/ru/index.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://ivan-omgru.ir/ru/about.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ivan-omgru.ir/ru/contact.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ivan-omgru.ir/ru/faq.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://ivan-omgru.ir/Mypageruir/blog-detalis/common-mistakes-persian-russian.html</loc>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- <url>
-    <loc>https://ivan-omgru.ir/ru/gallery.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url> -->
-
   <url>
-    <loc>https://ivan-omgru.ir/ru/instructor-details.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://ivan-omgru.ir/Mypageruir/blog-detalis/culture-of-russia.html</loc>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- ==================== صفحه خطا ==================== -->
   <url>
-    <loc>https://ivan-omgru.ir/404.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
+    <loc>https://ivan-omgru.ir/Mypageruir/blog-detalis/cyrillic-alphabet-guide.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-
+  <url>
+    <loc>https://ivan-omgru.ir/Mypageruir/blog-detalis/emigrate-to-russia-work-opportunities.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ivan-omgru.ir/Mypageruir/blog-detalis/hamkari-iran-va-rusye.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ivan-omgru.ir/Mypageruir/blog-detalis/russia-travel-guide-2025.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-verb-conjugation-guide.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-verbs-of-motion.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ivan-omgru.ir/Mypageruir/blog-detalis/story-love.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
