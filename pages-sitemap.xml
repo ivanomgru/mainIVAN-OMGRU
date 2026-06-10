@@ -110,11 +110,11 @@
   </url>
 
   <!-- ==================== صفحه خطا ==================== -->
-  <url>
+  <!-- <url>
     <loc>https://ivan-omgru.ir/404.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
-  </url>
+  </url> -->
 
 </urlset>
