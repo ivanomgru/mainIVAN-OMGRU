@@ -791,10 +791,11 @@ ul {
 .main-menu__category-content {
   flex: 1;
 }
-.main-menu__category-content h5 {
+.main-menu__category-content .menu22 {
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
+  color: #000000;
   margin-bottom: 5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
