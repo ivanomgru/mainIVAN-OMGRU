@@ -173,7 +173,7 @@ function createBlogPostCard(post) {
               <li><a href="${post.link}"><span class="icon-clock"></span>${post.readingTime}</a></li>
             </ul>
           </div>
-          <h4 class="blog-two__title"><a href="${post.link}">${post.title}</a></h4>
+          <h3 class="blog-two__title"><a href="${post.link}">${post.title}</a></h3>
           <p class="blog-two__text">${post.text}</p>
         </div>
         <div class="courses-two__content">
@@ -184,7 +184,7 @@ function createBlogPostCard(post) {
             <div class="courses-two__client-box">
               <div class="courses-two__client-img"><img src="${post.authorImage}" loading="lazy" alt="${post.authorName}"></div>
               <div class="courses-two__client-content">
-                <h4>${post.authorName}</h4>
+                <h3>${post.authorName}</h3>
                 <p><span class="odometer" data-count="${post.authorFollowers}">0</span><i>+</i> دنبال کننده</p>
               </div>
             </div>
