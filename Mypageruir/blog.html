@@ -184,6 +184,17 @@
         <!--Blog Page Start-->
         <section class="blog-page" data-scroll-index="1">
             <div class="container">
+                <div class="section-title-two text-center sec-title-animation animation-style1">
+                    <div class="section-title-two__tagline-box">
+                        <div class="section-title-two__tagline-shape">
+                            <img src="assets/images/icon/why-choose-one-icon-4.png" loading="lazy" alt="title shape">
+                        </div>
+                        <span class="section-title-two__tagline">از وبلاگ تا </span>
+                    </div>
+                    <h2 class="section-title-two__title title-animation">
+                        جدیدترین مقاله روز<span>omgru ivan</span>
+                    </h2>
+                </div>
                 <div class="row">
                     <!-- سربرگ وبلاگ -->
                     <div class="course-list__right-top">
@@ -195,8 +206,19 @@
                                 <span class="icon-down-arrow"></span>
                             </div>
                             <ul class="list-unstyled main-menu__category-sub-menu">
-                                <li data-category="language">
-                                    <a href="coming-soon.html">
+                                <li data-category="0">
+                                    <a href="#">
+                                        <div class="main-menu__category-icon">
+                                            <img src="assets/images/icon/categoyr-two-icon-7.png" alt="">
+                                        </div>
+                                        <div class="main-menu__category-content">
+                                             <div class="menu22">همه<br>مقالات</div>
+                                            <p style="color: #ff6a00;">ivan omgru</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li data-category="1">
+                                    <a href="#">
                                         <div class="main-menu__category-icon">
                                             <img src="assets/images/icon/categoyr-two-icon-1.png" loading="lazy" alt="">
                                         </div>
@@ -206,8 +228,8 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li data-category="migration">
-                                    <a href="coming-soon.html">
+                                <li data-category="2">
+                                    <a href="#">
                                         <div class="main-menu__category-icon">
                                             <img src="assets/images/icon/categoyr-two-icon-2.png" loading="lazy" alt="">
                                         </div>
@@ -217,8 +239,8 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li data-category="culture">
-                                    <a href="coming-soon.html">
+                                <li data-category="3">
+                                    <a href="#">
                                         <div class="main-menu__category-icon">
                                             <img src="assets/images/icon/categoyr-two-icon-5.png" loading="lazy" alt="">
                                         </div>
@@ -228,8 +250,8 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li data-category="other">
-                                    <a href="coming-soon.html">
+                                <li data-category="4">
+                                    <a href="#">
                                         <div class="main-menu__category-icon">
                                             <img src="assets/images/icon/categoyr-two-icon-6.png" loading="lazy" alt="">
                                         </div>
@@ -240,6 +262,14 @@
                                     </a>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="course-grid__search course-grid__single">
+                            <form class="blog-search-form" role="search" onsubmit="event.preventDefault(); var val = this.querySelector('input[type=search]').value.trim(); if(val) { window.location.href='https://www.google.com/search?q=' + encodeURIComponent(val + ' ivan omgru '); }">
+                                <div>
+                                    <input type="search" name="q" id="blog-search-input" placeholder="دنبال چه می‌گردی؟ ..." aria-label="جستجوی وبلاگ">
+                                </div>
+                                <button type="submit"><i class="icon-search"></i> جستجو</button>
+                            </form>
                         </div>
                         <div class="course-list__showing-sort">
                             <p>مرتب سازی: </p>
@@ -537,8 +567,7 @@
     <script src="assets/js/gsap/SplitText.min.js"></script>
 
     <script src="assets/js/blog-detalis/backend-blog.js"></script>
-
-
+    
     <!-- template js -->
         <script src="assets/js/script.min.js"></script>
 
