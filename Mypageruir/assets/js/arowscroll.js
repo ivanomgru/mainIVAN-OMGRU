@@ -400,7 +400,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // تابع مشترک برای همه سرچ‌ها
 function goToGoogleSearch(query) {
-    var finalQuery = query + " ivan omgru site:ivan-omgru.ir";
+    var finalQuery = query + " ivan omgru ";
     var googleUrl = "https://www.google.com/search?q=" + encodeURIComponent(finalQuery);
     window.location.href = googleUrl;
 }

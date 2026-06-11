@@ -1,19 +1,8 @@
 const blogPosts = [
-  // {
-  //   title: "",
-  //   category: "",
-  //   date: "",
-  //   readingTime: "",
-  //   authorName: "ابوالفضل شهاب",
-  //   authorImage: "assets/images/resources/courses-two-client-img-3.jpg",
-  //   authorFollowers: 3420,
-  //   image: "/Mypageruir/assets/images/blog/blog-1-1.jpg",
-  //   link: "/Mypageruir/blog-detalis/aya-zaban-rusi-sakhte.html",
-  //   text: ""
-  // }
   {
     title: "اشتباهات رایج فارسی‌زبانان در زبان روسی",
     category: "زبان روسی",
+    catId: 1,
     date: "1 فروردین، ۱۴۰۴",
     readingTime: "مطالعه ۷ دقیقه",
     authorName: "ابوالفضل شهاب",
@@ -26,6 +15,7 @@ const blogPosts = [
   {
     title: "فرهنگ مردم روسیه؛ نکاتی که دانستن آن‌ها مهم است",
     category: "فرهنگ روسیه",
+    catId: 4,
     date: "۱۸ فروردین، ۱۴۰۴",
     readingTime: "مطالعه ۸ دقیقه",
     authorName: "ابوالفضل شهاب",
@@ -38,6 +28,7 @@ const blogPosts = [
   {
     title: "آیا زبان روسی سخته؟ تحلیل جامع چالش‌ها و شیرینی‌های یادگیری روسی",
     category: "زبان روسی",
+    catId: 1,
     date: "۲۲ اردیبهشت، ۱۴۰۴",
     readingTime: "۱۵ دقیقه مطالعه",
     authorName: "ابوالفضل شهاب",
@@ -50,6 +41,7 @@ const blogPosts = [
   {
     title: "آیا مهاجرت به روسیه خوبه؟ واقعیت‌های اقتصاد، کار و زندگی برای یک مهاجر",
     category: "مهاجرت و اقتصاد",
+    catId: 2,
     date: "۳۰ اردیبهشت ۱۴۰۴",
     readingTime: "۶ دقیقه",
     authorName: "ابوالفضل شهاب",
@@ -62,6 +54,7 @@ const blogPosts = [
   {
     title: "کلمات عاشقانه به سه زبان روسی، انگلیسی و فارسی؛ راهنمای جامع ابراز احساسات",
     category: "زبان و فرهنگ",
+    catId: 1,
     date: "۳۱ اردیبهشت، ۱۴۰۴",
     readingTime: "۸ دقیقه",
     authorName: "ابوالفضل شهاب",
@@ -74,6 +67,7 @@ const blogPosts = [
   {
     title: "همکاری ایران و روسیه؛ فرصت‌ها، چالش‌ها و چشم‌انداز آینده (تحلیل جامع روابط راهبردی)",
     category: "ژئوپلیتیک",
+    catId: 3,
     date: "۲ خرداد، ۱۴۰۴",
     readingTime: "۸ دقیقه",
     authorName: "ابوالفضل شهاب",
@@ -86,6 +80,7 @@ const blogPosts = [
   {
     title: "راهنمای کامل سفر به روسیه برای ایرانیان ",
     category: "راهنمای سفر",
+    catId: 2,
     date: "۱۰ خرداد ۱۴۰۴",
     readingTime: "۱۲ دقیقه",
     authorName: "ابوالفضل شهاب",
@@ -98,6 +93,7 @@ const blogPosts = [
   {
     title: "آموزش الفبای سیریلیک روسی در یک هفته (روش تصویری برای فارسی‌زبانان)",
     category: "آموزش زبان روسی",
+    catId: 1,
     date: "۱۰ خرداد ۱۴۰۴",
     readingTime: "۱۸ دقیقه",
     authorName: "ابوالفضل شهاب",
@@ -110,6 +106,7 @@ const blogPosts = [
   {
     title: "صرف افعال روسی را یک‌بار برای همیشه یاد بگیر (روش قالب‌های طلایی)",
     category: "دستور زبان روسی",
+    catId: 1,
     date: "۱۰ خرداد ۱۴۰۴",
     readingTime: "۱۶ دقیقه",
     authorName: "ابوالفضل شهاب",
@@ -122,6 +119,7 @@ const blogPosts = [
   {
     title: "۵۰ فعل طلایی روسی که باید اول یاد بگیری (همراه با صرف، مثال و تلفظ)",
     category: "واژگان روسی",
+    catId: 1,
     date: "۱۵ خرداد ۱۴۰۵",
     readingTime: "۲۲ دقیقه",
     authorName: "ابوالفضل شهاب",
@@ -132,8 +130,9 @@ const blogPosts = [
     text: "جدول کامل ۵۰ فعل پرکاربرد روسی با صرف اول شخص و سوم شخص، مثال روزمره،  مکالمه روسی را سریع شروع کن."
   },
   {
-    title: "افعال حرکت روسی رو قورت بده (راهنمای جامع для فارسی‌زبانان) | ",
+    title: "افعال حرکت روسی رو قورت بده (راهنمای جامع برای فارسی‌زبانان) | ",
     category: "دستور زبان روسی",
+    catId: 1,
     date: "۱۵ خرداد، ۱۴۰۵",
     readingTime: "۲۰ دقیقه",
     authorName: "ابوالفضل شهاب",
@@ -145,195 +144,4 @@ const blogPosts = [
   }
 ];
 
-const BLOG_POSTS_PER_PAGE = 6;
-let blogCurrentPage = 1;
-let blogFilteredPosts = [...blogPosts];
-
-function createBlogPostCard(post) {
-  const hasImage = post.image && post.image.trim() !== "";
-  const imageHtml = hasImage 
-    ? `<img src="${post.image}" loading="lazy" alt="${post.title}">` 
-    : '<div class="glass-placeholder"></div>';
-  const noImageClass = hasImage ? "" : "no-image";
-
-  return `
-    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-      <div class="blog-two__single ${noImageClass}">
-        <div class="blog-two__img">
-          ${imageHtml}
-          <div class="blog-two__date">
-            <span class="icon-calendar"></span>
-            <p>${post.date}</p>
-          </div>
-        </div>
-        <div class="blog-two__content">
-          <div class="blog-two__meta-box">
-            <ul class="blog-two__meta list-unstyled">
-              <li><a href="${post.link}"><span class="icon-tags"></span>${post.category}</a></li>
-              <li><a href="${post.link}"><span class="icon-clock"></span>${post.readingTime}</a></li>
-            </ul>
-          </div>
-          <h3 class="blog-two__title"><a href="${post.link}">${post.title}</a></h3>
-          <p class="blog-two__text">${post.text}</p>
-        </div>
-        <div class="courses-two__content">
-          <div class="courses-two__btn-and-client-box">
-            <div class="courses-two__btn-box">
-              <a href="${post.link}" class="thm-btn-two"><span>مشاهده بیشتر</span><i class="far fa-angle-double-left"></i></a>
-            </div>
-            <div class="courses-two__client-box">
-              <div class="courses-two__client-img"><img src="${post.authorImage}" loading="lazy" alt="${post.authorName}"></div>
-              <div class="courses-two__client-content">
-                <h3>${post.authorName}</h3>
-                <p><span class="odometer" data-count="${post.authorFollowers}">0</span><i>+</i> دنبال کننده</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-function updateBlogStats() {
-  const totalPosts = blogFilteredPosts.length;
-  const shownPosts = Math.min(BLOG_POSTS_PER_PAGE * blogCurrentPage, totalPosts);
-  const statsEl = document.getElementById("blog-stats");
-  if (statsEl) {
-    statsEl.innerText = `نمایش ${shownPosts} مقاله از ${totalPosts} مقاله`;
-  }
-}
-
-function toggleBlogLoadMore() {
-  const totalPosts = blogFilteredPosts.length;
-  const loadMoreBtn = document.getElementById("blog-load-more-btn");
-
-  if (!loadMoreBtn) return;
-
-  if (blogCurrentPage === 2) {
-    loadMoreBtn.innerHTML = '<a href="#" class="thm-btn-two"><span>مشاهده بیشتر وبلاگ</span><i class="far fa-angle-double-left"></i></a>';
-    loadMoreBtn.style.display = "inline-flex";
-    loadMoreBtn.onclick = null;
-  } else {
-    const shouldShow = (BLOG_POSTS_PER_PAGE * blogCurrentPage) < totalPosts;
-    loadMoreBtn.style.display = shouldShow ? "inline-flex" : "none";
-    loadMoreBtn.innerHTML = '<span>بیشتر</span><i class="far fa-angle-double-left"></i>';
-    loadMoreBtn.removeEventListener("click", blogLoadMoreHandler);
-    loadMoreBtn.addEventListener("click", blogLoadMoreHandler);
-  }
-}
-
-function blogLoadMoreHandler() {
-  blogCurrentPage++;
-  renderBlogPosts(blogCurrentPage, true);
-}
-
-function renderBlogPagination() {
-  const totalPages = Math.ceil(blogFilteredPosts.length / BLOG_POSTS_PER_PAGE);
-  const paginationUl = document.getElementById("blog-pagination");
-
-  if (!paginationUl) return;
-
-  let html = "";
-  html += `<li class="prev"><a href="#" aria-label="prev" data-page="${blogCurrentPage - 1}" ${blogCurrentPage === 1 ? 'style="pointer-events:none;opacity:0.5;"' : ""}><i class="fas fa-arrow-right"></i></a></li>`;
-
-  for (let i = 1; i <= totalPages; i++) {
-    const pageStr = i < 10 ? "0" + i : i;
-    html += `<li class="count ${i === blogCurrentPage ? "active" : ""}"><a href="#" data-page="${i}">${pageStr}</a></li>`;
-  }
-
-  html += `<li class="next"><a href="#" aria-label="Next" data-page="${blogCurrentPage + 1}" ${blogCurrentPage === totalPages ? 'style="pointer-events:none;opacity:0.5;"' : ""}><i class="fas fa-arrow-left"></i></a></li>`;
-
-  paginationUl.innerHTML = html;
-}
-
-function renderBlogPosts(page = blogCurrentPage, append = false) {
-  const container = document.getElementById("blog-posts-container");
-  if (!container) return;
-
-  const start = BLOG_POSTS_PER_PAGE * (page - 1);
-  const end = start + BLOG_POSTS_PER_PAGE;
-  const postsToShow = blogFilteredPosts.slice(start, end);
-
-  if (!append) {
-    container.innerHTML = "";
-  }
-
-  postsToShow.forEach(post => {
-    container.insertAdjacentHTML("beforeend", createBlogPostCard(post));
-  });
-
-  updateBlogStats();
-  toggleBlogLoadMore();
-  renderBlogPagination();
-
-  if (typeof WOW !== "undefined" && !append) {
-    new WOW().init();
-  }
-
-  if (typeof Odometer !== "undefined") {
-    document.querySelectorAll(".odometer").forEach(el => {
-      const count = el.getAttribute("data-count");
-      if (count) {
-        el.innerText = count;
-      }
-    });
-  }
-}
-
-function applyBlogSort(sortBy) {
-  blogFilteredPosts = sortBy === "newest" 
-    ? [...blogPosts].reverse() 
-    : [...blogPosts];
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  const blogSortSelect = document.getElementById("blog-sort");
-
-  if (blogSortSelect) {
-    let lastBlogSort = blogSortSelect.value;
-    applyBlogSort(lastBlogSort);
-    renderBlogPosts(1, false);
-
-    blogSortSelect.addEventListener("change", function(e) {
-      const newVal = e.target.value;
-      if (newVal !== lastBlogSort) {
-        lastBlogSort = newVal;
-        applyBlogSort(newVal);
-        blogCurrentPage = 1;
-        renderBlogPosts(blogCurrentPage, false);
-      }
-    });
-
-    setInterval(function() {
-      if (blogSortSelect.value !== lastBlogSort) {
-        lastBlogSort = blogSortSelect.value;
-        applyBlogSort(lastBlogSort);
-        blogCurrentPage = 1;
-        renderBlogPosts(blogCurrentPage, false);
-      }
-    }, 500);
-  }
-
-  const blogLoadMore = document.getElementById("blog-load-more-btn");
-  if (blogLoadMore) {
-    blogLoadMore.addEventListener("click", blogLoadMoreHandler);
-  }
-
-  const blogPagination = document.getElementById("blog-pagination");
-  if (blogPagination) {
-    blogPagination.addEventListener("click", function(e) {
-      const link = e.target.closest("a[data-page]");
-      if (!link) return;
-
-      e.preventDefault();
-      const page = parseInt(link.getAttribute("data-page"));
-      const totalPages = Math.ceil(blogFilteredPosts.length / BLOG_POSTS_PER_PAGE);
-
-      if (!isNaN(page) && page >= 1 && page <= totalPages) {
-        blogCurrentPage = page;
-        renderBlogPosts(blogCurrentPage, false);
-      }
-    });
-  }
-});
+const BLOG_POSTS_PER_PAGE=6;let blogCurrentPage=1,currentCategory=null,blogFilteredPosts=[...blogPosts];function updateFilteredPosts(){let filtered=[...blogPosts];currentCategory&&0!==currentCategory&&(filtered=filtered.filter(post=>post.catId===currentCategory));const sortBy=document.getElementById("blog-sort")?.value||"newest";"newest"===sortBy?filtered=filtered.reverse():filtered=[...filtered];blogFilteredPosts=filtered}function createBlogPostCard(post){const hasImage=post.image&&""!==post.image.trim(),imageHtml=hasImage?`<img src="${post.image}" loading="lazy" alt="${post.title}">`:'<div class="glass-placeholder"></div>',noImageClass=hasImage?"":"no-image";return`<div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms"><div class="blog-two__single ${noImageClass}"><div class="blog-two__img">${imageHtml}<div class="blog-two__date"><span class="icon-calendar"></span><p>${post.date}</p></div></div><div class="blog-two__content"><div class="blog-two__meta-box"><ul class="blog-two__meta list-unstyled"><li><a href="${post.link}"><span class="icon-tags"></span>${post.category}</a></li><li><a href="${post.link}"><span class="icon-clock"></span>${post.readingTime}</a></li></ul></div><h4 class="blog-two__title"><a href="${post.link}">${post.title}</a></h4><p class="blog-two__text">${post.text}</p></div><div class="courses-two__content"><div class="courses-two__btn-and-client-box"><div class="courses-two__btn-box"><a href="${post.link}" class="thm-btn-two"><span>مشاهده بیشتر</span><i class="far fa-angle-double-left"></i></a></div><div class="courses-two__client-box"><div class="courses-two__client-img"><img src="${post.authorImage}" loading="lazy" alt="${post.authorName}"></div><div class="courses-two__client-content"><h4>${post.authorName}</h4><p><span class="odometer" data-count="${post.authorFollowers}">0</span><i>+</i> دنبال کننده</p></div></div></div></div></div></div>`}function updateBlogStats(){const totalPosts=blogFilteredPosts.length,shownPosts=Math.min(BLOG_POSTS_PER_PAGE*blogCurrentPage,totalPosts),statsEl=document.getElementById("blog-stats");statsEl&&(statsEl.innerText=`نمایش ${shownPosts} مقاله از ${totalPosts} مقاله`)}function toggleBlogLoadMore(){const totalPosts=blogFilteredPosts.length,loadMoreBtn=document.getElementById("blog-load-more-btn");if(!loadMoreBtn)return;const shouldShow=BLOG_POSTS_PER_PAGE*blogCurrentPage<totalPosts;loadMoreBtn.style.display=shouldShow?"inline-flex":"none";shouldShow&&(loadMoreBtn.innerHTML='<span>بیشتر</span><i class="far fa-angle-double-left"></i>',loadMoreBtn.removeEventListener("click",blogLoadMoreHandler),loadMoreBtn.addEventListener("click",blogLoadMoreHandler))}function blogLoadMoreHandler(){blogCurrentPage++,renderBlogPosts(blogCurrentPage,!0)}function renderBlogPagination(){const totalPages=Math.ceil(blogFilteredPosts.length/BLOG_POSTS_PER_PAGE),paginationUl=document.getElementById("blog-pagination");if(!paginationUl||totalPages<=1){paginationUl&&(paginationUl.innerHTML="");return}let html='';html+=`<li class="prev"><a href="#" data-page="${blogCurrentPage-1}" ${1===blogCurrentPage?'style="pointer-events:none;opacity:0.5;"':""}><i class="fas fa-arrow-right"></i></a></li>`;for(let i=1;i<=totalPages;i++){const pageStr=i<10?"0"+i:i;html+=`<li class="count ${i===blogCurrentPage?"active":""}"><a href="#" data-page="${i}">${pageStr}</a></li>`}html+=`<li class="next"><a href="#" data-page="${blogCurrentPage+1}" ${blogCurrentPage===totalPages?'style="pointer-events:none;opacity:0.5;"':""}><i class="fas fa-arrow-left"></i></a></li>`;paginationUl.innerHTML=html}function renderBlogPosts(page=blogCurrentPage,append=!1){const container=document.getElementById("blog-posts-container");if(!container)return;const start=BLOG_POSTS_PER_PAGE*(page-1),end=start+BLOG_POSTS_PER_PAGE,postsToShow=blogFilteredPosts.slice(start,end);append||(container.innerHTML="");postsToShow.forEach(post=>{container.insertAdjacentHTML("beforeend",createBlogPostCard(post))});updateBlogStats();toggleBlogLoadMore();renderBlogPagination();typeof WOW!=="undefined"&&!append&&new WOW().init();typeof Odometer!=="undefined"&&document.querySelectorAll(".odometer").forEach(el=>{const count=el.getAttribute("data-count");count&&(el.innerText=count)})}function refreshBlog(){updateFilteredPosts();blogCurrentPage=1;renderBlogPosts(1,!1)}document.addEventListener("DOMContentLoaded",function(){const categoryItems=document.querySelectorAll('.main-menu__category-sub-menu li');function setActiveCategory(selectedLi){categoryItems.forEach(li=>li.classList.remove("active"));selectedLi&&selectedLi.classList.add("active")}categoryItems.forEach(item=>{item.addEventListener("click",function(e){e.preventDefault();const catId=parseInt(this.getAttribute("data-category"));0===catId?(currentCategory=null,setActiveCategory(this)):currentCategory===catId?(currentCategory=null,setActiveCategory(null)):(currentCategory=catId,setActiveCategory(this));refreshBlog()})});const blogSortSelect=document.getElementById("blog-sort");if(blogSortSelect){let lastSortValue=blogSortSelect.value;blogSortSelect.addEventListener("change",function(){lastSortValue!==this.value&&(lastSortValue=this.value,refreshBlog())});setInterval(function(){blogSortSelect.value!==lastSortValue&&(lastSortValue=blogSortSelect.value,refreshBlog())},300)}const blogLoadMore=document.getElementById("blog-load-more-btn");blogLoadMore&&blogLoadMore.addEventListener("click",blogLoadMoreHandler);const blogPagination=document.getElementById("blog-pagination");blogPagination&&blogPagination.addEventListener("click",function(e){const link=e.target.closest("a[data-page]");if(!link)return;e.preventDefault();const page=parseInt(link.getAttribute("data-page")),totalPages=Math.ceil(blogFilteredPosts.length/BLOG_POSTS_PER_PAGE);isNaN(page)||page<1||page>totalPages||(blogCurrentPage=page,renderBlogPosts(blogCurrentPage,!1))});refreshBlog()});
