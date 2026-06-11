@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # Blog One - نسخه سبک‌تر و بهینه  دیده شده
 --------------------------------------------------------------*/
+
 .blog-one {
     position: relative;
     display: block;
@@ -1524,3 +1525,84 @@
 /*--------------------------------------------------------------
 # End
 --------------------------------------------------------------*/
+.course-grid__title-box {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.course-grid__title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.course-grid__title-shape-1 {
+    position: relative;
+    display: block;
+    margin-top: -7px;
+}
+
+.course-grid__title-shape-1 img {
+    width: auto;
+}
+
+.course-grid__search-text {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 17px;
+}
+
+.course-grid__search form {
+    position: relative;
+}
+
+.course-grid__search form input[type="search"],
+.course-grid__search form input[type="text"] {
+    width: 100%;
+    height: 50px;
+    background-color: var(--fistudy-white);
+    padding-right: 20px;
+    padding-left: 95px;
+    font-size: 16px;
+    color: var(--fistudy-gray);
+    font-family: var(--fistudy-font);
+    border: 1px solid var(--fistudy-bdr-color);
+    outline: none;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+.course-grid__search form ::placeholder {
+    color: inherit;
+    opacity: 1;
+}
+
+.course-grid__search form button[type="submit"] {
+    background-color: var(--fistudy-base);
+    color: var(--fistudy-white);
+    font-size: 16px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    width: 85px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+    border-radius: 45px;
+    transition: all 500ms ease;
+}
+
+.course-grid__search form button i {
+    font-size: 14px;
+}
+
+.course-grid__search form button:hover[type="submit"] {
+    background-color: var(--fistudy-black);
+    color: var(--fistudy-white);
+}
