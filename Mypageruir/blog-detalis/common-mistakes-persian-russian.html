@@ -295,13 +295,20 @@
                                     </li>
                                     <li>
                                         <div class="icon"><span style="font-size: 18px;">👁️</span></div>
-                                        <p><span id="online-viewers">0</span> نفر در حال مشاهده این صفحه هستند</p>
+                                        <p><span id="online-viewers"></span> نفر در حال مشاهده این صفحه هستند</p>
                                     </li>
                                 </ul>
                             </div>
 
                             <p class="blog-details__text-1">روسی زبانی شیرین ولی پرچالش برای ما فارسی‌زبانان است. الفبای سیریلیک، تلفظ خاص، صرف حالت‌های شش‌گانه (پادژها) و جنسیت اسم‌ها گاهی حسابی گیج‌کننده می‌شوند. در این مقاله از <strong>ایوان امگرو</strong> می‌خواهم مهم‌ترین اشتباهاتی را که خودم هم در سال‌های اول یادگیری مرتکب می‌شدم، بازگو کنم و راهکارهای ساده‌ای برای رفعشان ارائه دهم. اگر شما هم تازه وارد دنیای روسی شده‌اید، این مطلب را از دست ندهید.</p>
-                            
+                            <div class="blog-two__meta-box">
+                              <span>برای درک بهتر اشتباهات رایج، حتماً اول الفبا و صرف افعال را مرور کنید!</span>
+                              <ul class="blog-two__meta list-unstyled">
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/cyrillic-alphabet-guide.html"><span class="icon-tags"></span>آموزش الفبای سیریلیک</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/aya-zaban-rusi-sakhte.html"><span class="icon-tags"></span>آیا زبان روسی سخته؟</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-verb-conjugation-guide.html"><span class="icon-tags"></span>صرف افعال روسی</a></li>
+                              </ul>
+                            </div>
                             <h4 class="blog-details__title-2">۱. الفبا و خواندن: قربانی حروف مشابه نشوید!</h4>
                             <p class="blog-details__text-2">بسیاری از حروف روسی شبیه حروف لاتین یا حتی فارسی هستند ولی صدای متفاوتی دارند. مثلاً حرف <strong>В</strong> شبیه B انگلیسی است اما صدای «و» دارد. حرف <strong>Н</strong> شبیه H انگلیسی است ولی صدای «ن» می‌دهد. <strong>Р</strong> شبیه P اما تلفظ «ر» دارد (لرزان). معروف‌ترین اشتباه: کلمه <em>р‌а‌б‌о‌т‌а</em> (کار) را «رابوتا» می‌خوانند در حالی که «رابُتا» صحیح است. همچنین حرف <strong>Ы</strong> که صدای عمیق حنجره‌ای دارد، برای فارسی‌زبانها سخت است. پیشنهاد من: هر روز ۵ دقیقه حروف را با صدای بلند مرور کنید و جفت‌های فریبنده (В-Б، Н-П، Р-Р‌آ) را کنار هم بنویسید.</p>
                             
@@ -625,7 +632,8 @@
     <!-- template js -->
     <script src="/Mypageruir/assets/js/script.min.js"></script>
 
-<script>!function(){const STORAGE_KEY='onlineViewersCount';let e;const saved=localStorage.getItem(STORAGE_KEY);if(saved!==null&&!isNaN(parseInt(saved))){e=parseInt(saved);e=Math.max(26,Math.min(e,450))}else{e=Math.floor(Math.random()*(450-26+1)+26)}function updateViewers(){const viewerElement=document.getElementById("online-viewers");if(viewerElement){let change=Math.floor(Math.random()*11)-5;e=e+change;e=Math.max(26,Math.min(e,450));viewerElement.textContent=e;viewerElement.style.color="#ff2222";viewerElement.style.fontWeight="700";localStorage.setItem(STORAGE_KEY,e);setTimeout(()=>{if(viewerElement)viewerElement.style.color="#ff2222"},100)}}const style=document.createElement("style");style.textContent=` .blog-details__client-meta li:last-child { animation: blinkText 1s ease-in-out infinite; } #online-viewers { color: #ff2222; font-weight: 700; } @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } `;document.head.appendChild(style);updateViewers();setInterval(updateViewers,480000)}();</script>
+    <script src="/Mypageruir/assets/js/blog-detalis/View.js"></script>
+
 
 </body>
 

@@ -303,7 +303,7 @@
                                         <div class="icon">
                                             <span style="font-size: 18px;">👁️</span>
                                         </div>
-                                        <p><span id="online-viewers">0</span> نفر در حال مشاهده این صفحه هستند</p>
+                                        <p><span id="online-viewers"></span> نفر در حال مشاهده این صفحه هستند</p>
                                     </li>
                                 </ul>
                             </div>
@@ -312,7 +312,14 @@
                             <p class="blog-details__text-1">
                                 اگر به تازگی تصمیم گرفته‌اید زبان روسی را یاد بگیرید، احتمالاً اولین سؤالی که به ذهنتان می‌رسد این است: «آیا زبان روسی سخته؟» نگران نباشید، این سؤال هزاران زبان‌آموز دیگر در سراسر جهان است. روسی به دلیل الفبای سیریلیک، دستور زبان پیچیده و تلفظ خاص خود شهرت «سخت بودن» را دارد. اما حقیقت چیز دیگری است: سختی روسی بستگی به نگاه شما، روش یادگیری و شباهت‌ها و تفاوت‌های آن با زبان مادری‌تان دارد. در این مقاله از ایوان امگرو، من <strong>ابوالفضل شهاب</strong>، به طور کامل به این سؤال پاسخ می‌دهم و همه چیز را درباره زبان روسی برای شما روشن می‌کنم.
                             </p>
-        
+                            <div class="blog-two__meta-box">
+                              <span>اگر می‌خواهید درک درستی از سختی روسی داشته باشید، این مقالات را اول بخوانید!</span>
+                              <ul class="blog-two__meta list-unstyled">
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/cyrillic-alphabet-guide.html"><span class="icon-tags"></span>آموزش الفبای سیریلیک</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-verb-conjugation-guide.html"><span class="icon-tags"></span>صرف افعال روسی</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/50-russian-verbs.html"><span class="icon-tags"></span>۵۰ فعل طلایی روسی</a></li>
+                              </ul>
+                            </div>
                             <!-- سؤال ۱ -->
                             <h2 class="blog-details__title-2">۱. آیا الفبای سیریلیک روسی سخت است؟</h2>
                             <p class="blog-details__text-4">
@@ -702,7 +709,7 @@
     <!-- template js -->
     <script src="/Mypageruir/assets/js/script.min.js"></script>
 
-<script>!function(){const STORAGE_KEY='onlineViewersCount';let e;const saved=localStorage.getItem(STORAGE_KEY);if(saved!==null&&!isNaN(parseInt(saved))){e=parseInt(saved);e=Math.max(26,Math.min(e,450))}else{e=Math.floor(Math.random()*(450-26+1)+26)}function updateViewers(){const viewerElement=document.getElementById("online-viewers");if(viewerElement){let change=Math.floor(Math.random()*11)-5;e=e+change;e=Math.max(26,Math.min(e,450));viewerElement.textContent=e;viewerElement.style.color="#ff2222";viewerElement.style.fontWeight="700";localStorage.setItem(STORAGE_KEY,e);setTimeout(()=>{if(viewerElement)viewerElement.style.color="#ff2222"},100)}}const style=document.createElement("style");style.textContent=` .blog-details__client-meta li:last-child { animation: blinkText 1s ease-in-out infinite; } #online-viewers { color: #ff2222; font-weight: 700; } @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } `;document.head.appendChild(style);updateViewers();setInterval(updateViewers,480000)}();</script>
+    <script src="/Mypageruir/assets/js/blog-detalis/View.js"></script>
 
 </body>
 

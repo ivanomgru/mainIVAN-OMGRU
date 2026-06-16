@@ -279,12 +279,19 @@
                                 <ul class="blog-details__client-meta list-unstyled">
                                     <li><div class="icon"><span class="icon-calendar"></span></div><p>۵ تیر ۱۴۰۴</p></li>
                                     <li><div class="icon"><span class="icon-tags"></span></div><p>دستور زبان روسی | صرف افعال | آموزش روسی</p></li>
-                                    <li><div class="icon"><span style="font-size: 18px;">👁️</span></div><p><span id="online-viewers">0</span> نفر در حال مطالعه این مقاله هستند</p></li>
+                                    <li><div class="icon"><span style="font-size: 18px;">👁️</span></div><p><span id="online-viewers"></span> نفر در حال مطالعه این مقاله هستند</p></li>
                                 </ul>
                             </div>
         
                             <p class="blog-details__text-1">اگر مقاله قبلی من با عنوان «آیا زبان روسی سخته؟» را خوانده باشید، می‌دانید که یکی از چالش‌های بزرگ فارسی‌زبانان، <strong>صرف افعال (спряжение глаголов)</strong> است. بسیاری از زبان‌آموزان پس از دیدن تنوع پایانه‌های فعلی (شخص‌های ۶ گانه) و وجود دو دسته اصلی به همراه ده‌ها فعل استثنا، کلافه می‌شوند. اما خبر خوب این است: <strong>با روش «قالب‌های طلایی» می‌توانید در کمتر از یک هفته، بیش از ۸۰٪ افعال روسی را بدون حفظ کردن مستقیم، به صورت الگویی صرف کنید.</strong> در این مقاله از <strong>ایوان امگرو</strong>، قدم به قدم با دسته اول (Е/Ё) و دسته دوم (И)، تفاوت‌های تلفظی، استثنائات مهم، و در نهایت <strong>جدول قابل پرینت ۲۰ فعل پرکاربرد روزمره</strong> آشنا می‌شوید. همچنین تمرینات عملی و پاسخ‌نامه برای خودآزمایی ارائه شده است. اگر تا امروز از افعال روسی می‌ترسیدید، بعد از خواندن این مقاله نظرتان کاملاً تغییر خواهد کرد.</p>
-        
+                            <div class="blog-two__meta-box">
+                              <span>برای تسلط بر صرف افعال، اول این مقالات را مرور کنید!</span>
+                              <ul class="blog-two__meta list-unstyled">
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/50-russian-verbs.html"><span class="icon-tags"></span>۵۰ فعل طلایی روسی</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-verbs-of-motion.html"><span class="icon-tags"></span>افعال حرکت روسی</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/cyrillic-alphabet-guide.html"><span class="icon-tags"></span>آموزش الفبای سیریلیک</a></li>
+                              </ul>
+                            </div>      
                             <h4 class="blog-details__title-2">۱. چرا صرف افعال روسی برای فارسی‌زبانان سخت به نظر می‌رسد؟</h4>
                             <p class="blog-details__text-2">در فارسی، فعل فقط برای زمان‌ها صرف می‌شود و برای شخص (من، تو، او، ما، شما، آنها) اغلب یک شکل دارد (مثلاً «می‌روم، می‌روی، می‌رود» – فقط یک حرف آخر تغییر می‌کند). اما در روسی، هر شخص (я, ты, он/она, мы, вы, они) یک پایانه مشخص دارد. علاوه بر این، افعال به دو خانواده بزرگ تقسیم می‌شوند که پایانه‌های متفاوتی می‌گیرند. و باز هم بعضی افعال در زمان حال، ریشه‌شان عوض می‌شود (مانند «писать – пишу»). این پیچیدگی‌ها باعث ترس اولیه می‌شود. اما حقیقت این است که با یادگیری فقط ۲ الگو (قالب) و ۵ قانون فرعی، قادر خواهید بود هر فعل جدید را از روی بی‌نهایت آن تشخیص دهید و به درستی صرف کنید.</p>
         
@@ -704,7 +711,8 @@
     <!-- template js -->
     <script src="/Mypageruir/assets/js/script.min.js"></script>
 
-<script>!function(){const STORAGE_KEY='onlineViewersCount';let e;const saved=localStorage.getItem(STORAGE_KEY);if(saved!==null&&!isNaN(parseInt(saved))){e=parseInt(saved);e=Math.max(26,Math.min(e,450))}else{e=Math.floor(Math.random()*(450-26+1)+26)}function updateViewers(){const viewerElement=document.getElementById("online-viewers");if(viewerElement){let change=Math.floor(Math.random()*11)-5;e=e+change;e=Math.max(26,Math.min(e,450));viewerElement.textContent=e;viewerElement.style.color="#ff2222";viewerElement.style.fontWeight="700";localStorage.setItem(STORAGE_KEY,e);setTimeout(()=>{if(viewerElement)viewerElement.style.color="#ff2222"},100)}}const style=document.createElement("style");style.textContent=` .blog-details__client-meta li:last-child { animation: blinkText 1s ease-in-out infinite; } #online-viewers { color: #ff2222; font-weight: 700; } @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } `;document.head.appendChild(style);updateViewers();setInterval(updateViewers,480000)}();</script>
+    <script src="/Mypageruir/assets/js/blog-detalis/View.js"></script>
+
 
 </body>
 

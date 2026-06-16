@@ -282,13 +282,20 @@
                                 <ul class="blog-details__client-meta list-unstyled">
                                     <li><div class="icon"><span class="icon-calendar"></span></div><p>۲۶ اردیبهشت ۱۴۰۴</p></li>
                                     <li><div class="icon"><span class="icon-tags"></span></div><p>مهاجرت | اقتصاد روسیه</p></li>
-                                    <li><div class="icon"><span style="font-size: 18px;">👁️</span></div><p><span id="online-viewers">0</span> نفر در حال مشاهده این صفحه هستند</p></li>
+                                    <li><div class="icon"><span style="font-size: 18px;">👁️</span></div><p><span id="online-viewers"></span> نفر در حال مشاهده این صفحه هستند</p></li>
                                 </ul>
                             </div>
 
                             <!-- مقدمه: چرا روسیه؟ -->
                             <p class="blog-details__text-1">روسیه همیشه به عنوان یک مقصد مهاجرتی خاص مطرح بوده: نه آنقدر ساده مثل کانادا یا آلمان و نه آنقدر دور از ذهن مانند کشورهای آفریقایی. اما تحولات سه سال اخیر - جنگ اوکراین، تحریم‌های بی‌سابقه غرب، خروج صدها شرکت خارجی و همزمان رشد اقتصادی مبتنی بر صنایع دفاعی و کشاورزی - شرایط مهاجرت به روسیه را کاملاً تغییر داده است. در این مقاله از <strong>ایوان امگرو</strong>، بدون جانبداری و صرفاً بر اساس آمار و تجربیات واقعی مهاجران (از جمله هموطنان ایرانی ساکن مسکو و سن پترزبورگ) به این پرسش پاسخ می‌دهیم: <strong>آیا امروز مهاجرت به روسیه برای کار و زندگی ارزش دارد؟</strong></p>
-                            
+                            <div class="blog-two__meta-box">
+                              <span>قبل از تصمیم‌گیری برای مهاجرت، این مقالات را حتماً مرور کنید!</span>
+                              <ul class="blog-two__meta list-unstyled">
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/cost-of-living-russia-2026.html"><span class="icon-tags"></span>هزینه زندگی در روسیه</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/russia-travel-guide-2025.html"><span class="icon-tags"></span>راهنمای سفر به روسیه</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/culture-of-russia.html"><span class="icon-tags"></span>فرهنگ مردم روسیه</a></li>
+                              </ul>
+                            </div>
                             <h4 class="blog-details__title-2">۱. اقتصاد روسیه امروز؛ فرصت یا تهدید برای مهاجر؟</h4>
                             <p class="blog-details__text-2">بسیاری از رسانه‌های غربی اقتصاد روسیه را در حال فروپاشی معرفی می‌کنند، اما آمارها چیز دیگری می‌گویند. صندوق بین‌المللی پول در ژانویه ۲۰۲۴ رشد تولید ناخالص داخلی روسیه را ۲.۶٪ پیش‌بینی کرد که از آلمان و بریتانیا بیشتر است. نرخ بیکاری در روسیه به پایین‌ترین حد تاریخی خود (۲.۹٪) رسیده و کمبود نیروی کار ماهر در بسیاری از شهرها حس می‌شود. این یعنی <strong>بازار کار برای مهاجران متخصص بازتر از همیشه است</strong>. از طرفی تورم بالای ۷٪ و نوسانات نرخ ارز روبل (که گاهی تا ۱۰۰ روبل در برابر دلار هم بالا رفته) قدرت خرید را کاهش داده است. در مجموع، اقتصاد روسیه امروز یک «اقتصاد جنگی» با رشد مبتنی بر هزینه‌های نظامی و جایگزینی واردات است. این فضا هم فرصت‌های شغلی بی‌سابقه (به‌ویژه در تولید، مهندسی، آی‌تی و داروسازی) ایجاد کرده و هم بی‌ثباتی را افزایش داده است.</p>
                             
@@ -661,7 +668,8 @@
     <!-- template js -->
     <script src="/Mypageruir/assets/js/script.min.js"></script>
 
-<script>!function(){const STORAGE_KEY='onlineViewersCount';let e;const saved=localStorage.getItem(STORAGE_KEY);if(saved!==null&&!isNaN(parseInt(saved))){e=parseInt(saved);e=Math.max(26,Math.min(e,450))}else{e=Math.floor(Math.random()*(450-26+1)+26)}function updateViewers(){const viewerElement=document.getElementById("online-viewers");if(viewerElement){let change=Math.floor(Math.random()*11)-5;e=e+change;e=Math.max(26,Math.min(e,450));viewerElement.textContent=e;viewerElement.style.color="#ff2222";viewerElement.style.fontWeight="700";localStorage.setItem(STORAGE_KEY,e);setTimeout(()=>{if(viewerElement)viewerElement.style.color="#ff2222"},100)}}const style=document.createElement("style");style.textContent=` .blog-details__client-meta li:last-child { animation: blinkText 1s ease-in-out infinite; } #online-viewers { color: #ff2222; font-weight: 700; } @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } `;document.head.appendChild(style);updateViewers();setInterval(updateViewers,480000)}();</script>
+    <script src="/Mypageruir/assets/js/blog-detalis/View.js"></script>
+
 
 </body>
 

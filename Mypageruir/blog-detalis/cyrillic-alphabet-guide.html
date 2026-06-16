@@ -284,12 +284,19 @@
                                 <ul class="blog-details__client-meta list-unstyled">
                                     <li><div class="icon"><span class="icon-calendar"></span></div><p>۲۵ خرداد ۱۴۰۴</p></li>
                                     <li><div class="icon"><span class="icon-tags"></span></div><p>آموزش زبان روسی | الفبای سیریلیک | راهنمای مبتدیان</p></li>
-                                    <li><div class="icon"><span style="font-size: 18px;">👁️</span></div><p><span id="online-viewers">0</span> نفر در حال مطالعه این مقاله هستند</p></li>
+                                    <li><div class="icon"><span style="font-size: 18px;">👁️</span></div><p><span id="online-viewers"></span> نفر در حال مطالعه این مقاله هستند</p></li>
                                 </ul>
                             </div>
         
                             <p class="blog-details__text-1">اگر به تازگی تصمیم گرفته‌اید زبان روسی یاد بگیرید یا قصد سفر به روسیه را دارید، اولین و مهم‌ترین قدم آشنایی با <strong>الفبای سیریلیک (Кириллица)</strong> است. بسیاری از فارسی‌زبانان تصور می‌کنند الفبای روسی بسیار پیچیده و ترسناک است، اما واقعیت این است که با یک روش درست و برنامه‌ریزی روزانه، می‌توانید تمام ۳۳ حرف سیریلیک را در کمتر از کمتر از یک هفته (حدود ۷ تا ۱۰ جلسه) به طور کامل یاد بگیرید. در این مقاله از <strong>ایوان امگرو</strong>، یک نقشه راه عملی، تصویری و گام‌به‌گام برای شما آماده کرده‌ایم. جدول حروف، نکات تلفظی مخصوص فارسی‌زبانان، اشتباهات رایج، تمرینات روزانه و معرفی بهترین اپلیکیشن‌ها و منابع رایگان را پوشش می‌دهیم. حتی اگر هیچ آشنایی قبلی با زبان روسی ندارید، با خواندن این مقاله و انجام تمرینات ساده، می‌توانید پس از کمتر از یک هفته متون ساده روسی را بخوانید و تلفظ کنید.</p>
-        
+                            <div class="blog-two__meta-box">
+                              <span>برای یادگیری اصولی الفبا، این مقالات مکمل را حتماً بخوانید!</span>
+                              <ul class="blog-two__meta list-unstyled">
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/aya-zaban-rusi-sakhte.html"><span class="icon-tags"></span>آیا زبان روسی سخته؟</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/common-mistakes-persian-russian.html"><span class="icon-tags"></span>اشتباهات رایج فارسی‌زبانان</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-verb-conjugation-guide.html"><span class="icon-tags"></span>صرف افعال روسی</a></li>
+                              </ul>
+                            </div>        
                             <h4 class="blog-details__title-2">۱. چرا یادگیری الفبای سیریلیک اولین و مهم‌ترین گام است؟</h4>
                             <p class="blog-details__text-2">الفبای سیریلیک برخلاف تصور عموم، یک الفبای کاملاً منطقی و آوایی (فونتیک) است. یعنی در زبان روسی (برخلاف انگلیسی یا فرانسوی) تقریباً هر حرف فقط یک صدای مشخص دارد و هر کلمه دقیقاً به همان شکلی که نوشته می‌شود، تلفظ می‌گردد (البته با چند استثنای ساده مانند حروف صدادار بدون تکیه). بنابراین، اگر الفبا را درست یاد بگیرید، می‌توانید هر کلمه روسی را بدون دانستن معنی آن به درستی بخوانید. این ویژگی یادگیری روسی را برای مبتدیان بسیار لذت‌بخش می‌کند. به علاوه، با یادگیری الفبا می‌توانید از دیکشنری‌ها و منابع روسی استفاده کنید، تابلوهای خیابانی، منوهای رستوران و علائم را در سفر بخوانید و پایه‌ی محکمی برای دستور زبان و مکالمه بسازید.</p>
                             
@@ -714,7 +721,8 @@
     <!-- template js -->
     <script src="/Mypageruir/assets/js/script.min.js"></script>
 
-<script>!function(){const STORAGE_KEY='onlineViewersCount';let e;const saved=localStorage.getItem(STORAGE_KEY);if(saved!==null&&!isNaN(parseInt(saved))){e=parseInt(saved);e=Math.max(26,Math.min(e,450))}else{e=Math.floor(Math.random()*(450-26+1)+26)}function updateViewers(){const viewerElement=document.getElementById("online-viewers");if(viewerElement){let change=Math.floor(Math.random()*11)-5;e=e+change;e=Math.max(26,Math.min(e,450));viewerElement.textContent=e;viewerElement.style.color="#ff2222";viewerElement.style.fontWeight="700";localStorage.setItem(STORAGE_KEY,e);setTimeout(()=>{if(viewerElement)viewerElement.style.color="#ff2222"},100)}}const style=document.createElement("style");style.textContent=` .blog-details__client-meta li:last-child { animation: blinkText 1s ease-in-out infinite; } #online-viewers { color: #ff2222; font-weight: 700; } @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } `;document.head.appendChild(style);updateViewers();setInterval(updateViewers,480000)}();</script>
+    <script src="/Mypageruir/assets/js/blog-detalis/View.js"></script>
+
 
 </body>
 

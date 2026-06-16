@@ -279,12 +279,19 @@
                                 <ul class="blog-details__client-meta list-unstyled">
                                     <li><div class="icon"><span class="icon-calendar"></span></div><p>۱۵ خرداد ۱۴۰۵</p></li>
                                     <li><div class="icon"><span class="icon-tags"></span></div><p>واژگان روسی | افعال پرکاربرد | آموزش روسی</p></li>
-                                    <li><div class="icon"><span style="font-size: 18px;">👁️</span></div><p><span id="online-viewers">0</span> نفر در حال مطالعه این مقاله هستند</p></li>
+                                    <li><div class="icon"><span style="font-size: 18px;">👁️</span></div><p><span id="online-viewers"></span> نفر در حال مطالعه این مقاله هستند</p></li>
                                 </ul>
                             </div>
         
                             <p class="blog-details__text-1">تا همین چند وقت پیش، هر وقت یک زبان‌آموز روسی به من می‌گفت «از کجا شروع کنم؟»، من همیشه جواب می‌دادم: «از الفبا و بعد از آن، از افعال». اما حالا بعد از نوشتن مقاله‌های «آیا زبان روسی سخته؟»، «الفبای سیریلیک در یک هفته» و «صرف افعال با روش قالب‌های طلایی»، می‌دانم که خیلی از شما دوستان دیگر از دسته‌بندی اول و دوم و استثناها نمی‌ترسید. خب، قدم بعدی چیست؟ <strong>واژگان، مخصوصاً افعال.</strong> در این مقاله از <strong>ایوان امگرو</strong>، ۵۰ فعل پرکاربرد روسی را جمع‌آوری کرده‌ام – دقیقاً همان افعالی که در خیابان، در فیلم‌ها، در مکالمات روزمره و حتی در متون ساده به وفور می‌بینید. برای هر فعل، مصدر، معنی، دسته صرف، اول شخص مفرد (я) و سوم شخص جمع (они) را می‌نویسم، یک مثال ساده اضافه می‌کنم و نکات تلفظی را هم می‌گویم. اگر این ۵۰ فعل را خوب یاد بگیرید، می‌توانید حدود ۸۰٪ نیازهای مکالمه‌ای خود را در سفر، کار یا تحصیل پوشش دهید. پس دفتر و قلم بردارید و بیایید شروع کنیم.</p>
-        
+                            <div class="blog-two__meta-box">
+                              <span>برای استفاده بهتر از این ۵۰ فعل، اول مقالات زیر را بخوانید!</span>
+                              <ul class="blog-two__meta list-unstyled">
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-verb-conjugation-guide.html"><span class="icon-tags"></span>صرف افعال روسی</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-verbs-of-motion.html"><span class="icon-tags"></span>افعال حرکت روسی</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/cyrillic-alphabet-guide.html"><span class="icon-tags"></span>آموزش الفبای سیریلیک</a></li>
+                              </ul>
+                            </div>
                             <h4 class="blog-details__title-2">۱. چرا ۵۰ فعل؟ و چرا این ۵۰ تا؟</h4>
                             <p class="blog-details__text-2">زبان روسی بیش از ۲۰۰٬۰۰۰ فعل دارد (در منابع مختلف). اما خبر خوب این است که در مکالمه‌های روزمره، فقط چند صد فعل واقعاً کار می‌کنند. مطالعات روی پیکره‌های زبانی نشان می‌دهد که <strong>۵۰ فعل اول، نزدیک به ۶۰ درصد از کل افعال به کار رفته در گفتگوهای معمولی را تشکیل می‌دهند.</strong> جالب است نه؟ یعنی اگر همین ۵۰ فعل را بلد باشید، می‌توانید بگویید «رفتم، دیدم، گرفتم، خوردم، خوابیدم، کار کردم، دوست دارم، می‌توانم...» و خیلی چیزهای دیگر. من این لیست را بر اساس فرکانس واقعی در فیلم‌ها، سریال‌ها و مکالمات بومی‌ها انتخاب کرده‌ام – نه از روی کتاب‌های درسی خشک. پس خودت را خسته نکن. بیا این ۵۰ فعل را طوری یاد بگیریم که هیچ وقت از یادت نرود.</p>
         
@@ -707,14 +714,9 @@
     <script src="/Mypageruir/assets/js/gsap/ScrollTrigger.min.js"></script>
     <script src="/Mypageruir/assets/js/gsap/SplitText.min.js"></script>
 
-
-
-
+    <script src="/Mypageruir/assets/js/blog-detalis/View.js"></script>
     <!-- template js -->
     <script src="/Mypageruir/assets/js/script.min.js"></script>
-
-<script>!function(){const STORAGE_KEY='onlineViewersCount';let e;const saved=localStorage.getItem(STORAGE_KEY);if(saved!==null&&!isNaN(parseInt(saved))){e=parseInt(saved);e=Math.max(26,Math.min(e,450))}else{e=Math.floor(Math.random()*(450-26+1)+26)}function updateViewers(){const viewerElement=document.getElementById("online-viewers");if(viewerElement){let change=Math.floor(Math.random()*11)-5;e=e+change;e=Math.max(26,Math.min(e,450));viewerElement.textContent=e;viewerElement.style.color="#ff2222";viewerElement.style.fontWeight="700";localStorage.setItem(STORAGE_KEY,e);setTimeout(()=>{if(viewerElement)viewerElement.style.color="#ff2222"},100)}}const style=document.createElement("style");style.textContent=` .blog-details__client-meta li:last-child { animation: blinkText 1s ease-in-out infinite; } #online-viewers { color: #ff2222; font-weight: 700; } @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } `;document.head.appendChild(style);updateViewers();setInterval(updateViewers,480000)}();</script>
-
 </body>
 
 

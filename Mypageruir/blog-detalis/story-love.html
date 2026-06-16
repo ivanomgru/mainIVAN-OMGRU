@@ -271,13 +271,20 @@
                                     </li>
                                     <li>
                                         <div class="icon"><span style="font-size: 18px;">👁️</span></div>
-                                        <p><span id="online-viewers">0</span> نفر در حال مشاهده این صفحه هستند</p>
+                                        <p><span id="online-viewers"></span> نفر در حال مشاهده این صفحه هستند</p>
                                     </li>
                                 </ul>
                             </div>
         
                             <p class="blog-details__text-1">عشق جهانی است، اما زبان آن در فرهنگ‌ها و کشورها متفاوت به نظر می‌رسد. شاید برای شما هم پیش آمده باشد که بخواهید احساس خود را به زبان روسی، انگلیسی یا حتی فارسی به زیبایی بیان کنید اما دقیقاً ندانید چه عبارتی به کار ببرید. در این مقاله از <strong>ایوان امگرو</strong>، یک دایرةالمعارف کوچک از عاشقانه‌ترین کلمات و جملات را در سه زبان گردآوری کرده‌ایم؛ از ابتدایی‌ترین «دوستت دارم» تا پیچیده‌ترین اصطلاحات ادبی و عامیانه. چه در حال یادگیری زبان باشید، چه قصد مهاجرت دارید یا می‌خواهید قلب کسی را به دست آورید، این مقاله راهنمای همیشگی شما خواهد بود.</p>
-        
+                            <div class="blog-two__meta-box">
+                              <span>برای درک بهتر کلمات عاشقانه روسی، اول با فرهنگ و زبان روسیه آشنا شوید!</span>
+                              <ul class="blog-two__meta list-unstyled">
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/culture-of-russia.html"><span class="icon-tags"></span>فرهنگ مردم روسیه</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/russia-travel-guide-2025.html"><span class="icon-tags"></span>راهنمای سفر به روسیه</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/aya-zaban-rusi-sakhte.html"><span class="icon-tags"></span>آیا زبان روسی سخته؟</a></li>
+                              </ul>
+                            </div>        
                             <h4 class="blog-details__title-2">۱. درجه‌بندی عشق: از «علاقه» تا «فداکاری»</h4>
                             <p class="blog-details__text-2">همه کلمات عشق یکسان نیستند. در هر زبانی، شما می‌توانید شدت احساس خود را با انتخاب واژه‌های مختلف تنظیم کنید. بیایید با یک جدول مقایسه دقیق شروع کنیم:</p>
         
@@ -685,7 +692,8 @@
     <!-- template js -->
     <script src="/Mypageruir/assets/js/script.min.js"></script>
 
-<script>!function(){const STORAGE_KEY='onlineViewersCount';let e;const saved=localStorage.getItem(STORAGE_KEY);if(saved!==null&&!isNaN(parseInt(saved))){e=parseInt(saved);e=Math.max(26,Math.min(e,450))}else{e=Math.floor(Math.random()*(450-26+1)+26)}function updateViewers(){const viewerElement=document.getElementById("online-viewers");if(viewerElement){let change=Math.floor(Math.random()*11)-5;e=e+change;e=Math.max(26,Math.min(e,450));viewerElement.textContent=e;viewerElement.style.color="#ff2222";viewerElement.style.fontWeight="700";localStorage.setItem(STORAGE_KEY,e);setTimeout(()=>{if(viewerElement)viewerElement.style.color="#ff2222"},100)}}const style=document.createElement("style");style.textContent=` .blog-details__client-meta li:last-child { animation: blinkText 1s ease-in-out infinite; } #online-viewers { color: #ff2222; font-weight: 700; } @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } `;document.head.appendChild(style);updateViewers();setInterval(updateViewers,480000)}();</script>
+    <script src="/Mypageruir/assets/js/blog-detalis/View.js"></script>
+
 
 </body>
 

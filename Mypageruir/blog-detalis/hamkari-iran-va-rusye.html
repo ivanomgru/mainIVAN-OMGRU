@@ -281,13 +281,20 @@
                                     </li>
                                     <li>
                                         <div class="icon"><span style="font-size: 18px;">👁️</span></div>
-                                        <p><span id="online-viewers">0</span> نفر در حال مشاهده این صفحه هستند</p>
+                                        <p><span id="online-viewers"></span> نفر در حال مشاهده این صفحه هستند</p>
                                     </li>
                                 </ul>
                             </div>
         
                             <p class="blog-details__text-1">ایران و روسیه دو کشور بزرگ و تأثیرگذار در منطقه اوراسیا و خاورمیانه هستند که در سال‌های اخیر روابط خود را به سطح راهبردی ارتقا داده‌اند. از همکاری در سوریه و افغانستان گرفته تا پروژه کریدور شمال-جنوب و مبادلات تجاری با ارزهای ملی، این دو کشور نشان داده‌اند که اراده جدی برای گسترش همکاری در برابر فشارهای غرب دارند. در این مقاله از <strong>ایوان امگرو</strong>، به‌طور کامل به بررسی ابعاد مختلف همکاری ایران و روسیه، فرصت‌ها، چالش‌ها و چشم‌انداز آینده این روابط می‌پردازیم.</p>
-        
+                            <div class="blog-two__meta-box">
+                              <span>برای تحلیل عمیق‌تر روابط ایران و روسیه، این مقالات را هم بخوانید!</span>
+                              <ul class="blog-two__meta list-unstyled">
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/emigrate-to-russia-work-opportunities.html"><span class="icon-tags"></span>مهاجرت به روسیه</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/cost-of-living-russia-2026.html"><span class="icon-tags"></span>هزینه زندگی در روسیه</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/culture-of-russia.html"><span class="icon-tags"></span>فرهنگ مردم روسیه</a></li>
+                              </ul>
+                            </div>
                             <h4 class="blog-details__title-2">۱. پیشینه تاریخی روابط ایران و روسیه (از رقابت تا همکاری)</h4>
                             <p class="blog-details__text-2">روابط ایران و روسیه همواره فراز و نشیب‌های زیادی داشته است. از جنگ‌های دوره قاجار و قراردادهای ترکمن‌چای و گلستان تا روابط نسبتاً گرم و سپس انقلاب اسلامی، مسیر پر پیچ و خمی طی شده است. اما از دهه ۲۰۰۰ به بعد، به ویژه با روی کار آمدن ولادیمیر پوتین در روسیه و تشدید تحریم‌های غرب علیه ایران، دو کشور به این نتیجه رسیدند که همکاری به جای رقابت، منافع بیشتری دارد. امروز ایران و روسیه در مسائل کلیدی مانند مبارزه با تروریسم، انرژی، حمل و نقل و مقابله با یکجانبه‌گرایی آمریکا متحد شده‌اند.</p>
         
@@ -654,7 +661,8 @@
     <!-- template js -->
     <script src="/Mypageruir/assets/js/script.min.js"></script>
 
-<script>!function(){const STORAGE_KEY='onlineViewersCount';let e;const saved=localStorage.getItem(STORAGE_KEY);if(saved!==null&&!isNaN(parseInt(saved))){e=parseInt(saved);e=Math.max(26,Math.min(e,450))}else{e=Math.floor(Math.random()*(450-26+1)+26)}function updateViewers(){const viewerElement=document.getElementById("online-viewers");if(viewerElement){let change=Math.floor(Math.random()*11)-5;e=e+change;e=Math.max(26,Math.min(e,450));viewerElement.textContent=e;viewerElement.style.color="#ff2222";viewerElement.style.fontWeight="700";localStorage.setItem(STORAGE_KEY,e);setTimeout(()=>{if(viewerElement)viewerElement.style.color="#ff2222"},100)}}const style=document.createElement("style");style.textContent=` .blog-details__client-meta li:last-child { animation: blinkText 1s ease-in-out infinite; } #online-viewers { color: #ff2222; font-weight: 700; } @keyframes blinkText { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } `;document.head.appendChild(style);updateViewers();setInterval(updateViewers,480000)}();</script>
+    <script src="/Mypageruir/assets/js/blog-detalis/View.js"></script>
+
 
 </body>
 
