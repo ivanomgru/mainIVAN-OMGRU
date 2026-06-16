@@ -154,6 +154,19 @@ const blogPosts = [
     image: "/Mypageruir/assets/images/blog/cost-of-living-russia1-2026.jpg",
     link: "/Mypageruir/blog-detalis/cost-of-living-russia-2026.html",
     text: "جدول هزینه‌های ماهانه در مسکو، سن‌پترزبورگ، کازان و شهرهای ارزان، شهریه دانشگاه‌ها، بیمه، اجاره مسکن، ."
+  },
+  {
+    title: "۱۰۰ جمله پرکاربرد روسی در مکالمه روزمره",
+    category: "زبان روسی",
+    catId: 1,
+    date: "۲۶ مرداد، ۱۴۰۵",
+    readingTime: "مطالعه ۲۰ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/blog-153-3.jpg",
+    link: "/Mypageruir/blog-detalis/100-russian-phrases.html",
+    text: "اگر تازه شروع به یادگیری روسی کرده‌اید، بهترین راه برای پیشرفت سریع، مسلط شدن به جملات روزمره‌ای است که هر روز با آنها سروکار دارید."
   }
 ];
 
