@@ -167,6 +167,19 @@ const blogPosts = [
     image: "/Mypageruir/assets/images/blog/blog-153-3.jpg",
     link: "/Mypageruir/blog-detalis/100-russian-phrases.html",
     text: "اگر تازه شروع به یادگیری روسی کرده‌اید، بهترین راه برای پیشرفت سریع، مسلط شدن به جملات روزمره‌ای است که هر روز با آنها سروکار دارید."
+  },
+  {
+    title: "چطور با روسی حرف زدن، ذهنم را برای کدنویسی تربیت کرد؟",
+    category: "برنامه‌نویسی",
+    catId: 4,
+    date: "۲۷ خرداد، ۱۴۰۵",
+    readingTime: "مطالعه ۱۲ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/blog-details-ivan omgru1.jpg",
+    link: "/Mypageruir/blog-detalis/russian-programming-mindset.html",
+    text: "وقتی یادگیری زبان روسی را شروع کردم، تصور می‌کردم فقط قرار است یک زبان جدید یاد بگیرم؛ اما بعد از مدتی...."
   }
 ];
 
