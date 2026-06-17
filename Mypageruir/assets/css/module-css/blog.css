@@ -939,7 +939,7 @@
     text-decoration: underline;
     text-underline-offset: 5px;
     text-decoration-thickness: 3px;
-    text-decoration-color: #ff2222;
+    text-decoration-color: #2622ff63;
     background: linear-gradient(120deg, rgba(255,107,107,0.1) 0%, rgba(107, 184, 255, 0.369) 80%);
     padding: 3px 5px;
     border-radius: 4px;
@@ -958,7 +958,7 @@
     margin-bottom: 65px;
     background: linear-gradient(145deg, #ffffff 30%, #4c93da96 100%);
     box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.581),
-                0 0 0 1px rgba(255, 107, 107, 0.1);
+                0 0 0 1px rgba(255, 107, 107, 0.214);
     transition: all 0.3s ease;
 }
 
