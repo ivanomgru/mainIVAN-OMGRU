@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>چطور با روسی حرف زدن، ذهنم را برای کدنویسی تربیت کرد؟ | ابوالفضل شهاب</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/logoman/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/logoman/favicon.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/images/logoman/favicon-64.png" type="image/png" sizes="64x64">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logoman/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="/images/logoman/android-chrome-192.png">
+    <link rel="icon" sizes="512x512" href="/images/logoman/android-chrome-512.png">
+    <link rel="mask-icon" href="/images/logoman/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileImage" content="/images/logoman/mstile-150x150.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Primary SEO Meta -->
+    <meta name="description" content="تجربه‌ی من از یادگیری زبان روسی و شباهت‌های شگفت‌انگیز آن با برنامه‌نویسی؛ از ساختار و دقت تا خطایابی و تفکر شی‌گرا. مقاله‌ای با نگاهی نو به ارتباط زبان و کدنویسی.">
+    <meta name="keywords" content="زبان روسی و برنامه‌نویسی, شباهت روسی و کدنویسی, تفکر برنامه‌نویسی, یادگیری روسی, گرامر روسی, OOP و روسی, ابوالفضل شهاب, Ivan Omgru">
+    <meta name="author" content="ابوالفضل شهاب | Ivan Omgru">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="language" content="persian">
+    <meta name="geo.region" content="IR" />
+    <meta name="geo.placename" content="Iran" />
+    <link rel="canonical" href="https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-programming-mindset.html" />
+
+    <!-- Open Graph / Facebook (بهینه شده) -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="چطور با روسی حرف زدن، ذهنم را برای کدنویسی تربیت کرد؟">
+    <meta property="og:description" content="روزی که فهمیدم گرامر روسی همان معماری شی‌گرای برنامه‌نویسی است؛ سفری از الفبای سیریلیک تا دیباگ کردن جمله‌ها.">
+    <meta property="og:url" content="https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-programming-mindset.html">
+    <meta property="og:image" content="https://ivan-omgru.ir/images/logoman/cover-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="تصویر ذهنی ارتباط بین زبان روسی و برنامه‌نویسی">
+    <meta property="og:site_name" content="Ivan Omgru | وبلاگ ابوالفضل شهاب">
+    <meta property="og:locale" content="fa_IR">
+    <meta property="article:published_time" content="2026-06-17T09:00:00+03:30">
+    <meta property="article:modified_time" content="2026-06-17T16:00:00+03:30">
+    <meta property="article:author" content="https://ivan-omgru.ir/Mypageruir/about.html">
+    <meta property="article:section" content="برنامه‌نویسی و یادگیری زبان">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="چطور با روسی حرف زدن، ذهنم را برای کدنویسی تربیت کرد؟ | ابوالفضل شهاب">
+    <meta name="twitter:description" content="از شباهت ساختار روسی و کدنویسی تا خطایابی و تفکر شی‌گرا؛ تجربه‌ای شخصی از دو معلم بزرگ.">
+    <meta name="twitter:image" content="https://ivan-omgru.ir/images/logoman/cover-image.jpg">
+    <meta name="twitter:site" content="@ivan_omgru">
+
+    <!-- Schema.org: Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "چطور با روسی حرف زدن، ذهنم را برای کدنویسی تربیت کرد؟",
+      "description": "تجربه‌ی شخصی از یادگیری زبان روسی و کشف شباهت‌های عمیق آن با برنامه‌نویسی؛ از ساختار و دقت تا خطایابی و تفکر شی‌گرا.",
+      "image": "https://ivan-omgru.ir/images/logoman/cover-image.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "ابوالفضل شهاب",
+        "url": "https://ivan-omgru.ir/Mypageruir/about.html",
+        "sameAs": [
+          "https://www.instagram.com/ivan.omgru",
+          "https://youtube.com/@ivan.omgruss",
+          "https://t.me/ivan_omgru"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ivan Omgru",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ivan-omgru.ir/images/logoman/logo-512.png"
+        }
+      },
+      "datePublished": "2026-06-17T09:00:00+03:30",
+      "dateModified": "2026-06-17T16:00:00+03:30",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-programming-mindset.html"
+      },
+      "keywords": "زبان روسی و برنامه‌نویسی, شباهت روسی و کدنویسی, تفکر برنامه‌نویسی, یادگیری روسی, گرامر روسی, OOP و روسی"
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage (سوالات متداول درباره ارتباط روسی و برنامه‌نویسی) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "آیا زبان روسی و برنامه‌نویسی شباهت دارند؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "بله، هر دو دارای ساختار (syntax) دقیق، نیاز به دقت بالا، خطایابی (debugging) و تفکر منطقی هستند. در مقاله توضیح داده شده که چگونه حالت‌های دستوری روسی شبیه به مفاهیم شی‌گرا در برنامه‌نویسی عمل می‌کنند."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "چگونه زبان روسی به برنامه‌نویسی کمک می‌کند؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "یادگیری روسی باعث تقویت دقت، نظم ذهنی، و توانایی خطایابی گام‌به‌گام می‌شود. همچنین درک گرامر روسی با منطق شی‌گرا، به درک بهتر مفاهیم برنامه‌نویسی مانند Object و Function کمک می‌کند."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "مهم‌ترین شباهت بین گرامر روسی و برنامه‌نویسی چیست؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "شباهت در «ساختار» و «دقت» است. درست مثل یک کد که با یک نقطه‌ویرگول خطا می‌دهد، در روسی نیز انتخاب اشتباه حالت اسم یا صرف فعل، معنی جمله را تغییر می‌دهد."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "آیا تمرین همزمان روسی و برنامه‌نویسی مفید است؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "قطعاً. نویسنده پیشنهاد می‌دهد که مفاهیم برنامه‌نویسی را به روسی ترجمه کنید، باگ‌ها را با اشتباهات گرامری مقایسه کنید، و روزانه چند دقیقه کد ساده را به روسی توضیح دهید تا هر دو مهارت تقویت شوند."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "خانه",
+          "item": "https://ivan-omgru.ir/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "وبلاگ",
+          "item": "https://ivan-omgru.ir/Mypageruir/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "چطور با روسی حرف زدن، ذهنم را برای کدنویسی تربیت کرد؟",
+          "item": "https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-programming-mindset.html"
+        }
+      ]
+    }
+    </script>
+
+    <!-- CSS Links (بدون تغییر) -->
+    <link rel="stylesheet" href="/Mypageruir/assets/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/custom-animate.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/font-awesome-all.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/jarallax.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/jquery.magnific-popup.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/odometer.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/flaticon.min.css">
+    <link rel="stylesheet" href="/Mypageruir/assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/nice-select.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/aos.css" />
+
+    <!-- Module CSS -->
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/slider.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/footer.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/category.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/blog.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/counter.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/newsletter.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/page-header.min.css" />
+    
+    <!-- Template Styles -->
+    <link rel="stylesheet" href="/Mypageruir/assets/css/style.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/responsive.min.css" />
+</head>
+
+<body class="custom-cursor">
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <!--Start Preloader-->
+    <div class="loader js-preloader">
+        <div class="brand-loader">
+            <span class="brand-text">IVAN OMGRU</span>
+            <div class="brand-sub">ivan omgru</div>
+        </div>
+    </div>
+    <!--End Preloader-->
+
+    <div class="page-wrapper">
+            <nav class="main-menu">
+                <div class="main-menu__wrapper">
+                    <div class="container">
+                        <div class="main-menu__wrapper-inner">
+                            <div class="main-menu__left">
+                                <div class="main-menu__logo">
+                                    <a href="index.html"><img src="/Mypageruir/assets/images/resources/logo-1.png" alt=""></a>
+                                </div>
+                                <div class="main-menu__category-box">
+                                    <div class="main-menu__category-btn">
+                                        <i class="fas fa-th"></i>
+                                        <p>دسته بندی</p>
+                                        <span class="icon-down-arrow"></span>
+                                    </div>
+                                    <ul class="list-unstyled main-menu__category-sub-menu">
+                                        <li>
+                                            <a href="/Mypageruir/blog.html">
+                                                <div class="main-menu__category-icon">
+                                                    <img src="/Mypageruir/assets/images/icon/categoyr-two-icon-7.png" alt="">
+                                                </div>
+                                                <div class="main-menu__category-content">
+                                                     <div class="menu22">همه<br>مقالات</div>
+                                                    <p style="color: #ff6a00;">ivan omgru</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/Mypageruir/blog.html">
+                                                <div class="main-menu__category-icon">
+                                                    <img src="/Mypageruir/assets/images/icon/categoyr-two-icon-1.png" loading="lazy" alt="">
+                                                </div>
+                                                <div class="main-menu__category-content">
+                                                    <div class="menu22">زبان<br>روسی</div>
+                                                    <p>از پادژ تا الفبا</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/Mypageruir/blog.html">
+                                                <div class="main-menu__category-icon">
+                                                    <img src="/Mypageruir/assets/images/icon/categoyr-two-icon-2.png" loading="lazy" alt="">
+                                                </div>
+                                                <div class="main-menu__category-content">
+                                                    <div class="menu22">مهاجرت<br>به روسیه</div>
+                                                    <p>از ویزا تا اقتصاد</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/Mypageruir/blog.html">
+                                                <div class="main-menu__category-icon">
+                                                    <img src="/Mypageruir/assets/images/icon/categoyr-two-icon-5.png" loading="lazy" alt="">
+                                                </div>
+                                                <div class="main-menu__category-content">
+                                                    <div class="menu22">همکاری<br>ایران روسیه</div>
+                                                    <p>از همکاری تا فرهنگ</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/Mypageruir/blog.html">
+                                                <div class="main-menu__category-icon">
+                                                    <img src="/Mypageruir/assets/images/icon/categoyr-two-icon-6.png" loading="lazy" alt="">
+                                                </div>
+                                                <div class="main-menu__category-content">
+                                                    <div class="menu22">مطالب <br>دیگر</div>
+                                                    <p>از مطالب تا علم روز</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="main-menu__main-menu-box">
+                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                <ul class="main-menu__list">
+                                    <li class="dropdown">
+                                        <a href="#">صفحه اصلی</a>
+                                        <ul class="shadow-box">
+                                            <li><a href="/index.html">فارسی</a></li>
+                                            <li><a href="/ru/index.html">Русский</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">دوره ها</a>
+                                        <ul class="shadow-box">
+                                            <li><a href="/Mypageruir/pricing.html">پکیج ها</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">وبلاگ</a>
+                                        <ul class="shadow-box">
+                                            <li><a href="/Mypageruir/blog.html">آخرین خبر ها</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">ارتباط</a>
+                                        <ul class="shadow-box">
+                                            <li><a href="/Mypageruir/about.html">درباره</a></li>
+                                            <li><a href="/Mypageruir/faq.html">سوالات متداول</a></li>
+                                            <li><a href="/Mypageruir/contact.html">تماس</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="main-menu-two__right">
+                                <div class="main-menu-two__search-box">
+                                    <a href="#" class="main-menu-two__search searcher-toggler-box icon-search"></a>
+                                </div>
+                                <div class="main-menu-two__signin-reg">
+                                    <div class="main-menu-two__signin-reg-icon">
+                                        <span class="icon-user-plus"></span>
+                                    </div>
+                                    <div class="main-menu-two__signin-reg-content">
+                                        <a href="https://www.instagram.com/ivan.omgru" class="main-menu-two__signin">اینستاگرام</a>
+                                        <a href="https://www.youtube.com/@ivan.omgruss" class="main-menu-two__reg">یوتیوب</a>
+                                    </div>
+                                </div>
+                                <div class="main-menu-two__support-box">
+                                    <p class="main-menu-two__support-text"> <span class="icon-contact"></span> <span>پشتیبانی</span>
+                                    </p>
+                                    <h5 class="main-menu-two__support-number"><a href="mailto:Loverussian62@gmail.com">gmail</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div>
+        </div>
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header__bg" style="background-image: url(/Mypageruir/assets/images/shapes/page-header-bg-shape.png);">
+            </div>
+            <div class="page-header__shape-4">
+                <img src="/Mypageruir/assets/images/shapes/page-header-shape-4.png" loading="lazy" alt="decorative shape 4">
+            </div>
+            <div class="page-header__shape-5">
+                <img src="/Mypageruir/assets/images/shapes/7000ac21-997d-4a99-a361-291101c2c867.png" loading="lazy" alt="decorative shape 5">
+            </div>
+            <div class="page-header__social">
+                <a href="https://www.Telegram.com/@ivan_omgru" aria-label="Telegram">Telegram</a>
+                <span>//</span>
+                <a href="https://www.instagram.com/ivan.omgru/" aria-label="Instagram">Instagram</a>
+                <span>//</span>
+                <a href="https://youtube.com/@ivan.omgruss" aria-label="Youtube">Youtube</a>
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <div class="page-header__img">
+                        <img src="/Mypageruir/assets/images/resources/header-img-1-ivan-omgru.png" loading="lazy" alt="Ivan omgru header">
+                        <div class="page-header__shape-1">
+                            <img src="/Mypageruir/assets/images/shapes/page-header-shape-1.png" loading="lazy" alt="shape1">
+                        </div>
+                        <div class="page-header__shape-2">
+                            <img src="/Mypageruir/assets/images/shapes/page-header-shape-2.png" loading="lazy" alt="shape2">
+                        </div>
+                        <div class="page-header__shape-3">
+                            <img src="/Mypageruir/assets/images/shapes/page-header-shape-3.png" loading="lazy" alt="shape3">
+                        </div>
+                    </div>
+                    <h2>ارتباط زبان با برنامه نویسی<br>با روسی حرف زدن، ذهن را<br>برای کدنویسی آماده کنید !</h2>
+                    <div class="thm-breadcrumb__box">
+                        <ul class="thm-breadcrumb list-unstyled">
+                            <li><a href="/index.html">صفحه اصلی</a></li>
+                            <li><span>//</span></li>
+                            <li>با روسی حرف زدن، ذهن را برای کدنویسی آماده کنید</li>
+                        </ul>
+                    </div>
+                    <div class="arrow bounce">
+                       <a class="fa fa-chevron-down fa-2x" href="#" data-scroll-nav="1" aria-label="بعدی"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+<main>
+    
+    <!--Blog Details Start--> 
+    <section class="blog-details" data-scroll-index="1">
+        <div class="container">
+            <div class="row">
+                <div class="blog-details__left">
+                    <div class="blog-details__img-box">
+                        <div class="blog-details__img">
+                            <img src="/Mypageruir/assets/images/blog/blog-details-ivan omgru.webp" loading="lazy" alt="چطور با روسی حرف زدن، ذهنم را برای کدنویسی تربیت کرد؟">
+                        </div>
+                    </div>
+                    <div class="blog-details__content">
+                        <h3 class="blog-details__title-1">چطور با روسی حرف زدن، ذهنم را برای کدنویسی تربیت کرد؟</h3>
+                        <div class="blog-details__client-and-meta">
+                            <div class="blog-details__client-box">
+                                <div class="blog-details__client-img">
+                                    <img src="/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg" loading="lazy" alt="avatar نویسنده">
+                                </div>
+                                <div class="blog-details__client-content">
+                                    <p>نویسنده</p>
+                                    <h4>ابوالفضل شهاب</h4>
+                                </div>
+                            </div>
+                            <ul class="blog-details__client-meta list-unstyled">
+                                <li>
+                                    <div class="icon"><span class="icon-calendar"></span></div>
+                                    <p>۲۷ خرداد، ۱۴۰۵</p>
+                                </li>
+                                <li>
+                                    <div class="icon"><span class="icon-tags"></span></div>
+                                    <p>برنامه‌نویسی</p>
+                                </li>
+                                <li>
+                                    <div class="icon"><span style="font-size: 18px;">👁️</span></div>
+                                    <p><span id="online-viewers"></span> نفر در حال مشاهده این صفحه هستند</p>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <p class="blog-details__text-1">وقتی یادگیری زبان روسی را شروع کردم، تصور می‌کردم فقط قرار است یک زبان جدید یاد بگیرم؛ اما بعد از مدتی متوجه شدم اتفاق مهم‌تری در حال رخ دادن است. ذهنم کم‌کم شبیه یک برنامه‌نویس فکر می‌کرد. شاید در نگاه اول زبان روسی و برنامه‌نویسی هیچ ارتباطی با هم نداشته باشند، اما برای من این دو مسیر همیشه کنار هم رشد کرده‌اند. یکی به من یاد داد چگونه با انسان‌ها ارتباط برقرار کنم و دیگری یادم داد چگونه با کامپیوتر صحبت کنم؛ اما هر دو، ذهنم را به یک شکل تربیت کردند.</p>
+                        
+                        <div class="blog-two__meta-box">
+                            <span>برای درک عمیق‌تر این شباهت‌ها، حتماً نگاهی به مفاهیم پایه برنامه‌نویسی و گرامر روسی بیندازید!</span>
+                            <ul class="blog-two__meta list-unstyled">
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/cyrillic-alphabet-guide.html"><span class="icon-tags"></span>آموزش الفبای سیریلیک</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/aya-zaban-rusi-sakhte.html"><span class="icon-tags"></span>آیا زبان روسی سخته؟</a></li>
+                                <li><a href="https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-verb-conjugation-guide.html"><span class="icon-tags"></span>صرف افعال روسی</a></li>
+                            </ul>
+                        </div>
+    
+                        <h4 class="blog-details__title-2">از حفظ کردن تا فهمیدن ساختار</h4>
+                        <p class="blog-details__text-2">اوایل فکر می‌کردم برای یادگیری زبان باید فقط لغت حفظ کنم. اما خیلی زود فهمیدم روسی زبانی نیست که فقط با حفظ کردن بتوان در آن پیشرفت کرد. هر اسم حالت‌های مختلفی دارد، هر فعل صرف می‌شود و هر جمله قوانین خاص خودش را دارد. اگر فقط حفظ کنید، خیلی زود همه چیز را فراموش می‌کنید؛ اما اگر منطق پشت آن را بفهمید، جمله‌ها خودشان در ذهن شکل می‌گیرند.</p>
+                        <p class="blog-details__text-3">جالب اینجاست که چند ماه بعد دقیقاً همین موضوع را هنگام برنامه‌نویسی تجربه کردم. در برنامه‌نویسی هم کسی که فقط کدها را حفظ کند، با اولین مسئله جدید متوقف می‌شود؛ اما کسی که منطق برنامه را درک کند، حتی اگر کد را از حفظ نباشد، می‌تواند راه‌حل پیدا کند. از همان زمان فهمیدم که هر دو مهارت، بیش از آنکه به حافظه وابسته باشند، به شیوه فکر کردن وابسته‌اند.</p>
+    
+                        <h4 class="blog-details__title-3">زبان روسی هم مثل برنامه‌نویسی قانون دارد</h4>
+                        <p class="blog-details__text-4">در برنامه‌نویسی اگر یک علامت را اشتباه بنویسید، کد اجرا نمی‌شود. گاهی فقط یک نقطه‌ویرگول، یک آکولاد یا حتی یک حرف کوچک باعث می‌شود کل برنامه خطا بدهد. در زبان روسی هم شرایط تفاوت زیادی ندارد. اگر حالت اسم را اشتباه انتخاب کنید یا فعل را نادرست صرف کنید، معنی جمله تغییر می‌کند یا جمله برای یک فرد روس‌زبان غیرطبیعی به نظر می‌رسد. همین موضوع باعث شد قبل از حرف زدن، چند ثانیه در ذهنم جمله را بررسی کنم. بعدها متوجه شدم هنگام نوشتن کد نیز دقیقاً همین کار را انجام می‌دهم. قبل از اینکه Enter را بزنم، ذهنم چند بار کد را مرور می‌کند.</p>
+                        
+                        <div class="blog-details__points-box">
+                            <h4 class="blog-details__points-title">🧠 شباهت‌های کلیدی بین روسی و برنامه‌نویسی</h4>
+                            <ul class="blog-details__points list-unstyled">
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>ساختار (Syntax)</strong> – درست مثل قواعد گرامر، هر زبان برنامه‌نویسی قوانین نحوی خاص خود را دارد که اگر رعایت نشود، خطا می‌دهد.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>دقت (Precision)</strong> – یک حرف اضافه در روسی یا یک کاراکتر در کد، می‌تواند کل معنا را تغییر دهد.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>خطایابی (Debugging)</strong> – همانطور که باگ کد را خط به خط چک می‌کنید، جمله‌های روسی را هم جزءبه‌جزء بررسی کنید.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>صبر (Patience)</strong> – هیچ‌کس در یک هفته برنامه‌نویس یا روسی‌صحبت حرفه‌ای نمی‌شود؛ پیشرفت تدریجی است.</p></li>
+                            </ul>
+                        </div>
+    
+                        <div class="blog-details__quote-box">
+                            <div class="blog-details__quote-icon-1"><span class="icon-quote"></span></div>
+                            <div class="blog-details__quote-icon-2"><span class="icon-quote"></span></div>
+                            <p class="blog-details__quote-text">«گرامر روسی را مثل معماری یک نرم‌افزار ببین؛ هر قاعده‌ای یک نقشه است که اگر درست پیاده شود، خروجی‌اش یک جمله‌ی زیبا خواهد بود.»</p>
+                            <div class="blog-details__client-box-2">
+                                <div class="blog-details__client-img-2">
+                                    <img src="/Mypageruir/assets/images/blog/blog-details-client-img-2.jpg" loading="lazy" alt="نقل قول">
+                                </div>
+                                <div class="blog-details__client-content-2">
+                                    <p>توسعه‌دهنده و مدرس</p>
+                                    <h4>ابوالفضل شهاب</h4>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <h4 class="blog-details__title-2">وقتی یک قاعده‌ی روسی، معماری کد را برایم شفاف کرد</h4>
+                        <p class="blog-details__text-2">تا اینجا بیشتر به شباهت‌های کلی اشاره کردم؛ اما یک روز به یک شباهت تکنیکال و عینی برخوردم که برای همیشه نگاهم را تغییر داد. داشتم مبحث <strong>«حالت مفعولی» (Accusative)</strong> و <strong>«حالت اضافی» (Genitive)</strong> را در روسی مرور می‌کردم که ناگهان یاد مفاهیم <strong>Object</strong> و <strong>Function</strong> در برنامه‌نویسی شی‌گرا (OOP) افتادم.</p>
+                        <p class="blog-details__text-3">در برنامه‌نویسی، شما یک متد (فعل) دارید که روی یک شیء یا آبجکت (اسم) اثر می‌گذارد. اگر شیءِ اشتباهی را به متد پاس بدهید (ورودی بدهید)، یا اصلاً شیءای وجود نداشته باشد، برنامه با خطای <strong>NullPointerException</strong> یا <strong>TypeError</strong> از کار می‌افتد. در زبان روسی هم دقیقاً همین اتفاق می‌افتد! اگر در جمله، مفعول (شیء تحت تأثیر فعل) را با فاعلی (کننده‌ی کار) اشتباه بگیرید، یا حالت دستوری آن را رعایت نکنید، جمله‌ی شما نه فقط از نظر دستوری غلط، بلکه از نظر معنا نیز بی‌معنا یا معکوس می‌شود.</p>
+                        <p class="blog-details__text-4">ناگهان با خودم گفتم: «پس من دارم با همان منطقی که کد می‌نویسم، جمله‌سازی می‌کنم!» از آن روز به بعد، گرامر روسی برایم دیگر یک قانون خشک نبود؛ بلکه یک <strong>معماری شی‌گرا (Object-Oriented Architecture)</strong> بود که باید ورودی‌ها و خروجی‌هایش را به‌درستی مدیریت می‌کردم.</p>
+    
+                        <div class="blog-details__img-box-2">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="blog-details__img-box-img">
+                                        <img src="/Mypageruir/assets/images/blog/blog-details-img-box-img-1.jpg" loading="lazy" alt="برند ivan-omgru abolfazl shahb">
+                                        <div class="img-caption" style="text-align: center; font-size: 50px; color: #000;">IVAN OMGRU</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <h4 class="blog-details__title-3">خطایابی در کد، ویراستاری متن روسی را آسان کرد</h4>
+                        <p class="blog-details__text-4">یک شباهت عملی دیگر، بحث <strong>خطایابی (Debugging)</strong> بود. وقتی یک کد ۱۰۰ خطی می‌نویسم و با خطای <code>SyntaxError</code> یا <code>Uncaught ReferenceError</code> مواجه می‌شوم، ذهنم به‌صورت غریزی وارد یک فرآیند جستجوی گام‌به‌گام (Step-by-step) می‌شود. شروع می‌کنم از آخرین تغییری که دادم، خط به خط کد را چک می‌کنم تا ببینم کدام متغیر تعریف نشده یا کدام آکولاد بسته نشده است.</p>
+                        <p class="blog-details__text-5">جالب اینجاست که هنگام ویرایش یک متن طولانی روسی نیز دقیقاً همین کار را انجام می‌دهم. وقتی حس می‌کنم جمله‌ای "نچسب" یا غیرطبیعی از کار درآمده، برخلاف گذشته که یکباره آن را پاک می‌کردم، حالا مثل یک کامپایلر، تک‌تک اجزای جمله (فاعل، فعل، مفعول، حروف اضافه) را جداگانه بررسی می‌کنم تا ببینم کدام بخش دچار "باگ" شده است. این نگاه، استرس ویرایش و خطایابی را از بین برد. هم در کدنویسی و هم در روسی، دیگر خطاها را یک "شکست" نمی‌بینم، بلکه آنها را مثل یک معمای پلیسی می‌بینم که باید سرنخ‌هایش را پیدا کنم.</p>
+    
+                        <div class="blog-details__points-box">
+                            <h4 class="blog-details__points-title">🚀 پیشنهاد عملی برای تمرین هم‌زمان</h4>
+                            <ul class="blog-details__points list-unstyled">
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p>هر مفهوم جدید برنامه‌نویسی را اول در ذهنتان به روسی ترجمه کنید، بعد کدش را بنویسید. این کار هم تمرین زبان است، هم نقشه‌ی ذهنی‌تان را شفاف‌تر می‌کند.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p>یک دفترچه‌ی دوست‌داشتنی داشته باشید و هر باگ برنامه‌نویسی را با یک اشتباه گرامری روسی مقایسه کنید و راه حل بنویسید.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p>روزی ۵ دقیقه یک کد ساده (مثلاً حلقه یا شرط) را با صدای بلند به روسی توضیح دهید – این کار روانی کلام و دقت شما را بالا می‌برد.</p></li>
+                            </ul>
+                        </div>
+    
+                        <div class="blog-details__quote-box">
+                            <div class="blog-details__quote-icon-1"><span class="icon-quote"></span></div>
+                            <div class="blog-details__quote-icon-2"><span class="icon-quote"></span></div>
+                            <p class="blog-details__quote-text">«اگر روزی از من بپرسند کدام‌یک باعث پیشرفت دیگری شد، نمی‌توانم پاسخ دقیقی بدهم. چون روسی و برنامه‌نویسی، در مسیر من رقیب نبودند؛ بلکه دو معلم بودند که هر کدام از زاویه‌ای متفاوت، به من یاد دادند چگونه بهتر فکر کنم.»</p>
+                            <div class="blog-details__client-box-2">
+                                <div class="blog-details__client-img-2">
+                                    <img src="/Mypageruir/assets/images/icon/categoyr-two-icon-7.png" loading="lazy" alt="توصیه انگیزشی">
+                                </div>
+                                <div class="blog-details__client-content-2">
+                                    <p>نویسنده و توسعه‌دهنده</p>
+                                    <h4>ابوالفضل شهاب (ایوان امگرو)</h4>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <h4 class="blog-details__title-3">نتیجه‌ای که انتظارش را نداشتم</h4>
+                        <p class="blog-details__text-4">امروز اگر از من بپرسند مهم‌ترین چیزی که از زبان روسی یاد گرفتی چیست، پاسخ من فقط لغات یا گرامر نیست. زبان روسی به من یاد داد چگونه منظم فکر کنم، چگونه برای حل یک مسئله عجله نکنم، چگونه قبل از تصمیم گرفتن، ساختار را ببینم و چگونه از اشتباه نترسم. و شاید مهم‌تر از همه، یاد گرفتم که یادگیری هیچ‌وقت تمام نمی‌شود. امروز هنوز هم هر روز چیزی درباره زبان روسی یاد می‌گیرم و هر روز سعی می‌کنم کد بهتری بنویسم.</p>
+                        <p class="blog-details__text-5">شاید این دو دنیا در ظاهر هیچ ارتباطی با هم نداشته باشند؛ اما برای من، هر دو یک هدف مشترک دارند: ساختن ذهنی دقیق‌تر، منطقی‌تر، صبورتر و آماده‌تر برای حل مسئله.</p>
+                        <p class="blog-details__text-4">امروز دیگر وقتی پشت کامپیوتر می‌نشینم، احساس نمی‌کنم بین دو دنیا زندگی می‌کنم؛ دنیای زبان و دنیای برنامه‌نویسی. برای من هر دو یک هدف دارند؛ یاد گرفتنِ بهتر فکر کردن. شاید روزی زبان‌های بیشتری یاد بگیرم و تکنولوژی‌های جدیدتری بنویسم، اما مطمئنم ذهنی که روسی آن را منظم کرد، همیشه بزرگ‌ترین سرمایه من در مسیر برنامه‌نویسی خواهد بود.</p>
+                        <p class="blog-details__text-1" style="margin-top: 20px;"><strong>جمع‌بندی نهایی:</strong> اگر شما هم هم‌زمان درگیر یادگیری یک زبان خارجی و یک مهارت فنی هستید، بدانید که این دو می‌توانند یکدیگر را تقویت کنند. به جای اینکه آنها را دو مسیر جداگانه ببینید، سعی کنید نقاط اشتراکشان را پیدا کنید. من با روسی و کدنویسی این کار را کردم و نتیجه‌اش ذهنی منظم‌تر و صبورتر بود. امیدوارم این تجربه برای شما هم الهام‌بخش باشد. اگر سوال یا تجربه‌ای دارید، خوشحال می‌شوم در کامنت‌ها بخوانم. موفق باشید — ابوالفضل شهاب (ایوان امگرو).</p>
+                        
+                        <div class="blog-details__tag-and-share">
+                            <div class="blog-details__tag">
+                                <span>تگ:</span>
+                                <a href="/Mypageruir/blog.html">برنامه‌نویسی</a>
+                                <a href="/Mypageruir/blog.html">زبان روسی</a>
+                                <a href="https://www.instagram.com/ivan.omgru">اینستاگرام</a>
+                                <a href="https://www.youtube.com/@ivan.omgruss">یوتیوب</a>
+                            </div>
+                            <div class="blog-details__share">
+                                <span>اشتراک</span>
+                                <a href="https://www.pinterest.com/pin/create/button/?url=https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-programming-mindset.html&media=https://ivan-omgru.ir/images/logoman/cover-image.jpg&description=چطور با روسی حرف زدن، ذهنم را برای کدنویسی تربیت کرد؟" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="https://www.instagram.com/ivan.omgru/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://ivan-omgru.ir/Mypageruir/blog-detalis/russian-programming-mindset.html" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Blog Details End-->
+        <!-- Newsletter Section - تغییر یافته به خبرنامه دوره‌ها (نه اینستاگرام) -->
+        <section class="newsletter-two">
+            <div class="container">
+                <div class="newsletter-two__inner">
+                    <div class="newsletter-two__img">
+                        <img src="/Mypageruir/assets/images/resources/newsletter-two-img-1.png" loading="lazy" alt="newsletter image">
+                    </div>
+                    <div class="newsletter-two__inner-content">
+                        <div class="newsletter-two__shape-bg" style="background-image: url(/Mypageruir/assets/images/shapes/newsletter-two-shape-bg.png);"></div>
+                        <div class="newsletter-two__like">
+                            <img src="/Mypageruir/assets/images/shapes/newsletter-two-like.png" loading="lazy" alt="like icon">
+                        </div>
+                        <div class="newsletter-two__title-box">
+                            <h3 class="newsletter-two__title">به جمع زبان‌آموزان و برنامه‌نویسان <br><span>ما بپیوندید</span></h3>
+                            <p class="newsletter-two__text">با ثبت نام در خبرنامه، از دوره‌های جدید، تخفیف‌ها و رویدادهای آموزشی مطلع شوید.</p>
+                        </div>
+                        <div class="newsletter-two__form-box">
+                            <form class="newsletter-two__form" id="nameForm">
+                                <div class="newsletter-two__input">
+                                    <input type="text" id="username" placeholder="نام شما" aria-label="نام خود را وارد کنید">
+                                </div>
+                                <button type="submit" class="newsletter-two__btn" aria-label="عضویت در خبرنامه">
+                                    <span class="icon-circle-rightsvg"></span>
+                                    عضویت
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Newsletter Two End -->
+</main>
+
+        <!--Site Footer Two Start-->
+        <footer class="site-footer-two">
+            <div class="site-footer-two__shape-1 img-bounce"></div>
+            <div class="site-footer-two__shape-2 float-bob-y"></div>
+            <div class="site-footer-two__star text-rotate-box">
+                <img src="/Mypageruir/assets/images/shapes/site-footer-star.png" loading="lazy" alt="decorative star - ستاره تزئینی - декоративная звезда">
+            </div>
+            <div class="site-footer-two__top">
+                <div class="site-footer-two__main-content">
+                    <div class="container">
+                        <div class="site-footer-two__main-content-inner">
+                            <div class="site-footer-two__star rotate-me" style="z-index: -5;">
+                                <img src="/Mypageruir/assets/images/shapes/why-choose-two-shape-4.png" loading="lazy" alt="decorative star - ستاره تزئینی - декоративная звезда">
+                            </div>
+                            <div class="row">
+
+                                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                                    <div class="footer-widget-two__about">
+                                        <div class="footer-widget-two__about-logo">
+                                            <a href="/index.html"><img
+                                                    src="/Mypageruir/assets/images/resources/site-footer-logo-2.png" loading="lazy" alt="Ivan omgru logo - لوگوی ایوان امگرو - логотип Ivan omgru"></a>
+                                        </div>
+                                        <p class="footer-widget-two__about-text">بستری برای یادگیری و<br>آموزشی جامع و با کیفیت</p>
+										
+                                        <div class="site-footer-two__social">
+                                                <a href="https://youtube.com/@ivan.omgruss" aria-label="یوتیوب - YouTube - YouTube"><span class="fab fa-youtube"></span></a>
+                                                <a href="https://www.facebook.com/ivan.omgru" aria-label="فیسبوک - Facebook - Facebook"><span class="fab fa-facebook-f"></span></a>
+                                                <a href="https://www.instagram.com/ivan.omgru/" aria-label="اینستاگرام - Instagram - Instagram"><span class="fab fa-instagram"></span></a>
+                                        </div>
+                                        <div class="footer-widget-two__app-download-box">
+                                            <h4 class="footer-widget-two__app-download-title">دانلود اپلیکیشن</h4>
+                                            <div class="footer-widget-two__app-download">
+                                                <a href="#" class="footer-widget-two__app-download-single" aria-label="دانلود از گوگل پلی - Download from Google Play - Скачать из Google Play">
+                                                    <img src="/Mypageruir/assets/images/icon/google-play-icon-2.png" loading="lazy" alt="google play icon - آیکون گوگل پلی - иконка Google Play">
+                                                </a>
+                                                <a href="#" class="footer-widget-two__app-download-single" aria-label="دانلود از اپ استور - Download from App Store - Скачать из App Store">
+                                                    <img src="/Mypageruir/assets/images/icon/apple-icon-2.png" loading="lazy" alt="apple icon - آیکون اپل - иконка Apple">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                    <div class="footer-widget-two__quick-links">
+                                        <h4 class="footer-widget-two__title">لینک سریع</h4>
+                                        <ul class="footer-widget-two__quick-links-list list-unstyled">
+                                            <li><a href="/index.html" aria-label="صفحه اصلی - Home - Главная"> <span class="icon-plus"></span> صفحه اصلی</a></li>
+                                            <li><a href="/Mypageruir/about.html" aria-label="درباره - About us - О нас"> <span class="icon-plus"></span> درباره</a></li>
+                                            <li><a href="https://www.youtube.com/@ivan.omgruss" aria-label="دوره ها - Courses - Курсы"> <span class="icon-plus"></span>دوره ها</a></li>
+                                            <li><a href="/Mypageruir/faq.html" aria-label="سوالات متداول - FAQ - Часто задаваемые вопросы"> <span class="icon-plus"></span> سوالات متداول</a></li>
+                                            <li><a href="/Mypageruir/blog.html" aria-label="وبلاگ - Blog - Блог"> <span class="icon-plus"></span>وبلاگ</a></li>
+                                            <li><a href="/Mypageruir/contact.html" aria-label="تماس با من - Contact us - Связаться с нами"> <span class="icon-plus"></span>تماس با من</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                                    <div class="footer-widget-two__support">
+                                        <h4 class="footer-widget-two__title">پشتیبانی</h4>
+                                        <ul class="footer-widget-two__quick-links-list list-unstyled">
+                                            <li><a href="/Mypageruir/faq.html" aria-label="شرایط و قوانین - Terms and conditions - Условия и правила"> <span class="icon-plus"></span> شرایط و قوانین</a></li>
+                                            <li><a href="/Mypageruir/about.html" aria-label="درباره - About us - О нас"> <span class="icon-plus"></span>درباره</a></li>
+                                            <li><a href="/Mypageruir/faq.html" aria-label="شرایط بازگشت وجه - Refund policy - Условия возврата"> <span class="icon-plus"></span> شرایط بازگشت وجه</a></li>                                           
+                                            <li><a href="/Mypageruir/https://www.youtube.com/@ivan.omgruss" aria-label="دوره ها - Courses - Курсы"> <span class="icon-plus"></span>دوره ها</a></li>
+                                            <li><a href="/Mypageruir/blog.html" aria-label="وبلاگ - Blog - Блог"> <span class="icon-plus"></span>وبلاگ</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="site-footer__bottom-inner">
+                                <div class="site-footer__copyright">
+                                    <p class="site-footer__copyright-text">© 2025 <a href="http://ivan-omgru.ir/" aria-label="Ivan-omgru.ir - Иваномгру.ир">Ivan-omgru.ir </a>با افتخار ارائه می شود</p>
+                                </div>
+                                <div class="site-footer__bottom-card-box">
+                                    <ul class="list-unstyled site-footer__card-menu">
+                                        <li><a href="/Mypageruir/contact.html" aria-label="روش پرداخت ۱ - Payment method 1 - Способ оплаты 1"><img src="/Mypageruir/assets/images/icon/card-icon-1.png" loading="lazy" alt="payment card 1 - کارت پرداخت ۱ - платежная карта 1"></a></li>
+                                        <li><a href="/Mypageruir/contact.html" aria-label="روش پرداخت ۲ - Payment method 2 - Способ оплаты 2"><img src="/Mypageruir/assets/images/icon/card-icon-2.png" loading="lazy" alt="payment card 2 - کارت پرداخت ۲ - платежная карта 2"></a></li>
+                                        <li><a href="/Mypageruir/contact.html" aria-label="روش پرداخت ۳ - Payment method 3 - Способ оплаты 3"><img src="/Mypageruir/assets/images/icon/card-icon-3.png" loading="lazy" alt="payment card 3 - کارت پرداخت ۳ - платежная карта 3"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Site Footer Two End-->
+
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="/index.html" aria-label="logo image"><img src="/Mypageruir/assets/images/resources/logo-4.png" width="105"
+                        loading="lazy" alt="logo 2-30 website" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:Loverussian62@gmail.com">Loverussian62</a>
+                </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:09223055692">09223055692</a>
+                </li>
+
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="https://www.instagram.com/ivan.omgru/" class="fab fa-instagram"></a>
+                    <a href="https://www.facebook.com/ivan.omgru" class="fab fa-facebook-square"></a>
+                    <a href="https://youtube.com/@ivan.omgruss" class="fab fa-youtube"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+
+
+
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <!-- Search Popup -->
+    <div class="search-popup">
+        <div class="color-layer"></div>
+        <button class="close-search"><span class="far fa-times fa-fw"></span></button>
+        <form method="post" action="#">
+            <div class="form-group">
+                <input type="search" name="search-field" value="" placeholder="دنبال چی میگردی؟" required="">
+                <button type="submit" aria-label="جستجو"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- End Search Popup -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+        <span class="scroll-to-top__text">➡️up</span>
+    </a>
+
+
+    <script src="/Mypageruir/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/Mypageruir/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/Mypageruir/assets/js/jarallax.min.js"></script>
+    <script src="/Mypageruir/assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/Mypageruir/assets/js/jquery.appear.min.js"></script>
+    <script src="/Mypageruir/assets/js/swiper.min.js"></script>
+    <script src="/Mypageruir/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/Mypageruir/assets/js/jquery.validate.min.js"></script>
+    <script src="/Mypageruir/assets/js/odometer.min.js"></script>
+    <script src="/Mypageruir/assets/js/wNumb.min.js"></script>
+    <script src="/Mypageruir/assets/js/wow.js"></script>
+    <script src="/Mypageruir/assets/js/isotope.js"></script>
+    <script src="/Mypageruir/assets/js/owl.carousel.min.js"></script>
+    <script src="/Mypageruir/assets/js/jquery-ui.min.js"></script>
+    <script src="/Mypageruir/assets/js/jquery.nice-select.min.js"></script>
+    <script src="/Mypageruir/assets/js/marquee.min.js"></script>
+    <script src="/Mypageruir/assets/js/aos.js"></script>
+    <script src="/Mypageruir/assets/js/arowscroll.min.js"></script>
+
+    <script src="/Mypageruir/assets/js/gsap/gsap.min.js"></script>
+    <script src="/Mypageruir/assets/js/gsap/ScrollTrigger.min.js"></script>
+    <script src="/Mypageruir/assets/js/gsap/SplitText.min.js"></script>
+
+    <!-- template js -->
+    <script src="/Mypageruir/assets/js/script.min.js"></script>
+
+    <script src="/Mypageruir/assets/js/blog-detalis/View.js"></script>
+
+
+</body>
+
+
+</html>
