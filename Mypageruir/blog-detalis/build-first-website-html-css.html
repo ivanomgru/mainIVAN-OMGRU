@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>آموزش گام‌به‌گام ساخت اولین وب‌سایت شخصی با HTML و CSS | ابوالفضل شهاب</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/logoman/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/logoman/favicon.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/images/logoman/favicon-64.png" type="image/png" sizes="64x64">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logoman/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="/images/logoman/android-chrome-192.png">
+    <link rel="icon" sizes="512x512" href="/images/logoman/android-chrome-512.png">
+    <link rel="mask-icon" href="/images/logoman/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileImage" content="/images/logoman/mstile-150x150.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Primary SEO Meta -->
+    <meta name="description" content="آموزش جامع و گام‌به‌گام ساخت اولین وب‌سایت شخصی با HTML و CSS؛ از نصب ابزار تا انتشار با GitHub Pages، شامل هدر، فوتر، مهارت‌ها، فرم تماس و طراحی ریسپانسیو.">
+    <meta name="keywords" content="آموزش HTML, آموزش CSS, ساخت وب‌سایت شخصی, طراحی وب, پروژه عملی HTML CSS, ریسپانسیو, GitHub Pages, ابوالفضل شهاب, ایوان امگرو">
+    <meta name="author" content="ابوالفضل شهاب | Ivan Omgru">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="language" content="persian">
+    <meta name="geo.region" content="IR" />
+    <meta name="geo.placename" content="Iran" />
+    <link rel="canonical" href="https://ivan-omgru.ir/Mypageruir/blog-detalis/build-first-website-html-css.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="آموزش گام‌به‌گام ساخت اولین وب‌سایت شخصی با HTML و CSS">
+    <meta property="og:description" content="از صفر تا صد؛ با HTML و CSS یک وب‌سایت شخصی کامل شامل هدر، درباره من، مهارت‌ها، پروژه‌ها، فرم تماس و طراحی واکنش‌گرا بسازید و با GitHub Pages منتشر کنید.">
+    <meta property="og:url" content="https://ivan-omgru.ir/Mypageruir/blog-detalis/build-first-website-html-css.html">
+    <meta property="og:image" content="https://ivan-omgru.ir/images/logoman/cover-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="آموزش ساخت وب‌سایت با HTML و CSS | ابوالفضل شهاب">
+    <meta property="og:site_name" content="Ivan Omgru | وبلاگ ابوالفضل شهاب">
+    <meta property="og:locale" content="fa_IR">
+    <meta property="article:published_time" content="2026-06-18T09:00:00+03:30">
+    <meta property="article:modified_time" content="2026-06-18T16:00:00+03:30">
+    <meta property="article:author" content="https://ivan-omgru.ir/Mypageruir/about.html">
+    <meta property="article:section" content="آموزش برنامه‌نویسی وب">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="آموزش گام‌به‌گام ساخت اولین وب‌سایت شخصی با HTML و CSS | ابوالفضل شهاب">
+    <meta name="twitter:description" content="آموزش عملی و پروژه‌محور ساخت وب‌سایت شخصی با HTML و CSS — مناسب برای مبتدیان کامل.">
+    <meta name="twitter:image" content="https://ivan-omgru.ir/images/logoman/cover-image.jpg">
+    <meta name="twitter:site" content="@ivan_omgru">
+
+    <!-- Schema.org: Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "آموزش گام‌به‌گام ساخت اولین وب‌سایت شخصی با HTML و CSS",
+      "description": "در این مقاله کامل، قدم‌به‌قدم یاد می‌گیرید چگونه با HTML و CSS یک وب‌سایت شخصی حرفه‌ای بسازید، آن را ریسپانسیو کنید و با GitHub Pages به صورت رایگان منتشر نمایید.",
+      "image": "https://ivan-omgru.ir/images/logoman/cover-image.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "ابوالفضل شهاب",
+        "url": "https://ivan-omgru.ir/Mypageruir/about.html",
+        "sameAs": [
+          "https://www.instagram.com/ivan.omgru",
+          "https://youtube.com/@ivan.omgruss",
+          "https://t.me/ivan_omgru"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ivan Omgru",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ivan-omgru.ir/images/logoman/logo-512.png"
+        }
+      },
+      "datePublished": "2026-06-18T09:00:00+03:30",
+      "dateModified": "2026-06-18T16:00:00+03:30",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ivan-omgru.ir/Mypageruir/blog-detalis/build-first-website-html-css.html"
+      },
+      "keywords": "آموزش HTML, آموزش CSS, طراحی وب, پروژه عملی, ریسپانسیو, GitHub Pages"
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage (سوالات متداول درباره ساخت وب‌سایت) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "آیا برای یادگیری HTML و CSS نیاز به پیش‌نیاز برنامه‌نویسی دارم؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "خیر، HTML و CSS پایه‌ترین زبان‌های وب هستند و هیچ پیش‌نیاز برنامه‌نویسی نیاز ندارند. فقط کافی است با کار با کامپیوتر آشنایی اولیه داشته باشید."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "چقدر زمان می‌برد تا با HTML و CSS یک سایت ساده بسازم؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "با مطالعه این مقاله و انجام تمرین‌ها، حدود ۲ تا ۳ ساعت زمان نیاز دارید تا اولین سایت شخصی خود را بسازید. البته برای تسلط بیشتر به تمرین مداوم نیاز است."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "آیا می‌توانم سایت ساخته شده را به صورت رایگان منتشر کنم؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "بله، با استفاده از GitHub Pages می‌توانید سایت خود را به صورت کاملاً رایگان و با یک آدرس اینترنتی معتبر منتشر کنید. مراحل آن در همین مقاله توضیح داده شده است."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "آیا بعد از یادگیری HTML و CSS باید زبان دیگری یاد بگیرم؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "توصیه می‌شود بعد از تسلط بر HTML و CSS، زبان JavaScript را برای تعاملات پویا و سپس یک فریم‌ورک مانند React یا Vue.js را یاد بگیرید تا به یک توسعه‌دهنده حرفه‌ای تبدیل شوید."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "خانه",
+          "item": "https://ivan-omgru.ir/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "وبلاگ",
+          "item": "https://ivan-omgru.ir/Mypageruir/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "آموزش ساخت اولین وب‌سایت با HTML و CSS",
+          "item": "https://ivan-omgru.ir/Mypageruir/blog-detalis/build-first-website-html-css.html"
+        }
+      ]
+    }
+    </script>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="/Mypageruir/assets/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/custom-animate.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/font-awesome-all.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/jarallax.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/jquery.magnific-popup.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/odometer.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/flaticon.min.css">
+    <link rel="stylesheet" href="/Mypageruir/assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/nice-select.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/aos.css" />
+
+    <!-- Module CSS -->
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/slider.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/footer.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/category.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/blog.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/counter.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/newsletter.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/page-header.min.css" />
+    
+    <!-- Template Styles -->
+    <link rel="stylesheet" href="/Mypageruir/assets/css/style.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/responsive.min.css" />
+</head>
+
+<body class="custom-cursor">
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <!--Start Preloader-->
+    <div class="loader js-preloader">
+        <div class="brand-loader">
+            <span class="brand-text">IVAN OMGRU</span>
+            <div class="brand-sub">ivan omgru</div>
+        </div>
+    </div>
+    <!--End Preloader-->
+
+    <div class="page-wrapper">
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div>
+        </div>
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header__bg" style="background-image: url(/Mypageruir/assets/images/shapes/page-header-bg-shape.png);">
+            </div>
+            <div class="page-header__shape-4">
+                <img src="/Mypageruir/assets/images/shapes/page-header-shape-4.png" loading="lazy" alt="decorative shape 4">
+            </div>
+            <div class="page-header__shape-5">
+                <img src="/Mypageruir/assets/images/shapes/7000ac21-997d-4a99-a361-291101c2c867.png" loading="lazy" alt="decorative shape 5">
+            </div>
+            <div class="page-header__social">
+                <a href="https://www.Telegram.com/@ivan_omgru" aria-label="Telegram">Telegram</a>
+                <span>//</span>
+                <a href="https://www.instagram.com/ivan.omgru/" aria-label="Instagram">Instagram</a>
+                <span>//</span>
+                <a href="https://youtube.com/@ivan.omgruss" aria-label="Youtube">Youtube</a>
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <div class="page-header__img">
+                        <img src="/Mypageruir/assets/images/resources/header-img-1-ivan-omgru.png" loading="lazy" alt="Ivan omgru header">
+                        <div class="page-header__shape-1">
+                            <img src="/Mypageruir/assets/images/shapes/page-header-shape-1.png" loading="lazy" alt="shape1">
+                        </div>
+                        <div class="page-header__shape-2">
+                            <img src="/Mypageruir/assets/images/shapes/page-header-shape-2.png" loading="lazy" alt="shape2">
+                        </div>
+                        <div class="page-header__shape-3">
+                            <img src="/Mypageruir/assets/images/shapes/page-header-shape-3.png" loading="lazy" alt="shape3">
+                        </div>
+                    </div>
+                    <h2>آموزش گام به گام ساخت سایت</h2>
+                    <div class="thm-breadcrumb__box">
+                        <ul class="thm-breadcrumb list-unstyled">
+                            <li><a href="/index.html">صفحه اصلی</a></li>
+                            <li><span>//</span></li>
+                            <li>مطالب دیگر</li>
+                        </ul>
+                    </div>
+                    <div class="arrow bounce">
+                       <a class="fa fa-chevron-down fa-2x" href="#" data-scroll-nav="1" aria-label="بعدی"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+<main>
+
+    <!--Blog Details Start-->
+    <section class="blog-details" data-scroll-index="1">
+        <div class="container">
+            <div class="row">
+                <div class="blog-details__left">
+                    <div class="blog-details__img-box">
+                        <div class="blog-details__img">
+                            <img src="/Mypageruir/assets/images/blog/blog-details-program-img-1.webp" loading="lazy" alt="آموزش گام‌به‌گام ساخت اولین وب‌سایت شخصی با HTML و CSS">
+                        </div>
+                    </div>
+                    <div class="blog-details__content">
+                        <h3 class="blog-details__title-1">آموزش گام‌به‌گام: اولین وب‌سایت شخصی‌ات را با HTML و CSS بساز</h3>
+                        <div class="blog-details__client-and-meta">
+                            <div class="blog-details__client-box">
+                                <div class="blog-details__client-img">
+                                    <img src="/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg" loading="lazy" alt="avatar نویسنده">
+                                </div>
+                                <div class="blog-details__client-content">
+                                    <p>نویسنده</p>
+                                    <h4>ابوالفضل شهاب</h4>
+                                </div>
+                            </div>
+                            <ul class="blog-details__client-meta list-unstyled">
+                                <li>
+                                    <div class="icon"><span class="icon-calendar"></span></div>
+                                    <p>۲۸ خرداد، ۱۴۰۵</p>
+                                </li>
+                                <li>
+                                    <div class="icon"><span class="icon-tags"></span></div>
+                                    <p>برنامه‌نویسی وب</p>
+                                </li>
+                                <li>
+                                    <div class="icon"><span style="font-size: 18px;">👁️</span></div>
+                                    <p><span id="online-viewers"></span> نفر در حال مشاهده این صفحه هستند</p>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <!-- ===== مقدمه جامع ===== -->
+                        <p class="blog-details__text-1">
+                            تا حالا فکر کردی هر بار که یه آدرس اینترنتی رو توی مرورگر می‌زنی، چه اتفاقی می‌افته؟ پشت هر صفحه‌ی وب زیبا، یه دنیای کد پنهونه که با <strong>HTML</strong> و <strong>CSS</strong> ساخته شده. شاید فکر کنی ساختن یه وب‌سایت کار خیلی سختیه، ولی خبر خوب اینه که با کمی تمرین و حوصله، هر کسی می‌تونه اولین صفحه‌ی خودش رو بسازه.
+                        </p>
+                        <p class="blog-details__text-2">
+                            توی این مقاله از <strong>ایوان امگرو</strong> قراره با هم قدم‌به‌قدم پیش بریم و یه وب‌سایت شخصی کامل رو از صفر تا صد بسازیم. نه فقط یه صفحه‌ی ساده، بلکه یه سایت با هدر، فوتر، درباره‌ی من، بخش مهارت‌ها، فرم تماس و حتی طراحی واکنش‌گرا (ریسپانسیو) برای موبایل. این مقاله طوری طراحی شده که اگر هیچ‌چیزی از برنامه‌نویسی نمی‌دونی، دقیقاً از جای درست شروع کنی. پس یه فنجون چای بریز، کامپیوترت رو روشن کن و بیا بریم تو دنیای هیجان‌انگیز طراحی وب!
+                        </p>
+    
+                        <!-- ===== بخش ابزارهای ضروری ===== -->
+                        <h4 class="blog-details__title-2">🔧 گام صفر: ابزارهایی که نیاز داری</h4>
+                        <p class="blog-details__text-3">
+                            قبل از نوشتن اولین خط کد، باید چند ابزار ساده رو روی سیستم‌ات نصب کنی. نگران نباش، همه‌شون رایگان و سبک هستن.
+                        </p>
+                        <div class="blog-details__points-box">
+                            <ul class="blog-details__points list-unstyled">
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>ویرایشگر کد (Code Editor):</strong> بهترین گزینه برای شروع <strong>Visual Studio Code</strong> (VS Code) هست. از سایت رسمی دانلودش کن و نصبش کن. بعد از نصب، حتماً افزونه‌ی <strong>Live Server</strong> رو نصب کن تا بتونی تغییرات کد رو به‌صورت زنده توی مرورگر ببینی.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>مرورگر (Browser):</strong> گوگل کروم یا فایرفاکس هر دو عالی‌ان. توی این مقاله از کروم استفاده می‌کنیم چون ابزارهای توسعه‌دهنده (Developer Tools) خیلی خوبی داره.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>یه پوشه برای پروژه:</strong> توی کامپیوترت یه پوشه جدید با اسم <code>my-first-website</code> بساز. اینجا قراره همه‌ی فایل‌هامون رو ذخیره کنیم.</p></li>
+                            </ul>
+                        </div>
+                        <p class="blog-details__text-4">
+                            حالا VS Code رو باز کن و پوشه‌ی پروژه رو بهش معرفی کن (File → Open Folder). توی قسمت چپ، روی اسم پوشه کلیک راست کن و فایل‌های جدید بساز. آماده‌ای که شروع کنیم؟
+                        </p>
+    
+                        <!-- ===== معرفی HTML و CSS ===== -->
+                        <h4 class="blog-details__title-3">🌐 HTML و CSS چیه و چرا باهم میان؟</h4>
+                        <p class="blog-details__text-5">
+                            <strong>HTML</strong> (مخفف HyperText Markup Language) زبان نشانه‌گذاری برای ساختن ساختار صفحه‌ست. مثل اسکلت یه ساختمان می‌مونه که تیرها و ستون‌ها رو مشخص می‌کنه. هر چیزی که توی صفحه می‌بینی (متن، عکس، دکمه، فرم) با تگ‌های HTML تعریف می‌شه.
+                        </p>
+                        <p class="blog-details__text-6">
+                            <strong>CSS</strong> (مخفف Cascading Style Sheets) اما ظاهر و زیبایی صفحه رو تعیین می‌کنه. رنگ‌ها، فونت‌ها، فاصله‌ها، اندازه‌ها و حتی انیمیشن‌ها با CSS پیاده‌سازی می‌شن. به بیان ساده‌تر: HTML می‌گه «اینجا یه عنوان بزرگ هست» و CSS می‌گه «این عنوان با رنگ آبی و فونت ۳۰ پیکسل نمایش داده بشه».
+                        </p>
+                        <p class="blog-details__text-7">
+                            توی این مقاله، هر دو رو با هم یاد می‌گیریم و یه سایت کامل می‌سازیم. پس بیا بریم سراغ قدم اول.
+                        </p>
+    
+                        <!-- ===== گام اول: ساختار اصلی HTML ===== -->
+                        <h4 class="blog-details__title-2">📄 گام اول: فایل index.html رو بساز</h4>
+                        <p class="blog-details__text-8">
+                            توی پوشه‌ی پروژه، یه فایل جدید با اسم <code>index.html</code> بساز. این اسم برای صفحه‌ی اصلی وب‌سایت‌ها استاندارده. حالا کد زیر رو توش بنویس. نگران نباش، تک‌تک خط‌هاش رو برات توضیح می‌دم.
+                        </p>
+    
+                        <div class="blog-details__points-box" style="background: #f5f5f5; direction: ltr; text-align: left; font-family: 'Courier New', monospace; padding: 20px; border-radius: 8px; overflow-x: auto;">
+                            <pre  dir="ltr" style="direction: ltr; text-align: left; unicode-bidi: embed;" style="margin:0; white-space: pre-wrap; word-break: break-all; font-size: 14px; line-height: 1.6;">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="fa" dir="rtl"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;اولین وب‌سایت من | ایوان امگرو&lt;/title&gt;
+        &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+        &lt;header&gt;
+            &lt;h1&gt;سلام، من [اسم تو] هستم!&lt;/h1&gt;
+            &lt;p&gt;به اولین وب‌سایت شخصی من خوش آمدی.&lt;/p&gt;
+        &lt;/header&gt;
+    
+        &lt;section&gt;
+            &lt;h2&gt;درباره‌ی من&lt;/h2&gt;
+            &lt;p&gt;من عاشق یادگیری تکنولوژی‌های جدید هستم و این صفحه رو با HTML و CSS ساختم.&lt;/p&gt;
+        &lt;/section&gt;
+    
+        &lt;footer&gt;
+            &lt;p&gt;© ۲۰۲۶ - ساخته شده با ❤️ توسط من&lt;/p&gt;
+        &lt;/footer&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;
+                            </pre>
+                        </div>
+    
+                        <p class="blog-details__text-9">
+                            <strong>توضیح کد:</strong>
+                            <ul style="list-style: disc; padding-right: 20px; margin-top: 10px;">
+                                <li><code>&lt;!DOCTYPE html&gt;</code> به مرورگر می‌گه که این یک صفحه‌ی HTML5 هست.</li>
+                                <li><code>&lt;html lang="fa" dir="rtl"&gt;</code> زبان و جهت نوشتار رو فارسی و راست‌چین می‌کنه.</li>
+                                <li><code>&lt;head&gt;</code> شامل اطلاعات پنهان صفحه مثل کاراکترها، عنوان و لینک به فایل CSS هست.</li>
+                                <li><code>&lt;body&gt;</code> جایی که محتوای قابل‌مشاهده قرار می‌گیره.</li>
+                                <li><code>&lt;header&gt;</code>، <code>&lt;section&gt;</code> و <code>&lt;footer&gt;</code> تگ‌های معنایی (Semantic) هستن که ساختار صفحه رو مشخص می‌کنن و برای سئو و دسترسی‌پذیری عالی‌ان.</li>
+                            </ul>
+                        </p>
+                        <p class="blog-details__text-10">
+                            حالا فایل رو ذخیره کن و با دوبار کلیک روی index.html، توی مرورگر بازش کن. اولین صفحه‌ی وب‌ات رو می‌بینی! 🎉 شاید قشنگ نباشه، اما این شروع راهه.
+                        </p>
+    
+                        <!-- ===== گام دوم: CSS پایه ===== -->
+                        <h4 class="blog-details__title-3">🎨 گام دوم: بهش رنگ و لعاب بده با CSS</h4>
+                        <p class="blog-details__text-11">
+                            حالا که اسکلت صفحه رو داریم، نوبت زیبایی‌شه. توی پوشه‌ی پروژه، یه فایل جدید با اسم <code>style.css</code> بساز و کد زیر رو توش بنویس. من تک‌تک خط‌ها رو توضیح می‌دم تا بدونی چطور کار می‌کنه.
+                        </p>
+    
+                        <div class="blog-details__points-box" style="background: #f5f5f5; direction: ltr; text-align: left; font-family: 'Courier New', monospace; padding: 20px; border-radius: 8px; overflow-x: auto;">
+                            <pre  dir="ltr" style="direction: ltr; text-align: left; unicode-bidi: embed;" style="margin:0; white-space: pre-wrap; word-break: break-all; font-size: 14px; line-height: 1.6;">
+    /* تنظیمات کلی برای همه‌ی صفحه */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Vazir', 'Tahoma', Arial, sans-serif;
+        background: #f8f9fa;
+        color: #212529;
+        line-height: 1.8;
+        padding: 20px;
+    }
+    /* استایل هدر */
+    header {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+        border-radius: 16px;
+        margin-bottom: 30px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 10px;
+    }
+    header p {
+        font-size: 1.3rem;
+        opacity: 0.9;
+    }
+    /* استایل بخش درباره‌ی من */
+    section {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 16px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    section h2 {
+        color: #2575fc;
+        border-bottom: 3px solid #6a11cb;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+    section p {
+        font-size: 1.1rem;
+        color: #495057;
+    }
+    /* استایل فوتر */
+    footer {
+        text-align: center;
+        padding: 20px;
+        color: #6c757d;
+        font-size: 0.95rem;
+        border-top: 1px solid #e9ecef;
+        margin-top: 20px;
+    }
+                            </pre>
+                        </div>
+    
+                        <p class="blog-details__text-12">
+                            <strong>توضیح بخش‌های مهم CSS:</strong>
+                            <ul style="list-style: disc; padding-right: 20px; margin-top: 10px;">
+                                <li><code>* { margin:0; padding:0; box-sizing:border-box; }</code> حاشیه و فاصله‌ی داخلی پیش‌فرض همه‌ی المان‌ها رو صفر می‌کنه تا طراحی دقیق‌تری داشته باشیم.</li>
+                                <li><code>body</code> فونت، رنگ پس‌زمینه و فاصله‌ی کلی صفحه رو مشخص می‌کنه.</li>
+                                <li><code>header</code> با گرادیان رنگی (از بنفش به آبی) و سایه، جلوه‌ی حرفه‌ای گرفته.</li>
+                                <li><code>section</code> با پس‌زمینه‌ی سفید، گوشه‌های گرد و سایه، بخش درباره‌ی من رو زیبا کرده.</li>
+                                <li><code>footer</code> با خط جداکننده و رنگ کم‌رنگ، انتهای صفحه رو مرتب نشون میده.</li>
+                            </ul>
+                        </p>
+                        <p class="blog-details__text-13">
+                            حالا مرورگرت رو ریفرش کن (F5 بزن). چه تغییرات جذابی! 🚀 حالا صفحه‌ات رنگ و جلوه‌ی حرفه‌ای گرفته. ولی این تازه شروع ماجراست.
+                        </p>
+    
+                        <!-- ===== گام سوم: اضافه کردن بخش‌های جدید ===== -->
+                        <h4 class="blog-details__title-2">🧩 گام سوم: بخش مهارت‌ها و پروژه‌ها رو اضافه کن</h4>
+                        <p class="blog-details__text-14">
+                            یه وب‌سایت شخصی خوب باید نشون بده که چه کارهایی بلدی. پس بیا یه بخش برای مهارت‌ها و نمونه‌کارها به صفحه اضافه کنیم.
+                        </p>
+                        <p class="blog-details__text-15">
+                            توی فایل <code>index.html</code>، بعد از بخش <code>&lt;section&gt;</code> که درباره‌ی من بود، کد زیر رو اضافه کن:
+                        </p>
+    
+                        <div class="blog-details__points-box" style="background: #f5f5f5; direction: ltr; text-align: left; font-family: 'Courier New', monospace; padding: 20px; border-radius: 8px; overflow-x: auto;">
+                            <pre  dir="ltr" style="direction: ltr; text-align: left; unicode-bidi: embed;" style="margin:0; white-space: pre-wrap; word-break: break-all; font-size: 14px; line-height: 1.6;">
+    &lt;section&gt;
+        &lt;h2&gt;🛠️ مهارت‌های من&lt;/h2&gt;
+        &lt;ul style="list-style: none; display: flex; flex-wrap: wrap; gap: 15px; padding: 0;"&gt;
+            &lt;li style="background: #e9ecef; padding: 10px 20px; border-radius: 30px; font-weight: bold;"&gt;HTML&lt;/li&gt;
+            &lt;li style="background: #e9ecef; padding: 10px 20px; border-radius: 30px; font-weight: bold;"&gt;CSS&lt;/li&gt;
+            &lt;li style="background: #e9ecef; padding: 10px 20px; border-radius: 30px; font-weight: bold;"&gt;JavaScript (در حال یادگیری)&lt;/li&gt;
+            &lt;li style="background: #e9ecef; padding: 10px 20px; border-radius: 30px; font-weight: bold;"&gt;طراحی وب&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/section&gt;
+    
+    &lt;section&gt;
+        &lt;h2&gt;📂 نمونه پروژه‌ها&lt;/h2&gt;
+        &lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;"&gt;
+            &lt;div style="background: #f1f3f5; padding: 20px; border-radius: 12px; text-align: center;"&gt;
+                &lt;h3&gt;پروژه اول&lt;/h3&gt;
+                &lt;p&gt;یک صفحه‌ی ساده با HTML و CSS&lt;/p&gt;
+                &lt;a href="#" style="color: #2575fc; text-decoration: none; font-weight: bold;"&gt;مشاهده →&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div style="background: #f1f3f5; padding: 20px; border-radius: 12px; text-align: center;"&gt;
+                &lt;h3&gt;پروژه دوم&lt;/h3&gt;
+                &lt;p&gt;در حال ساخت ...&lt;/p&gt;
+                &lt;a href="#" style="color: #2575fc; text-decoration: none; font-weight: bold;"&gt;به‌زودی →&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+                            </pre>
+                        </div>
+    
+                        <p class="blog-details__text-16">
+                            <strong>چی شد؟</strong> یه بخش مهارت‌ها با برچسب‌های گرد و قشنگ اضافه شد و یه بخش پروژه‌ها که با <code>grid</code> مرتب چیده شده. حالا می‌تونی با CSS بیشتر تغییرشون بدی. مثلاً رنگ‌ها رو عوض کنی یا سایه اضافه کنی.
+                        </p>
+    
+                        <!-- ===== گام چهارم: فرم تماس ===== -->
+                        <h4 class="blog-details__title-3">✉️ گام چهارم: یه فرم تماس ساده بساز</h4>
+                        <p class="blog-details__text-17">
+                            خیلی از وب‌سایت‌ها یه فرم دارن که بازدیدکننده‌ها بتونن پیام بفرستن. بیا یه فرم ساده ولی کاربردی به صفحه اضافه کنیم.
+                        </p>
+    
+                        <div class="blog-details__points-box" style="background: #f5f5f5; direction: rtl; text-align: left; font-family: 'Courier New', monospace; padding: 20px; border-radius: 8px; overflow-x: auto;">
+                            <pre  dir="ltr" style="direction: ltr; text-align: left; unicode-bidi: embed;" style="margin:0; white-space: pre-wrap; word-break: break-all; font-size: 14px; line-height: 1.6;">
+    &lt;section&gt;
+        &lt;h2&gt;📬 با من در تماس باش&lt;/h2&gt;
+        &lt;form style="display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto;"&gt;
+            &lt;input type="text" placeholder="نام شما" style="padding: 12px; border: 2px solid #dee2e6; border-radius: 8px; font-size: 1rem;"&gt;
+            &lt;input type="email" placeholder="ایمیل شما" style="padding: 12px; border: 2px solid #dee2e6; border-radius: 8px; font-size: 1rem;"&gt;
+            &lt;textarea rows="5" placeholder="پیام شما ..." style="padding: 12px; border: 2px solid #dee2e6; border-radius: 8px; font-size: 1rem; resize: vertical;"&gt;&lt;/textarea&gt;
+            &lt;button type="submit" style="background: #2575fc; color: white; padding: 14px; border: none; border-radius: 8px; font-size: 1.2rem; font-weight: bold; cursor: pointer;"&gt;ارسال پیام&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/section&gt;
+                            </pre>
+                        </div>
+    
+                        <p class="blog-details__text-18">
+                            <strong>نکته:</strong> این فرم در حال حاضر فقط ظاهر داره و پیام‌ها رو واقعاً ارسال نمی‌کنه. برای ارسال واقعی به زبان‌های سمت سرور مثل PHP یا Node.js نیاز داری که توی مقاله‌های بعدی بهش می‌پردازیم. ولی برای تمرین CSS و HTML، همین الان می‌تونی استایلش رو به سلیقه‌ی خودت تغییر بدی.
+                        </p>
+    
+                        <!-- ===== گام پنجم: ریسپانسیو کردن با Media Query ===== -->
+                        <h4 class="blog-details__title-2">📱 گام پنجم: وب‌سایتت رو برای موبایل هم قشنگ کن</h4>
+                        <p class="blog-details__text-19">
+                            امروزه بیشتر کاربران با موبایل وارد سایت‌ها می‌شن. به همین دلیل باید طراحی رو برای صفحه‌نمایش‌های کوچک هم بهینه کنیم. این کار رو با <strong>Media Query</strong> انجام می‌دیم.
+                        </p>
+                        <p class="blog-details__text-20">
+                            توی فایل <code>style.css</code>، در انتها کد زیر رو اضافه کن:
+                        </p>
+    
+                        <div class="blog-details__points-box" style="background: #f5f5f5; direction: ltr; text-align: left; font-family: 'Courier New', monospace; padding: 20px; border-radius: 8px; overflow-x: auto;">
+                            <pre  dir="ltr" style="direction: ltr; text-align: left; unicode-bidi: embed;" style="margin:0; white-space: pre-wrap; word-break: break-all; font-size: 14px; line-height: 1.6;">
+    /* طراحی برای موبایل (عرض کمتر از 768px) */
+    @media (max-width: 768px) {
+        header {
+            padding: 40px 15px;
+        }
+        header h1 {
+            font-size: 2rem;
+        }
+        section {
+            padding: 25px 15px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        section h2 {
+            font-size: 1.6rem;
+        }
+        .blog-details__points-box pre {
+            font-size: 12px;
+        }
+        /* مهارت‌ها توی موبایل به صورت ستونی */
+        section ul {
+            flex-direction: column;
+            align-items: center;
+        }
+        /* پروژه‌ها به صورت تک‌ستون */
+        section div[style*="grid"] {
+            grid-template-columns: 1fr !important;
+        }
+    }
+                            </pre>
+                        </div>
+    
+                        <p class="blog-details__text-21">
+                            حالا مرورگرت رو به اندازه‌ی موبایل کوچک کن (با ابزار توسعه‌دهنده یا کشیدن گوشه‌ی پنجره). می‌بینی که اندازه‌ی فونت‌ها کوچک‌تر شده، فاصله‌ها کمتر شده و المان‌ها به‌صورت ستونی چیده شدن. این یعنی سایتت ریسپانسیو شده! 🎉
+                        </p>
+    
+                        <!-- ===== گام ششم: دیباگ و خطایابی ===== -->
+                        <h4 class="blog-details__title-3">🐞 گام ششم: خطایابی (Debugging) رو یاد بگیر</h4>
+                        <p class="blog-details__text-22">
+                            توی مسیر یادگیری، حتماً به خطا برمی‌خوری. این کاملاً طبیعیه. مهم اینه که بلد باشی چطور خطا رو پیدا کنی. مرورگر کروم ابزار فوق‌العاده‌ای داره به اسم <strong>Developer Tools</strong> که با کلید F12 باز می‌شه.
+                        </p>
+                        <p class="blog-details__text-23">
+                            توی تب <strong>Elements</strong> می‌تونی ساختار HTML رو ببینی و حتی زنده تغییرش بدی. توی تب <strong>Styles</strong> می‌تونی تمام CSSهای اعمال‌شده رو ببینی و تست کنی. اگه یه المان ظاهر مورد نظر رو نداره، اینجا رو چک کن تا ببینی کدوم قانون CSS روش تاثیر گذاشته.
+                        </p>
+                        <p class="blog-details__text-24">
+                            یه ترفند دیگه: اگه یه تغییر توی CSS دادی ولی توی مرورگر اعمال نشد، احتمالاً مرورگر کش (حافظه‌ی موقت) رو نگه داشته. کافیه Ctrl+Shift+R (یا Ctrl+F5) بزنی تا صفحه با ریفرش کامل بارگذاری بشه.
+                        </p>
+    
+                        <!-- ===== گام هفتم: انتشار با GitHub Pages ===== -->
+                        <h4 class="blog-details__title-2">🌍 گام هفتم: وب‌سایتت رو به دنیا نشون بده</h4>
+                        <p class="blog-details__text-25">
+                            حالا که سایتت رو ساختی، وقتشه که همه بتونن ببیننش. بهترین و رایگان‌ترین راه، استفاده از <strong>GitHub Pages</strong> هست. قدم‌ها رو با هم بریم:
+                        </p>
+                        <div class="blog-details__points-box">
+                            <ul class="blog-details__points list-unstyled">
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p>۱. یه حساب کاربری در <a href="https://github.com" target="_blank" rel="noopener">GitHub</a> بساز (رایگان).</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p>۲. یه مخزن (Repository) جدید با اسم <code>my-first-website</code> بساز.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p>۳. فایل‌های <code>index.html</code> و <code>style.css</code> رو توی مخزن آپلود کن.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p>۴. برو به تنظیمات (Settings) مخزن، بخش Pages رو پیدا کن و از قسمت Branch، گزینه‌ی <code>main</code> رو انتخاب کن و Save بزن.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p>۵. بعد از چند دقیقه، سایتت روی آدرس <code>https://[username].github.io/my-first-website</code> در دسترسه.</p></li>
+                            </ul>
+                        </div>
+                        <p class="blog-details__text-26">
+                            حالا می‌تونی لینک سایتت رو با دوستات به اشتراک بذاری و بهشون بگی که اولین وب‌سایت شخصی‌ات رو ساختی! چقدر حس خوبی داره، نه؟ 😊
+                        </p>
+    
+                        <!-- ===== گام هشتم: نکات پیشرفته و منابع ===== -->
+                        <h4 class="blog-details__title-3">📚 گام هشتم: از اینجا به بعد چیکار کنم؟</h4>
+                        <p class="blog-details__text-27">
+                            ساختن یه صفحه‌ی ساده فقط شروع ماجراست. حالا که با HTML و CSS آشنا شدی، می‌تونی مسیرهای زیر رو دنبال کنی:
+                        </p>
+                        <div class="blog-details__points-box">
+                            <ul class="blog-details__points list-unstyled">
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>یادگیری Flexbox و Grid:</strong> این دو ابزار قدرتمند برای چیدمان (Layout) هستن و تقریباً توی همه‌ی سایت‌های مدرن استفاده می‌شن. وب‌سایت <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener">CSS-Tricks</a> رو حتماً ببین.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>شروع با JavaScript:</strong> برای تعامل با کاربر (مثل کلیک، انیمیشن، اعتبارسنجی فرم) به JS نیاز داری. دوره‌های رایگان زیادی توی یوتیوب هست.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>الهام از طراحی‌های آماده:</strong> سایت‌هایی مثل <a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble</a> و <a href="https://www.pinterest.com" target="_blank" rel="noopener">Pinterest</a> پر از ایده‌های طراحی هستن که می‌تونی با HTML/CSS پیاده‌سازی کنی.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>مستندات رسمی:</strong> سایت <a href="https://developer.mozilla.org/fa/" target="_blank" rel="noopener">MDN Web Docs</a> کامل‌ترین مرجع برای HTML، CSS و JavaScript به زبان فارسی و انگلیسی هست.</p></li>
+                            </ul>
+                        </div>
+    
+                        <!-- ===== نقل قول انگیزشی ===== -->
+                        <div class="blog-details__quote-box">
+                            <div class="blog-details__quote-icon-1"><span class="icon-quote"></span></div>
+                            <div class="blog-details__quote-icon-2"><span class="icon-quote"></span></div>
+                            <p class="blog-details__quote-text">«هر استادی روزی مبتدی بود. هیچ‌کس از اول بلد نبود. فقط کافیه اولین قدم رو برداری و به مسیرت ادامه بدی.»</p>
+                            <div class="blog-details__client-box-2">
+                                <div class="blog-details__client-img-2">
+                                    <img src="/Mypageruir/assets/images/icon/categoyr-two-icon-7.png" loading="lazy" alt="توصیه انگیزشی">
+                                </div>
+                                <div class="blog-details__client-content-2">
+                                    <p>توسعه‌دهنده و مدرس</p>
+                                    <h4>ابوالفضل شهاب (ایوان امگرو)</h4>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- ===== سوالات متداول ===== -->
+                        <h4 class="blog-details__title-2">❓ سوالات متداول</h4>
+                        <div class="blog-details__points-box">
+                            <ul class="blog-details__points list-unstyled">
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>آیا برای یادگیری HTML و CSS نیاز به ریاضی دارم؟</strong> خیر! کاملاً بدون پیش‌نیاز ریاضی می‌تونی شروع کنی. فقط به منطق و علاقه نیاز داری.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>چقدر طول می‌کشه تا حرفه‌ای بشم؟</strong> با تمرین روزانه ۱-۲ ساعت، بعد از ۳-۴ ماه می‌تونی سایت‌های زیبایی بسازی. ولی یادگیری هیچ‌وقت تموم نمی‌شه و همیشه چیز جدید هست.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>آیا می‌تونم با همین HTML و CSS کار پیدا کنم؟</strong> بله! بسیاری از شرکت‌ها برای کارآموز طراحی وب دنبال افرادی هستن که HTML و CSS بلد باشن. بعداً با یادگیری JavaScript و فریم‌ورک‌ها، فرصت‌های بیشتری پیدا می‌کنی.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>بهترین روش برای تمرین چیه؟</strong> بهترین روش اینه که هر روز یه چیز جدید رو امتحان کنی. مثلاً امروز یه دکمه طراحی کن، فردا یه فرم بساز، پس‌فردا یه منوی افقی درست کن. تمرین عملی بهترین معلمه.</p></li>
+                            </ul>
+                        </div>
+    
+                        <!-- ===== جمع‌بندی نهایی ===== -->
+                        <p class="blog-details__text-1" style="margin-top: 30px; font-size: 1.15rem; line-height: 2;">
+                            <strong>جمع‌بندی نهایی:</strong> ساختن اولین وب‌سایت شخصی با HTML و CSS نه تنها ساده است، بلکه دریچه‌ای به دنیای بی‌نهایت خلاقیت و فرصت‌های شغلی باز می‌کند. توی این مقاله، قدم‌به‌قدم با هم پیش رفتیم و یه سایت کامل شامل هدر حرفه‌ای، بخش درباره‌ی من، مهارت‌ها، نمونه پروژه‌ها، فرم تماس، طراحی ریسپانسیو و حتی آموزش انتشار با گیت‌هاب رو ساختیم.
+                        </p>
+                        <p class="blog-details__text-2" style="font-size: 1.15rem; line-height: 2;">
+                            از اینجا به بعد، فقط سقف آسمان است. هر روز یه چیز جدید یاد بگیر، تمرین کن، از اشتباهاتت نترس و مهم‌تر از همه، از مسیر لذت ببر. من خودم سال‌ها پیش از همین نقطه شروع کردم و امروز می‌تونم سایت‌های پیچیده‌ای رو طراحی کنم. تو هم می‌تونی!
+                        </p>
+                        <p class="blog-details__text-3" style="font-size: 1.15rem; line-height: 2;">
+                            <strong>حالا نوبت توست!</strong> برو کد بزن، سایت بساز و لینکش رو توی کامنت‌ها برام بفرست. خیلی دوست دارم اولین اثرت رو ببینم. اگه توی مسیر به مشکل برخوردی، خوشحال می‌شم کمک کنم. موفق باشی — ابوالفضل شهاب (ایوان امگرو) 🚀
+                        </p>
+    
+                        <!-- ===== برچسب‌ها و اشتراک ===== -->
+                        <div class="blog-details__tag-and-share">
+                            <div class="blog-details__tag">
+                                <span>تگ:</span>
+                                <a href="/Mypageruir/blog.html">آموزش HTML</a>
+                                <a href="/Mypageruir/blog.html">آموزش CSS</a>
+                                <a href="/Mypageruir/blog.html">طراحی وب</a>
+                                <a href="https://www.instagram.com/ivan.omgru">اینستاگرام</a>
+                                <a href="https://www.youtube.com/@ivan.omgruss">یوتیوب</a>
+                            </div>
+                            <div class="blog-details__share">
+                                <span>اشتراک</span>
+                                <a href="https://www.pinterest.com/pin/create/button/?url=https://ivan-omgru.ir/Mypageruir/blog-detalis/build-first-website-html-css.html&media=https://ivan-omgru.ir/images/logoman/cover-image.jpg&description=آموزش گام‌به‌گام ساخت اولین وب‌سایت شخصی با HTML و CSS" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="https://www.instagram.com/ivan.omgru/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://ivan-omgru.ir/Mypageruir/blog-detalis/build-first-website-html-css.html" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Blog Details End-->
+    
+
+        <!-- Newsletter Section - تغییر یافته به خبرنامه دوره‌ها (نه اینستاگرام) -->
+        <section class="newsletter-two">
+            <div class="container">
+                <div class="newsletter-two__inner">
+                    <div class="newsletter-two__img">
+                        <img src="/Mypageruir/assets/images/resources/newsletter-two-img-1.png" loading="lazy" alt="newsletter image">
+                    </div>
+                    <div class="newsletter-two__inner-content">
+                        <div class="newsletter-two__shape-bg" style="background-image: url(/Mypageruir/assets/images/shapes/newsletter-two-shape-bg.png);"></div>
+                        <div class="newsletter-two__like">
+                            <img src="/Mypageruir/assets/images/shapes/newsletter-two-like.png" loading="lazy" alt="like icon">
+                        </div>
+                        <div class="newsletter-two__title-box">
+                            <h3 class="newsletter-two__title">به جمع زبان‌آموزان و برنامه‌نویسان <br><span>ما بپیوندید</span></h3>
+                            <p class="newsletter-two__text">با ثبت نام در خبرنامه، از دوره‌های جدید، تخفیف‌ها و رویدادهای آموزشی مطلع شوید.</p>
+                        </div>
+                        <div class="newsletter-two__form-box">
+                            <form class="newsletter-two__form" id="nameForm">
+                                <div class="newsletter-two__input">
+                                    <input type="text" id="username" placeholder="نام شما" aria-label="نام خود را وارد کنید">
+                                </div>
+                                <button type="submit" class="newsletter-two__btn" aria-label="عضویت در خبرنامه">
+                                    <span class="icon-circle-rightsvg"></span>
+                                    عضویت
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Newsletter Two End -->
+</main>
+
+        <!--Site Footer Two Start-->
+        <footer class="site-footer-two">
+            <div class="site-footer-two__shape-1 img-bounce"></div>
+            <div class="site-footer-two__shape-2 float-bob-y"></div>
+            <div class="site-footer-two__star text-rotate-box">
+                <img src="/Mypageruir/assets/images/shapes/site-footer-star.png" loading="lazy" alt="decorative star - ستاره تزئینی - декоративная звезда">
+            </div>
+            <div class="site-footer-two__top">
+                <div class="site-footer-two__main-content">
+                    <div class="container">
+                        <div class="site-footer-two__main-content-inner">
+                            <div class="site-footer-two__star rotate-me" style="z-index: -5;">
+                                <img src="/Mypageruir/assets/images/shapes/why-choose-two-shape-4.png" loading="lazy" alt="decorative star - ستاره تزئینی - декоративная звезда">
+                            </div>
+                            <div class="row">
+
+                                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                                    <div class="footer-widget-two__about">
+                                        <div class="footer-widget-two__about-logo">
+                                            <a href="/index.html"><img
+                                                    src="/Mypageruir/assets/images/resources/site-footer-logo-2.png" loading="lazy" alt="Ivan omgru logo - لوگوی ایوان امگرو - логотип Ivan omgru"></a>
+                                        </div>
+                                        <p class="footer-widget-two__about-text">بستری برای یادگیری و<br>آموزشی جامع و با کیفیت</p>
+										
+                                        <div class="site-footer-two__social">
+                                                <a href="https://youtube.com/@ivan.omgruss" aria-label="یوتیوب - YouTube - YouTube"><span class="fab fa-youtube"></span></a>
+                                                <a href="https://www.facebook.com/ivan.omgru" aria-label="فیسبوک - Facebook - Facebook"><span class="fab fa-facebook-f"></span></a>
+                                                <a href="https://www.instagram.com/ivan.omgru/" aria-label="اینستاگرام - Instagram - Instagram"><span class="fab fa-instagram"></span></a>
+                                        </div>
+                                        <div class="footer-widget-two__app-download-box">
+                                            <h4 class="footer-widget-two__app-download-title">دانلود اپلیکیشن</h4>
+                                            <div class="footer-widget-two__app-download">
+                                                <a href="#" class="footer-widget-two__app-download-single" aria-label="دانلود از گوگل پلی - Download from Google Play - Скачать из Google Play">
+                                                    <img src="/Mypageruir/assets/images/icon/google-play-icon-2.png" loading="lazy" alt="google play icon - آیکون گوگل پلی - иконка Google Play">
+                                                </a>
+                                                <a href="#" class="footer-widget-two__app-download-single" aria-label="دانلود از اپ استور - Download from App Store - Скачать из App Store">
+                                                    <img src="/Mypageruir/assets/images/icon/apple-icon-2.png" loading="lazy" alt="apple icon - آیکون اپل - иконка Apple">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                    <div class="footer-widget-two__quick-links">
+                                        <h4 class="footer-widget-two__title">لینک سریع</h4>
+                                        <ul class="footer-widget-two__quick-links-list list-unstyled">
+                                            <li><a href="/index.html" aria-label="صفحه اصلی - Home - Главная"> <span class="icon-plus"></span> صفحه اصلی</a></li>
+                                            <li><a href="/Mypageruir/about.html" aria-label="درباره - About us - О нас"> <span class="icon-plus"></span> درباره</a></li>
+                                            <li><a href="https://www.youtube.com/@ivan.omgruss" aria-label="دوره ها - Courses - Курсы"> <span class="icon-plus"></span>دوره ها</a></li>
+                                            <li><a href="/Mypageruir/faq.html" aria-label="سوالات متداول - FAQ - Часто задаваемые вопросы"> <span class="icon-plus"></span> سوالات متداول</a></li>
+                                            <li><a href="/Mypageruir/blog.html" aria-label="وبلاگ - Blog - Блог"> <span class="icon-plus"></span>وبلاگ</a></li>
+                                            <li><a href="/Mypageruir/contact.html" aria-label="تماس با من - Contact us - Связаться с нами"> <span class="icon-plus"></span>تماس با من</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                                    <div class="footer-widget-two__support">
+                                        <h4 class="footer-widget-two__title">پشتیبانی</h4>
+                                        <ul class="footer-widget-two__quick-links-list list-unstyled">
+                                            <li><a href="/Mypageruir/faq.html" aria-label="شرایط و قوانین - Terms and conditions - Условия и правила"> <span class="icon-plus"></span> شرایط و قوانین</a></li>
+                                            <li><a href="/Mypageruir/about.html" aria-label="درباره - About us - О нас"> <span class="icon-plus"></span>درباره</a></li>
+                                            <li><a href="/Mypageruir/faq.html" aria-label="شرایط بازگشت وجه - Refund policy - Условия возврата"> <span class="icon-plus"></span> شرایط بازگشت وجه</a></li>                                           
+                                            <li><a href="/Mypageruir/https://www.youtube.com/@ivan.omgruss" aria-label="دوره ها - Courses - Курсы"> <span class="icon-plus"></span>دوره ها</a></li>
+                                            <li><a href="/Mypageruir/blog.html" aria-label="وبلاگ - Blog - Блог"> <span class="icon-plus"></span>وبلاگ</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="site-footer__bottom-inner">
+                                <div class="site-footer__copyright">
+                                    <p class="site-footer__copyright-text">© 2025 <a href="http://ivan-omgru.ir/" aria-label="Ivan-omgru.ir - Иваномгру.ир">Ivan-omgru.ir </a>با افتخار ارائه می شود</p>
+                                </div>
+                                <div class="site-footer__bottom-card-box">
+                                    <ul class="list-unstyled site-footer__card-menu">
+                                        <li><a href="/Mypageruir/contact.html" aria-label="روش پرداخت ۱ - Payment method 1 - Способ оплаты 1"><img src="/Mypageruir/assets/images/icon/card-icon-1.png" loading="lazy" alt="payment card 1 - کارت پرداخت ۱ - платежная карта 1"></a></li>
+                                        <li><a href="/Mypageruir/contact.html" aria-label="روش پرداخت ۲ - Payment method 2 - Способ оплаты 2"><img src="/Mypageruir/assets/images/icon/card-icon-2.png" loading="lazy" alt="payment card 2 - کارت پرداخت ۲ - платежная карта 2"></a></li>
+                                        <li><a href="/Mypageruir/contact.html" aria-label="روش پرداخت ۳ - Payment method 3 - Способ оплаты 3"><img src="/Mypageruir/assets/images/icon/card-icon-3.png" loading="lazy" alt="payment card 3 - کارت پرداخت ۳ - платежная карта 3"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Site Footer Two End-->
+
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="/index.html" aria-label="logo image"><img src="/Mypageruir/assets/images/resources/logo-4.png" width="105"
+                        loading="lazy" alt="logo 2-30 website" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:Loverussian62@gmail.com">Loverussian62</a>
+                </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:09223055692">09223055692</a>
+                </li>
+
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="https://www.instagram.com/ivan.omgru/" class="fab fa-instagram"></a>
+                    <a href="https://www.facebook.com/ivan.omgru" class="fab fa-facebook-square"></a>
+                    <a href="https://youtube.com/@ivan.omgruss" class="fab fa-youtube"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+
+
+
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <!-- Search Popup -->
+    <div class="search-popup">
+        <div class="color-layer"></div>
+        <button class="close-search"><span class="far fa-times fa-fw"></span></button>
+        <form method="post" action="#">
+            <div class="form-group">
+                <input type="search" name="search-field" value="" placeholder="دنبال چی میگردی؟" required="">
+                <button type="submit" aria-label="جستجو"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- End Search Popup -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+        <span class="scroll-to-top__text">➡️up</span>
+    </a>
+
+
+    <script src="/Mypageruir/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/Mypageruir/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/Mypageruir/assets/js/jarallax.min.js"></script>
+    <script src="/Mypageruir/assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/Mypageruir/assets/js/jquery.appear.min.js"></script>
+    <script src="/Mypageruir/assets/js/swiper.min.js"></script>
+    <script src="/Mypageruir/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/Mypageruir/assets/js/jquery.validate.min.js"></script>
+    <script src="/Mypageruir/assets/js/odometer.min.js"></script>
+    <script src="/Mypageruir/assets/js/wNumb.min.js"></script>
+    <script src="/Mypageruir/assets/js/wow.js"></script>
+    <script src="/Mypageruir/assets/js/isotope.js"></script>
+    <script src="/Mypageruir/assets/js/owl.carousel.min.js"></script>
+    <script src="/Mypageruir/assets/js/jquery-ui.min.js"></script>
+    <script src="/Mypageruir/assets/js/jquery.nice-select.min.js"></script>
+    <script src="/Mypageruir/assets/js/marquee.min.js"></script>
+    <script src="/Mypageruir/assets/js/aos.js"></script>
+    <script src="/Mypageruir/assets/js/arowscroll.min.js"></script>
+
+    <script src="/Mypageruir/assets/js/gsap/gsap.min.js"></script>
+    <script src="/Mypageruir/assets/js/gsap/ScrollTrigger.min.js"></script>
+    <script src="/Mypageruir/assets/js/gsap/SplitText.min.js"></script>
+
+
+
+
+    <!-- template js -->
+    <script src="/Mypageruir/assets/js/script.min.js"></script>
+
+    <script src="/Mypageruir/assets/js/blog-detalis/View.js"></script>
+
+
+</body>
+
+
+</html>
