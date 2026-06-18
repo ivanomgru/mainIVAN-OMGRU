@@ -180,6 +180,19 @@ const blogPosts = [
     image: "/Mypageruir/assets/images/blog/blog-details-ivan omgru1.jpg",
     link: "/Mypageruir/blog-detalis/russian-programming-mindset.html",
     text: "وقتی یادگیری زبان روسی را شروع کردم، تصور می‌کردم فقط قرار است یک زبان جدید یاد بگیرم؛ اما بعد از مدتی...."
+  },
+  {
+    title: "آموزش گام‌به‌گام ساخت اولین وب‌سایت شخصی با HTML و CSS",
+    category: "برنامه‌نویسی",
+    catId: 4,
+    date: "۲۸ خرداد، ۱۴۰۵",
+    readingTime: "مطالعه ۲۰ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/blog-1-9-9-1-2.jpg",
+    link: "/Mypageruir/blog-detalis/build-first-website-html-css.html",
+    text: "در این مقاله از ایوان امگرو، قرار است که گام‌به‌گام پیش برویم و یک وب‌سایت شخصی کامل را از صفر تا صد بسازیم."
   }
 ];
 
