@@ -424,127 +424,147 @@ ul {
    PRELOADER - ivan omgru custom
 ================================ */
 .loader {
-  position: fixed;
-  inset: 0;
-  z-index: 20000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ffffff;
-  overflow: hidden;
-  animation: fadeInLoader 0s ease forwards;
+    position: absolute;
+    inset: 0;
+    z-index: 20000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #f5f9ff 0%, #deeafa 100%);
+    overflow: hidden;
+    animation: fadeInLoader 0.6s ease forwards;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
 }
 
-/* کانتینر برند */
 .brand-loader {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: #000000;
-  transform: scale(0.9);
-  animation: brandReveal 1.5s ease forwards;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #1e2a3a;
+    transform: scale(0.95);
+    animation: brandReveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* متن اصلی */
 .brand-text {
-  font-size: 42px;
-  font-weight: 800;
-  letter-spacing: 6px;
-  position: relative;
-  display: inline-block;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    text-shadow: 0 2px 4px rgba(0, 109, 168, 0.529);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    overflow: visible;
+    padding: 10px 0;
 }
 
-/* افکت نور عبوری لوکس */
-.brand-text::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.8),
-    transparent
-  );
-  animation: lightSweep 2.5s infinite linear;
-}
-
-/* زیرنویس ساده و ثابت */
 .brand-sub {
-  margin-top: 15px;
-  font-size: 14px;
-  letter-spacing: 3px;
-  opacity: 0.8;
-  transform: none;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #4a647a;
+    border-bottom: 2px solid rgba(30, 58, 95, 0.2);
+    padding-bottom: 6px;
+    margin-top: 4px;
+    animation: subFade 0.8s ease 0.4s both;
 }
 
-/* حلقه انرژی اصلی (چرخش) */
-.brand-loader::before {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: rotateRing 6s linear infinite;
-  z-index: 1;
-}
-
-/* حلقه‌های ضربه‌ای / پالس نرم */
+.brand-loader::before,
 .brand-loader::after {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 2px solid rgba(0, 0, 0, 0.268);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  animation: pulseRing 2.5s ease-out infinite;
-  z-index: 0;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.brand-loader::before {
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgba(30, 58, 95, 0.15);
+    border-top-color: #1e3a5f;
+    animation: rotateRing 6s linear infinite;
+    box-shadow: 0 0 20px rgba(30, 58, 95, 0.06);
+}
+
+.brand-loader::after {
+    width: 140px;
+    height: 140px;
+    border: 2px solid rgba(30, 58, 95, 0.08);
+    border-bottom-color: #3a6b8f;
+    animation: rotateRingReverse 5s linear infinite, pulseGlow 2.5s ease-in-out infinite;
+    box-shadow: 0 0 30px rgb(255, 255, 255);
 }
 
 /* انیمیشن‌ها */
 @keyframes fadeInLoader {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @keyframes brandReveal {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes lightSweep {
-  0% { left: -120%; }
-  100% { left: 140%; }
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
 }
 
 @keyframes rotateRing {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-@keyframes pulseRing {
-  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-  50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.2; }
-  100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+@keyframes rotateRingReverse {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(-360deg); }
 }
 
-/* خروج سینمایی هماهنگ */
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); box-shadow: 0 0 40px rgba(30, 58, 95, 0.1); }
+}
+
+@keyframes subFade {
+    0% { opacity: 0; transform: translateY(6px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 .loader.hide {
-  animation: loaderExit 0.5s ease forwards;
+    animation: loaderExit 0.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
 @keyframes loaderExit {
-  0% { opacity: 1; transform: scale(1); }
-  100% { opacity: 0; transform: scale(1.1); }
+    0% { opacity: 1; transform: scale(1); filter: blur(0); }
+    100% { opacity: 0; transform: scale(1.05); filter: blur(4px); }
+}
+
+@media (max-width: 600px) {
+    .brand-text {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+    .brand-loader::before {
+        width: 150px;
+        height: 150px;
+    }
+    .brand-loader::after {
+        width: 110px;
+        height: 110px;
+    }
+    .brand-sub {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
 }
 
 .scroll-to-top {
