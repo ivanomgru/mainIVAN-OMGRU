@@ -424,7 +424,7 @@ ul {
    PRELOADER - ivan omgru custom
 ================================ */
 .loader {
-    position: absolute;
+   position: fixed;
     inset: 0;
     z-index: 20000;
     display: flex;
