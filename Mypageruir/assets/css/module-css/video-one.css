@@ -131,8 +131,7 @@
     display: block;
     border-radius: 15px;
     overflow: hidden;
-    aspect-ratio: 16 / 9;  /* ← این خط کلیدی است */
-    background-color: #ffffff; /* رنگ پس‌زمینه در صورت خالی بودن */
+    background-color: #ffffff00; /* رنگ پس‌زمینه در صورت خالی بودن */
 }
 
 /* ویدیو و تصویر پوستر را کاملاً درون کادر قرار دهید */
