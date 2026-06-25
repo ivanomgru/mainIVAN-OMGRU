@@ -205,7 +205,7 @@ const blogPosts = [
   authorFollowers: 3420,
   image: "/Mypageruir/assets/images/blog/blog-details1-111img-1@0.75x.jpg",
   link: "/Mypageruir/blog-detalis/100russian-phrases.html",
-  text: "دانستن جملات پرکاربرد روزمره مثل داشتن کلیدی طلایی برای ورود به دنیای روس‌زبان‌هاست.پس آن را بررسی میکنم!"
+  text: "دانستن جملات پرکاربرد روزمره مثل داشتن کلیدی طلایی برای ورود به دنیای روس‌زبان‌هاست.پس آن را در این مقاله بررسی میکنم!"
   }
 ];
 
