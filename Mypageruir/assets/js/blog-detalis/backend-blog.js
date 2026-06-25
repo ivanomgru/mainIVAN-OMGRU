@@ -193,6 +193,19 @@ const blogPosts = [
     image: "/Mypageruir/assets/images/blog/blog-1-9-9-1-2.jpg",
     link: "/Mypageruir/blog-detalis/build-first-website-html-css.html",
     text: "در این مقاله از ایوان امگرو، قرار است که گام‌به‌گام پیش برویم و یک وب‌سایت شخصی کامل را از صفر تا صد بسازیم."
+  },
+  {
+  title: "۱۰۰ جمله پرکاربرد روسی در مکالمه روزمره",
+  category: "زبان روسی",
+  catId: 1,
+  date: "۴ تیر، ۱۴۰۵",
+  readingTime: "مطالعه ۲۰ دقیقه",
+  authorName: "ابوالفضل شهاب",
+  authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+  authorFollowers: 3420,
+  image: "/Mypageruir/assets/images/blog/blog-details1-111img-1@0.75x.jpg",
+  link: "/Mypageruir/blog-detalis/100-russian-phrases.html",
+  text: "دانستن جملات پرکاربرد روزمره مثل داشتن کلیدی طلایی برای ورود به دنیای روس‌زبان‌هاست.پس آن را بررسی میکنم!"
   }
 ];
 
