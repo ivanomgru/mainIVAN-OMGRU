@@ -206,6 +206,19 @@ const blogPosts = [
   image: "/Mypageruir/assets/images/blog/blog-details1-111img-1@0.75x.jpg",
   link: "/Mypageruir/blog-detalis/100russian-phrases.html",
   text: "دانستن جملات پرکاربرد روزمره مثل داشتن کلیدی طلایی برای ورود به دنیای روس‌زبان‌هاست.پس آن را در این مقاله بررسی میکنم!"
+  },
+  {
+    title: "مهاجرت به روسیه ۲۰۲۶ – هزینه، بورسیه و ویزای تحصیلی",
+    category: "مهاجرت تحصیلی",
+    catId: 2,
+    date: "۵ تیر، ۱۴۰۴",
+    readingTime: "مطالعه ۱۲ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/Untitle8886886d-1@1.5x.jpg",
+    link: "/Mypageruir/blog-detalis/study-in-russia.html",
+    text: "راهنمای جامع مهاجرت به روسیه شامل مقایسه روش‌ها، هزینه‌های سالانه (شهریه و زندگی)، بورسیه‌های دولتی و ..."
   }
 ];
 
