@@ -132,6 +132,8 @@
     border-radius: 15px;
     overflow: hidden;
     background-color: #ffffff00; /* رنگ پس‌زمینه در صورت خالی بودن */
+    width: 100%;
+    aspect-ratio: 16 / 9; /* یا هر نسبت دلخواه */
 }
 
 /* ویدیو و تصویر پوستر را کاملاً درون کادر قرار دهید */
@@ -146,6 +148,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block; /* حذف فضای خالی اضافه زیر عکس */
+
 }
 
 .video-one__video-link {
