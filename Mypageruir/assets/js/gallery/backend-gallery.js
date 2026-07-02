@@ -1,4 +1,6 @@
+// assets/js/gallery/backend-gallery.js
 document.addEventListener('DOMContentLoaded', function () {
+
     // ============================================================
     // 1. داده‌های گالری
     // ============================================================
@@ -38,14 +40,53 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     // ============================================================
-    // 2. عناصر DOM
+    // 2. تولید اسکیما (JSON-LD) برای گوگل
+    // ============================================================
+    function generateGallerySchema(items) {
+        const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '/');
+        // اگر مسیر نسبی دارید، آن را با baseUrl ترکیب کنید.
+        // بهتر است از آدرس مطلق استفاده شود.
+        const fullUrl = (src) => new URL(src, window.location.href).href;
+
+        const imageObjects = items.map(item => ({
+            "@type": "ImageObject",
+            "contentUrl": fullUrl(item.imgSrc),
+            "thumbnail": fullUrl(item.imgSrc), // در صورت وجود تصویر بند‌انگشتی جداگانه، آن را جایگزین کنید
+            "caption": item.alt,
+            "description": item.alt,
+            "author": {
+                "@type": "Person",
+                "name": "ابوالفضل شهاب"
+            }
+        }));
+
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            "name": "گالری تصاویر ابوالفضل شهاب | بلاگر ایرانی-روسی",
+            "description": "گالری تصاویر ابوالفضل شهاب، بلاگر ایرانی-روسی و بنیان‌گذار IVAN OMGRU.",
+            "image": imageObjects
+        };
+
+        // ساخت اسکریپت JSON-LD
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(schema);
+        document.head.appendChild(script);
+    }
+
+    // اجرای تولید اسکیما (بلافاصله پس از تعریف داده‌ها)
+    generateGallerySchema(galleryItems);
+
+    // ============================================================
+    // 3. عناصر DOM
     // ============================================================
     const galleryContainer = document.querySelector('.masonary-layout');
     const statsEl = document.getElementById('blog-stats');
     const loadMoreBtn = document.getElementById('blog-load-more-btn');
 
     // ============================================================
-    // 3. وضعیت
+    // 4. وضعیت
     // ============================================================
     const itemsPerPage = 9;
     let currentPage = 1;
@@ -54,10 +95,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let allLoaded = false;
     let isLoading = false;
     const viewAllLink = 'https://example.com/more-photos';
-    let observer = null; // برای دسترسی در توابع دیگر
+    let observer = null;
 
     // ============================================================
-    // 4. رندر گالری (با imagesLoaded)
+    // 5. رندر گالری
     // ============================================================
     function renderGalleryPage(page, append = false) {
         const start = (page - 1) * itemsPerPage;
@@ -96,26 +137,24 @@ document.addEventListener('DOMContentLoaded', function () {
         updateStats();
         updateLoadMoreButton();
 
-        // ===== استفاده از imagesLoaded برای اطمینان از بارگذاری تصاویر =====
         if (typeof imagesLoaded !== 'undefined') {
             imagesLoaded(galleryContainer, function () {
                 refreshIsotope();
             });
         } else {
-            // fallback: اگر imagesLoaded در دسترس نبود
             setTimeout(refreshIsotope, 400);
         }
     }
 
     // ============================================================
-    // 5. آمار
+    // 6. آمار
     // ============================================================
     function updateStats() {
         statsEl.textContent = `نمایش ${displayedItems.length} عکس از ${allItems.length} عکس`;
     }
 
     // ============================================================
-    // 6. وضعیت دکمه بیشتر
+    // 7. وضعیت دکمه بیشتر
     // ============================================================
     function updateLoadMoreButton() {
         const totalItems = allItems.length;
@@ -136,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ============================================================
-    // 7. بارگذاری بیشتر
+    // 8. بارگذاری بیشتر
     // ============================================================
     function loadMore() {
         if (isLoading || allLoaded) return;
@@ -157,13 +196,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ============================================================
-    // 8. ایزوتوپ (مقاوم و با layout اجباری)
+    // 9. ایزوتوپ
     // ============================================================
     function refreshIsotope() {
         if (typeof $ === 'undefined' || typeof $.fn.isotope === 'undefined') return;
         const $container = $(galleryContainer);
-        
-        // اگر ایزوتوپ وجود داشته باشد، فقط layout کن، وگرنه از نو بساز
+
         if ($container.data('isotope')) {
             $container.isotope('reloadItems');
             $container.isotope('layout');
@@ -175,12 +213,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 masonry: { gutter: 30 }
             });
         }
-        // همواره فیلتر را روی '*' قرار بده تا همه آیتم‌ها نشان داده شوند
         $container.isotope({ filter: '*' });
     }
 
     // ============================================================
-    // 9. رویداد کلیک دکمه
+    // 10. رویداد کلیک دکمه
     // ============================================================
     loadMoreBtn.addEventListener('click', function () {
         if (allLoaded) {
@@ -191,12 +228,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // ============================================================
-    // 10. بارگذاری اولیه
+    // 11. بارگذاری اولیه
     // ============================================================
     renderGalleryPage(1, false);
 
     // ============================================================
-    // 11. اسکرول بی‌نهایت با Intersection Observer
+    // 12. اسکرول بی‌نهایت
     // ============================================================
     const sentinel = document.createElement('div');
     sentinel.id = 'scroll-sentinel';
@@ -216,28 +253,24 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(sentinel);
 
     // ============================================================
-    // 12. پس از بارگذاری کامل صفحه و تغییر اندازه، دوباره layout کن
+    // 13. مدیریت تغییر اندازه و رویدادهای دیگر
     // ============================================================
     function handleResize() {
         refreshIsotope();
     }
 
-    // بعد از بارگذاری کامل صفحه
     window.addEventListener('load', function () {
-        // با تأخیر کوتاه برای اطمینان از اتمام کار قالب
         setTimeout(refreshIsotope, 200);
     });
 
-    // تغییر اندازه مرورگر با debounce ساده
     let resizeTimer;
     window.addEventListener('resize', function () {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(handleResize, 200);
     });
 
-    // همچنین وقتی منو یا هر چیز دیگری باعث تغییر عرض شود
-    // (اختیاری: اگر از Bootstrap collapse استفاده می‌کنید)
     document.addEventListener('shown.bs.collapse', function () {
         setTimeout(refreshIsotope, 300);
     });
+
 });
