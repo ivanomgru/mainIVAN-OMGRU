@@ -39,30 +39,89 @@
 <meta name="twitter:image" content="https://ivan-omgru.ir/images/logoman/cover-image.jpg">
 
 <!-- JSON-LD Schema for BlogPage -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "وبلاگ کمپانی ivan omgru",
-  "url": "https://ivan-omgru.ir/Mypageruir/blog.html",
-  "description": "آخرین مطالب و مقالات آموزشی کمپانی ivan omgru و ابوالفضل شهاب. مقالات در حوزه طراحی وب،زیان روسی،برنامه‌نویسی و آموزش‌های دیجیتال.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "ivan omgru",
-    "url": "https://ivan-omgru.ir",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "/images/logoman/android-chrome-512.png"
+    <!-- 1. اسکیما برای خود صفحه (WebPage) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "وبلاگ و مقالات آموزشی IVAN OMGRU | ابوالفضل شهاب",
+        "description": "آخرین مطالب و مقالات آموزشی در حوزه زبان روسی، مهاجرت، برنامه‌نویسی و طراحی وب",
+        "url": "https://ivan-omgru.ir/Mypageruir/blog.html",
+        "inLanguage": "fa-IR",
+        "dateModified": "2026-07-03",
+        "image": "https://ivan-omgru.ir/images/logoman/android-chrome-512.png",
+        "author": {
+            "@type": "Person",
+            "name": "ابوالفضل شهاب"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "IVAN OMGRU"
+        }
     }
-  },
-  "author": {
-    "@type": "Person",
-    "name": "ابوالفضل شهاب ivan omgru",
-    "url": "https://ivan-omgru.ir"
-  },
-  "inLanguage": "fa"
-}
-</script>   
+    </script>
+
+    <!-- 2. اسکیما برای مسیر راهنما (BreadcrumbList) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "صفحه اصلی",
+                "item": "https://ivan-omgru.ir/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "وبلاگ",
+                "item": "https://ivan-omgru.ir/Mypageruir/blog.html"
+            }
+        ]
+    }
+    </script>
+
+    <!-- 3. اسکیما برای شخص (Person) – ابوالفضل شهاب -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "ابوالفضل شهاب",
+        "alternateName": "Ivan Omgru",
+        "jobTitle": "بلاگر ایرانی-روسی و مدرس",
+        "description": "بنیان‌گذار IVAN OMGRU، مدرس زبان روسی و برنامه‌نویس",
+        "url": "https://ivan-omgru.ir/",
+        "image": "https://ivan-omgru.ir/images/logoman/android-chrome-512.png",
+        "sameAs": [
+            "https://www.instagram.com/ivan.omgru",
+            "https://www.youtube.com/@ivan.omgruss",
+            "https://t.me/ivan_omgru",
+            "https://www.linkedin.com/in/ivan-omgru",
+            "https://www.facebook.com/ivan.omgru"
+        ]
+    }
+    </script>
+
+    <!-- 4. اسکیما برای سازمان (Organization) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "IVAN OMGRU",
+        "url": "https://ivan-omgru.ir/",
+        "logo": "https://ivan-omgru.ir/images/logoman/android-chrome-512.png",
+        "description": "پلتفرم آموزشی و بلاگ شخصی ابوالفضل شهاب",
+        "sameAs": [
+            "https://www.instagram.com/ivan.omgru",
+            "https://www.youtube.com/@ivan.omgruss",
+            "https://t.me/ivan_omgru",
+            "https://www.linkedin.com/in/ivan-omgru",
+            "https://www.facebook.com/ivan.omgru"
+        ]
+    }
+    </script>
 
     <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="assets/css/animate.min.css" />
@@ -284,7 +343,7 @@
                         </div>
                         <div class="course-list__showing-sort">
                             <p>مرتب سازی: </p>
-                            <div class="select-box">
+                           <div class="select-box">
                                 <select class="wide" id="blog-sort" aria-label="مرتب سازی مقالات - Sort articles - Сортировка статей">
                                     <option value="newest" selected>جدیدترین</option>
                                     <option value="oldest">قدیمی ترین</option>
