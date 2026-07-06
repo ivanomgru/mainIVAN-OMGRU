@@ -219,6 +219,19 @@ const blogPosts = [
     image: "/Mypageruir/assets/images/blog/Untitle8886886d-1@1.5x.jpg",
     link: "/Mypageruir/blog-detalis/study-in-russia.html",
     text: "راهنمای جامع مهاجرت به روسیه شامل مقایسه روش‌ها، هزینه‌های سالانه (شهریه و زندگی)، بورسیه‌های دولتی و ..."
+  },
+  {
+    title: "راهنمای جامع غذاهای سنتی روسیه؛ از بورشت و پلمنی تا مدوویک",
+    category: "فرهنگ روسیه",
+    catId: 3,
+    date: "۶ تیر، ۱۴۰۵",
+    readingTime: "مطالعه ۲۵ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/blog--11-31.5x@1.25x@1.25x.jpg",
+    link: "/Mypageruir/blog-detalis/russian-traditional-food.html",
+    text: "آشنایی با ۱۸ غذای محبوب و اصیل روسی؛ به همراه نکات فرهنگی، آداب غذا خوردن و راهنمای سفر."
   }
 ];
 
