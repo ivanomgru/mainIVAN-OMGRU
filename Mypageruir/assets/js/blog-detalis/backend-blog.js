@@ -242,7 +242,7 @@ const blogPosts = [
     authorName: "ابوالفضل شهاب",
     authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
     authorFollowers: 3420,
-    image: "/Mypageruir/assets/images/blog/russian-traditional-food.webp",  // تصویر اصلی مقاله
+    image: "/Mypageruir/assets/images/blog/cover-image-grammar1.jpg",  // تصویر اصلی مقاله
     link: "/Mypageruir/blog-detalis/common-mistakes-grammar-russian.html",
     text: "بررسی حالت‌های شش‌گانه و افعال حرکتی تا ترتیب کلمات و ضمایر بازگشتی. همراه با جدول مقایسه‌ای و نکات طلایی."
   }
