@@ -232,6 +232,19 @@ const blogPosts = [
     image: "/Mypageruir/assets/images/blog/blog--11-31.5x@1.25x@1.25x.jpg",
     link: "/Mypageruir/blog-detalis/russian-traditional-food.html",
     text: "آشنایی با ۱۸ غذای محبوب و اصیل روسی؛ به همراه نکات فرهنگی، آداب غذا خوردن و راهنمای سفر."
+  },
+  {
+    title: "راهنمای جامع اشتباهات دستوری فارسی‌زبانان در زبان روسی پادژ",
+    category: "آموزش | گرامر و زبان",
+    catId: 1,
+    date: "۶ تیر، ۱۴۰۵",
+    readingTime: "مطالعه ۲۵ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "/Mypageruir/assets/images/blog/russian-traditional-food.webp",  // تصویر اصلی مقاله
+    link: "/Mypageruir/blog-detalis/common-mistakes-grammar-russian.html",
+    text: "بررسی حالت‌های شش‌گانه و افعال حرکتی تا ترتیب کلمات و ضمایر بازگشتی. همراه با جدول مقایسه‌ای و نکات طلایی."
   }
 ];
 
