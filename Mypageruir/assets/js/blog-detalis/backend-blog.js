@@ -245,6 +245,19 @@ const blogPosts = [
     image: "/Mypageruir/assets/images/blog/cover-image-grammar1.jpg",
     link: "/Mypageruir/blog-detalis/common-mistakes-grammar-russian.html",
     text: "بررسی حالت‌های شش‌گانه و افعال حرکتی تا ترتیب کلمات و ضمایر بازگشتی. همراه با جدول مقایسه‌ای و نکات طلایی."
+  },
+  {
+    title: "فرهنگ روسیه (نسخه جامع): از آداب معاشرت تا سبک زندگی",
+    category: "فرهنگ روسیه",
+    catId: 3,
+    date: "21 تیر، ۱۴۰۵",
+    readingTime: "مطالعه ۲۸ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 3420,
+    image: "assets/images/blog/cover-image-culture-russia.jpg",
+    link: "/Mypageruir/blog-detalis/culture-of-russia-part2.html",
+    text: "مرجع کامل فرهنگ روسیه برای فارسی‌زبانان: بررسی آداب معاشرت،تفاوت‌های منطقه‌ای و تأثیر تاریخ بر روحیه روس‌ها. "
   }
 ];
 
