@@ -176,7 +176,7 @@
 .sliding-text-three {
     position: relative;
     display: block;
-    background: linear-gradient(-92.7deg, #c6e4ff43 0.48%, #f0d6ff61 56.21%, #babfffaf 100%);
+    background-color: var(--fistudy-base);
     padding: 11px 0 11px;
     z-index: 1;
 }
@@ -206,7 +206,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    color: #425BFC;
+    color: var(--fistudy-white);
     font-size: 32px;
     line-height: 48px;
     font-weight: 500;
@@ -219,8 +219,6 @@
 .sliding-text-three__title img {
     margin-left: 60px;
     position: relative;
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.64));
-    transition: transform 0.5s ease, filter 0.5s ease;
     width: auto;
 }
 /*--------------------------------------------------------------

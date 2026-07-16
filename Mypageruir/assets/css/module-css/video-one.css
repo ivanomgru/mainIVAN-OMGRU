@@ -46,19 +46,43 @@
     height: 229px;
     width: 229px;
     border-radius: 10%;
-    background: linear-gradient(-92.7deg, #ffa3a7 0.48%, #d998ff 56.21%, #778bff 100%);
+    background: linear-gradient(135deg,#ffffff 0%,#f9d8ff 30%,#d98dff 70%,#9f8cff 100%);
+    transform: rotate(10deg);
 }
 
+.video-one__shape-1::before{
+content:"";
+position:absolute;
+inset:18px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,.28);
+}
 .video-one__shape-2 {
     position: absolute;
     top: -50px;
     right: -67px;
     height: 236px;
     width: 236px;
-    border: 4px dashed var(--fistudy-base);
+    border: 2px dashed var(--fistudy-base);
     border-radius: 50%;
 }
-
+.video-one__shape-5{
+    position:absolute;
+    left:-15%;
+    top:140px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:
+        radial-gradient(circle at 30% 30%,
+        #ffffff 0%,
+        #f9d8ff 30%,
+        #d98dff 70%,
+        #9f8cff 100%);
+    box-shadow:
+        0 10px 25px rgba(190,130,255,.35);
+    z-index:-1;
+}
 /* ===== بخش‌های اضافه شده از فایل اول ===== */
 .video-one__video-shape-1 {
     position: absolute;
@@ -112,19 +136,27 @@
 
 /* ===== پایان بخش اضافه شده ===== */
 
-.video-player {
+.video-player{
     position: relative;
     display: block;
     max-width: 800px;
     margin: 2rem auto;
-    border-radius: 15px;
-    overflow: hidden;
-    background: #424242;
-    font-family: sans-serif;
-    box-shadow: -25px 25px 40px -10px rgba(0, 0, 0, 0.6),
-            -5px 5px 15px rgba(0, 0, 0, 0.166);
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.75);
+    overflow:hidden;
+    box-shadow:0 30px 60px rgba(115,120,255,.18),0 10px 25px rgba(0,0,0,.12);
+    transition:.35s;
 }
 
+.video-player:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 40px 80px rgba(115,120,255,.22),
+        0 15px 35px rgba(0,0,0,.16);
+
+}
 /* به .video-one__img-box یک نسبت ابعاد ثابت بدهید (مثلاً 16:9) */
 .video-one__img-box {
     position: relative;
