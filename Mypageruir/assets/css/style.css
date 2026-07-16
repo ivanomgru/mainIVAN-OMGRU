@@ -592,7 +592,7 @@ ul {
 .stricky-header .main-menu__list > li.current > a::after,
 .stricky-header .main-menu__list > li:hover > a,
 .stricky-header .main-menu__list > li:hover > a::after {
- background: #ffffff00;
+  color: var(--fistudy-base);
 }
 .scroll-to-top__text {
   display: inline;
