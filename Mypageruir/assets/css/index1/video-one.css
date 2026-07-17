@@ -257,15 +257,6 @@
     z-index: 2;
 }
 
-@keyframes ripple {
-    70% {
-        box-shadow: 0 0 0 40px rgba(223, 65, 255, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(223, 65, 255, 0);
-    }
-}
-
 .video-one__video-icon .ripple:before {
     animation-delay: 0.9s;
     content: "";
@@ -314,7 +305,7 @@
     background-color: #ff0000;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-    animation: liveBlink 1s infinite;
+    animation: liveBlink 2s infinite;
     margin-right: 5px;
 }
 
@@ -350,11 +341,13 @@
     box-sizing: border-box;
     z-index: 20;                       /* افزایش z-index */
     transition: opacity 0.3s ease;
+    border-radius: 15px;
     overflow: visible !important;      /* اجازه خروج منو */
 }
 
 .video-controls:hover {
     background: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
 }
 
 #progressBar {
@@ -513,52 +506,8 @@
     z-index: 9999 !important;
 }
 
-/* ===== بهبود نمایش در موبایل ===== */
 @media (max-width: 768px) {
     .video-controls {
-        display: flex !important;           /* نمایش کنترل‌ها */
-        padding: 0.3rem;
-        background: rgba(0, 0, 0, 0.6);    /* پس‌زمینه کمی تیره‌تر برای خوانایی */
-    }
-    .video-controls button {
-        font-size: 0.9rem;                 /* دکمه‌های کوچک‌تر */
-        padding: 3px 5px;
-    }
-    .video-controls select {
-        font-size: 0.75rem;
-        padding: 0.1rem 1.8rem 0.1rem 0.4rem;
-        min-width: 50px;
-        background-size: 0.6rem !important;
-        background-position: right 0.3rem center !important;
-    }
-    #currentTime,
-    #duration {
-        font-size: 0.7rem;
-        min-width: 30px;
-    }
-    .video-controls-left,
-    .video-controls-right {
-        gap: 0.2rem;
-        flex-wrap: wrap;
-    }
-    .video-one__live {
-        padding: 5px 10px;
-        font-size: 12px;
-        top: 8px;
-        right: 8px;
-    }
-    .video-one__live-text {
-        font-size: 11px;
-    }
-    .video-one__video-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-    }
-    .video-one__video-link .ripple,
-    .video-one__video-icon .ripple:before,
-    .video-one__video-icon .ripple:after {
-        width: 60px;
-        height: 60px;
+        display: none;
     }
 }

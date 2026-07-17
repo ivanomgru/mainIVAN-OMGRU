@@ -1,0 +1,438 @@
+/*--------------------------------------------------------------
+# Blog One - نسخه سبک‌تر و بهینه  دیده شده
+--------------------------------------------------------------*/
+
+.blog-one {
+    position: relative;
+    display: block;
+    background: linear-gradient(135deg, 
+        rgba(252, 252, 252, 1) 0%,
+        rgba(248, 250, 255, 0.95) 100%);
+    overflow: hidden;
+    padding: 120px 0 225px;
+    z-index: 1;
+}
+
+/* افکت پس‌زمینه سبک‌تر */
+.blog-one::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background: radial-gradient(circle at 50% 0%, rgba(186, 191, 255, 0.08) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.blog-one__carousel {
+    position: relative;
+    display: block;
+}
+
+.blog-one__single {
+    position: relative;
+    display: block;
+    background: white;
+    border: 1px solid rgba(221, 221, 221, 0.3);
+    padding: 23px;
+    border-radius: 24px;
+    box-shadow: 
+        0 4px 25px rgba(0, 0, 0, 0.05),
+        0 1px 2px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.blog-one__single:hover {
+    transform: translateY(-5px);
+    border-color: rgba(12, 28, 252, 0.4);
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.08),
+        0 10px 25px rgba(186, 191, 255, 0.1);
+}
+
+.blog-one__img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+/* افکت overlay بهینه‌شده */
+.blog-one__img:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg, 
+        rgba(186, 191, 255, 0.3), 
+        transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.blog-one__single:hover .blog-one__img:before {
+    opacity: 0.3;
+}
+
+/* افکت نور سریع‌تر */
+.blog-one__img:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.3), 
+        transparent);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+    z-index: 2;
+}
+
+.blog-one__single:hover .blog-one__img:after {
+    left: 150%;
+}
+
+.blog-one__img img {
+    width: 100%;
+    border-radius: 20px;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.blog-one__single:hover .blog-one__img img {
+    transform: scale(1.05);
+}
+
+.blog-one__content {
+    position: relative;
+    display: block;
+    margin-top: 15px;
+}
+
+.blog-one__meta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+    padding-bottom: 11px;
+    margin-bottom: 14px;
+}
+
+/* خط متحرک سریع‌تر */
+.blog-one__meta::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        #9aa1ff, 
+        #c6e4ff);
+    transition: width 0.4s ease;
+}
+
+.blog-one__single:hover .blog-one__meta::after {
+    width: 100%;
+}
+
+.blog-one__meta li {
+    position: relative;
+    display: block;
+}
+
+.blog-one__meta li+li {
+    margin-right: 30px;
+}
+
+.blog-one__meta li a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #444;
+    font-family: var(--fistudy-font-two);
+    transition: all 0.2s ease;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.blog-one__meta li a:hover {
+    color: #9aa1ff;
+    background: rgba(215, 72, 151, 0.1);
+}
+
+.blog-one__meta li a span {
+    position: relative;
+    font-size: 12px;
+    margin-left: 6px;
+    color: #9aa1ff;
+}
+
+.blog-one__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* خط زیر عنوان سریع‌تر */
+.blog-one__title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #9aa1ff, transparent);
+    transition: width 0.3s ease;
+}
+
+.blog-one__single:hover .blog-one__title::after {
+    width: 100%;
+}
+
+.blog-one__title a {
+    color: #222;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.blog-one__title a:hover {
+    color: #242b93;
+}
+
+.blog-one__text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 14px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* دکور کنار متن (ساده‌تر) */
+.blog-one__text::before {
+    content: '›';
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #9aa1ff;
+    font-size: 18px;
+    opacity: 0.3;
+}
+
+.blog-one__btn-and-user-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.blog-one__btn-box {
+    position: relative;
+    display: block;
+    border-radius: 20px;
+}
+
+/* افکت درخشش سریع‌تر */
+.blog-one__btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: left 0.5s ease;
+}
+
+.blog-one__single:hover .blog-one__btn-box::before {
+    left: 100%;
+}
+
+.blog-one__btn-box .thm-btn {
+    font-size: 16px;
+    padding: 8px 25px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, 
+        #9aa1ff, 
+        #ff54bd);
+    border: none;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgb(0, 17, 255);
+    transition: all 0.2s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.blog-one__btn-box .thm-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgb(255, 2, 120);
+}
+
+.blog-one__btn-box .thm-btn span {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.blog-one__user-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    background: rgba(186, 191, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.blog-one__single:hover .blog-one__user-box {
+    background: rgba(186, 191, 255, 0.15);
+}
+
+.blog-one__user-img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(154, 161, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.blog-one__user-img img {
+    width: 100% !important;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+.blog-one__single:hover .blog-one__user-img img {
+    transform: scale(1.1);
+}
+
+.blog-one__user-content {
+    position: relative;
+    display: block;
+    flex: 1;
+}
+
+.blog-one__user-name {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.blog-one__user-sub-title {
+    font-size: 14px;
+    line-height: 14px;
+    color: #666;
+    font-weight: 400;
+}
+
+/* دکمه‌های کاروسل */
+.blog-one .blog-one__carousel .owl-nav {
+    position: absolute;
+    bottom: -104px;
+    left: 0;
+    margin: 0 !important;
+    display: flex;
+    gap: 15px;
+}
+
+.blog-one .blog-one__carousel .owl-nav .owl-prev,
+.blog-one .blog-one__carousel .owl-nav .owl-next {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid rgba(186, 191, 255, 0.3);
+    color: #9aa1ff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.blog-one .blog-one__carousel .owl-nav .owl-prev:hover,
+.blog-one .blog-one__carousel .owl-nav .owl-next:hover {
+    background: #9aa1ff;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.blog-one .blog-one__carousel .owl-dots {
+    position: absolute;
+    bottom: -112px;
+    right: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.blog-one .blog-one__carousel .owl-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: rgba(186, 191, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.blog-one .blog-one__carousel .owl-dot.active {
+    width: 30px;
+    background: linear-gradient(90deg, #9aa1ff, #c6e4ff);
+}
+
+.blog-one .blog-one__carousel .owl-dot:hover {
+    background: rgba(186, 191, 255, 0.4);
+}
+
+/* انیمیشن ساده‌تر */
+.blog-one__single {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تأخیر انیمیشن */
+.blog-one__single:nth-child(2) { animation-delay: 0.1s; }
+.blog-one__single:nth-child(3) { animation-delay: 0.2s; }
+.blog-one__single:nth-child(4) { animation-delay: 0.3s; }
+
+/* بهینه‌سازی عملکرد */
+@media (prefers-reduced-motion: reduce) {
+    .blog-one__single,
+    .blog-one__img img,
+    .blog-one__btn-box .thm-btn,
+    .blog-one__user-box {
+        transition: none;
+        animation: none;
+    }
+}

@@ -11,7 +11,7 @@
 .newsletter-one__inner {
     position: relative;
     display: block;
-    background: linear-gradient(90deg, #FF4330 0%, #FF7163 100%);
+    background: #F78DA7;
     border-radius: 40px;
     text-align: center;
     padding: 40px 40px 60px;
@@ -346,44 +346,10 @@
     padding-right: 5px;
     font-weight: 600;
 }
-@media (max-width: 768px) {
-    /* غیر فعال کردن تمام انیمیشن‌ها به جز like */
-    .newsletter-two__img {
-        animation: none !important;
-    }
 
-    .newsletter-two__like {
-        /* انیمیشن سبک‌تر برای موبایل */
-        animation: floatRotateMobile 4s ease-in-out infinite;
-    }
-
-    @keyframes floatRotateMobile {
-        0%, 100% { transform: translateY(0) rotate(0deg); }
-        50% { transform: translateY(-5px) rotate(10deg); } /* کمتر از دسکتاپ */
-    }
-
-    /* غیر فعال کردن hover و transition اضافی */
-    .newsletter-two__btn,
-    .newsletter-two__inner-content,
-    .newsletter-two__title,
-    .newsletter-two__input input[type="email"] {
-        transition: none !important;
-    }
-
-    /* غیر فعال کردن blur برای کاهش مصرف GPU */
-    .newsletter-two__inner-content {
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-    }
-}
-/*--------------------------------------------------------------
-# Newsletter Three
---------------------------------------------------------------*/
-.newsletter-three {
-    padding-top: 150px;
-}
-
-/* ریسپانسیو */
+/* ------------------------------------------------------------- */
+/*  Media Queries موجود (تغییر اندازه‌ها) – بدون تغییر           */
+/* ------------------------------------------------------------- */
 @media (max-width: 1200px) {
     .newsletter-two__like {
         right: 400px;
@@ -460,16 +426,40 @@
     }
 }
 
+/* ============================================================= */
+/*  ** موبایل (عرض ≤ ۷۶۷px) **                                   */
+/*  تمام عکس‌های بخش Newsletter One (از جمله shape-1) حذف شدند   */
+/*  افکت‌های hover همچنان فعال هستند                             */
+/* ============================================================= */
 
+@media (max-width: 767px) {
+    /* ----- بخش Newsletter One (همه عکس‌ها غیرفعال) ----- */
+    .newsletter-one__bg-shape,
+    .newsletter-one__shape-1,
+    .newsletter-one__shape-2,
+    .newsletter-one__img {
+        display: none !important;
+    }
 
+    .newsletter-one__img,
+    .newsletter-one__shape-1.float-bob-y {
+        animation: none !important;
+    }
 
+    /* ----- بخش Newsletter Two (عکس‌ها غیرفعال، انیمیشن‌ها غیرفعال) ----- */
+    .newsletter-two__img,
+    .newsletter-two__like,
+    .newsletter-two__shape-bg {
+        display: none !important;
+    }
 
+    .newsletter-two__img,
+    .newsletter-two__like {
+        animation: none !important;
+    }
 
-
-
-
-
-
+    /* توجه: transition و backdrop-filter حذف نشده‌اند تا hoverها به‌خوبی کار کنند */
+}
 /*--------------------------------------------------------------
 # End
 --------------------------------------------------------------*/
