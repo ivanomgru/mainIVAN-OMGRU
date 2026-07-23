@@ -258,6 +258,19 @@ const blogPosts = [
     image: "assets/images/blog/cover-image-culture-russia.jpg",
     link: "/Mypageruir/blog-detalis/culture-of-russia-part2.html",
     text: "مرجع کامل فرهنگ روسیه برای فارسی‌زبانان: بررسی آداب معاشرت،تفاوت‌های منطقه‌ای و تأثیر تاریخ بر روحیه روس‌ها. "
+  },
+  {
+    title: "راهنمای جامع کلمات عاشقانه روسی؛ از «دوستت دارم» تا «تو جهان منی» !",
+    category: "عشق و احساسات",
+    catId: 1,
+    date: "1 مرداد ۱۴۰۵",
+    readingTime: "مطالعه ۱۵ دقیقه",
+    authorName: "ابوالفضل شهاب",
+    authorImage: "assets/images/blog/blog-details-client-img-1.jpg",
+    authorFollowers: 4780,
+    image: "/Mypageruir/assets/images/blog/blog-d566556-1-2-1.webp",
+    link: "/Mypageruir/blog-detalis/story-love2.html",
+    text: "روسی، زبانی است که با شنیدنش، قلب‌ها به تپش می‌افتند. در این مقاله  عاشقانه‌ترین ها را گردآوری کرده‌ایم.."
   }
 ];
 
