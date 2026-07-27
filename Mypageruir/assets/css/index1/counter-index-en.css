@@ -8,44 +8,49 @@
     overflow: hidden;
     z-index: 1;
 }
-/* انیمیشن هاور برای بخش اصلی */
+
 .counter-one:hover {
     background: linear-gradient(90deg,#9fb8ff 0%,#c89cff 100%);
     transition: background 0.5s ease;
 }
+
 .counter-one__bg {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     bottom: 0;
     width: calc((100% - 686px) / 2);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right center;
-    border-top-right-radius: 135px;
-    border-bottom-right-radius: 135px;
+    border-top-left-radius: 135px;
+    border-bottom-left-radius: 135px;
     z-index: 1;
 }
+
 .counter-one:hover .counter-one__bg {
     filter: brightness(1.1) contrast(1.15);
     transform: scale(1.02);
 }
+
 .counter-one__bg::before {
     content: "";
     position: absolute;
     top: -12px;
-    left: 0;
+    right: 0;
     bottom: -12px;
-    right: -12px;
+    left: -12px;
     border: 12px solid var(--fistudy-white);
-    border-top-right-radius: 147px;
-    border-bottom-right-radius: 147px;
+    border-top-left-radius: 147px;
+    border-bottom-left-radius: 147px;
     z-index: -1;
 }
+
 .counter-one:hover .counter-one__bg::before {
     border-color: rgba(247, 141, 167, 0.8);
     box-shadow: 0 0 40px rgba(63, 5, 19, 0.5);
 }
+
 .counter-one__video-link {
     position: absolute;
     top: 50%;
@@ -223,7 +228,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-	flex-direction: row-reverse;
 }
 
 .counter-one__count h3 {
@@ -306,3 +310,6 @@
         color: var(--fistudy-base) !important;
     }
 }
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

@@ -35,7 +35,7 @@
     position: relative;
     display: block;
     margin: 0 auto;
-    max-width: 800px;
+    margin: 0 109px;
     z-index: 1;
 }
 
@@ -51,11 +51,11 @@
 }
 
 .video-one__shape-1::before{
-content:"";
-position:absolute;
-inset:18px;
-border-radius:24px;
-border:1px solid rgba(255,255,255,.28);
+    content:"";
+    position:absolute;
+    inset:18px;
+    border-radius:24px;
+    border:5px solid rgba(255,255,255,.28);
 }
 .video-one__shape-2 {
     position: absolute;
@@ -66,7 +66,6 @@ border:1px solid rgba(255,255,255,.28);
     border: 2px dashed var(--fistudy-base);
     border-radius: 50%;
 }
-
 /* ===== بخش‌های اضافه شده از فایل اول ===== */
 .video-one__video-shape-1 {
     position: absolute;
@@ -117,39 +116,30 @@ border:1px solid rgba(255,255,255,.28);
     font-size: 16px;
 }
 
-
 /* ===== پایان بخش اضافه شده ===== */
 
-.video-player{
+/* ===== اصلاحات برای رفع مشکل منوهای بازشونده ===== */
+.video-player {
     position: relative;
     display: block;
     max-width: 100%;
     margin: 2rem auto;
     border-radius:18px;
     border:1px solid rgba(255,255,255,.75);
-    overflow:hidden;
-    box-shadow:0 30px 60px rgba(115,120,255,.18),0 10px 25px rgba(0,0,0,.12);
+    overflow: visible !important;        /* مهم: اجازه خروج منو از کادر */
+    box-shadow:0 30px 60px rgba(134, 138, 255, 0.46),0 10px 25px rgba(0,0,0,.12);
     transition:.35s;
-}
-
-.video-player:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:
-        0 40px 80px rgba(115,120,255,.22),
-        0 15px 35px rgba(0,0,0,.16);
-
+    z-index: 10;                        /* افزایش z-index */
 }
 /* به .video-one__img-box یک نسبت ابعاد ثابت بدهید (مثلاً 16:9) */
 .video-one__img-box {
     position: relative;
     display: block;
     border-radius: 15px;
-    overflow: hidden;
-    background-color: #ffffff00; /* رنگ پس‌زمینه در صورت خالی بودن */
+    overflow: hidden;                    /* این overflow باید بماند تا تصویر و ویدیو درون کادر بریده شوند */
+    background-color: #ffffff00;
     width: 100%;
-    aspect-ratio: 16 / 9; /* یا هر نسبت دلخواه */
+    aspect-ratio: 16 / 9;
 }
 
 /* ویدیو و تصویر پوستر را کاملاً درون کادر قرار دهید */
@@ -164,8 +154,7 @@ border:1px solid rgba(255,255,255,.28);
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block; /* حذف فضای خالی اضافه زیر عکس */
-
+    display: block;
 }
 
 .video-one__video-link {
@@ -190,11 +179,11 @@ border:1px solid rgba(255,255,255,.28);
     line-height: 40px;
     text-align: center;
     font-size: 30px;
-    color: #ffffff83;
+    color: #ffffff;
     background-color: #d477ffb4;
     border-radius: 50%;
     margin: 0 auto;
-    box-shadow: 0 0 20px rgb(111, 0, 255);
+    box-shadow: 0 0 20px rgb(21, 21, 21);
     transition: all 0.4s ease;
     cursor: pointer;
     z-index: 3;
@@ -241,15 +230,6 @@ border:1px solid rgba(255,255,255,.28);
     box-shadow: 0 0 0 0 rgba(223, 65, 255, 0.664);
     animation: ripple 3s infinite;
     z-index: 2;
-}
-
-@keyframes ripple {
-    70% {
-        box-shadow: 0 0 0 40px rgba(223, 65, 255, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(223, 65, 255, 0);
-    }
 }
 
 .video-one__video-icon .ripple:before {
@@ -300,7 +280,7 @@ border:1px solid rgba(255,255,255,.28);
     background-color: #ff0000;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-    animation: liveBlink 1s infinite;
+    animation: liveBlink 2s infinite;
     margin-right: 5px;
 }
 
@@ -325,23 +305,24 @@ border:1px solid rgba(255,255,255,.28);
 
 /* کنترل‌های ویدیو */
 .video-controls {
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.19);
-    display: flex;
+    display: flex;                      /* پیش‌فرض برای دسکتاپ و تمام‌صفحه */
     flex-direction: column;
     padding: 0.5rem;
     box-sizing: border-box;
-    z-index: 4;
+    z-index: 20;
     transition: opacity 0.3s ease;
+    border-radius: 15px;
     overflow: visible !important;
-    
-
 }
 
 .video-controls:hover {
     background: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
 }
 
 #progressBar {
@@ -386,13 +367,14 @@ border:1px solid rgba(255,255,255,.28);
 .video-controls-right {
     display: flex;
     gap: 0.5rem;
-    z-index: 9;
+    z-index: 30;
     align-items: center;
 }
 
 .video-controls-right {
     overflow: visible !important;
     position: relative;
+    z-index: 40;
 }
 
 .video-controls button {
@@ -423,42 +405,46 @@ border:1px solid rgba(255,255,255,.28);
     color: #ccc;
 }
 
-/* استایل dropdownها */
+/* استایل dropdownها - اصلاح شده برای خوانایی و نمایش کامل */
 .video-controls select {
-    padding: 0.2rem 0.5rem;
-    padding-right: 1.5rem !important;
+    padding: 0.2rem 1.8rem 0.2rem 0.5rem;
     border-radius: 5px;
-    border: none;
+    border: 1px solid rgba(255,255,255,0.3);
     font-weight: 600;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.9) url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 0.5rem center/0.8rem !important;
+    background: #ffffff url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 0.5rem center/0.8rem !important;
     transition: all 0.3s ease;
     position: relative;
-    z-index: 1000;
+    z-index: 9999 !important;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    color: #333;
+    min-width: 70px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .video-controls select:hover {
-    background: white url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 0.5rem center/0.8rem !important;
+    background: #ffffff url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 0.5rem center/0.8rem !important;
     transform: scale(1.05);
+    border-color: #778bff;
 }
 
 /* وقتی dropdown باید به سمت بالا باز شود */
 .video-controls select[data-dropup="true"] {
-    background: rgba(255, 255, 255, 0.9) url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='18 15 12 9 6 15'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 0.5rem center/0.8rem !important;
+    background: #ffffff url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='18 15 12 9 6 15'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 0.5rem center/0.8rem !important;
 }
 
 .video-controls select[data-dropup="true"]:hover {
-    background: white url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='18 15 12 9 6 15'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 0.5rem center/0.8rem !important;
+    background: #ffffff url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='18 15 12 9 6 15'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 0.5rem center/0.8rem !important;
 }
 
 /* استایل برای dropdownها در حالت focus */
 .video-controls select:focus {
     outline: 2px solid var(--fistudy-base, #778bff);
     outline-offset: 2px;
-    z-index: 1001;
+    z-index: 99999 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .sr-only {
@@ -473,7 +459,7 @@ border:1px solid rgba(255,255,255,.28);
     border: 0;
 }
 
-/* استایل‌های حالت تمام صفحه */
+/* ===== استایل‌های حالت تمام صفحه ===== */
 .video-player:fullscreen {
     width: 100%;
     height: 100%;
@@ -484,6 +470,7 @@ border:1px solid rgba(255,255,255,.28);
 .video-player:fullscreen .video-controls {
     padding: 1rem;
     overflow: visible !important;
+    display: flex !important;           /* نمایش در تمام‌صفحه */
 }
 
 .video-player:fullscreen .video-one__live {
@@ -491,12 +478,79 @@ border:1px solid rgba(255,255,255,.28);
     right: 20px;
 }
 
-/* حالت تمام صفحه - تنظیمات بیشتر */
-.video-player:fullscreen .video-controls select[data-dropup="true"] {
-    position: relative;
+.video-player:fullscreen .video-controls select {
+    z-index: 9999 !important;
 }
+
+/* ===== بهبود نمایش در موبایل (کنترل‌ها فقط در تمام‌صفحه نشان داده شوند) ===== */
 @media (max-width: 768px) {
+    /* در موبایل و غیر تمام‌صفحه، کنترل‌ها توسط جاوااسکریپت مخفی می‌شوند (display:none) */
+    /* ما فقط ظاهر را بهبود می‌دهیم و قانون display:flex را حذف می‌کنیم تا JS کنترل کند */
     .video-controls {
-        display: none;
+        background: rgba(0, 0, 0, 0.75);
+        padding: 0.5rem 0.3rem;
+        border-radius: 12px;
+        bottom: 0;
+        z-index: 50 !important;
+    }
+    
+    .video-controls button {
+        font-size: 1.1rem;
+        padding: 6px 8px;
+        min-width: 36px;
+        min-height: 36px;
+    }
+    
+    #currentTime,
+    #duration {
+        font-size: 0.8rem;
+        min-width: 35px;
+        font-weight: 700;
+        color: #fff;
+    }
+    
+    .video-controls select {
+        font-size: 0.8rem;
+        padding: 0.3rem 2rem 0.3rem 0.6rem;
+        min-width: 60px;
+        background-color: #ffffff !important;
+        color: #222 !important;
+        border: 1px solid rgba(255,255,255,0.5);
+        border-radius: 6px;
+        z-index: 9999 !important;
+    }
+    
+    .video-controls-left,
+    .video-controls-right {
+        gap: 0.4rem;
+    }
+    
+    .video-one__video-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+    
+    .video-one__video-link .ripple,
+    .video-one__video-icon .ripple:before,
+    .video-one__video-icon .ripple:after {
+        width: 70px;
+        height: 70px;
+    }
+    
+    #progressBar {
+        height: 8px;
+    }
+    
+    #progressBar::-webkit-slider-thumb {
+        width: 18px;
+        height: 18px;
+    }
+    
+    /* در موبایل و تمام‌صفحه، کنترل‌ها نمایش داده شوند */
+    .video-player:fullscreen .video-controls {
+        padding: 0.8rem;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex !important;       /* نمایش در تمام‌صفحه در موبایل */
     }
 }

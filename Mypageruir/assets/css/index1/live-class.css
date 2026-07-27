@@ -33,7 +33,7 @@
     position: relative;
     display: block;
     overflow: hidden;
-    border-radius: 40px;
+    border-radius: 16px;
     z-index: 1;
 }
 
@@ -44,7 +44,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #cfbaff52;
+    background-color: rgba(var(--fistudy-black-rgb), .50);
     border-radius: 16px;
     opacity: 0;
     transform: translateY(50px);
@@ -60,7 +60,7 @@
 
 .live-class-one__img img {
     width: 100%;
-    border-radius: 40px;
+    border-radius: 16px;
     transform: scale(1.0);
     transition-delay: 0.1s;
     transition-timing-function: ease-in-out;
@@ -82,7 +82,7 @@
 .live-class-one__btn-box .thm-btn {
     padding: 2px 15px 1px;
     font-size: 14px;
-  background: linear-gradient(-92.7deg, #0088ff70 0.48%, #e5b7ff91 56.21%, #babfff 100%);
+  background: linear-gradient(-92.7deg, #0088ffb1 0.48%, #d690ff91 56.21%, #8d95ff 100%);
 }
 
 .live-class-one__btn-box .thm-btn::before {
@@ -106,8 +106,7 @@
 }
 
 .live-class-one__title a {
-    color: var(--fistudy-black);    color: #FF0000;
-
+    color: var(--fistudy-black);
 }
 
 .live-class-one__title a:hover {
@@ -119,31 +118,17 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 3px;
 }
 
 .live-class-one__circle {
     position: relative;
     display: block;
-    height: 12px; /* کمی بزرگتر برای دید بهتر */
-    width: 12px;
+    height: 6px;
+    width: 6px;
     background-color: #FF0000;
     border-radius: 50%;
-    animation: liveBlink 3s infinite; /* نام انیمیشن، مدت، تکرار بی‌نهایت */
 }
-
-/* تعریف انیمیشن چشمک زدن */
-@keyframes liveBlink {
-    0%, 50%, 100% {
-        opacity: 1; /* روشن */
-        transform: scale(1); /* اندازه اصلی */
-    }
-    25%, 75% {
-        opacity: 0.3; /* کم نور */
-        transform: scale(1.3); /* کمی بزرگتر برای افکت زنده */
-    }
-}
-
 
 .live-class-one__class-time-text {
     font-size: 14px;

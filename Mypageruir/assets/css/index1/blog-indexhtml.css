@@ -5,24 +5,10 @@
 .blog-one {
     position: relative;
     display: block;
-    background: linear-gradient(135deg, 
-        rgba(252, 252, 252, 1) 0%,
-        rgba(248, 250, 255, 0.95) 100%);
+    background-color: rgba(64, 61, 253, 0.04);
     overflow: hidden;
     padding: 120px 0 225px;
     z-index: 1;
-}
-
-/* افکت پس‌زمینه سبک‌تر */
-.blog-one::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 300px;
-    background: radial-gradient(circle at 50% 0%, rgba(186, 191, 255, 0.08) 0%, transparent 70%);
-    z-index: -1;
 }
 
 .blog-one__carousel {
@@ -33,13 +19,10 @@
 .blog-one__single {
     position: relative;
     display: block;
-    background: white;
+    background: rgba(255, 255, 255, 0);
     border: 1px solid rgba(221, 221, 221, 0.3);
     padding: 23px;
     border-radius: 24px;
-    box-shadow: 
-        0 4px 25px rgba(0, 0, 0, 0.05),
-        0 1px 2px rgba(0, 0, 0, 0.03);
     transition: all 0.3s ease;
     overflow: hidden;
 }
@@ -48,8 +31,7 @@
     transform: translateY(-5px);
     border-color: rgba(12, 28, 252, 0.4);
     box-shadow: 
-        0 15px 40px rgba(0, 0, 0, 0.08),
-        0 10px 25px rgba(186, 191, 255, 0.1);
+        0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
 .blog-one__img {
@@ -69,10 +51,10 @@
     left: 0;
     right: 0;
     background: linear-gradient(45deg, 
-        rgba(186, 191, 255, 0.3), 
+        rgba(0, 0, 0, 0.98), 
         transparent 50%);
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.5s ease;
     z-index: 1;
 }
 
