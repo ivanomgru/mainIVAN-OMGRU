@@ -303,21 +303,28 @@
     margin: 0;
 }
 
-/* کنترل‌های ویدیو */
+/* ===== کنترل‌های ویدیو - اصلاح شده برای مخفی‌سازی خودکار ===== */
 .video-controls {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.19);
-    display: flex;                      /* پیش‌فرض برای دسکتاپ و تمام‌صفحه */
+    display: flex;
     flex-direction: column;
     padding: 0.5rem;
     box-sizing: border-box;
     z-index: 20;
-    transition: opacity 0.3s ease;
     border-radius: 15px;
     overflow: visible !important;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* ← یک transition کامل */
+}
+
+/* کلاس مخفی‌سازی (توسط جاوااسکریپت اضافه می‌شود) */
+.video-controls.controls-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .video-controls:hover {
@@ -459,7 +466,7 @@
     border: 0;
 }
 
-/* ===== استایل‌های حالت تمام صفحه ===== */
+/* ===== استایل‌های حالت تمام صفحه (اصلاح شده برای override کلاس مخفی) ===== */
 .video-player:fullscreen {
     width: 100%;
     height: 100%;
@@ -470,7 +477,7 @@
 .video-player:fullscreen .video-controls {
     padding: 1rem;
     overflow: visible !important;
-    display: flex !important;           /* نمایش در تمام‌صفحه */
+    display: flex !important;
 }
 
 .video-player:fullscreen .video-one__live {
@@ -482,75 +489,121 @@
     z-index: 9999 !important;
 }
 
-/* ===== بهبود نمایش در موبایل (کنترل‌ها فقط در تمام‌صفحه نشان داده شوند) ===== */
+/* ===== رفع فیت نشدن ویدیو در تمام‌صفحه (موبایل و دسکتاپ) ===== */
+.video-player:fullscreen .video-one__img-box {
+    aspect-ratio: auto !important;
+    height: 100% !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    background-color: #000 !important; /* پس‌زمینه سیاه برای حاشیه‌ها */
+}
+
+.video-player:fullscreen video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important; /* ← تغییر از cover به contain */
+    display: block !important;
+    background-color: #000 !important;
+}
+
+.video-player:fullscreen .video-one__video-link {
+    display: none !important;
+}
+
+/* ===== بهبود نمایش در موبایل ===== */
+
 @media (max-width: 768px) {
-    /* در موبایل و غیر تمام‌صفحه، کنترل‌ها توسط جاوااسکریپت مخفی می‌شوند (display:none) */
-    /* ما فقط ظاهر را بهبود می‌دهیم و قانون display:flex را حذف می‌کنیم تا JS کنترل کند */
-    .video-controls {
-        background: rgba(0, 0, 0, 0.75);
-        padding: 0.5rem 0.3rem;
-        border-radius: 12px;
-        bottom: 0;
-        z-index: 50 !important;
-    }
-    
-    .video-controls button {
-        font-size: 1.1rem;
-        padding: 6px 8px;
-        min-width: 36px;
-        min-height: 36px;
-    }
-    
-    #currentTime,
-    #duration {
-        font-size: 0.8rem;
-        min-width: 35px;
-        font-weight: 700;
-        color: #fff;
-    }
-    
-    .video-controls select {
-        font-size: 0.8rem;
-        padding: 0.3rem 2rem 0.3rem 0.6rem;
-        min-width: 60px;
-        background-color: #ffffff !important;
-        color: #222 !important;
-        border: 1px solid rgba(255,255,255,0.5);
-        border-radius: 6px;
-        z-index: 9999 !important;
-    }
-    
-    .video-controls-left,
-    .video-controls-right {
-        gap: 0.4rem;
-    }
-    
-    .video-one__video-icon {
-        width: 70px;
-        height: 70px;
-        font-size: 28px;
-    }
-    
-    .video-one__video-link .ripple,
-    .video-one__video-icon .ripple:before,
-    .video-one__video-icon .ripple:after {
-        width: 70px;
-        height: 70px;
-    }
-    
-    #progressBar {
-        height: 8px;
-    }
-    
-    #progressBar::-webkit-slider-thumb {
-        width: 18px;
-        height: 18px;
-    }
-    
-    /* در موبایل و تمام‌صفحه، کنترل‌ها نمایش داده شوند */
-    .video-player:fullscreen .video-controls {
-        padding: 0.8rem;
-        background: rgba(0, 0, 0, 0.8);
-        display: flex !important;       /* نمایش در تمام‌صفحه در موبایل */
-    }
+  .video-controls {
+    background: rgba(0, 0, 0, .75);
+    padding: .5rem .3rem;
+    border-radius: 12px;
+    bottom: 0;
+    z-index: 50 !important;
+  }
+  .video-controls button {
+    font-size: 1.1rem;
+    padding: 6px 8px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+  #currentTime,
+  #duration {
+    font-size: .8rem;
+    min-width: 35px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .video-controls select {
+    font-size: .8rem;
+    padding: .3rem 2rem .3rem .6rem;
+    min-width: 60px;
+    background-color: #fff !important;
+    color: #222 !important;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 6px;
+    z-index: 9999 !important;
+  }
+  .video-controls-left,
+  .video-controls-right {
+    gap: .4rem;
+  }
+  .video-one__video-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+  }
+  .video-one__video-link .ripple {
+    width: 70px;
+    height: 70px;
+  }
+  .video-one__video-icon .ripple:before,
+  .video-one__video-icon .ripple:after {
+    display: none !important;
+  }
+  #progressBar {
+    height: 8px;
+  }
+  #progressBar::-webkit-slider-thumb {
+    width: 18px;
+    height: 18px;
+  }
+  .video-player:fullscreen .video-controls {
+    padding: .8rem;
+    background: rgba(0, 0, 0, .8);
+    display: flex !important;
+  }
+
+  .video-one__live {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .video-one__video-icon {
+    transition: transform .25s, box-shadow .25s;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .4);
+  }
+  .video-controls button,
+  .video-controls select {
+    transition: transform .2s, background .2s;
+  }
+  .video-player {
+    box-shadow: 0 10px 30px rgba(134, 138, 255, .3), 0 5px 15px rgba(0, 0, 0, .1);
+  }
+  .video-one__live-icon .live-dot {
+    animation: liveBlinkMobile 2s infinite;
+  }
+  @keyframes liveBlinkMobile {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .3; }
+  }
+
+  /* ===== اضافه شده برای سبک‌تر کردن shape‌ها ===== */
+  .video-one__shape-3,
+  .video-one__shape-4,
+  .video-one__video-shape-1 {
+    display: none !important;
+  }
+  .video-one__inner {
+    margin: 0 20px;
+  }
 }
