@@ -1,5 +1,31 @@
+// ==================== تنظیمات وضعیت لایو ====================
+// 0 = غیرفعال (هیچ وقت لایو نشان داده نشود)
+// 1 = فعال (همیشه لایو نشان داده شود، بدون در نظر گرفتن زمان)
+// 2 = بر اساس زمان (با startTime مقایسه شود)
+const LIVE_STATUS = 2; // این عدد را به دلخواه تغییر دهید (0, 1, یا 2)
+
 document.addEventListener("DOMContentLoaded", function() {
-    // ==================== اسکریپت لایو کلاس (اصلاح شده برای دو زبان) ====================
+
+    // ====== اضافه کردن استایل‌های مورد نیاز برای مخفی‌سازی خودکار کنترل‌ها ======
+    if (!document.querySelector('#autoHideControlsStyle')) {
+        const style = document.createElement('style');
+        style.id = 'autoHideControlsStyle';
+        style.textContent = `
+            .video-controls {
+                transition: opacity 0.3s ease, visibility 0.3s ease;
+                opacity: 1;
+                visibility: visible;
+            }
+            .video-controls.controls-hidden {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    // ==================== اسکریپت لایو کلاس (اصلاح شده با LIVE_STATUS) ====================
     function getLangText(faText, ruText) {
         const currentLang = document.documentElement.lang || 'fa';
         if (currentLang === 'ru') return ruText;
@@ -8,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     const liveClasses = {
         "class1": {
-            startTime: new Date("2025-05-03T15:00:00"),
+            startTime: new Date("2027-05-03T15:00:00"),
             teacherFa: "استاد - ivan_omgru",
             teacherRu: "Преподаватель - ivan_omgru",
             imgFa: "Mypageruir/assets/images/resources/live-class-1-1.jpg",
@@ -17,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
     let liveStarted = false;
+    let liveDisabled = false;
+
     function updateLive() {
         const now = new Date();
         const cls = liveClasses["class1"];
@@ -28,26 +56,62 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             return cls.imgFa;
         }
-    
+
+        let isLive = false;
+        let isCountdown = false;
+        let isDisabled = false;
+
+        if (LIVE_STATUS === 0) {
+            isDisabled = true;
+        } else if (LIVE_STATUS === 1) {
+            isLive = true;
+        } else if (LIVE_STATUS === 2) {
+            if (now >= cls.startTime) {
+                isLive = true;
+            } else {
+                isCountdown = true;
+            }
+        }
+
         document.querySelectorAll(".live-class-one__carousel .item").forEach(item => {
             const btnBox = item.querySelector(".live-class-one__btn-box");
             const timeText = item.querySelector(".live-class-one__class-time-text");
             const titleLink = item.querySelector(".live-class-one__title a");
             const img = item.querySelector(".live-class-one__img img");
             const currentImgSrc = getClassImage();
-    
-            if(!cls.liveLink) {
-                timeText.textContent = getLangText("زنده - 00:00:00", "Живой - 00:00:00");
-                titleLink.textContent = getLangText("استاد - ویدیو زنده ای یافت نشد !", "Преподаватель - живое видео не найдено!");
+
+            if (isDisabled) {
+                timeText.textContent = getLangText("زنده غیرفعال", "Живой отключен");
+                titleLink.textContent = getLangText("کلاس غیرفعال", "Класс отключен");
                 titleLink.href = "#";
-                btnBox.innerHTML = `<a href="#" class="thm-btn">${getLangText("عضو کلاس", "Присоединиться к классу")}</a>`;
-                if(img && img.getAttribute('src') !== currentImgSrc) {
+                btnBox.innerHTML = `<a href="#" class="thm-btn" style="opacity:0.6;pointer-events:none;">${getLangText("غیرفعال", "Отключено")}</a>`;
+                if (img && img.getAttribute('src') !== currentImgSrc) {
                     img.src = currentImgSrc;
                 }
                 return;
             }
-    
-            if(now < cls.startTime) {
+
+            if (isLive) {
+                timeText.textContent = getLangText("کلاس در حال اجرا - زنده", "Класс идет - живой");
+                const teacherText = currentLang === 'ru' ? cls.teacherRu : cls.teacherFa;
+                titleLink.textContent = teacherText;
+                titleLink.href = cls.liveLink;
+                titleLink.target = "_blank";
+                if (img && img.tagName === 'IMG') {
+                    const parent = img.parentNode;
+                    if (!parent.querySelector('iframe')) {
+                        const iframe = document.createElement('iframe');
+                        iframe.className = 'live-class-one__img';
+                        iframe.style.width = '100%';
+                        iframe.style.height = '200px';
+                        iframe.src = cls.liveLink;
+                        iframe.frameBorder = '0';
+                        iframe.allowFullscreen = true;
+                        img.parentNode.replaceChild(iframe, img);
+                    }
+                }
+                btnBox.innerHTML = `<a href="${cls.liveLink}" target="_blank" class="thm-btn">${getLangText("وارد کلاس زنده شوید", "Войти в живой класс")}</a>`;
+            } else if (isCountdown) {
                 const diff = cls.startTime - now;
                 const h = Math.floor(diff / 1000 / 60 / 60);
                 const m = Math.floor((diff / 1000 / 60) % 60);
@@ -57,47 +121,88 @@ document.addEventListener("DOMContentLoaded", function() {
                 titleLink.textContent = getLangText("کلاس آنلاین به زودی", "Онлайн класс скоро");
                 titleLink.href = "#";
                 btnBox.innerHTML = `<a href="#" class="thm-btn">${getLangText("عضو کلاس شوید", "Стать участником класса")}</a>`;
-                if(img && img.getAttribute('src') !== currentImgSrc) {
+                if (img && img.parentNode && img.parentNode.querySelector('iframe')) {
+                    const iframeEl = img.parentNode.querySelector('iframe');
+                    if (iframeEl) {
+                        const newImg = document.createElement('img');
+                        newImg.src = currentImgSrc;
+                        newImg.alt = img.alt || '';
+                        newImg.className = img.className || '';
+                        iframeEl.parentNode.replaceChild(newImg, iframeEl);
+                    }
+                } else if (img && img.getAttribute('src') !== currentImgSrc) {
                     img.src = currentImgSrc;
                 }
-            } else {
-                timeText.textContent = getLangText("کلاس در حال اجرا - زنده", "Класс идет - живой");
-                const teacherText = currentLang === 'ru' ? cls.teacherRu : cls.teacherFa;
-                titleLink.textContent = teacherText;
-                titleLink.href = cls.liveLink;
-                titleLink.target = "_blank";
-                // تعویض img با iframe فقط در حالت زنده
-                if(img && img.tagName === 'IMG') {
-                    const iframe = document.createElement('iframe');
-                    iframe.className = 'live-class-one__img';
-                    iframe.style.width = '100%';
-                    iframe.style.height = '200px';
-                    iframe.src = cls.liveLink;
-                    iframe.frameBorder = '0';
-                    iframe.allowFullscreen = true;
-                    img.parentNode.replaceChild(iframe, img);
-                }
-                btnBox.innerHTML = `<a href="${cls.liveLink}" target="_blank" class="thm-btn">${getLangText("وارد کلاس زنده شوید", "Войти в живой класс")}</a>`;
             }
         });
-    
-        // ادامه کد مربوط به video-one__img-box
+
         const videoBox = document.querySelector(".video-one__img-box");
         const liveText = document.querySelector(".video-one__live-text");
 
-        if(now < cls.startTime) {
+        if (isDisabled) {
+            if (videoBox) {
+                const iframe = videoBox.querySelector('iframe');
+                if (iframe) {
+                    const img = document.createElement('img');
+                    img.src = getClassImage();
+                    img.alt = 'Live disabled';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    iframe.parentNode.replaceChild(img, iframe);
+                } else {
+                    const img = videoBox.querySelector('img');
+                    if (img) {
+                        img.src = getClassImage();
+                    } else {
+                        const newImg = document.createElement('img');
+                        newImg.src = getClassImage();
+                        newImg.style.width = '100%';
+                        newImg.style.height = '100%';
+                        videoBox.appendChild(newImg);
+                    }
+                }
+                liveStarted = false;
+            }
+            if (liveText) liveText.textContent = getLangText("زنده غیرفعال", "Живой отключен");
+            return;
+        }
+
+        if (isLive) {
+            if (videoBox && !liveStarted) {
+                videoBox.innerHTML = `<iframe width="100%" height="400" src="${cls.liveLink}" frameborder="0" allowfullscreen></iframe>`;
+                liveStarted = true;
+            }
+            if (liveText) liveText.textContent = getLangText("کلاس در حال اجرا - زنده", "Класс идет - живой");
+        } else if (isCountdown) {
             const diff = cls.startTime - now;
             const h = Math.floor(diff / 1000 / 60 / 60);
             const m = Math.floor((diff / 1000 / 60) % 60);
             const s = Math.floor((diff / 1000) % 60);
             const countdown = `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
-            if(liveText) liveText.textContent = getLangText(`شروع کلاس در: ${countdown}`, `Класс начинается через: ${countdown}`);
-        } else {
-            if(!liveStarted && videoBox) {
-                videoBox.innerHTML = `<iframe width="100%" height="400" src="${cls.liveLink}" frameborder="0" allowfullscreen></iframe>`;
-                liveStarted = true;
+            if (liveText) liveText.textContent = getLangText(`شروع کلاس در: ${countdown}`, `Класс начинается через: ${countdown}`);
+            if (videoBox) {
+                const iframe = videoBox.querySelector('iframe');
+                if (iframe) {
+                    const img = document.createElement('img');
+                    img.src = getClassImage();
+                    img.alt = 'Countdown';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    iframe.parentNode.replaceChild(img, iframe);
+                    liveStarted = false;
+                } else {
+                    const img = videoBox.querySelector('img');
+                    if (!img) {
+                        const newImg = document.createElement('img');
+                        newImg.src = getClassImage();
+                        newImg.style.width = '100%';
+                        newImg.style.height = '100%';
+                        videoBox.appendChild(newImg);
+                    } else {
+                        img.src = getClassImage();
+                    }
+                }
             }
-            if(liveText) liveText.textContent = getLangText("کلاس در حال اجرا - زنده", "Класс идет - живой");
         }
     }
 
@@ -108,8 +213,7 @@ document.addEventListener("DOMContentLoaded", function() {
         updateLive();
     });
 
-
-    // ==================== اسکریپت پلیر ویدیو (بدون تغییر) ====================
+    // ==================== اسکریپت پلیر ویدیو (با اضافه شدن خودکار مخفی‌سازی کنترل‌ها) ====================
     (function(){
         'use strict';
     
@@ -200,13 +304,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     e.stopPropagation();
                     if (ensureLoaded()) {
                         video.play().then(() => {
-                            // پس از شروع پخش، در موبایل تمام‌صفحه می‌کنیم
                             if (window.innerWidth <= 768) {
-                                // درخواست تمام‌صفحه برای کانتینر پلیر
                                 if (player.requestFullscreen) {
                                     player.requestFullscreen().catch(err => console.warn('Fullscreen failed:', err));
                                 } 
-                                // پشتیبانی از iOS (Safari)
                                 else if (video.webkitEnterFullscreen) {
                                     video.webkitEnterFullscreen();
                                 }
@@ -215,7 +316,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         
                         hideBigPlayButton();
                         if (videoControls && window.innerWidth <= 768 && !document.fullscreenElement) {
-                            videoControls.style.display = 'flex';
+                            // حذف تنظیم display:flex در اینجا چون توسط تابع مخفی‌سازی مدیریت می‌شود
                         }
                     }
                 }
@@ -398,16 +499,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (video.paused && (video.currentTime === 0 || video.ended)) showBigPlayButton();
                 else hideBigPlayButton();
     
+                // ====== تابع قبلی updateControlsVisibility را غیرفعال می‌کنیم تا با تابع جدید تداخل نداشته باشد ======
                 function updateControlsVisibility() {
-                    const isMobile = window.innerWidth <= 768;
-                    if (isMobile && !document.fullscreenElement) {
-                        if (videoControls) videoControls.style.display = 'none';
-                    } else {
-                        if (videoControls) videoControls.style.display = 'flex';
-                    }
+                    // کاری انجام نمی‌دهد
                 }
-                document.addEventListener('fullscreenchange', updateControlsVisibility);
-                updateControlsVisibility();
+                document.removeEventListener('fullscreenchange', updateControlsVisibility);
+                // برای اطمینان، یک بار آن را اجرا نمی‌کنیم
     
                 function flashOverlay(type) {
                     let overlay = player.querySelector('.flash-overlay');
@@ -444,5 +541,137 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     
         initVideoPlayers();
+
+        // ==================== تابع خودکار مخفی‌سازی کنترل‌ها (مثل یوتیوب) ====================
+        function setupAutoHideControls() {
+            const players = document.querySelectorAll('.video-player');
+            const HIDE_DELAY = 3000; // 3 ثانیه
+        
+            players.forEach(player => {
+                const controls = player.querySelector('.video-controls');
+                if (!controls) return;
+        
+                let hideTimeout = null;
+                let isHoveringControls = false;
+                let controlsVisible = false;
+        
+                // تابع نمایش کنترل‌ها و تنظیم تایمر (بدون شرط تمام‌صفحه)
+                function showControls() {
+                    controls.classList.remove('controls-hidden');
+                    controlsVisible = true;
+                    clearTimeout(hideTimeout);
+                    
+                    // شرط تمام‌صفحه حذف شد → تایمر همیشه تنظیم می‌شه
+                    if (!isHoveringControls) {
+                        hideTimeout = setTimeout(() => {
+                            controls.classList.add('controls-hidden');
+                            controlsVisible = false;
+                        }, HIDE_DELAY);
+                    }
+                }
+        
+                // ===== رویداد کلیک روی ناحیه ویدیو =====
+                const clickTargets = [
+                    player,
+                    player.querySelector('.video-one__img-box'),
+                    player.querySelector('video')
+                ].filter(el => el);
+        
+                clickTargets.forEach(el => {
+                    el.addEventListener('click', (e) => {
+                        if (e.target.closest('.video-one__video-icon')) return;
+                        if (e.target.closest('.video-one__video-link')) return;
+                        
+                        if (!controlsVisible) {
+                            showControls();
+                        } else {
+                            clearTimeout(hideTimeout);
+                            if (!isHoveringControls) {
+                                hideTimeout = setTimeout(() => {
+                                    controls.classList.add('controls-hidden');
+                                    controlsVisible = false;
+                                }, HIDE_DELAY);
+                            }
+                        }
+                    });
+                });
+        
+                // ===== ورود/خروج ماوس روی کنترل‌ها =====
+                controls.addEventListener('pointerenter', () => {
+                    isHoveringControls = true;
+                    clearTimeout(hideTimeout);
+                    controls.classList.remove('controls-hidden');
+                    controlsVisible = true;
+                });
+        
+                controls.addEventListener('pointerleave', () => {
+                    isHoveringControls = false;
+                    // شرط تمام‌صفحه حذف شد
+                    if (controlsVisible) {
+                        clearTimeout(hideTimeout);
+                        hideTimeout = setTimeout(() => {
+                            controls.classList.add('controls-hidden');
+                            controlsVisible = false;
+                        }, HIDE_DELAY);
+                    }
+                });
+        
+                // ===== لمس در موبایل =====
+                controls.addEventListener('touchstart', () => {
+                    isHoveringControls = true;
+                    clearTimeout(hideTimeout);
+                    controls.classList.remove('controls-hidden');
+                    controlsVisible = true;
+                }, { passive: true });
+        
+                controls.addEventListener('touchend', () => {
+                    isHoveringControls = false;
+                    // شرط تمام‌صفحه حذف شد
+                    if (controlsVisible) {
+                        clearTimeout(hideTimeout);
+                        hideTimeout = setTimeout(() => {
+                            controls.classList.add('controls-hidden');
+                            controlsVisible = false;
+                        }, HIDE_DELAY);
+                    }
+                }, { passive: true });
+        
+                // ===== مدیریت تغییر حالت تمام‌صفحه =====
+                document.addEventListener('fullscreenchange', () => {
+                    if (document.fullscreenElement === player) {
+                        controls.classList.remove('controls-hidden');
+                        controlsVisible = true;
+                        clearTimeout(hideTimeout);
+                        if (!isHoveringControls) {
+                            hideTimeout = setTimeout(() => {
+                                controls.classList.add('controls-hidden');
+                                controlsVisible = false;
+                            }, HIDE_DELAY);
+                        }
+                    } else if (document.fullscreenElement === null) {
+                        controls.classList.remove('controls-hidden');
+                        controlsVisible = true;
+                        clearTimeout(hideTimeout);
+                        if (!isHoveringControls) {
+                            hideTimeout = setTimeout(() => {
+                                controls.classList.add('controls-hidden');
+                                controlsVisible = false;
+                            }, HIDE_DELAY);
+                        }
+                    }
+                });
+        
+                // ===== شروع اولیه: کنترل‌ها مخفی، بعد از نیم ثانیه نمایش =====
+                controls.classList.add('controls-hidden');
+                controlsVisible = false;
+                setTimeout(() => {
+                    if (!controlsVisible) {
+                        showControls();
+                    }
+                }, 500);
+            });
+        }
+        // راه‌اندازی مخفی‌سازی خودکار
+        setupAutoHideControls();
     })();
 });
