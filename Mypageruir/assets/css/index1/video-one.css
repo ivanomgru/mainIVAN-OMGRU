@@ -507,10 +507,6 @@
     background-color: #000 !important;
 }
 
-.video-player:fullscreen .video-one__video-link {
-    display: none !important;
-}
-
 /* ===== بهبود نمایش در موبایل ===== */
 
 @media (max-width: 768px) {
