@@ -1,0 +1,379 @@
+/*--------------------------------------------------------------
+# Team Details
+--------------------------------------------------------------*/
+.team-details {
+    position: relative;
+    display: block;
+    padding: 120px 0 120px;
+    z-index: 1;
+}
+
+.team-details__left {
+    position: relative;
+    display: block;
+    margin-right: 43px;
+}
+
+.team-details__img {
+    position: relative;
+    display: block;
+}
+
+.team-details__img img {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid var(--fistudy-base);
+}
+
+.team-details__right {
+    position: relative;
+    display: block;
+    margin-right: 0px;
+}
+
+.team-details__name-and-ratting-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.team-details__name-box {
+    position: relative;
+    display: block;
+}
+
+.team-details__name {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 46px;
+    margin-bottom: 1px;
+}
+
+.team-details__sub-title {
+    font: 16px;
+    line-height: 26px;
+    color: var(--fistudy-base);
+}
+
+.team-details__ratting-box {
+    position: relative;
+    display: block;
+}
+
+.team-details__ratting {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 1px;
+}
+
+.team-details__ratting>li {
+    position: relative;
+    display: block;
+}
+
+.team-details__ratting>li>span {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    color: #FFC224;
+}
+
+.team-details__ratting>li:nth-child(5) span {
+    color: var(--fistudy-gray);
+}
+
+.team-details__ratting-text {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.team-details__meta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.team-details__meta>li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.team-details__meta>li .icon {
+    position: relative;
+    display: inline-block;
+}
+
+.team-details__meta>li .icon>span {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: #FF3EA5;
+}
+
+.team-details__meta>li:nth-child(2) .icon>span {
+    color: var(--fistudy-base);
+}
+
+.team-details__meta>li:nth-child(3) .icon>span {
+    color: var(--fistudy-primary);
+}
+
+.team-details__meta>li .content {
+    position: relative;
+    display: block;
+}
+
+.team-details__meta>li .content p {
+    font-size: 16px;
+    line-height: 26px !important;
+    font-family: var(--fistudy-font) !important;
+    letter-spacing: 0.03em;
+}
+
+.team-details__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    margin-top: 27px;
+    margin-bottom: 15px;
+}
+
+.team-details__text-1 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+/*----- Education / Points Box (Enhanced) -----*/
+.team-details__points-box {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+}
+
+.team-details__points-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #1e1e2a;
+    margin-bottom: 20px;
+    letter-spacing: -0.3px;
+    position: relative;
+    padding-right: 18px;
+}
+
+.team-details__points-title::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 28px;
+    background: #ff3ea5;
+    border-radius: 4px;
+}
+
+.team-details__points-list {
+    position: relative;
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Each item – card style with hover effect */
+.team-details__points-list li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: #ffffff;
+    padding: 18px 22px;
+    border-radius: 16px;
+    border: 1px solid #b4b4f6;
+    transition: all 0.25s ease-in-out;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+
+    /* override original dashed border */
+    border-bottom: none !important;
+    padding-bottom: 18px !important;
+}
+
+.team-details__points-list li + li {
+    margin-top: 0; /* override original margin */
+}
+
+.team-details__points-list li:hover {
+    border-color: var(--fistudy-base, #ff6b4a);
+    box-shadow: 0 8px 20px rgba(255, 107, 74, 0.10);
+    transform: translateY(-2px);
+    background: #fdfbfe;
+}
+
+/* Content row (icon + text) */
+.team-details__points-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+}
+
+/* Icon wrapper */
+.team-details__points-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    transition: background 0.25s ease;
+}
+
+.team-details__points-icon img {
+    width: 22px;
+    height: auto;
+    display: block;
+}
+
+/* Main text (education title) */
+.team-details__points-text {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #1e1e2a;
+    margin: 0;
+    transition: color 0.25s ease;
+}
+
+.team-details__points-list li:hover .team-details__points-text {
+    color: var(--fistudy-base);
+}
+
+/* Sub description (second <p> inside li) */
+.team-details__points-list li > p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6b6b7a;
+    margin: 6px 0 0 0;
+    padding-right: 54px; /* aligns with text after icon */
+    font-weight: 400;
+    text-align: right;
+    width: 100%;
+    transition: color 0.25s ease;
+}
+
+.team-details__have-question-and-social {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.team-details__have-question {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.team-details__have-question-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--fistudy-primary);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.team-details__have-question-icon span {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: var(--fistudy-white);
+}
+
+.team-details__have-question-content {
+    position: relative;
+    display: block;
+    border: 1px solid var(--fistudy-bdr-color);
+    border-radius: 11px;
+    padding: 15px 32px 11px;
+    margin-left: -24px;
+}
+
+.team-details__have-question-content p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+}
+
+.team-details__have-question-content h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.team-details__have-question-content h3 a {
+    color: var(--fistudy-black);
+}
+
+.team-details__have-question-content h3 a:hover {
+    color: var(--fistudy-base);
+}
+
+.team-details__have-question-social {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.team-details__have-question-social a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 36px;
+    border: 1px solid var(--fistudy-bdr-color);
+    border-radius: 18px;
+    font-size: 16px;
+    color: var(--fistudy-black);
+}
+
+.team-details__have-question-social a:hover {
+    color: var(--fistudy-white);
+    background-color: var(--fistudy-base);
+    border: 1px solid var(--fistudy-base);
+}
+
+/*--------------------------------------------------------------
+# Team Page
+--------------------------------------------------------------*/
+.team-page {
+    position: relative;
+    display: block;
+    padding: 120px 0 96px;
+    z-index: 1;
+}
+
+.team-page .team-one__single {
+    margin-bottom: 24px;
+}

@@ -212,7 +212,6 @@
 @media (max-width: 767px) {
     /* ----- بخش Newsletter One (همه عکس‌ها غیرفعال) ----- */
     .newsletter-one__bg-shape,
-    .newsletter-one__shape-1,
     .newsletter-one__shape-2,
     .newsletter-one__img {
         display: none !important;

@@ -1,0 +1,580 @@
+/* ==============================================================
+   2. بخش اصلی وبلاگ (blog-page)
+   ============================================================== */
+.blog-page {
+    position: relative;
+    display: block;
+    padding: 120px 0;
+    z-index: 1;
+}
+
+/* ==============================================================
+   3. کارت‌های وبلاگ (blog-two)
+   ============================================================== */
+.blog-two {
+    position: relative;
+    display: block;
+    padding: 120px 0;
+    z-index: 1;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* ---- کارت تکی ---- */
+.blog-two__single {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.blog-two__single:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* تاخیر انیمیشن برای هر کارت */
+.blog-two__single:nth-child(1) { animation-delay: 0.1s; }
+.blog-two__single:nth-child(2) { animation-delay: 0.2s; }
+.blog-two__single:nth-child(3) { animation-delay: 0.3s; }
+.blog-two__single:nth-child(4) { animation-delay: 0.4s; }
+
+/* خط بالای کارت در هاور */
+.blog-two__single::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--fistudy-base) 0%, var(--fistudy-primary) 50%, #FFC224 100%);
+    border-radius: 4px 4px 0 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.blog-two__single:hover::before {
+    opacity: 1;
+}
+
+/* ---- تصویر کارت ---- */
+.blog-two__img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    z-index: 1;
+    height: 260px;
+}
+
+.blog-two__img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg,
+                rgba(var(--fistudy-black-rgb), 0.8) 0%,
+                rgba(var(--fistudy-black-rgb), 0.2) 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+    border-radius: 20px 20px 0 0;
+}
+.blog-two__single:hover .blog-two__img::before {
+    opacity: 0.6;
+}
+
+.blog-two__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    transform: scale(1);
+    transition: transform 1s cubic-bezier(0.2, 0.9, 0.3, 1.3);
+    filter: brightness(0.95);
+}
+.blog-two__single:hover .blog-two__img img {
+    transform: scale(1.1) rotate(1deg);
+    filter: brightness(1);
+}
+
+/* ---- تاریخ در گوشه تصویر ---- */
+.blog-two__date {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: linear-gradient(135deg,
+                var(--fistudy-base) 0%,
+                rgba(var(--fistudy-base-rgb), 0.9) 100%);
+    padding: 14px 20px;
+    border-radius: 16px;
+    z-index: 3;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+    border: none;
+    transform: translateY(10px);
+    opacity: 0.9;
+    transition: all 0.4s ease;
+}
+.blog-two__single:hover .blog-two__date {
+    transform: translateY(0);
+    opacity: 1;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.blog-two__date span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+.blog-two__date p {
+    font-size: 18px;
+    color: white;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ---- محتوای کارت ---- */
+.blog-two__content {
+    position: relative;
+    display: block;
+    padding: 25px 25px 30px;
+}
+
+.blog-two__meta-box {
+    position: relative;
+    display: block;
+    border: 1px solid rgba(var(--fistudy-bdr-color-rgb), 0.2);
+    padding: 12px 15px;
+    border-radius: 12px;
+    background: rgba(249, 250, 251, 0.8);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+.blog-two__single:hover .blog-two__meta-box {
+    border-color: var(--fistudy-base);
+    background: rgba(var(--fistudy-base-rgb), 0.05);
+    transform: translateX(5px);
+}
+
+.blog-two__meta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.blog-two__meta li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+.blog-two__meta li + li {
+    margin-right: 30px; /* در صورت RTL قابل تنظیم است */
+}
+
+.blog-two__meta li a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--fistudy-black);
+    padding: 4px 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.blog-two__meta li a:hover {
+    color: var(--fistudy-base);
+    transform: translateY(-2px);
+}
+
+.blog-two__meta li a span {
+    position: relative;
+    font-size: 16px;
+    margin-left: 6px;
+    color: #FFC224;
+    transition: all 0.3s ease;
+}
+.blog-two__meta li a:hover span {
+    transform: scale(1.2);
+}
+
+.blog-two__meta li:nth-child(2) a span { color: var(--fistudy-primary); }
+.blog-two__meta li:nth-child(3) a span { color: var(--fistudy-base); }
+
+.blog-two__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 15px 0;
+    color: var(--fistudy-black);
+    padding-bottom: 15px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.blog-two__title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--fistudy-base);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+.blog-two__single:hover .blog-two__title::after {
+    width: 80px;
+}
+
+.blog-two__title a {
+    color: var(--fistudy-black);
+    text-decoration: none;
+    display: block;
+    background: linear-gradient(90deg,
+                var(--fistudy-black) 0%,
+                var(--fistudy-black) 50%,
+                var(--fistudy-base) 100%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background-position 0.6s ease;
+}
+.blog-two__title a:hover {
+    background-position: 0 0;
+}
+
+/* ---- دکمه بیشتر ---- */
+.blog-two__btn-box {
+    position: relative;
+    display: block;
+    text-align: left;
+    padding-top: 30px;
+}
+
+/* ==============================================================
+   4. بخش بالایی (سرچ، دسته‌بندی، مرتب‌سازی)
+   ============================================================== */
+.course-list__right-top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--fistudy-bdr-color);
+    border-radius: 16px;
+    background-color: var(--fistudy-white);
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+.course-list__right-top-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.course-list__showing-sort {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    width: 100%;
+    gap: 15px;
+}
+.course-list__showing-sort p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--fistudy-black);
+}
+
+.course-list__showing-sort .select-box {
+    position: relative;
+    display: block;
+    flex: 1;
+}
+.course-list__showing-sort .select-box .nice-select {
+    color: var(--fistudy-gray);
+    font-size: 14px;
+    font-weight: 400;
+    height: 70px;
+    line-height: 70px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-bottom: 0;
+    background-color: transparent;
+}
+.course-list__showing-sort .select-box .nice-select::after {
+    position: absolute;
+    left: 0;
+}
+
+/* ---- جعبه جستجو ---- */
+.course-grid__search form {
+    position: relative;
+}
+.course-grid__search form input[type="search"],
+.course-grid__search form input[type="text"] {
+    width: 100%;
+    height: 50px;
+    background-color: var(--fistudy-white);
+    padding-right: 20px;
+    padding-left: 95px;
+    font-size: 16px;
+    color: var(--fistudy-gray);
+    font-family: var(--fistudy-font);
+    border: 1px solid var(--fistudy-bdr-color);
+    outline: none;
+    font-weight: 500;
+    border-radius: 25px;
+}
+.course-grid__search form ::placeholder {
+    color: inherit;
+    opacity: 1;
+}
+
+.course-grid__search form button[type="submit"] {
+    background-color: var(--fistudy-base);
+    color: var(--fistudy-white);
+    font-size: 16px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    width: 85px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+    border-radius: 45px;
+    transition: all 500ms ease;
+}
+.course-grid__search form button i {
+    font-size: 14px;
+}
+.course-grid__search form button:hover[type="submit"] {
+    background-color: var(--fistudy-black);
+    color: var(--fistudy-white);
+}
+
+/* ==============================================================
+   5. اطلاعات نویسنده در کارت (courses-two)
+   ============================================================== */
+.courses-two__content {
+    position: relative;
+    display: block;
+    margin-top: 14px;
+}
+
+.courses-two__btn-and-client-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.courses-two__btn-box {
+    position: relative;
+    display: block;
+}
+
+.courses-two__client-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.courses-two__client-img {
+    position: relative;
+    display: block;
+    max-width: 40px;
+    width: 100%;
+}
+.courses-two__client-img img {
+    width: 100%;
+    border: 1px solid var(--fistudy-base);
+    border-radius: 50%;
+}
+
+.courses-two__client-content {
+    position: relative;
+    display: block;
+    flex: 1;
+}
+.courses-two__client-content h4 {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 1px;
+}
+.courses-two__client-content p {
+    font-size: 12px;
+    line-height: 22px;
+    text-transform: capitalize;
+}
+.courses-two__client-content p span {
+    font-family: var(--fistudy-font) !important;
+}
+
+/* ==============================================================
+   6. صفحه‌بندی (pagination)
+   ============================================================== */
+.blog-list__pagination {
+    position: relative;
+    display: block;
+}
+.blog-list__pagination .pg-pagination li {
+    display: inline-block;
+    margin-right: 12px;
+}
+.blog-list__pagination .pg-pagination li a {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
+    color: var(--fistudy-gray);
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: black;
+    border: 1px solid var(--fistudy-bdr-color);
+    transition: all 500ms ease;
+}
+.blog-list__pagination .pg-pagination li:hover a,
+.blog-list__pagination .pg-pagination li.active a {
+    background-color: var(--fistudy-base);
+    color: var(--fistudy-white);
+}
+
+/* ==============================================================
+   7. فیلترهای دسته‌بندی (gallery-filter)
+   ============================================================== */
+.gallery-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 15px;
+    margin-bottom: 35px;
+}
+
+.gallery-filter .btn {
+    background: transparent;
+    border: 1.5px solid #e9ecef;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #495057;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.gallery-filter .btn .btn-emoji {
+    font-size: 16px;
+}
+.gallery-filter .btn:hover {
+    transform: scale(1.1);
+    border-color: #1a73e8;
+}
+.gallery-filter .btn.active {
+    background: #1a73e8;
+    border-color: #1a73e8;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.25);
+}
+.gallery-filter .btn.active:hover {
+    background: #1557b0;
+    border-color: #1557b0;
+}
+
+/* ==============================================================
+   8. دکمه‌ها (buttons)
+   ============================================================== */
+.thm-btn-two {
+    background-color: transparent;
+    border-radius: 5%;
+    border: 1.5px solid transparent;
+}
+.thm-btn-two:hover {
+    transform: translateY(-5px);
+    transition: all 0.25s ease;
+}
+.thm-btn-two:hover i {
+    transform: translateX(-15px);
+}
+
+/* ==============================================================
+   9. جایگزین تصویر (glass-placeholder) - برای تصاویر missing
+   ============================================================== */
+.glass-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+.glass-placeholder::after {
+    content: "بدون تصویر";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255,255,255,0.7);
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.blog-two__single.no-image .blog-two__img {
+    background: #f0f0f0;
+}
+
+/* ==============================================================
+   10. انیمیشن‌ها (animations)
+   ============================================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

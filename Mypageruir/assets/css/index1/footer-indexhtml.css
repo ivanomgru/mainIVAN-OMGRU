@@ -412,42 +412,6 @@
         transition: none !important;
     }
 
-    /* 3. غیرفعال کردن افکت‌های هاور (بازگردانی به حالت عادی) */
-    
-    /* هاور آیکون‌های شبکه‌های اجتماعی */
-    .site-footer__social-box-inner a:hover {
-        background-color: var(--fistudy-base) !important;
-        color: var(--fistudy-white) !important;
-        transform: none !important;
-    }
-    .site-footer__social-box-inner a:hover:before {
-        transform: scale(0.0) !important;
-    }
-
-    /* هاور لینک‌های اطلاعات تماس */
-    .site-footer__contact-info-text a:hover {
-        color: var(--fistudy-white) !important;
-    }
-
-    /* هاور لینک‌های منو (دسترسی سریع و لینک‌های مفید) */
-    .site-footer__links-list li a:hover {
-        color: var(--fistudy-white) !important;
-    }
-
-    /* هاور دکمه خبرنامه */
-    .site-footer__newsletter-form .thm-btn {
-        color: var(--fistudy-black) !important;
-    }
-    .site-footer__newsletter-form .thm-btn:before {
-        background-color: rgba(var(--fistudy-white-rgb), 1) !important;
-    }
-    .site-footer__newsletter-form .thm-btn:hover {
-        color: var(--fistudy-black) !important;
-    }
-    .site-footer__newsletter-form .thm-btn:hover:before {
-        background-color: rgba(var(--fistudy-white-rgb), 1) !important;
-    }
-
     /* هاور لینک‌های کپی‌رایت */
     .site-footer__copyright-text a:hover {
         color: var(--fistudy-primary) !important;
