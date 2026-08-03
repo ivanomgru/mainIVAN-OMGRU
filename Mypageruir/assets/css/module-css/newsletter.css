@@ -1,129 +1,4 @@
 /*--------------------------------------------------------------
-# Newsletter One
---------------------------------------------------------------*/
-.newsletter-one {
-    position: relative;
-    display: block;
-    padding: 0 0 120px;
-    z-index: 1;
-}
-
-.newsletter-one__inner {
-    position: relative;
-    display: block;
-    background: linear-gradient(90deg, #FF4330 0%, #FF7163 100%);
-    border-radius: 40px;
-    text-align: center;
-    padding: 40px 40px 60px;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.newsletter-one__inner:hover {
-    background: linear-gradient(90deg,#9fb8ff 0%,#c89cff 100%);
-    transition: background 0.5s ease;
-}
-.newsletter-one__bg-shape {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-}
-
-.newsletter-one__shape-1 {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-.newsletter-one__shape-1 img {
-    width: auto;
-    opacity: .19;
-}
-
-.newsletter-one__shape-2 {
-    position: absolute;
-    left: 50px;
-    bottom: 55px;
-    z-index: -1;
-}
-
-.newsletter-one__shape-2 img {
-    width: auto;
-}
-
-.newsletter-one__img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    animation: leftRight 4s ease-in-out infinite;
-    z-index: -1;
-}
-
-.newsletter-one__img img {
-    width: auto;
-}
-
-.newsletter-one__title {
-    font-size: 60px;
-    font-weight: 500;
-    line-height: 80px;
-    color: transparent;
-    -webkit-text-stroke: 2px var(--fistudy-white);
-}
-
-.newsletter-one__text {
-    font-size: 18px;
-    line-height: 26px;
-    color: var(--fistudy-white);
-    text-transform: math-auto;
-    margin-top: 18px;
-    margin-bottom: 52px;
-}
-
-.newsletter-one__contact-form {
-    position: relative;
-    display: block;
-    max-width: 630px;
-    width: 100%;
-    margin: 0 auto 0;
-}
-
-.newsletter-one__contact-input-box {
-    position: relative;
-    display: block;
-}
-
-.newsletter-one__contact-input-box input[type="email"] {
-    height: 75px;
-    width: 100%;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--fistudy-gray);
-    padding-left: 180px;
-    padding-right: 25px;
-    background-color: var(--fistudy-white);
-    border: 3px solid var(--fistudy-bdr-color);
-    border-radius: 40px;
-	text-align: right
-}
-
-.newsletter-one__contact-form .thm-btn {
-    border: none;
-    position: absolute;
-    top: 11px;
-    left: 11px;
-    bottom: 11px;
-}
-/*--------------------------------------------------------------
 # Newsletter Two - Lightweight Version
 --------------------------------------------------------------*/
 .newsletter-two {
@@ -319,7 +194,7 @@
     top: 8px;
     left: 8px;
     border: none;
-    background: linear-gradient(135deg, #d998ff 0%, #a855f7 100%);
+    background: linear-gradient(92.7deg, #5db3ff86 0.48%, #bf50ff8f 56.21%, #6973ff9f 100%);
     font-size: 17px;
     color: var(--fistudy-white);
     font-weight: 600;
@@ -346,44 +221,10 @@
     padding-right: 5px;
     font-weight: 600;
 }
-@media (max-width: 768px) {
-    /* غیر فعال کردن تمام انیمیشن‌ها به جز like */
-    .newsletter-two__img {
-        animation: none !important;
-    }
 
-    .newsletter-two__like {
-        /* انیمیشن سبک‌تر برای موبایل */
-        animation: floatRotateMobile 4s ease-in-out infinite;
-    }
-
-    @keyframes floatRotateMobile {
-        0%, 100% { transform: translateY(0) rotate(0deg); }
-        50% { transform: translateY(-5px) rotate(10deg); } /* کمتر از دسکتاپ */
-    }
-
-    /* غیر فعال کردن hover و transition اضافی */
-    .newsletter-two__btn,
-    .newsletter-two__inner-content,
-    .newsletter-two__title,
-    .newsletter-two__input input[type="email"] {
-        transition: none !important;
-    }
-
-    /* غیر فعال کردن blur برای کاهش مصرف GPU */
-    .newsletter-two__inner-content {
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-    }
-}
-/*--------------------------------------------------------------
-# Newsletter Three
---------------------------------------------------------------*/
-.newsletter-three {
-    padding-top: 150px;
-}
-
-/* ریسپانسیو */
+/* ------------------------------------------------------------- */
+/*  Media Queries – بهینه‌سازی برای موبایل (سبک‌تر)             */
+/* ------------------------------------------------------------- */
 @media (max-width: 1200px) {
     .newsletter-two__like {
         right: 400px;
@@ -419,57 +260,111 @@
     }
 }
 
+/* ====== بهینه‌سازی ویژه موبایل (سبک‌تر و سریع‌تر) ====== */
 @media (max-width: 768px) {
     .newsletter-two {
-        padding: 0 20px 80px;
+        padding: 0 15px 60px; /* کاهش padding عمودی */
     }
     
     .newsletter-two__inner-content {
-        border-radius: 40px 20px 50px 60px;
-        padding: 40px 25px 30px;
+        border-radius: 30px 15px 40px 50px; /* گوشه‌های ساده‌تر */
+        padding: 30px 18px 25px;
+        backdrop-filter: none; /* حذف blur سنگین */
+        -webkit-backdrop-filter: none;
+        border-width: 4px; /* حاشیه باریک‌تر */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* سایه ملایم‌تر */
+        background: linear-gradient(135deg, 
+            rgba(255, 163, 167, 0.95) 0%, 
+            rgba(217, 152, 255, 0.9) 56.21%, 
+            rgba(119, 139, 255, 0.95) 100%);
+        /* بدون افکت نئون اضافی */
+    }
+    
+    /* حذف افکت نئون (::before) در موبایل */
+    .newsletter-two__inner-content::before {
+        display: none;
+    }
+    
+    /* حذف انیمیشن‌های سنگین در موبایل */
+    .newsletter-two__img
+    {
+        animation: none !important;
+    }
+    
+    .newsletter-two__img {
+        margin: 0 auto 20px;
+        max-width: 80px; /* کاهش حجم تصویر */
+    }
+    
+    .newsletter-two__like {
+        margin: 20px auto 0;
+        max-width: 50px;
     }
     
     .newsletter-two__title {
-        font-size: 28px;
-        line-height: 1.4;
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-shadow: none; /* حذف سایه‌های اضافی */
+    }
+    
+    .newsletter-two__title::after {
+        width: 40px;
+        height: 2px;
+        bottom: -5px;
     }
     
     .newsletter-two__text {
-        font-size: 16px;
-        line-height: 1.6;
+        font-size: 15px;
+        line-height: 1.5;
+        max-width: 100%;
+        opacity: 1;
     }
     
-    .newsletter-two__input input[type="email"] {
-        padding-left: 40px;
+    /* فرم ورودی */
+    .newsletter-two__input input[type="text"] {
+        height: 52px;
+        font-size: 15px;
+        padding: 0 20px;
         text-align: center;
-        height: 60px;
-        font-size: 16px;
+        border-radius: 30px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
     }
     
+    .newsletter-two__input input[type="text"]:focus {
+        transform: none; /* حذف حرکت برای کاهش پردازش */
+        box-shadow: 0 5px 15px rgba(106, 17, 203, 0.1);
+    }
+    
+    /* دکمه به صورت تمام‌عرض و ساده */
     .newsletter-two__btn {
         position: relative;
         top: auto;
         left: auto;
-        margin: 15px auto 0;
+        margin: 12px auto 0;
         display: block;
         width: 100%;
-        max-width: 200px;
-        font-size: 16px;
-        padding: 10px 25px;
-        height: 48px;
+        max-width: 180px;
+        height: 46px;
+        font-size: 15px;
+        padding: 0 20px;
+        border-radius: 30px;
+        box-shadow: 0 4px 12px rgba(217, 152, 255, 0.25);
+        background: linear-gradient(135deg, #a855f7, #d998ff);
+    }
+    
+    .newsletter-two__btn:hover {
+        transform: none; /* حذف hover متحرک */
+        box-shadow: 0 4px 12px rgba(217, 152, 255, 0.3);
+    }
+    
+    .newsletter-two__btn span {
+        font-size: 14px;
+        padding-right: 3px;
+    }
+    
+    /* حذف افکت پارتیکل در موبایل برای کاهش بار */
+    .newsletter-two::before {
+        opacity: 0.1;
+        background-size: 150px 150px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-/*--------------------------------------------------------------
-# End
---------------------------------------------------------------*/
