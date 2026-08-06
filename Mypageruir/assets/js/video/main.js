@@ -1,1 +1,8 @@
-import{initLiveManager}from"./live-manager.js";import{initVideoPlayers}from"./video-player.js";import{setupAutoHideControls}from"./controls-hide.js";document.addEventListener("DOMContentLoaded",(function(){if(!document.querySelector("#autoHideControlsStyle")){const style=document.createElement("style");style.id="autoHideControlsStyle",style.textContent="\n            .video-controls {\n                transition: opacity 0.3s ease, visibility 0.3s ease;\n                opacity: 1;\n                visibility: visible;\n            }\n            .video-controls.controls-hidden {\n                opacity: 0;\n                visibility: hidden;\n                pointer-events: none;\n            }\n        ",document.head.appendChild(style)}initLiveManager(),initVideoPlayers(),setupAutoHideControls()}));
+// main.js
+import { initLiveManager } from './live-manager.js';
+
+document.addEventListener('DOMContentLoaded', function() {
+    // فقط مدیریت لایو (کلاس‌های زنده) فعال می‌مونه
+    initLiveManager();
+    // video-player و controls-hide حذف شدند چون Plyr جایگزین شده
+});
