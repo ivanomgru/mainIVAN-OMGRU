@@ -1,0 +1,199 @@
+/*--------------------------------------------------------------
+# Faq Page - Glassmorphism Style (بهینه‌شده برای عملکرد بالا)
+--------------------------------------------------------------*/
+
+/* حذف backdrop-filter از کل صفحه (فقط روی کارت‌ها بماند) */
+.faq-page {
+    position: relative;
+    display: block;
+    padding: 120px 0 133px;
+    z-index: 1;
+}
+
+.faq-page__left,
+.faq-page__right {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* ===== هر آیتم FAQ ===== */
+.faq-page .faq-one-accrodion .accrodion {
+    position: relative;
+    display: block;
+    background: rgba(255, 255, 255, 0.25);
+    /* بلور با شدت کمتر برای کاهش مصرف GPU */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(27, 38, 188, 0.15);
+    border-radius: 20px;
+    /* فقط خواصی که واقعاً تغییر می‌کنند را transition دهیم */
+    transition: transform 500ms ease,
+                box-shadow 500ms ease,
+                background 500ms ease,
+                border 500ms ease;
+    /* به مرورگر اعلام می‌کنیم که این المنت قرار است تغییر کند */
+    will-change: transform, box-shadow;
+}
+
+/* فاصله بین آیتم‌ها */
+.faq-page .faq-one-accrodion .accrodion + .accrodion {
+    margin-top: 20px;
+}
+
+/* ===== حالت هاور (دسکتاپ) ===== */
+.faq-page .faq-one-accrodion .accrodion:hover {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.754);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+/* ===== حالت فعال (باز شده) ===== */
+.faq-page .faq-one-accrodion .accrodion.active {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.3);
+    /* در حالت active نیازی به blur نیست (پس‌زمینه سفید) */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+/* ===== عنوان ===== */
+.faq-page .faq-one-accrodion .accrodion-title {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding: 22px 35px 19px 45px; /* جا برای آیکون چپ */
+    text-align: left;
+    transition: padding 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.faq-page .faq-one-accrodion .accrodion-title h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    color: black;
+    text-align: right; /* راست‌چین (طبق طراحی اصلی) */
+    transition: color 300ms ease, font-weight 300ms ease;
+}
+
+.faq-page .faq-one-accrodion .accrodion.active .accrodion-title h2 {
+    color: #2a2a4a;
+    font-weight: 600;
+}
+
+/* ===== آیکون (با استفاده از ::before) ===== */
+.faq-page .faq-one-accrodion .accrodion-title h2::before {
+    content: "\e928";
+    font-family: 'icomoon' !important;
+    font-weight: 700;
+    font-size: 14px;
+    color: #5a4abd;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    line-height: 14px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    width: 28px;
+    height: 28px;
+    /* حذف backdrop-filter از آیکون برای کاهش سنگینی */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: background 300ms ease,
+                color 300ms ease,
+                border 300ms ease,
+                transform 300ms ease;
+    will-change: transform;
+}
+
+/* تغییر آیکون در حالت فعال */
+.faq-page .faq-one-accrodion .accrodion.active .accrodion-title h2::before {
+    content: "\e926";
+    color: #ffffff;
+    background: #5a4abd;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* ===== محتوای بازشونده ===== */
+.faq-page .faq-one-accrodion .accrodion-content {
+    position: relative;
+    padding-bottom: 32px;
+    padding-left: 45px; /* هم‌تراز با عنوان */
+    padding-right: 55px;
+    margin-top: -8px;
+}
+
+.faq-page .faq-one-accrodion .accrodion-content p {
+    margin: 0;
+    color: #2d2d44;
+    font-size: 16px;
+    line-height: 30px;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* حذف استایل‌های اضافی */
+.faq-page .faq-one-accrodion .accrodion-title::before {
+    display: none;
+}
+
+/* ============================================================
+   بهبود برای موبایل (کاهش مصرف و افزایش سرعت)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* کاهش شدت بلور یا حذف آن در موبایل */
+    .faq-page .faq-one-accrodion .accrodion {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(3px);  /* بلور بسیار کم */
+        -webkit-backdrop-filter: blur(3px);
+        transition: transform 300ms ease,
+                    box-shadow 300ms ease,
+                    background 300ms ease;
+        will-change: auto; /* در موبایل از will-change صرف‌نظر می‌کنیم */
+    }
+
+    /* حذف کامل هاور در موبایل (فقط یک افکت بسیار خفیف) */
+    .faq-page .faq-one-accrodion .accrodion:hover {
+        transform: none !important;
+        box-shadow: 0 4px 16px 0 rgba(27, 38, 188, 0.1) !important;
+        background: rgba(255, 255, 255, 0.5) !important;
+        border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    }
+
+    /* آیکون در موبایل بدون بلور و سایه کم‌رنگ‌تر */
+    .faq-page .faq-one-accrodion .accrodion-title h2::before {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+
+    /* تنظیم فاصله‌ها برای نمایش بهتر */
+    .faq-page .faq-one-accrodion .accrodion-title {
+        padding: 18px 20px 16px 40px;
+    }
+    .faq-page .faq-one-accrodion .accrodion-content {
+        padding-left: 40px;
+        padding-right: 25px;
+    }
+}
+
+/* --------------------------------------------------------------
+# پایان
+-------------------------------------------------------------- */
