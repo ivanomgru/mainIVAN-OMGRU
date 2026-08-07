@@ -7,7 +7,7 @@ Error Page
     position: relative;
     display: block;
     background: var(--fistudy-white);
-    padding: 120px 0px 153px;
+    padding: 120px 0px 53px;
     z-index: 1;
 }
 
@@ -18,12 +18,15 @@ Error Page
 
 .error-page__img {
     position: relative;
-    display: block;
-    mix-blend-mode: difference;
+    display: flex;
+    justify-content: center;
 }
 
 .error-page__img img {
-    width: auto;
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+    display: block;
 }
 
 .error-page__content {
@@ -32,7 +35,7 @@ Error Page
     margin-top: 62px;
 }
 
-.error-page__content h2 {
+.error-page__content h1 {
     color: var(--fistudy-base);
     font-size: 28px;
     line-height: 35px;
