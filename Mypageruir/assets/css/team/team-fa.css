@@ -382,28 +382,3 @@
 .team-page .team-one__single {
     margin-bottom: 24px;
 }
-
-
-/*--------------------------------------------------------------
-# Responsive Adjustments (for Education section)
---------------------------------------------------------------*/
-@media (max-width: 576px) {
-    .team-details__points-list li {
-        padding: 16px 18px;
-    }
-
-    .team-details__points-text {
-        font-size: 15px;
-    }
-
-    .team-details__points-list li > p {
-        font-size: 13px;
-        padding-right: 0;
-        margin-top: 4px;
-    }
-
-    .team-details__points-content {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-}

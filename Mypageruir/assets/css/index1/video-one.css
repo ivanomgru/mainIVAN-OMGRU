@@ -1,5 +1,5 @@
 /* --------------------------------------------------------------
-# Video One - ترکیب نهایی (غیر ریسپانسیو - ثابت برای موبایل)
+# Video One - نسخه بهینه‌شده برای موبایل
 --------------------------------------------------------------*/
 .video-one {
     position: relative;
@@ -57,6 +57,7 @@
     border-radius:24px;
     border:5px solid rgba(255,255,255,.28);
 }
+
 .video-one__shape-2 {
     position: absolute;
     top: -50px;
@@ -66,7 +67,7 @@
     border: 2px dashed var(--fistudy-base);
     border-radius: 50%;
 }
-/* ===== بخش‌های اضافه شده از فایل اول ===== */
+
 .video-one__video-shape-1 {
     position: absolute;
     top: -33px;
@@ -79,84 +80,47 @@
     width: auto;
 }
 
-.video-one__video-control {
-    position: absolute;
-    bottom: 33px;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.video-one__video-control li {
-    position: relative;
-    display: block;
-}
-
-.video-one__video-control li a {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 28px;
-    width: 28px;
-    background-color: var(--fistudy-base);
-    border-radius: 50%;
-    color: var(--fistudy-white);
-    font-size: 10px;
-}
-
-.video-one__video-control li:nth-child(3) a {
-    height: 44px;
-    width: 44px;
-    background-color: #FF0000;
-    font-size: 16px;
-}
-
-/* ===== پایان بخش اضافه شده ===== */
-
-/* ===== اصلاحات برای رفع مشکل منوهای بازشونده ===== */
+/* ============================================== */
+/* ===== کانتینر اصلی ویدیو (با Plyr) ===== */
 .video-player {
     position: relative;
     display: block;
     max-width: 80%;
     margin: 2rem auto;
-    border-radius:18px;
-    border:1px solid rgba(255,255,255,.75);
-    overflow: visible !important;        /* مهم: اجازه خروج منو از کادر */
-    box-shadow:0 30px 60px rgba(134, 138, 255, 0.46),0 10px 25px rgba(0,0,0,.12);
-    transition:.35s;
-    z-index: 10;                        /* افزایش z-index */
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,.75);
+    overflow: visible !important;
+    box-shadow: 0 30px 60px rgba(134, 138, 255, 0.46), 0 10px 25px rgba(0,0,0,.12);
+    transition: .35s;
+    z-index: 10;
+    will-change: transform;
 }
+
 .video-player:hover {
     box-shadow: 0 40px 80px rgba(134, 138, 255, 0.75),   /* سایه بزرگ‌تر و پررنگ‌تر */
                 0 15px 35px rgba(0, 0, 0, 0.2);
     background: rgba(255, 255, 255, 0.15);
-        transform: translateY(-6px);   /* 6 پیکسل به سمت بالا (هر عددی دوست دارید) */
-
+        transform: translateY(-6px);   
 }
-/* به .video-one__img-box یک نسبت ابعاد ثابت بدهید (مثلاً 16:9) */
+
+/* ===== جعبه ویدیو ===== */
 .video-one__img-box {
     position: relative;
     display: block;
     border-radius: 15px;
-    overflow: hidden;                    /* این overflow باید بماند تا تصویر و ویدیو درون کادر بریده شوند */
+    overflow: hidden;
     background-color: #ffffff00;
     width: 100%;
+    z-index: 999;
     aspect-ratio: 16 / 9;
 }
 
-/* ویدیو و تصویر پوستر را کاملاً درون کادر قرار دهید */
 .video-one__img-box video {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-/* اگر در آینده از تگ img هم استفاده کردید (اختیاری) */
 .video-one__img-box img {
     width: 100%;
     height: 100%;
@@ -164,6 +128,7 @@
     display: block;
 }
 
+/* ===== دکمه پخش بزرگ ===== */
 .video-one__video-link {
     position: absolute;
     top: 0;
@@ -194,6 +159,7 @@
     transition: all 0.4s ease;
     cursor: pointer;
     z-index: 3;
+    will-change: transform, opacity;
 }
 
 .video-one__video-icon .fa-play {
@@ -224,6 +190,7 @@
     box-shadow: 0 0 30px rgba(111, 0, 255, 0.8);
 }
 
+/* ریپل (حلقه‌های متحرک) */
 .video-one__video-link .ripple,
 .video-one__video-icon .ripple:before,
 .video-one__video-icon .ripple:after {
@@ -251,6 +218,16 @@
     position: absolute;
 }
 
+@keyframes ripple {
+    70% {
+        box-shadow: 0 0 0 40px rgba(223, 65, 255, .08);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(223, 65, 255, .28);
+    }
+}
+
+/* ===== بخش لایو ===== */
 .video-one__live {
     position: absolute;
     top: 15px;
@@ -310,170 +287,30 @@
     margin: 0;
 }
 
-/* ===== کنترل‌های ویدیو - اصلاح شده برای مخفی‌سازی خودکار ===== */
-.video-controls {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.19);
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-    box-sizing: border-box;
-    z-index: 20;
+/* ===== هماهنگی با Plyr (اصلاح شده برای پس‌زمینه شفاف) ===== */
+.video-player .plyr {
     border-radius: 15px;
-    overflow: visible !important;
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* ← یک transition کامل */
-}
-
-/* کلاس مخفی‌سازی (توسط جاوااسکریپت اضافه می‌شود) */
-.video-controls.controls-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.video-controls:hover {
-    background: rgba(0, 0, 0, 0.85);
-    border-radius: 15px;
-}
-
-#progressBar {
-    width: 100%;
-    height: 6px;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 3px;
-    outline: none;
-    -webkit-appearance: none;
-}
-
-#progressBar::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: var(--fistudy-base, #778bff);
-    cursor: pointer;
-}
-
-#progressBar::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: var(--fistudy-base, #778bff);
-    cursor: pointer;
-    border: none;
-}
-
-.video-controls-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0.3rem;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    overflow: visible !important;
-}
-
-.video-controls-left,
-.video-controls-right {
-    display: flex;
-    gap: 0.5rem;
-    z-index: 30;
-    align-items: center;
-}
-
-.video-controls-right {
-    overflow: visible !important;
-    position: relative;
-    z-index: 40;
-}
-
-.video-controls button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    font-size: 1.2rem;
-    padding: 5px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.video-controls button:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: scale(1.1);
-}
-
-#currentTime,
-#duration {
-    color: #fff;
-    font-weight: 700;
-    font-size: 0.9rem;
-    min-width: 40px;
-}
-
-#duration {
-    color: #ccc;
-}
-
-/* استایل dropdownها - اصلاح شده برای خوانایی و نمایش کامل */
-.video-controls select {
-    padding: 0.2rem 1.8rem 0.2rem 0.5rem;
-    border-radius: 5px;
-    border: 1px solid rgba(255,255,255,0.3);
-    font-weight: 600;
-    cursor: pointer;
-    background: #ffffff url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 0.5rem center/0.8rem !important;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 9999 !important;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    color: #333;
-    min-width: 70px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.video-controls select:hover {
-    background: #ffffff url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 0.5rem center/0.8rem !important;
-    transform: scale(1.05);
-    border-color: #778bff;
-}
-
-/* وقتی dropdown باید به سمت بالا باز شود */
-.video-controls select[data-dropup="true"] {
-    background: #ffffff url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='18 15 12 9 6 15'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 0.5rem center/0.8rem !important;
-}
-
-.video-controls select[data-dropup="true"]:hover {
-    background: #ffffff url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='18 15 12 9 6 15'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 0.5rem center/0.8rem !important;
-}
-
-/* استایل برای dropdownها در حالت focus */
-.video-controls select:focus {
-    outline: 2px solid var(--fistudy-base, #778bff);
-    outline-offset: 2px;
-    z-index: 99999 !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+    background: transparent !important;  /* ← شفاف شد */
 }
 
-/* ===== استایل‌های حالت تمام صفحه (اصلاح شده برای override کلاس مخفی) ===== */
+.video-player .plyr__video-wrapper {
+    aspect-ratio: 16 / 9;
+    background: transparent !important;  /* ← شفاف شد */
+}
+
+.video-player .plyr__control--overlaid {
+    display: none !important;
+}
+
+.video-player .plyr__controls {
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 15px 15px;
+    padding: 10px 15px;
+}
+
+/* ===== تمام‌صفحه ===== */
 .video-player:fullscreen {
     width: 100%;
     height: 100%;
@@ -481,10 +318,14 @@
     border-radius: 0;
 }
 
-.video-player:fullscreen .video-controls {
-    padding: 1rem;
-    overflow: visible !important;
-    display: flex !important;
+.video-player:fullscreen .plyr {
+    border-radius: 0;
+}
+
+.video-player:fullscreen .plyr__video-wrapper {
+    aspect-ratio: auto !important;
+    height: 100vh !important;
+    width: 100% !important;
 }
 
 .video-player:fullscreen .video-one__live {
@@ -492,121 +333,93 @@
     right: 20px;
 }
 
-.video-player:fullscreen .video-controls select {
-    z-index: 9999 !important;
-}
-
-/* ===== رفع فیت نشدن ویدیو در تمام‌صفحه (موبایل و دسکتاپ) ===== */
-.video-player:fullscreen .video-one__img-box {
-    aspect-ratio: auto !important;
-    height: 100% !important;
-    width: 100% !important;
-    border-radius: 0 !important;
-    overflow: hidden !important;
-    background-color: #000 !important; /* پس‌زمینه سیاه برای حاشیه‌ها */
-}
-
-.video-player:fullscreen video {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important; /* ← تغییر از cover به contain */
-    display: block !important;
-    background-color: #000 !important;
-}
-
-/* ===== بهبود نمایش در موبایل ===== */
-
+/* =============================================================== */
+/* ===== 🚀 بهینه‌سازی برای موبایل (A6 و مشابه‌ها) ===== */
 @media (max-width: 768px) {
-  .video-controls {
-    background: rgba(0, 0, 0, .75);
-    padding: .5rem .3rem;
-    border-radius: 12px;
-    bottom: 0;
-    z-index: 50 !important;
-  }
-  .video-controls button {
-    font-size: 1.1rem;
-    padding: 6px 8px;
-    min-width: 36px;
-    min-height: 36px;
-  }
-  #currentTime,
-  #duration {
-    font-size: .8rem;
-    min-width: 35px;
-    font-weight: 700;
-    color: #fff;
-  }
-  .video-controls select {
-    font-size: .8rem;
-    padding: .3rem 2rem .3rem .6rem;
-    min-width: 60px;
-    background-color: #fff !important;
-    color: #222 !important;
-    border: 1px solid rgba(255, 255, 255, .5);
-    border-radius: 6px;
-    z-index: 9999 !important;
-  }
-  .video-controls-left,
-  .video-controls-right {
-    gap: .4rem;
-  }
-  .video-one__video-icon {
-    width: 70px;
-    height: 70px;
-    font-size: 28px;
-  }
-  .video-one__video-link .ripple {
-    width: 70px;
-    height: 70px;
-  }
-  .video-one__video-icon .ripple:before,
-  .video-one__video-icon .ripple:after {
-    display: none !important;
-  }
-  #progressBar {
-    height: 8px;
-  }
-  #progressBar::-webkit-slider-thumb {
-    width: 18px;
-    height: 18px;
-  }
-  .video-player:fullscreen .video-controls {
-    padding: .8rem;
-    background: rgba(0, 0, 0, .8);
-    display: flex !important;
-  }
+    /* 1️⃣ غیرفعال کردن ریپل (قبلاً انجام شده) */
+    .video-one__video-icon .ripple:before,
+    .video-one__video-icon .ripple:after {
+        display: none !important;
+    }
 
-  .video-one__live {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
-  .video-one__video-icon {
-    transition: transform .25s, box-shadow .25s;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .4);
-  }
-  .video-controls button,
-  .video-controls select {
-    transition: transform .2s, background .2s;
-  }
-  .video-player {
-    box-shadow: 0 10px 30px rgba(134, 138, 255, .3), 0 5px 15px rgba(0, 0, 0, .1);
-  }
-  .video-one__live-icon .live-dot {
-    animation: liveBlinkMobile 2s infinite;
-  }
-  @keyframes liveBlinkMobile {
-    0%, 100% { opacity: 1; }
-    50% { opacity: .3; }
-  }
+    /* 2️⃣ کاهش سایه و حذف حرکت hover */
+    .video-player {
+        max-width: 95%;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15) !important;
+        border: 1px solid rgba(255,255,255,0.3);
+        transform: none !important;
+    }
+    .video-player:hover {
+        transform: none !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15) !important;
+        background: transparent;
+    }
 
-  /* ===== اضافه شده برای سبک‌تر کردن shape‌ها ===== */
-  .video-one__shape-3,
-  .video-one__shape-4,
-  .video-one__video-shape-1 {
-    display: none !important;
-  }
-  .video-one__inner {
-    margin: 0 20px;
-  }
+    /* 3️⃣ دکمه پخش کوچک‌تر */
+    .video-one__video-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, .4);
+        transition: transform .25s, box-shadow .25s;
+    }
+
+    .video-one__video-link .ripple {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* 4️⃣ حذف backdrop-filter (قبلاً انجام شده) */
+    .video-one__live {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        padding: 8px 12px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .video-one__live-text {
+        font-size: 12px;
+    }
+    .video-one__live-icon {
+        font-size: 13px;
+    }
+    .video-one__live-icon .live-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* 5️⃣ انیمیشن لایو سبک‌تر */
+    .video-one__live-icon .live-dot {
+        animation: liveBlinkMobile 2s infinite;
+    }
+    @keyframes liveBlinkMobile {
+        0%, 100% { opacity: 1; }
+        50% { opacity: .3; }
+    }
+
+    /* 6️⃣ حذف shapeهای اضافی (قبلاً انجام شده) */
+    .video-one__shape-3,
+    .video-one__shape-4,
+    .video-one__video-shape-1 {
+        display: none !important;
+    }
+
+    .video-one__inner {
+        margin: 0 20px;
+    }
+
+    .video-one__img-box {
+        border-radius: 12px;
+    }
+
+    /* 7️⃣ هماهنگی Plyr در موبایل */
+    .video-player .plyr {
+        border-radius: 12px;
+    }
+    .video-player .plyr__controls {
+        border-radius: 0 0 12px 12px;
+        padding: 8px 10px;
+    }
 }
