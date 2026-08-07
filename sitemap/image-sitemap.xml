@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <url>
+    <loc>https://ivan-omgru.ir/Mypageruir/gallery.html</loc>
+    
+    <!-- تصویر ۱: gallery-page-1-6.jpg -->
+    <image:image>
+      <image:loc>https://ivan-omgru.ir/Mypageruir/assets/images/gallery/gallery-page-1-6.jpg</image:loc>
+      <image:title>اتاق ابوالفضل شهاب - مدرس زبان روسی</image:title>
+      <image:caption>اتاق ابوالفضل شهاب Abolfaz shahab ivan omgru مدرس زبان روسی</image:caption>
+    </image:image>
+    
+    <!-- تصویر ۲: gallery-page-1-8.jpg -->
+    <image:image>
+      <image:loc>https://ivan-omgru.ir/Mypageruir/assets/images/gallery/gallery-page-1-8.jpg</image:loc>
+      <image:title>ابوالفضل شهاب - مدرس زبان روسی و برنامه‌نویس</image:title>
+      <image:caption>ابوالفضل شهاب ivan omgru مدرس زبان روسی - برنامه نویس - عکس اینستاگرام</image:caption>
+    </image:image>
+    
+    <!-- تصویر ۳: gallery-page-1-9.jpg -->
+    <image:image>
+      <image:loc>https://ivan-omgru.ir/Mypageruir/assets/images/gallery/gallery-page-1-9.jpg</image:loc>
+      <image:title>بورسیه تحصیلی به روسیه - ابوالفضل شهاب</image:title>
+      <image:caption>بورسیه تحصیلی به روسیه ivan omgru ابوالفضل شهاب پست تحصیل به خارج از کشور</image:caption>
+    </image:image>
+    
+    <!-- تصویر ۴: gallery-page-1-8-1.jpg -->
+    <image:image>
+      <image:loc>https://ivan-omgru.ir/Mypageruir/assets/images/gallery/gallery-page-1-8-1.jpg</image:loc>
+      <image:title>ابوالفضل شهاب در حال تدریس</image:title>
+      <image:caption>ابوالفضل شهاب ivan omgru مدرس زبان روسی - برنامه نویس - عکس اینستاگرام</image:caption>
+    </image:image>
+    
+  </url>
+  
+</urlset>

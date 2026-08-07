@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ویرایشگر مقاله: آیا زبان روسی سخته؟ | ابوالفضل شهاب</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/logoman/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/logoman/favicon.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/images/logoman/favicon-64.png" type="image/png" sizes="64x64">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logoman/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="/images/logoman/android-chrome-192.png">
+    <link rel="icon" sizes="512x512" href="/images/logoman/android-chrome-512.png">
+    <link rel="mask-icon" href="/images/logoman/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileImage" content="/images/logoman/mstile-150x150.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- SEO Meta -->
+    <meta name="description" content="ابزار ویرایشگر مقاله زبان روسی - به راحتی متن مقاله را تغییر دهید و فایل نهایی را دانلود کنید.">
+    <meta name="author" content="ابوالفضل شهاب | Ivan Omgru">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="/Mypageruir/assets/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/custom-animate.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/font-awesome-all.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/jarallax.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/jquery.magnific-popup.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/odometer.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/flaticon.min.css">
+    <link rel="stylesheet" href="/Mypageruir/assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/nice-select.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/aos.css" />
+
+    <!-- Module CSS -->
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/slider.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/footer.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/category.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/blog/blog-detalise.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/counter.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/newsletter.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/module-css/page-header.min.css" />
+    
+    <!-- Template Styles -->
+    <link rel="stylesheet" href="/Mypageruir/assets/css/style.min.css" />
+    <link rel="stylesheet" href="/Mypageruir/assets/css/responsive.min.css" />
+
+    <style>
+        /* استایل دکمه‌های شناور ویرایشگر */
+        .editor-toolbar {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 9999;
+            display: flex;
+            gap: 15px;
+            background: #fff;
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border: 1px solid rgba(0,0,0,0.1);
+            backdrop-filter: blur(8px);
+            background: rgba(255,255,255,0.95);
+            direction: ltr;
+        }
+        .editor-btn {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Vazir', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .editor-btn i {
+            font-size: 16px;
+        }
+        .btn-edit {
+            background-color: #2c3e66;
+            color: white;
+            border: 1px solid #1e2b46;
+        }
+        .btn-edit.active {
+            background-color: #e67e22;
+            border-color: #b45f1b;
+        }
+        .btn-download {
+            background-color: #27ae60;
+            color: white;
+            border: 1px solid #1e8449;
+        }
+        .btn-download:hover {
+            background-color: #2ecc71;
+        }
+        .btn-edit:hover {
+            background-color: #1a2a4f;
+        }
+        .btn-edit.active:hover {
+            background-color: #f39c12;
+        }
+        [contenteditable="true"] {
+            background-color: #fff9e0;
+            transition: all 0.1s ease;
+            box-shadow: 0 0 0 1px #ffc107 inset;
+            border-radius: 6px;
+            padding: 2px 4px;
+        }
+        [contenteditable="true"]:focus {
+            outline: none;
+            background-color: #fff3c9;
+            box-shadow: 0 0 0 2px #f39c12 inset;
+        }
+        .blog-details__content [contenteditable="true"] {
+            cursor: text;
+        }
+        .editor-toast {
+            position: fixed;
+            bottom: 100px;
+            left: 30px;
+            background: #2c3e66;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            z-index: 9998;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            font-family: sans-serif;
+        }
+        @media (max-width: 768px) {
+            .editor-toolbar { bottom: 15px; left: 15px; padding: 8px 12px; gap: 8px; }
+            .editor-btn { padding: 5px 12px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body class="custom-cursor">
+
+<div class="custom-cursor__cursor"></div>
+<div class="custom-cursor__cursor-two"></div>
+
+<!-- Preloader -->
+<div class="loader js-preloader">
+    <div class="brand-loader">
+        <span class="brand-text">IVAN OMGRU</span>
+        <div class="brand-sub">ivan omgru</div>
+    </div>
+</div>
+
+<div class="page-wrapper">
+    <!-- استیکی هدر (بدون تغییر) -->
+    <div class="stricky-header stricked-menu main-menu">
+        <div class="sticky-header__content"></div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header__bg" style="background-image: url(/Mypageruir/assets/images/shapes/page-header-bg-shape.png);"></div>
+        <div class="page-header__shape-4"><img src="/Mypageruir/assets/images/shapes/page-header-shape-4.png" loading="lazy" alt="shape"></div>
+        <div class="page-header__shape-5"><img src="/Mypageruir/assets/images/shapes/7000ac21-997d-4a99-a361-291101c2c867.png" loading="lazy" alt="shape"></div>
+        <div class="page-header__social">
+            <a href="https://www.Telegram.com/@ivan_omgru" aria-label="Telegram">Telegram</a><span>//</span>
+            <a href="https://www.instagram.com/ivan.omgru/" aria-label="Instagram">Instagram</a><span>//</span>
+            <a href="https://youtube.com/@ivan.omgruss" aria-label="Youtube">Youtube</a>
+        </div>
+        <div class="container">
+            <div class="page-header__inner">
+                <div class="page-header__img">
+                    <img src="/Mypageruir/assets/images/resources/header-img-1-ivan-omgru.png" loading="lazy" alt="header">
+                    <div class="page-header__shape-1"><img src="/Mypageruir/assets/images/shapes/page-header-shape-1.png" loading="lazy" alt="shape"></div>
+                    <div class="page-header__shape-2"><img src="/Mypageruir/assets/images/shapes/page-header-shape-2.png" loading="lazy" alt="shape"></div>
+                    <div class="page-header__shape-3"><img src="/Mypageruir/assets/images/shapes/page-header-shape-3.png" loading="lazy" alt="shape"></div>
+                </div>
+                <h2>آیا زبان روسی سخته؟</h2>
+                <div class="thm-breadcrumb__box">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="/index.html">صفحه اصلی</a></li>
+                        <li><span>//</span></li>
+                        <li>زبان روسی</li>
+                    </ul>
+                </div>
+                <div class="arrow bounce"><a class="fa fa-chevron-down fa-2x" href="#" data-scroll-nav="1"></a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش اصلی مقاله (قابل ویرایش) -->
+    <section class="blog-details" data-scroll-index="1">
+        <div class="container">
+            <div class="row">
+                <div class="blog-details__left">
+                    <div class="blog-details__img-box">
+                        <div class="blog-details__img">
+                            <img src="/Mypageruir/assets/images/blog/blog-details-img-1.jpg" loading="lazy" alt="الفبای سیریلیک روسی">
+                        </div>
+                    </div>
+                    <div class="blog-details__content" id="editableContentArea">
+                        <!-- تمام متن‌های زیر قابل ویرایش خواهند بود (با تگ‌های مجزا) -->
+                        <h1 class="blog-details__title-1">آیا زبان روسی سخته؟ تحلیل جامع چالش‌ها و شیرینی‌های یادگیری روسی</h1>
+                        <div class="blog-details__client-and-meta">
+                            <div class="blog-details__client-box">
+                                <div class="blog-details__client-img"><img src="/Mypageruir/assets/images/blog/blog-details-client-img-1.jpg" loading="lazy" alt="ابوالفضل شهاب"></div>
+                                <div class="blog-details__client-content"><p>نویسنده</p><h4>ابوالفضل شهاب</h4></div>
+                            </div>
+                            <ul class="blog-details__client-meta list-unstyled">
+                                <li><div class="icon"><span class="icon-calendar"></span></div><p>۲۲ اردیبهشت، ۱۴۰۴</p></li>
+                                <li><div class="icon"><span class="icon-tags"></span></div><p>زبان روسی</p></li>
+                                <li><div class="icon"><span style="font-size: 18px;">👁️</span></div><p><span id="online-viewers"></span> نفر در حال مشاهده این صفحه هستند</p></li>
+                            </ul>
+                        </div>
+
+                        <!-- مقدمه -->
+                        <p class="blog-details__text-1">اگر به تازگی تصمیم گرفته‌اید زبان روسی را یاد بگیرید، احتمالاً اولین سؤالی که به ذهنتان می‌رسد این است: «آیا زبان روسی سخته؟» نگران نباشید، این سؤال هزاران زبان‌آموز دیگر در سراسر جهان است. روسی به دلیل الفبای سیریلیک، دستور زبان پیچیده و تلفظ خاص خود شهرت «سخت بودن» را دارد. اما حقیقت چیز دیگری است: سختی روسی بستگی به نگاه شما، روش یادگیری و شباهت‌ها و تفاوت‌های آن با زبان مادری‌تان دارد. در این مقاله از ایوان امگرو، من <strong>ابوالفضل شهاب</strong>، به طور کامل به این سؤال پاسخ می‌دهم و همه چیز را درباره زبان روسی برای شما روشن می‌کنم.</p>
+
+                        <h2 class="blog-details__title-2">۱. آیا الفبای سیریلیک روسی سخت است؟</h2>
+                        <p class="blog-details__text-4">اولین ترس بیشتر زبان‌آموزان، الفبای جدید است. الفبای روسی (سیریلیک) دارای ۳۳ حرف است که برخی از آنها شبیه به حروف لاتین ولی با تلفظ متفاوت هستند (مثل В که «و» خوانده می‌شود، نه «ب»). برخی حروف نیز کاملاً جدیدند مانند Ы, Ъ, Ь. اما خبر خوب این است: <strong>الفبای روسی را می‌توان در کمتر از یک هفته یاد گرفت</strong>. کافی است هر روز ۳ تا ۴ حرف جدید را با مثال تمرین کنید. پس از دو هفته، می‌توانید کلمات ساده روسی را روان بخوانید. بنابراین الفبای روسی سخت نیست، فقط جدید است.</p>
+
+                        <h2 class="blog-details__title-2">۲. دستور زبان روسی چقدر پیچیده است؟</h2>
+                        <p class="blog-details__text-3">اینجا جایی است که روسی واقعاً چالش‌برانگیز می‌شود. زبان روسی از سیستم <strong>حالت‌ها (padezh)</strong> استفاده می‌کند: ۶ حالت دستوری که نقش اسم، صفت و ضمیر را در جمله مشخص می‌کنند. برای فارسی‌زبانان که با حالت فاعلی، مفعولی و اضافه آشنایی محدودی دارند، این موضوع نیاز به تمرین زیاد دارد. علاوه بر این، روسی سه جنس دستوری (مذکر، مؤنث، خنثی) و افعال حرکت بسیار دقیق (مثل رفتن با ماشین در مقابل پیاده رفتن) دارد. اما نگران نباشید: <strong>قواعد روسی بسیار منظم هستند</strong> و پس از مدتی به الگوها عادت می‌کنید. با تکرار و تمرین روزانه، می‌توانید بر دستور زبان روسی مسلط شوید.</p>
+
+                        <h2 class="blog-details__title-2">۳. تلفظ روسی دشوار است؟</h2>
+                        <p class="blog-details__text-4">تلفظ روسی برای فارسی‌زبانان مشکلات خاصی دارد: صامت‌های نرم و سخت (مثلاً Л و ЛЬ)، صدای Ы که در فارسی وجود ندارد، و تأکید استرس کلمه (stress) که می‌تواند معنی کلمه را تغییر دهد. اما خبر خوب اینکه <strong>قوانین کاهش واکه‌ها (akanye/ikanye) قاعده‌مند هستند</strong>. با شنیدن زیاد موسیقی و پادکست روسی، گوش شما به تدریج به این صداها عادت می‌کند. پیشنهاد من: از روش «سایه‌سازی» (shadowing) استفاده کنید – همزمان با گوینده بومی تکرار کنید.</p>
+
+                        <div class="blog-details__points-box">
+                            <h4 class="blog-details__points-title">نکات طلایی برای بهبود تلفظ روسی</h4>
+                            <ul class="blog-details__points list-unstyled">
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p>روزانه ۱۰ دقیقه فیلم روسی با زیرنویس روسی ببینید (کانال‌های یوتیوب مثل «Russian with Max»).</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p>صدای خود را ضبط کنید و با گوینده اصلی مقایسه کنید – این کار معجزه می‌کند.</p></li>
+                                <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p>روی «قافیه‌های روسی» کار کنید – تفاوت صامت نرم و سخت را با جفت‌های حداقل (مثل брат / брать) تمرین نمایید.</p></li>
+                            </ul>
+                        </div>
+
+                        <h2 class="blog-details__title-2">۴. آیا لغات روسی به فارسی شبیه است؟</h2>
+                        <p class="blog-details__text-4">بله و خیر. روسی و فارسی هر دو بخشی از خانواده بزرگ زبان‌های هندواروپایی هستند، بنابراین برخی ریشه‌های مشترک قدیمی وجود دارد (مثل «مادر» در فارسی و «مادر» در روسی با تلفظ مشابه). اما در طول تاریخ، روسی وام‌واژه‌های زیادی از فرانسوی، آلمانی و انگلیسی گرفته و فارسی نیز از عربی و فرانسوی تأثیر پذیرفته است. در نتیجه، <strong>قرابت لغوی مستقیم زیاد نیست</strong>. اما خبر خوب اینکه با یادگیری چند ریشه یونانی-لاتینی رایج، می‌توانید هزاران کلمه بین‌المللی (مثل телефон, проблема, система) را تشخیص دهید. همچنین روسی کلمات قرضی جالبی از فارسی قدیم دارد مثل «بازار» (bazaar) و «چای» (chay).</p>
+
+                        <h2 class="blog-details__title-2">۵. چقدر زمان نیاز است تا روسی را خوب یاد بگیریم؟</h2>
+                        <p class="blog-details__text-5">مؤسسه خدمات خارجی آمریکا (FSI) زبان روسی را در دسته زبان‌های «سطح ۴» قرار می‌دهد، یعنی <strong>حدود ۱۱۰۰ ساعت مطالعه فعال</strong> برای رسیدن به تسلط حرفه‌ای (به جای ۶۰۰ ساعت برای فرانسوی). یعنی اگر روزی ۳ ساعت مطالعه کنید، حدود ۱۲ تا ۱۵ ماه طول می‌کشد. اما این اعداد برای انگلیسی‌زبانان است. برای فارسی‌زبانان، به دلیل شباهت‌های ساختاری کمتر (مثلاً نداشتن جنسیت دستوری در فارسی)، شاید کمی بیشتر زمان ببرد. اما به یاد داشته باشید: <strong>با سطح B1 (مکالمه روزمره) می‌توانید از یادگیری لذت ببرید</strong> – نیازی نیست حتماً به C2 برسید.</p>
+
+                        <div class="blog-details__quote-box">
+                            <div class="blog-details__quote-icon-1"><span class="icon-quote"></span></div>
+                            <div class="blog-details__quote-icon-2"><span class="icon-quote"></span></div>
+                            <p class="blog-details__quote-text">«زبان روسی مثل یک قلعه است: ورودی آن الفبا به نظر ترسناک می‌آید، اما بعد از دروازه، کوچه‌های منظم و زیبایی از قواعد را می‌بینید. فقط صبور باشید و هر روز یک آجر بردارید.»</p>
+                            <div class="blog-details__client-box-2">
+                                <div class="blog-details__client-img-2"><img src="/Mypageruir/assets/images/blog/blog-details-client-img-2.jpg" loading="lazy" alt="یادگیرنده روسی"></div>
+                                <div class="blog-details__client-content-2"><p>بنیان گذار سایت</p><h4>ابوالفضل شهاب</h4></div>
+                            </div>
+                        </div>
+
+                        <h2 class="blog-details__title-2">۶. آیا یادگیری روسی برای ایرانیان مزیت خاصی دارد؟</h2>
+                        <p class="blog-details__text-4">قطعاً بله! روسیه همسایه شمالی ایران است و روابط اقتصادی، سیاسی و گردشگری روزبه‌روز گسترده‌تر می‌شود. تسلط به روسی به شما کمک می‌کند تا:<br>- در شرکت‌های صادرات-واردات مشغول به کار شوید.<br>- بورسیه‌های تحصیلی روسیه (مانند بورسیه اوپن) را دریافت کنید.<br>- به ادبیات غنی تولستوی، داستایفسکی و چخوف به زبان اصلی دسترسی پیدا کنید.<br>- در سفر به کشورهای حوزه دریای خزر و آسیای مرکزی بدون مشکل ارتباط برقرار کنید (چرا که روسی هنوز زبان میانجی است).<br>علاوه بر این، یادگیری روسی «دومین زبان اینترنت» پس از انگلیسی است و منابع علمی و فنی بسیار ارزشمندی به این زبان وجود دارد.</p>
+
+                        <div class="blog-details__img-box-2">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6"><div class="blog-details__img-box-img"><img src="/Mypageruir/assets/images/blog/blog-details-img-box-img-1.jpg" loading="lazy" alt="متن روسی و کتاب"></div></div>
+                                <div class="col-xl-6 col-lg-6"><div class="blog-details__img-box-img"><img src="/Mypageruir/assets/images/blog/blog-details-img-box-img-2.jpg" loading="lazy" alt="پرچم روسیه و ایران"></div></div>
+                            </div>
+                        </div>
+
+                        <h2 class="blog-details__title-2">۷. راهکارهای عملی برای آسان‌تر کردن یادگیری روسی</h2>
+                        <p class="blog-details__text-5">بعد از خواندن نکات بالا، شاید هنوز نگران «سختی» روسی باشید. اما بیایید نگاهی واقع‌بینانه داشته باشیم: <strong>هیچ زبانی بی‌نقص و کاملاً آسان نیست</strong>. حتی انگلیسی هم برای فارسی‌زبانان چالش تلفظ و زمان‌های فعل را دارد. در اینجا ۵ راهکار عملی از طرف من (ابوالفضل شهاب) برای کاهش سختی روسی ارائه می‌کنم:</p>
+                        <ul class="blog-details__points list-unstyled">
+                            <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>از اهداف کوچک شروع کنید:</strong> روزی ۳۰ دقیقه مطالعه مؤثر بهتر از ۳ ساعت فشرده و خسته‌کننده است.</p></li>
+                            <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>یادگیری را با علایق خود پیوند بزنید:</strong> اگر به موسیقی علاقه دارید، آهنگ‌های روسی (مثل آلبوم‌های Zemfira یا موسیقی تارکوفسکی) گوش دهید. اگر به بازی ویدیویی، نسخه روسی بازی مورد علاقه‌تان را نصب کنید.</p></li>
+                            <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>از اپلیکیشن‌های خوب غافل نشوید:</strong> Duolingo برای شروع، Russian Enthusiast برای گرامر، و HelloTalk برای مکالمه با روس‌زبانان.</p></li>
+                            <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>هر روز یک جمله بنویسید:</strong> دفتر خاطرات سه‌خطی به روسی بنویسید (مثلاً «امروز هوا آفتابی بود، من چای خوردم و یک فیلم دیدم»).</p></li>
+                            <li><div class="icon"><span class="far fa-angle-double-left"></span></div><p><strong>اشتباه کردن را بپذیرید:</strong> روس‌زبانان عادت دارند خارجی‌ها را به خاطر لهجه یا اشتباه گرامری تحسین کنند. نترسید!</p></li>
+                        </ul>
+
+                        <h2 class="blog-details__title-2">نتیجه‌گیری: پس آیا زبان روسی واقعاً سخت است؟</h2>
+                        <p class="blog-details__text-5">پاسخ کوتاه: <strong>بله، روسی نسبت به زبان‌هایی مثل اسپانیایی یا ایتالیایی برای فارسی‌زبانان سخت‌تر است</strong>، اما غیرممکن نیست. پاسخ بلند: سختی روسی عمدتاً در ابتدای راه (الفبای جدید، حالت‌های دستوری) احساس می‌شود. بعد از شش ماه مطالعه منظم، شما به الگوهای اصلی مسلط می‌شوید و از خواندن متون ساده لذت خواهید برد. به قول معروف «اولش سخت است، اما بعدش شیرین». اگر انگیزه قوی دارید، از اشتباه نمی‌ترسید و هر روز حتی ۲۰ دقیقه تمرین کنید، بدون شک می‌توانید روسی را خوب یاد بگیرید. من ابوالفضل شهاب، به شما اطمینان می‌دهم که ارزشش را دارد: درهای دنیای اسلاو، ادبیات بی‌نظیر و فرهنگی عمیق به روی شما باز خواهد شد.</p>
+                        <p class="blog-details__text-5" style="margin-top: 10px;">آیا شما تجربه یادگیری روسی دارید؟ یا هنوز سؤالی در ذهنتان مانده است؟ در بخش دیدگاه‌ها برای ما بنویسید. همچنین اگر می‌خواهید یک <strong>برنامه مطالعه شخصی‌سازی‌شده روسی</strong> دریافت کنید، با ما در ارتباط باشید.</p>
+                    </div>
+
+                    <!-- تگ و اشتراک (غیرقابل ویرایش) -->
+                    <div class="blog-details__tag-and-share">
+                        <div class="blog-details__tag"><span>تگ:</span><a href="/Mypageruir/category/zaban-rusi.html">زبان روسی</a><a href="/Mypageruir/category/yadgiri-rusi.html">یادگیری روسی</a><a href="/Mypageruir/category/sirilil.html">سیریلیک</a><a href="/Mypageruir/category/dastor-zaban-rusi.html">دستور زبان روسی</a></div>
+                        <div class="blog-details__share"><span>اشتراک</span><a href="https://www.pinterest.com/pin/create/button/?url=..." target="_blank"><i class="fab fa-pinterest-p"></i></a><a href="https://www.instagram.com/ivan.omgru/" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/sharer/sharer.php?u=..." target="_blank"><i class="fab fa-facebook-f"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- خبرنامه (بدون تغییر) -->
+    <section class="newsletter-two">
+        <div class="container">
+            <div class="newsletter-two__inner">
+                <div class="newsletter-two__img"><img src="/Mypageruir/assets/images/resources/newsletter-two-img-1.png" loading="lazy" alt="newsletter"></div>
+                <div class="newsletter-two__inner-content">
+                    <div class="newsletter-two__shape-bg" style="background-image: url(/Mypageruir/assets/images/shapes/newsletter-two-shape-bg.png);"></div>
+                    <div class="newsletter-two__like"><img src="/Mypageruir/assets/images/shapes/newsletter-two-like.png" loading="lazy" alt="like"></div>
+                    <div class="newsletter-two__title-box"><h3 class="newsletter-two__title">به جمع زبان‌آموزان و برنامه‌نویسان <br><span>ما بپیوندید</span></h3><p class="newsletter-two__text">با ثبت نام در خبرنامه، از دوره‌های جدید، تخفیف‌ها و رویدادهای آموزشی مطلع شوید.</p></div>
+                    <div class="newsletter-two__form-box"><form class="newsletter-two__form" id="nameForm"><div class="newsletter-two__input"><input type="text" id="username" placeholder="نام شما"></div><button type="submit" class="newsletter-two__btn"><span class="icon-circle-rightsvg"></span>عضویت</button></form></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر (بدون تغییر) -->
+    <footer class="site-footer-two">
+        <div class="site-footer-two__shape-1 img-bounce"></div>
+        <div class="site-footer-two__shape-2 float-bob-y"></div>
+        <div class="site-footer-two__star text-rotate-box"><img src="/Mypageruir/assets/images/shapes/site-footer-star.png" loading="lazy" alt="star"></div>
+        <div class="site-footer-two__top">
+            <div class="site-footer-two__main-content"><div class="container"><div class="site-footer-two__main-content-inner">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="footer-widget-two__about"><div class="footer-widget-two__about-logo"><a href="/index.html"><img src="/Mypageruir/assets/images/resources/site-footer-logo-2.png" loading="lazy" alt="logo"></a></div>
+                        <p class="footer-widget-two__about-text">بستری برای یادگیری و<br>آموزشی جامع و با کیفیت</p>
+                        <div class="site-footer-two__social"><a href="https://youtube.com/@ivan.omgruss"><span class="fab fa-youtube"></span></a><a href="https://www.facebook.com/ivan.omgru"><span class="fab fa-facebook-f"></span></a><a href="https://www.instagram.com/ivan.omgru/"><span class="fab fa-instagram"></span></a></div>
+                        <div class="footer-widget-two__app-download-box"><h4 class="footer-widget-two__app-download-title">دانلود اپلیکیشن</h4><div class="footer-widget-two__app-download"><a href="#" class="footer-widget-two__app-download-single"><img src="/Mypageruir/assets/images/icon/google-play-icon-2.png" loading="lazy" alt="google play"></a><a href="#" class="footer-widget-two__app-download-single"><img src="/Mypageruir/assets/images/icon/apple-icon-2.png" loading="lazy" alt="apple"></a></div></div></div></div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms"><div class="footer-widget-two__quick-links"><h4 class="footer-widget-two__title">لینک سریع</h4><ul class="footer-widget-two__quick-links-list list-unstyled"><li><a href="/index.html"><span class="icon-plus"></span> صفحه اصلی</a></li><li><a href="/Mypageruir/about.html"><span class="icon-plus"></span> درباره</a></li><li><a href="https://www.youtube.com/@ivan.omgruss"><span class="icon-plus"></span>دوره ها</a></li><li><a href="/Mypageruir/faq.html"><span class="icon-plus"></span> سوالات متداول</a></li><li><a href="/Mypageruir/blog.html"><span class="icon-plus"></span>وبلاگ</a></li><li><a href="/Mypageruir/contact.html"><span class="icon-plus"></span>تماس با من</a></li></ul></div></div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms"><div class="footer-widget-two__support"><h4 class="footer-widget-two__title">پشتیبانی</h4><ul class="footer-widget-two__quick-links-list list-unstyled"><li><a href="/Mypageruir/faq.html"><span class="icon-plus"></span> شرایط و قوانین</a></li><li><a href="/Mypageruir/about.html"><span class="icon-plus"></span>درباره</a></li><li><a href="/Mypageruir/faq.html"><span class="icon-plus"></span> شرایط بازگشت وجه</a></li><li><a href="https://www.youtube.com/@ivan.omgruss"><span class="icon-plus"></span>دوره ها</a></li><li><a href="/Mypageruir/blog.html"><span class="icon-plus"></span>وبلاگ</a></li></ul></div></div>
+                </div>
+            </div></div></div>
+        </div>
+        <div class="site-footer__bottom"><div class="container"><div class="row"><div class="col-xl-12"><div class="site-footer__bottom-inner"><div class="site-footer__copyright"><p class="site-footer__copyright-text">© 2025 <a href="#">Ivan-omgru.ir</a> با افتخار ارائه می شود</p></div><div class="site-footer__bottom-card-box"><ul class="list-unstyled site-footer__card-menu"><li><a href="/Mypageruir/contact.html"><img src="/Mypageruir/assets/images/icon/card-icon-1.png" loading="lazy" alt="card"></a></li><li><a href="/Mypageruir/contact.html"><img src="/Mypageruir/assets/images/icon/card-icon-2.png" loading="lazy" alt="card"></a></li><li><a href="/Mypageruir/contact.html"><img src="/Mypageruir/assets/images/icon/card-icon-3.png" loading="lazy" alt="card"></a></li></ul></div></div></div></div></div></div>
+    </footer>
+</div>
+
+<!-- موبایل ناو (بدون تغییر) -->
+<div class="mobile-nav__wrapper"><div class="mobile-nav__overlay mobile-nav__toggler"></div><div class="mobile-nav__content"><span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span><div class="logo-box"><a href="/index.html"><img src="/Mypageruir/assets/images/resources/logo-4.png" width="105" loading="lazy" alt="logo"></a></div><div class="mobile-nav__container"></div><ul class="mobile-nav__contact list-unstyled"><li><i class="fa fa-envelope"></i><a href="mailto:Loverussian62@gmail.com">Loverussian62</a></li><li><i class="fas fa-phone"></i><a href="tel:09223055692">09223055692</a></li></ul><div class="mobile-nav__top"><div class="mobile-nav__social"><a href="https://www.instagram.com/ivan.omgru/" class="fab fa-instagram"></a><a href="https://www.facebook.com/ivan.omgru" class="fab fa-facebook-square"></a><a href="https://youtube.com/@ivan.omgruss" class="fab fa-youtube"></a></div></div></div></div>
+
+<!-- جستجو پاپ آپ -->
+<div class="search-popup"><div class="color-layer"></div><button class="close-search"><span class="far fa-times fa-fw"></span></button><form method="post" action="#"><div class="form-group"><input type="search" name="search-field" value="" placeholder="دنبال چی میگردی؟" required=""><button type="submit"><i class="fas fa-search"></i></button></div></form></div>
+
+<a href="#" data-target="html" class="scroll-to-target scroll-to-top"><span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span><span class="scroll-to-top__text">➡️up</span></a>
+
+<!-- اسکریپت‌های اصلی -->
+<script src="/Mypageruir/assets/js/jquery-3.6.0.min.js"></script>
+<script src="/Mypageruir/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/Mypageruir/assets/js/jarallax.min.js"></script>
+<script src="/Mypageruir/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="/Mypageruir/assets/js/jquery.appear.min.js"></script>
+<script src="/Mypageruir/assets/js/swiper.min.js"></script>
+<script src="/Mypageruir/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/Mypageruir/assets/js/jquery.validate.min.js"></script>
+<script src="/Mypageruir/assets/js/odometer.min.js"></script>
+<script src="/Mypageruir/assets/js/wNumb.min.js"></script>
+<script src="/Mypageruir/assets/js/wow.js"></script>
+<script src="/Mypageruir/assets/js/isotope.js"></script>
+<script src="/Mypageruir/assets/js/owl.carousel.min.js"></script>
+<script src="/Mypageruir/assets/js/jquery-ui.min.js"></script>
+<script src="/Mypageruir/assets/js/jquery.nice-select.min.js"></script>
+<script src="/Mypageruir/assets/js/marquee.min.js"></script>
+<script src="/Mypageruir/assets/js/aos.js"></script>
+<script src="/Mypageruir/assets/js/arowscroll.min.js"></script>
+<script src="/Mypageruir/assets/js/gsap/gsap.min.js"></script>
+<script src="/Mypageruir/assets/js/gsap/ScrollTrigger.min.js"></script>
+<script src="/Mypageruir/assets/js/gsap/SplitText.min.js"></script>
+<script src="/Mypageruir/assets/js/script.min.js"></script>
+
+<!-- ابزار ویرایشگر (فقط بر روی محتوای مقاله اثر می‌کند) -->
+<div class="editor-toolbar">
+    <button id="toggleEditBtn" class="editor-btn btn-edit"><i class="fas fa-pen-fancy"></i> فعال‌سازی ویرایش</button>
+    <button id="downloadHtmlBtn" class="editor-btn btn-download"><i class="fas fa-download"></i> ذخیره و دانلود HTML</button>
+</div>
+<div id="editorToast" class="editor-toast">حالت ویرایش فعال است</div>
+
+<script>
+    (function() {
+        // عناصر قابل ویرایش: تمام تگ‌های محتوایی داخل بخش .blog-details__content
+        // به جز موارد متا و کلاینت (اما آن‌ها هم اگر editable شوند مشکلی ندارد برای امنیت بهتر است فقط متن مقاله عادی)
+        // هدف اصلی: h1, h2, p, li داخل points-box, quote-text و هر چیزی که متن مقاله است.
+        const editableContainer = document.querySelector('#editableContentArea');
+        if (!editableContainer) return;
+
+        // انتخاب تمام المان‌های متنی که کاربر معمولاً مایل به ویرایش آنهاست
+        const editableSelectors = 'h1, h2, p, .blog-details__points li p, .blog-details__quote-text, .blog-details__points-title, li p';
+        let editMode = false;
+        const toggleBtn = document.getElementById('toggleEditBtn');
+        const downloadBtn = document.getElementById('downloadHtmlBtn');
+        const toastEl = document.getElementById('editorToast');
+
+        function showToast(msg, isActive = true) {
+            if(toastEl) {
+                toastEl.textContent = msg;
+                toastEl.style.opacity = '0.9';
+                setTimeout(() => {
+                    toastEl.style.opacity = '0';
+                }, 2000);
+            }
+        }
+
+        // فعال/غیرفعال کردن ویرایش
+        function setEditMode(enable) {
+            const targets = editableContainer.querySelectorAll(editableSelectors);
+            targets.forEach(el => {
+                if (enable) {
+                    el.setAttribute('contenteditable', 'true');
+                } else {
+                    el.removeAttribute('contenteditable');
+                }
+            });
+            editMode = enable;
+            if (toggleBtn) {
+                if (enable) {
+                    toggleBtn.innerHTML = '<i class="fas fa-lock"></i> غیرفعال‌سازی ویرایش';
+                    toggleBtn.classList.add('active');
+                    showToast('✨ حالت ویرایش فعال شد - می‌توانید متن مقاله را تغییر دهید', true);
+                } else {
+                    toggleBtn.innerHTML = '<i class="fas fa-pen-fancy"></i> فعال‌سازی ویرایش';
+                    toggleBtn.classList.remove('active');
+                    showToast('🔒 حالت ویرایش غیرفعال شد', false);
+                }
+            }
+        }
+
+        // تابع دانلود کل صفحه (با تمام تغییرات)
+        function downloadFullPage() {
+            // ایجاد کپی از کل سند، اما بدون اثرات دکمه toast در فایل؟ بهتر است همه چیز دقیقا حفظ شود.
+            // برای اطمینان از بسته شدن صحیح contenteditable در نسخه ذخیره‌شده، همان state فعلی حفظ می‌شود.
+            const docClone = document.documentElement.cloneNode(true);
+            // حذف هرگونه event listener اضافی نیاز نیست، فایل HTML خام است.
+            const htmlContent = '<!DOCTYPE html>\n' + docClone.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'aya-zaban-rusi-sakhte-v2.html';  // نام فایل خروجی
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast('✅ فایل HTML با موفقیت ذخیره شد!', false);
+        }
+
+        // اضافه کردن event listeners
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                setEditMode(!editMode);
+            });
+        }
+        if (downloadBtn) {
+            downloadBtn.addEventListener('click', downloadFullPage);
+        }
+
+        // غیرفعال کردن حالت ویرایش اولیه (برای جلوگیری از ویرایش تصادفی)
+        setEditMode(false);
+
+        // نمایش تعداد بازدیدکنندگان (همان اسکریپت قبلی)
+        !function(){
+            let viewers = Math.floor(Math.random()*(450-26+1)+26);
+            function updateViewers() {
+                const el = document.getElementById("online-viewers");
+                if(el){
+                    let change = Math.floor(Math.random()*11)-5;
+                    viewers = viewers + change;
+                    viewers = Math.max(26, Math.min(450, viewers));
+                    el.textContent = viewers;
+                    el.style.color = "#ff2222";
+                    el.style.fontWeight = "700";
+                }
+            }
+            const style = document.createElement("style");
+            style.textContent = `.blog-details__client-meta li:last-child{animation:blinkText 1s ease-in-out infinite}#online-viewers{color:#ff2222;font-weight:700}@keyframes blinkText{0%,100%{opacity:1}50%{opacity:0.5}}`;
+            document.head.appendChild(style);
+            updateViewers();
+            setInterval(updateViewers, 12000);
+        }();
+    })();
+</script>
+</body>
+</html>
