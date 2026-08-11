@@ -533,7 +533,42 @@
   background: linear-gradient(-92.7deg, #0088ff70 0.48%, #e5b7ff91 56.21%, #babfff 100%);
   color: var(--fistudy-white);
 }
+@media (max-width: 768px) {
 
+  /* ----- 1. حذف تمام سایه‌های سنگین (بسیار مصرف‌کننده در موبایل) ----- */
+  .banner-one__udemy-review,
+  .banner-one__student-trained {
+    box-shadow: none !important;
+  }
+
+  /* ----- 3. غیرفعال کردن کامل افکت‌های هاور (در موبایل هاور معنا ندارد و سنگین است) ----- */
+  .banner-one__other-btn-1:hover,
+  .banner-one__tags a:hover {
+    background: var(--fistudy-white) !important; /* به حالت عادی برمی‌گردد */
+    color: var(--fistudy-base) !important;
+  }
+
+  /* هاور اسپن داخل دکمه هم غیرفعال شود */
+  .banner-one__other-btn-1:hover span {
+    color: var(--fistudy-base) !important;
+  }
+
+  /* ----- 4. خاموش کردن انیمیشن‌های بی‌وقفه (مصرف بالای باتری و CPU) ----- */
+  .banner-one__img > img,
+  .banner-one__student-trained {
+    animation: none !important;
+  }
+
+  /* ----- 5. حذف المان‌های صرفاً تزئینی (دایره‌های شفاف و شکل‌های اضافی) ----- */
+
+  .banner-one__bg-shape-1,
+  .banner-one__icon-1,
+  .banner-one__icon-2,
+  .banner-one__icon-3,
+  .banner-one__title-box-shape {
+    display: none !important;
+  }
+}
 /*--------------------------------------------------------------
   # End
   ---------------------------------------------------------

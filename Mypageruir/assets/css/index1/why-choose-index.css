@@ -137,8 +137,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(-92.7deg, #c6e4ff70 0.48%, #f0d6ff91 56.21%, #babfff8a 100%);
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.636);
     border-radius: 8px;
 }
 
@@ -225,7 +223,6 @@
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    background: linear-gradient(-92.7deg, #c6e4ff70 0.48%, #f0d6ff91 56.21%, #babfff8a 100%); 
     margin-bottom: 29px;
     border-radius: 20px;
 }
@@ -273,7 +270,6 @@
 .why-choose-one__points-content h3 {
     font-size: 18px;
     font-weight: 500;
-        background: linear-gradient(-92.7deg, #c6e4ff70 0.48%, #f0d6ff91 56.21%, #babfff8a 100%); 
     border-radius: 30px;
     text-transform: capitalize;
     line-height: 30px;
@@ -299,7 +295,7 @@
 
 .why-choose-one .why-choose-one__btn {
   background: linear-gradient(-92.7deg, #0088ffb1 0.48%, #d690ff91 56.21%, #8d95ff 100%);
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.402);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.247);
 
 }
 
@@ -310,7 +306,7 @@
     gap: 16px;
     max-width: 304px;
     width: 100%;
-  background: linear-gradient(-92.7deg, #89baff 0.48%, #d690ff91 56.21%, #8d95ff 100%);
+    background-color: rgb(149, 149, 255);
     border: 3px solid var(--fistudy-bdr-color);
     padding: 11px 11px 11px;
     border-radius: 34px;
@@ -376,3 +372,85 @@
     margin-top: 1px;
 }
 /*--- دیده شده/*
+/*--------------------------------------------------------------
+# Why Choose One - فقط سبک‌سازی موبایل (دست نزن به رنگ‌ها)
+--------------------------------------------------------------*/
+@media (max-width: 767px) {
+
+    /* ----- 1. حذف تمام اشکال تزئینی (موقعیت‌یابی مطلق + انیمیشن) ----- */
+    .why-choose-one__shape-1,
+    .why-choose-one__shape-2,
+    .why-choose-one__shape-3,
+    .why-choose-one__shape-6,
+    .why-choose-one__shape-7 {
+        display: none !important;
+    }
+
+    /* ----- 2. غیرفعال کردن انیمیشن‌های باقی‌مانده (در صورت وجود) ----- */
+    .why-choose-one__shape-1,
+    .why-choose-one__shape-5,
+    .why-choose-one__shape-4 {
+        animation: none !important;
+    }
+
+    /* ----- 3. تصویر اصلی: حذف شبه‌عنصر با transition و زوم در هاور ----- */
+    .why-choose-one__img::before {
+        display: none !important;
+        content: none !important;
+    }
+    .why-choose-one__img img {
+        transform: scale(1) !important;
+        transition: none !important;
+    }
+    .why-choose-one__img:hover img {
+        transform: scale(1) !important;
+    }
+
+    /* ----- 4. تصویر کوچک (img-2): همین کار ----- */
+    .why-choose-one__img-2::before {
+        display: none !important;
+        content: none !important;
+    }
+    .why-choose-one__img-2 img {
+        transform: scale(1) !important;
+        transition: none !important;
+        border-width: 4px; /* اگر خواستید همان ضخامت بماند، همینطور می‌ماند */
+    }
+    .why-choose-one__img-2:hover img {
+        transform: scale(1) !important;
+    }
+
+    /* ----- 5. shape-2 (هاور scale دارد) ----- */
+    .why-choose-one__shape-2 img {
+        transition: none !important;
+        transform: scale(1) !important;
+    }
+    .why-choose-one__shape-2:hover img {
+        transform: scale(1) !important;
+    }
+
+    /* ----- 6. نقاط (لیست): حذف خط عمودی و هاور scale آیکون ----- */
+    .why-choose-one__points-list::before {
+        display: none !important; /* حذف خط عمودی برای کاهش سنگینی (اختیاری) */
+    }
+
+    .why-choose-one__points-icon img {
+        transition: none !important;
+        transform: scale(1) !important;
+    }
+    .why-choose-one__points-list li:hover .why-choose-one__points-icon img {
+        transform: scale(1) !important;
+    }
+
+    /* ----- 7. دکمه: فقط سایه‌ی سنگین را کم‌تر می‌کنیم (رنگ دست نمی‌خورد) ----- */
+    .why-choose-one .why-choose-one__btn {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important; /* سایه‌ی ملایم‌تر */
+        /* گرادیان و رنگ کاملاً به حال خود باقی می‌مانند */
+    }
+
+    /* ----- 8. باکس کلاینت: هیچ تغییری در رنگ و سایه نمی‌دهیم (فقط در صورت وجود transition) ----- */
+    .why-choose-one__client-box {
+        /* هیچ استایلی اضافه نمی‌کنیم، فقط در صورت نیاز transition را غیرفعال می‌کنیم */
+        transition: none !important;
+    }
+}

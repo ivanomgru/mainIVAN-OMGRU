@@ -31,13 +31,10 @@
 }
 
 .blog-one__single:hover {
-    transform: translateY(-10px) translateX(10px);
     background: rgba(255, 255, 255, 0.45);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-color: rgba(134, 138, 255, 0.25);
-
-    box-shadow: 0 20px 40px rgba(134, 138, 255, 0.15);
     z-index: 5;
 }
 
@@ -124,9 +121,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, 
-        #9aa1ff, 
-        #c6e4ff);
+    background-color: #c6e4ff;
     transition: width 0.4s ease;
 }
 
@@ -155,11 +150,6 @@
     transition: all 0.2s ease;
     padding: 5px 10px;
     border-radius: 6px;
-}
-
-.blog-one__meta li a:hover {
-    color: #9aa1ff;
-    background: rgba(215, 72, 151, 0.1);
 }
 
 .blog-one__meta li a span {
@@ -255,7 +245,6 @@
     padding: 8px 25px;
     border-radius: 20px;
     background: linear-gradient(92.7deg, #5db3ff6e 0.48%, #bf50ff81 56.21%, #6b75ff9f 100%);
-
     border: none;
     color: white;
     font-weight: 500;
@@ -435,7 +424,6 @@
     }
 
     .blog-one__single:hover {
-        transform: translateY(-4px) !important; /* حذف translateX برای جلوگیری از اسکرول افقی */
         background: rgba(255, 255, 255, 0.90) !important;
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;

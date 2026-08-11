@@ -29,9 +29,6 @@
     -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.35);
 
-    /* سایه‌ی تک‌لایه و بسیار ملایم */
-    box-shadow: 0 8px 24px rgba(134, 138, 255, 0.08);
-
     /* انتقال ساده و سریع */
     transition: transform 0.3s ease,
                 box-shadow 0.3s ease,
@@ -42,13 +39,10 @@
 
 /* حالت هاور: فقط بالا رفتن با سایه‌ای کمی پررنگ‌تر */
 .courses-one__single:hover {
-    transform: translateY(-10px) translateX(10px);
     background: rgba(255, 255, 255, 0.45);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-color: rgba(134, 138, 255, 0.25);
-
-    box-shadow: 0 20px 40px rgba(134, 138, 255, 0.15);
     z-index: 5;
 }
 
@@ -190,7 +184,6 @@
     padding: 8px 25px;
     border-radius: 20px;
     background: linear-gradient(92.7deg, #5db3ff6e 0.48%, #bf50ff81 56.21%, #6b75ff9f 100%);
-
     border: none;
     color: white;
     font-weight: 500;
@@ -356,12 +349,10 @@
         -webkit-backdrop-filter: none !important;
         background: rgba(255, 255, 255, 0.70) !important;
         border-color: rgba(255, 255, 255, 0.9) !important;
-        box-shadow: 0 4px 12px rgba(134, 138, 255, 0.06) !important;
         transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     }
 
     .courses-one__single:hover {
-        transform: translateY(-4px) !important; /* حذف translateX برای جلوگیری از اسکرول افقی */
         background: rgba(255, 255, 255, 0.90) !important;
         box-shadow: 0 12px 24px rgba(134, 138, 255, 0.10) !important;
         backdrop-filter: none !important;
@@ -378,7 +369,6 @@
 
     .courses-one__btn-box .thm-btn:hover {
         transform: translateY(-2px) !important;
-        box-shadow: 0 4px 15px rgba(255, 2, 120, 0.25) !important;
     }
 
 
@@ -386,6 +376,7 @@
         background: none !important;
         -webkit-text-fill-color: var(--fistudy-primary) !important;
         color: var(--fistudy-primary) !important;
+        font-size: 15px;
     }
 }
 
