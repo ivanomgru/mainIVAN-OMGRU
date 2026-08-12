@@ -286,7 +286,7 @@
 .banner-one__udemy-review-img img {
   width: 100%;
   border-radius: 50%;
-  border: 1px solid var(--fistudy-black);
+  /* border: 1px solid var(--fistudy-black); */
 }
 
 .banner-one__udemy-review-logo {
@@ -374,7 +374,7 @@
 .banner-one__student-trained-img img {
   width: 100%;
   border-radius: 50%;
-  border: 1px solid var(--fistudy-bdr-color);
+  border: 5px solid var(--fistudy-bdr-color);
 }
 
 .banner-one__student-trained-count-box {
