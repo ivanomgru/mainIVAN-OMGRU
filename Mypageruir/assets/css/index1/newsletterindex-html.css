@@ -11,7 +11,7 @@
 .newsletter-one__inner {
     position: relative;
     display: block;
-    background: #F78DA7;
+    background: linear-gradient(90deg,#93b0ff 0%,#c18eff 100%);
     border-radius: 40px;
     text-align: center;
     padding: 40px 40px 60px;

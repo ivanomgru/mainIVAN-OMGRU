@@ -4,7 +4,7 @@
 .counter-one {
     position: relative;
     display: block;
-    background: #F78DA7;
+    background: linear-gradient(90deg,#93b0ff 0%,#c18eff 100%);
     overflow: hidden;
     z-index: 1;
 }
