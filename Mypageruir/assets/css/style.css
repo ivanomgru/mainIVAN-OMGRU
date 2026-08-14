@@ -432,7 +432,7 @@ ul {
     justify-content: center;
     background: linear-gradient(145deg, #f5f9ff 0%, #deeafa 100%);
     overflow: hidden;
-    animation: fadeInLoader 0s ease forwards;
+    animation: fadeInLoader 1s ease forwards;
 }
 
 .brand-loader {
@@ -441,7 +441,7 @@ ul {
     text-align: center;
     color: #1e2a3a;
     transform: scale(0.95);
-    animation: brandReveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation: brandReveal 2.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -475,7 +475,7 @@ ul {
     border-bottom: 2px solid rgba(30, 58, 95, 0.2);
     padding-bottom: 6px;
     margin-top: 4px;
-    animation: subFade 0.8s ease 0.4s both;
+    animation: subFade 0.8s ease 1.4s both;
 }
 
 .brand-loader::before,
@@ -526,11 +526,6 @@ ul {
 @keyframes rotateRingReverse {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(-360deg); }
-}
-
-@keyframes pulseGlow {
-    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
-    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); box-shadow: 0 0 40px rgba(30, 58, 95, 0.1); }
 }
 
 @keyframes subFade {
