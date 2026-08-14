@@ -369,7 +369,6 @@
 /*--------------------------------------------------------------
 # End
 --------------------------------------------------------------*/
-
 @media (max-width: 767px) {
 
     /* ----- 1. حذف تمام اشکال تزئینی (موقعیت‌یابی مطلق + انیمیشن) ----- */
@@ -389,10 +388,7 @@
     }
 
     /* ----- 3. تصویر اصلی: حذف شبه‌عنصر با transition و زوم در هاور ----- */
-    .why-choose-one__img::before {
-        display: none !important;
-        content: none !important;
-    }
+   
     .why-choose-one__img img {
         transform: scale(1) !important;
         transition: none !important;
@@ -402,10 +398,7 @@
     }
 
     /* ----- 4. تصویر کوچک (img-2): همین کار ----- */
-    .why-choose-one__img-2::before {
-        display: none !important;
-        content: none !important;
-    }
+
     .why-choose-one__img-2 img {
         transform: scale(1) !important;
         transition: none !important;
@@ -425,9 +418,6 @@
     }
 
     /* ----- 6. نقاط (لیست): حذف خط عمودی و هاور scale آیکون ----- */
-    .why-choose-one__points-list::before {
-        display: none !important; /* حذف خط عمودی برای کاهش سنگینی (اختیاری) */
-    }
 
     .why-choose-one__points-icon img {
         transition: none !important;

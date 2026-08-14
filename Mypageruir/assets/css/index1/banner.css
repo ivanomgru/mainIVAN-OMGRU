@@ -542,11 +542,11 @@
   }
 
   /* ----- 3. غیرفعال کردن کامل افکت‌های هاور (در موبایل هاور معنا ندارد و سنگین است) ----- */
-  .banner-one__other-btn-1:hover,
+  /* .banner-one__other-btn-1:hover,
   .banner-one__tags a:hover {
-    background: var(--fistudy-white) !important; /* به حالت عادی برمی‌گردد */
+    background: var(--fistudy-white) !important;
     color: var(--fistudy-base) !important;
-  }
+  } */
 
   /* هاور اسپن داخل دکمه هم غیرفعال شود */
   .banner-one__other-btn-1:hover span {
