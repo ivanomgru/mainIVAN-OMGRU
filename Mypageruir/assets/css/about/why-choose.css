@@ -1115,3 +1115,356 @@
 /*--------------------------------------------------------------
 # End
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# نسخهٔ روان و مدرن برای موبایل (رم ۴ گیگ به بالا)
+# حذف: backdrop-blur، rotate سه‌بعدی، فیلتر blur، موج‌های SVG
+# حفظ: سایه‌های ملایم، لیفت، اسکیل آیکون، گرادیان تیترها
+# بدون تغییر در اندازه‌ها، فاصله‌ها و فونت‌ها
+--------------------------------------------------------------*/
+@media (max-width: 991px) {
+
+    /* ===== بخش اصلی Why Choose Three ===== */
+    .why-choose-three {
+        background: linear-gradient(180deg, #FCFCFC 0%, #F4F6FF 100%) !important;
+        background-image: none !important;
+    }
+
+    /* حذف شکل تزیینی با فیلتر blur (حافظه‌خوار) */
+    .why-choose-three__shape-1 {
+        display: none !important;
+    }
+
+    /* ===== کارت گفتگوی مدیرعامل ===== */
+    .why-choose-three__ceo-speech {
+        background: linear-gradient(135deg, #ff566c, #4f67ff) !important;
+        backdrop-filter: none !important;
+        box-shadow: 0 15px 30px rgba(92, 86, 255, 0.25) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        transform: translateY(0) !important;
+    }
+    .why-choose-three__ceo-speech:hover {
+        transform: translateY(-6px) !important;
+        box-shadow: 0 25px 45px rgba(92, 86, 255, 0.35) !important;
+    }
+
+    /* حذف کادر چین‌خورده و افکت‌های اضافی */
+    .why-choose-three__ceo-speech-border {
+        display: none !important;
+    }
+
+    /* تصویر مدیرعامل - فقط لیفت نرم */
+    .why-choose-three__ceo-img-two img {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+        transition: transform 0.3s ease !important;
+    }
+    .why-choose-three__ceo-speech:hover .why-choose-three__ceo-img-two img {
+        transform: scale(1.02) !important;
+    }
+
+    /* ===== کارت‌های گرید ویژگی‌ها ===== */
+    .why-choose-three__feature-single {
+        background: #ffffff !important;
+        backdrop-filter: none !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04) !important;
+        border: 1px solid rgba(0, 0, 0, 0.04) !important;
+        transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                    box-shadow 0.35s ease !important;
+        transform: translateY(0) !important;
+    }
+
+    /* هاور جذاب: لیفت + سایهٔ عمیق‌تر (فقط GPU) */
+    .why-choose-three__feature li:hover .why-choose-three__feature-single {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 20px 40px rgba(var(--fistudy-base-rgb), 0.12) !important;
+        border-color: rgba(var(--fistudy-base-rgb), 0.15) !important;
+    }
+
+    /* نوار بالایی کارت - با اسکیل ساده (بدون تغییر ارتفاع) */
+    .why-choose-three__feature-single::after {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 4px !important;
+        background: var(--fistudy-base) !important;
+        transform: scaleX(0) !important;
+        transform-origin: left !important;
+        transition: transform 0.4s ease !important;
+        border-radius: 28px 28px 0 0 !important;
+    }
+    .why-choose-three__feature li:hover .why-choose-three__feature-single::after {
+        transform: scaleX(1) !important;
+    }
+
+    /* ===== باکس آیکون ===== */
+    .why-choose-three__feature-img {
+        background: #f1f4fa !important; /* رنگ ثابت ساده به جای گرادیان سنگین */
+        transition: transform 0.4s ease, background 0.3s ease !important;
+        transform: rotate(0deg) !important; /* حذف rotate سه‌بعدی */
+    }
+    .why-choose-three__feature-img::before {
+        display: none !important; /* حذف افکت گرادیان دور آیکون */
+    }
+    .why-choose-three__feature li:hover .why-choose-three__feature-img {
+        transform: scale(1.05) !important; /* فقط بزرگ‌تر می‌شود، نمی‌چرخد */
+        background: rgba(var(--fistudy-base-rgb), 0.1) !important;
+    }
+
+    /* ===== آیکون داخل باکس ===== */
+    .why-choose-three__feature-img img {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06)) !important;
+        transition: transform 0.4s ease !important;
+        transform: scale(1) !important;
+    }
+    .why-choose-three__feature li:hover .why-choose-three__feature-img img {
+        transform: scale(1.1) !important; /* آیکون هم بزرگ‌تر می‌شود */
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1)) !important;
+    }
+
+    /* ===== تیتر ویژگی‌ها با گرادیان (با پشتیبانی از -webkit) ===== */
+    .why-choose-three__feature-title {
+        background: linear-gradient(135deg, #1e293b 0%, #475569 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        transition: all 0.3s ease !important;
+    }
+    .why-choose-three__feature li:hover .why-choose-three__feature-title {
+        background: linear-gradient(135deg, var(--fistudy-base) 0%, rgba(var(--fistudy-base-rgb), 0.7) 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+    }
+
+    /* حذف badge های متحرک (برای کاهش محاسبات) */
+    .why-choose-three__feature-single .feature-badge {
+        display: none !important;
+    }
+    /* حذف دکورهای اضافی */
+    .why-choose-three__feature-single .decor-circle,
+    .why-choose-three__feature-single .glow-effect {
+        display: none !important;
+    }
+
+    /* حذف perspective سه‌بعدی */
+    .why-choose-three__right {
+        perspective: none !important;
+    }
+
+    /* حذف انیمیشن ورود (ممکن است با اسکرول تداخل داشته باشد) */
+    .why-choose-three__feature li {
+        animation: none !important;
+        opacity: 1 !important;
+    }
+
+    /* ===== بخش Mission / Vission (تب‌ها) ===== */
+    .about-three__mission-vission {
+        background: #ffffff !important;
+        backdrop-filter: none !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+        perspective: none !important;
+        border: 1px solid rgba(0, 0, 0, 0.04) !important;
+        transition: box-shadow 0.3s ease !important;
+    }
+    .about-three__mission-vission:hover {
+        box-shadow: 0 15px 40px rgba(58, 91, 220, 0.08) !important;
+        transform: none !important;
+    }
+
+    /* نوار بالایی متحرک (شیمیر) را حذف می‌کنیم، ولی نوار ساده را نگه می‌داریم */
+    .about-three__mission-vission::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: 4px !important;
+        background: linear-gradient(90deg, #3a5bdc, #5d8eff) !important;
+        animation: none !important; /* حرکت گرادیان را متوقف می‌کنیم */
+        transform: scaleX(1) !important; /* همیشه نمایان باشد */
+        z-index: 2 !important;
+    }
+
+    /* ===== نوار دکمه‌های تب ===== */
+    .tab-buttons {
+        background: #f8fafc !important;
+        backdrop-filter: none !important;
+        border-bottom: 1px solid #e9edf4 !important;
+    }
+
+    .tab-btn {
+        transition: color 0.2s ease, background 0.2s ease !important;
+        transform: none !important;
+        padding: 15px 20px !important;
+        color: #64748b !important;
+    }
+    .tab-btn::before,
+    .tab-btn::after {
+        display: none !important; /* حذف افکت‌های پس‌زمینه‌ی سنگین */
+    }
+
+    /* هاور ساده و زیبا: فقط تغییر رنگ */
+    .tab-btn:hover {
+        color: #3a5bdc !important;
+        background: rgba(58, 91, 220, 0.04) !important;
+        transform: none !important;
+    }
+
+    /* حالت فعال با خط زیرین (برای زیبایی) */
+    .tab-btn.active-btn {
+        color: #3a5bdc !important;
+        background: #ffffff !important;
+        box-shadow: none !important;
+        position: relative !important;
+    }
+    .tab-btn.active-btn::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        right: 50% !important;
+        transform: translateX(50%) !important;
+        width: 40% !important;
+        height: 3px !important;
+        background: #3a5bdc !important;
+        border-radius: 3px !important;
+        display: block !important; /* خط زیرین زیبا */
+        box-shadow: none !important;
+    }
+
+    /* حذف دایره کوچک کنار اسپن تب */
+    .tab-btn span::after {
+        display: none !important;
+    }
+
+    /* ===== محتوای تب ===== */
+    .tabs-content {
+        padding: 30px 25px !important;
+    }
+    .tabs-content__inner {
+        animation: none !important;
+    }
+    .tab {
+        animation: none !important;
+    }
+
+    /* ===== آیتم‌های لیست (کارت‌های ماموریت/چشم‌انداز) ===== */
+    .about-three__mission-vission-list li {
+        background: #ffffff !important;
+        backdrop-filter: none !important;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.03) !important;
+        border: 1px solid #f1f4fa !important;
+        transform: translateY(0) !important;
+        transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease !important;
+        padding: 30px 25px !important;
+        border-radius: 20px !important;
+        margin-bottom: 20px !important;
+        counter-increment: mission-counter !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    /* نوار بالایی کارت‌ها (همیشه نمایان نباشد، با هاور بیاید) */
+    .about-three__mission-vission-list li::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 4px !important;
+        background: linear-gradient(90deg, #3a5bdc, rgba(93, 142, 255, 0.4)) !important;
+        transform: scaleX(0) !important;
+        transform-origin: left !important;
+        transition: transform 0.4s ease !important;
+        border-radius: 20px 20px 0 0 !important;
+    }
+
+    /* هاور جذاب کارت‌ها: لیفت + سایه */
+    .about-three__mission-vission-list li:hover {
+        transform: translateY(-6px) !important;
+        box-shadow: 0 16px 30px rgba(58, 91, 220, 0.08) !important;
+        border-color: rgba(58, 91, 220, 0.1) !important;
+    }
+    .about-three__mission-vission-list li:hover::before {
+        transform: scaleX(1) !important;
+    }
+
+    /* شماره‌ها را مخفی می‌کنیم (برای سادگی و کاهش بار) */
+    .about-three__mission-vission-list li::after {
+        display: none !important;
+    }
+
+    /* حذف گلوری و دایره‌های تزیینی */
+    .about-three__mission-vission-list li .glow-effect,
+    .about-three__mission-vission-list li .decor-circle {
+        display: none !important;
+    }
+
+    /* تیتر کارت‌ها با گرادیان (شبیه نمونه اصلی) */
+    .about-three__mission-vission-title {
+        background: linear-gradient(135deg, #1e293b 0%, #475569 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        border-bottom: 2px solid #f1f4fa !important;
+        padding-bottom: 12px !important;
+        transition: all 0.3s ease !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+    }
+    .about-three__mission-vission-title::before {
+        content: '' !important;
+        width: 10px !important;
+        height: 10px !important;
+        background: #3a5bdc !important;
+        border-radius: 50% !important;
+        display: inline-block !important;
+        flex-shrink: 0 !important;
+        animation: none !important; /* چشمک‌زدن را حذف می‌کنیم */
+        box-shadow: 0 0 12px rgba(58, 91, 220, 0.3) !important;
+    }
+    .about-three__mission-vission-title::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: -2px !important;
+        right: 0 !important;
+        width: 60px !important;
+        height: 2px !important;
+        background: #3a5bdc !important;
+        transition: width 0.4s ease !important;
+        border-radius: 2px !important;
+    }
+    .about-three__mission-vission-list li:hover .about-three__mission-vission-title {
+        background: linear-gradient(135deg, #3a5bdc 0%, #5d8eff 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+    }
+    .about-three__mission-vission-list li:hover .about-three__mission-vission-title::after {
+        width: 120px !important;
+    }
+
+    /* متن توضیحات */
+    .about-three__mission-vission-text {
+        transition: none !important;
+        padding-right: 0 !important;
+        color: #475569 !important;
+    }
+    .about-three__mission-vission-list li:hover .about-three__mission-vission-text {
+        transform: none !important;
+        color: #1e293b !important;
+    }
+
+    /* حذف انیمیشن‌های ورود */
+    .about-three__mission-vission-list li {
+        animation: none !important;
+        opacity: 1 !important;
+    }
+
+    /* ===== حذف کامل موج‌های SVG ===== */
+    .about-three__wave,
+    .about-three__wave--top {
+        display: none !important;
+    }
+}

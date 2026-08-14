@@ -377,21 +377,66 @@
     margin-bottom: 7px;
 }
 
+/*--------------------------------------------------------------
+# نسخه فوق‌بهینه برای موبایل (حتی با رم ۳ گیگ)
+# حذف: گرادیان، اشکال تزیینی، سایه، هاورهای سنگین، انیمیشن‌ها
+# حفظ: اندازه‌ها، فاصله‌ها و فونت‌های اصلی
+--------------------------------------------------------------*/
+@media (max-width: 991px) {
 
+    /* 1. گرادیان سنگین پس‌زمینه اصلی را به یک رنگ ساده تبدیل کن */
+    .about-three {
+        background: #F5F8FF !important;
+        background-image: none !important;
+    }
 
+    /* 2. تمام اشکال تزیینی (دایره‌های گرادیان‌دار و حاشیه‌دار) را کاملاً حذف کن */
+    .about-three__shape-1,
+    .about-three__shape-2,
+    .about-three__shape-3,
+    .about-three__shape-4 {
+        display: none !important;
+    }
 
+    /* 3. سایه باکس تجربه را حذف کن (فشار CPU هنگام اسکرول) */
+    .about-three__experience-box-inner {
+        box-shadow: none !important;
+    }
 
+    /* 4. افکت ::before را که با تغییر ارتفاع باعث لگ شدید می‌شد، نابود کن */
+    .about-three__img-one::before {
+        display: none !important;
+    }
 
+    /* 5. اسکیل و ترنزیشن تصویر اصلی را قفل کن */
+    .about-three__img-one img {
+        transform: scale(1) !important;
+        transition: none !important;
+    }
 
+    /* 6. اسکیل و ترنزیشن آیکون باکس تجربه را قفل کن */
+    .about-three__experience-icon img {
+        transform: scale(1) !important;
+        transition: none !important;
+    }
 
+    /* 7. انیمیشن پس‌زمینه دکمه‌های تب (که با اسکیلY بود) را حذف کن */
+    .about-three__tab-box .tab-buttons .tab-btn span:before {
+        display: none !important;
+    }
 
+    /* 8. تمام ترنزیشن‌های دکمه‌ها را غیرفعال کن */
+    .about-three__tab-box .tab-buttons .tab-btn span {
+        transition: none !important;
+    }
 
-
-
-
-
-
-
+    /* 9. یک هاور ساده (همان حالت فعال/اکتیو) بدون هیچ انیمیشنی */
+    .about-three__tab-box .tab-buttons .tab-btn.active-btn span {
+        background-color: var(--fistudy-base);
+        border-color: var(--fistudy-base);
+        color: #ffffff;
+    }
+}
 /*--------------------------------------------------------------
 # End
 --------------------------------------------------------------*/

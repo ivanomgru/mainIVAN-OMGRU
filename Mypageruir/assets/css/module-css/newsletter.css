@@ -221,150 +221,127 @@
     padding-right: 5px;
     font-weight: 600;
 }
-
 /* ------------------------------------------------------------- */
-/*  Media Queries – بهینه‌سازی برای موبایل (سبک‌تر)             */
+/*  بهینه‌سازی موبایل (رم ۴ گیگ به بالا) - حفظ انیمیشن لایک       */
 /* ------------------------------------------------------------- */
-@media (max-width: 1200px) {
-    .newsletter-two__like {
-        right: 400px;
-        bottom: 40px;
-    }
-}
+/* ------------------------------------------------------------- */
+/*  بهینه‌سازی موبایل (رم ۴ گیگ به بالا) - دکمه وسط             */
+/* ------------------------------------------------------------- */
+@media (max-width: 991px) {
 
-@media (max-width: 992px) {
-    .newsletter-two__inner-content {
-        border-radius: 50px 25px 60px 70px;
-        padding: 50px 40px 40px;
+    /* ===== حذف پارتیکل‌های پس‌زمینه (سنگین) ===== */
+    .newsletter-two::before {
+        display: none !important;
     }
-    
-    .newsletter-two__title {
-        font-size: 32px;
-    }
-    
-    .newsletter-two__like {
-        position: relative;
-        right: auto;
-        bottom: auto;
-        margin: 30px auto;
-        display: block;
-        width: fit-content;
-    }
-    
+
+    /* ===== حذف انیمیشن تصویر بزرگ سمت چپ (فقط کم‌رنگش می‌کنیم) ===== */
     .newsletter-two__img {
-        position: relative;
-        top: auto;
-        left: auto;
-        margin: 0 auto 30px;
-        display: block;
+        animation: none !important;
+        opacity: 0.3 !important;
+        z-index: 0 !important;
     }
-}
 
-/* ====== بهینه‌سازی ویژه موبایل (سبک‌تر و سریع‌تر) ====== */
-@media (max-width: 768px) {
-    .newsletter-two {
-        padding: 0 15px 60px; /* کاهش padding عمودی */
+    /* ===== ✅ حفظ آیکون لایک با انیمیشن floatRotate ===== */
+    .newsletter-two__like {
+        animation: floatRotate 4s ease-in-out infinite !important;
+        display: block !important;
+        position: relative !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 30px auto !important;
+        width: fit-content !important;
+        max-width: 50px !important;
     }
-    
+
+    /* ===== باکس اصلی ===== */
     .newsletter-two__inner-content {
-        border-radius: 30px 15px 40px 50px; /* گوشه‌های ساده‌تر */
-        padding: 30px 18px 25px;
-        backdrop-filter: none; /* حذف blur سنگین */
-        -webkit-backdrop-filter: none;
-        border-width: 4px; /* حاشیه باریک‌تر */
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* سایه ملایم‌تر */
         background: linear-gradient(135deg, 
             rgba(255, 163, 167, 0.95) 0%, 
             rgba(217, 152, 255, 0.9) 56.21%, 
-            rgba(119, 139, 255, 0.95) 100%);
-        /* بدون افکت نئون اضافی */
+            rgba(119, 139, 255, 0.95) 100%) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border: 4px solid rgba(255, 255, 255, 0.4) !important;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08) !important;
+        border-radius: 50px 25px 60px 70px !important;
+        padding: 40px 30px 35px !important; /* پدینگ متعادل‌تر */
     }
-    
-    /* حذف افکت نئون (::before) در موبایل */
+
+    /* ===== حذف افکت نئون ===== */
     .newsletter-two__inner-content::before {
-        display: none;
+        display: none !important;
     }
-    
-    /* حذف انیمیشن‌های سنگین در موبایل */
-    .newsletter-two__img
-    {
-        animation: none !important;
+
+    /* ===== حذف تصویر پس‌زمینه ===== */
+    .newsletter-two__shape-bg {
+        display: none !important;
     }
-    
-    .newsletter-two__img {
-        margin: 0 auto 20px;
-        max-width: 80px; /* کاهش حجم تصویر */
-    }
-    
-    .newsletter-two__like {
-        margin: 20px auto 0;
-        max-width: 50px;
-    }
-    
+
+    /* ===== تیتر ===== */
     .newsletter-two__title {
-        font-size: 24px;
-        margin-bottom: 10px;
-        text-shadow: none; /* حذف سایه‌های اضافی */
+        font-size: 32px !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+        margin-bottom: 15px !important;
     }
-    
     .newsletter-two__title::after {
-        width: 40px;
-        height: 2px;
-        bottom: -5px;
+        width: 50px !important;
+        height: 3px !important;
+        bottom: -8px !important;
     }
-    
+
+    /* ===== متن ===== */
     .newsletter-two__text {
-        font-size: 15px;
-        line-height: 1.5;
-        max-width: 100%;
-        opacity: 1;
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        max-width: 100% !important;
     }
-    
-    /* فرم ورودی */
+
+    /* ===== اینپوت ===== */
     .newsletter-two__input input[type="text"] {
-        height: 52px;
-        font-size: 15px;
-        padding: 0 20px;
-        text-align: center;
-        border-radius: 30px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+        background: rgba(255, 255, 255, 0.98) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+        transition: box-shadow 0.3s ease, border-color 0.3s ease !important;
+        border: 2px solid transparent !important;
+        height: 56px !important; /* کمی کوتاه‌تر برای موبایل */
+        font-size: 15px !important;
+        padding: 0 20px !important; /* حذف padding چپ برای استایل موبایل */
+        text-align: center !important;
+        border-radius: 30px !important;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06) !important;
     }
-    
     .newsletter-two__input input[type="text"]:focus {
-        transform: none; /* حذف حرکت برای کاهش پردازش */
-        box-shadow: 0 5px 15px rgba(106, 17, 203, 0.1);
+        transform: translateY(-1px) !important;
+        box-shadow: 0 8px 20px rgba(106, 17, 203, 0.1) !important;
+        border-color: rgba(217, 152, 255, 0.5) !important;
     }
-    
-    /* دکمه به صورت تمام‌عرض و ساده */
+
+    /* ===== ✅ دکمه کاملاً وسط (مطابق کد اصلی شما) ===== */
     .newsletter-two__btn {
-        position: relative;
-        top: auto;
-        left: auto;
-        margin: 12px auto 0;
-        display: block;
-        width: 100%;
-        max-width: 180px;
-        height: 46px;
-        font-size: 15px;
-        padding: 0 20px;
-        border-radius: 30px;
-        box-shadow: 0 4px 12px rgba(217, 152, 255, 0.25);
-        background: linear-gradient(135deg, #a855f7, #d998ff);
+        position: relative !important; /* حذف absolute */
+        top: auto !important;
+        left: auto !important;
+        margin: 16px auto 0 !important; /* فاصله از اینپوت + مرکز */
+        display: block !important;
+        width: 100% !important;
+        max-width: 200px !important;
+        height: 48px !important;
+        font-size: 15px !important;
+        padding: 0 20px !important;
+        border-radius: 30px !important;
+        background: linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%) !important;
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.25) !important;
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                    box-shadow 0.3s ease, 
+                    background 0.3s ease !important;
+        transform: translateY(0) !important;
     }
-    
     .newsletter-two__btn:hover {
-        transform: none; /* حذف hover متحرک */
-        box-shadow: 0 4px 12px rgba(217, 152, 255, 0.3);
+        transform: translateY(-3px) !important;
+        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35) !important;
+        background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%) !important;
     }
-    
     .newsletter-two__btn span {
-        font-size: 14px;
-        padding-right: 3px;
-    }
-    
-    /* حذف افکت پارتیکل در موبایل برای کاهش بار */
-    .newsletter-two::before {
-        opacity: 0.1;
-        background-size: 150px 150px;
+        font-size: 14px !important;
+        padding-right: 3px !important;
     }
 }
