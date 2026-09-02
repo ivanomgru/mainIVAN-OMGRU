@@ -432,7 +432,7 @@ ul {
     justify-content: center;
     background: linear-gradient(145deg, #f5f9ff 0%, #deeafa 100%);
     overflow: hidden;
-    animation: fadeInLoader 0s ease forwards;
+    animation: fadeInLoader 1s ease forwards;
 }
 
 .brand-loader {
