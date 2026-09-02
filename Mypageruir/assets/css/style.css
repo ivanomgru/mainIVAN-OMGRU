@@ -432,7 +432,7 @@ ul {
     justify-content: center;
     background: linear-gradient(145deg, #f5f9ff 0%, #deeafa 100%);
     overflow: hidden;
-    animation: fadeInLoader 5s ease forwards;
+    animation: fadeInLoader 0s ease forwards;
 }
 
 .brand-loader {
@@ -441,7 +441,7 @@ ul {
     text-align: center;
     color: #1e2a3a;
     transform: scale(0.95);
-    animation: brandReveal 2.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation: brandReveal 1.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -494,7 +494,7 @@ ul {
     height: 200px;
     border: 2px solid rgba(30, 58, 95, 0.15);
     border-top-color: #1e3a5f;
-    animation: rotateRing 6s linear infinite;
+    animation: rotateRing 3s linear infinite;
     box-shadow: 0 0 20px rgba(30, 58, 95, 0.06);
 }
 
@@ -503,7 +503,7 @@ ul {
     height: 140px;
     border: 2px solid rgba(30, 58, 95, 0.08);
     border-bottom-color: #3a6b8f;
-    animation: rotateRingReverse 5s linear infinite, pulseGlow 2.5s ease-in-out infinite;
+    animation: rotateRingReverse 3s linear infinite, pulseGlow 2.5s ease-in-out infinite;
     box-shadow: 0 0 30px rgb(255, 255, 255);
 }
 
