@@ -441,7 +441,7 @@ ul {
     text-align: center;
     color: #1e2a3a;
     transform: scale(0.95);
-    animation: brandReveal 1.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation: brandReveal 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
     display: flex;
     flex-direction: column;
     align-items: center;
