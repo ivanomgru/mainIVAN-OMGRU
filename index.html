@@ -167,8 +167,8 @@
 <script defer>(function(){var e=Array.prototype.slice.call(document.querySelectorAll("link[data-defer-css]")),t=2,n=!1,o=!1;function r(){if(n||0===e.length)return;n=!0;var o=e.splice(0,t),r=o.length;o.forEach(function(e){e.setAttribute("rel","stylesheet"),e.addEventListener("load",c),e.addEventListener("error",c)});function c(){--r<=0&&(n=!1,setTimeout(r,60))}}function c(){o||(o=!0,r())}"requestIdleCallback"in window?requestIdleCallback(c,{timeout:1500}):window.addEventListener("load",function(){setTimeout(c,800)}),window.addEventListener("scroll",c,{passive:!0,once:!0}),window.addEventListener("touchstart",c,{passive:!0,once:!0})})();</script>
 
 <!-- Основной стиль -->
-<link data-defer-css href="Mypageruir/assets/css/style.css" />
-<link data-defer-css href="Mypageruir/assets/css/responsive.min.css" />
+<link rel="stylesheet" href="Mypageruir/assets/css/style.css" />
+<link rel="stylesheet" href="Mypageruir/assets/css/responsive.min.css" />
 </head>
 <body class="custom-cursor">
     <div class="custom-cursor__cursor"></div>
