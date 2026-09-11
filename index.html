@@ -150,7 +150,7 @@
 <!-- Модули CSS -->
 <link rel="stylesheet" href="Mypageruir/assets/css/module-css/slider.min.css" />
 <link rel="stylesheet" href="Mypageruir/assets/css/module-css/category.min.css" />
-<link data-defer-css href="Mypageruir/assets/css/index1/1index-html.css" />
+<link rel="stylesheet" href="Mypageruir/assets/css/index1/1index-html.css" />
 <!-- Основной стиль -->
 <link rel="stylesheet" href="Mypageruir/assets/css/style.css" />
 <link rel="stylesheet" href="Mypageruir/assets/css/responsive.min.css" />
@@ -382,58 +382,5 @@
     <script src="Mypageruir/assets/js/script.min.js"></script>
 
     <script>!function(){const style=document.createElement("style");style.textContent='.courses-one__heart .icon-heart{font-size:28px;cursor:pointer;transition:.3s}.courses-one__heart .icon-heart:before{content:"♡";}.courses-one__heart .icon-heart.active:before{content:"♥";color:#ff3366}',document.head.appendChild(style),document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".courses-one__heart").forEach((heart,i)=>{const span=heart.querySelector(".icon-heart");"1"===localStorage.getItem(`h_${i}`)&&span.classList.add("active"),heart.querySelector("a").addEventListener("click",e=>{e.preventDefault(),span.classList.toggle("active"),localStorage.setItem(`h_${i}`,span.classList.contains("active")?"1":"0")})})})}();</script>
-<script defer>
-(function () {
-  var queue = Array.prototype.slice.call(
-    document.querySelectorAll('link[data-defer-css]')
-  );
-  var BATCH = 2;      // دو تا دو تا
-  var loading = false;
-  var started = false;
-
-  function loadNext() {
-    if (loading || queue.length === 0) return;
-    loading = true;
-
-    var batch = queue.splice(0, BATCH);
-    var remaining = batch.length;
-
-    batch.forEach(function (link) {
-      // تنظیم rel باعث شروع دانلود می‌شود
-      link.setAttribute('rel', 'stylesheet');
-      link.addEventListener('load', done);
-      link.addEventListener('error', done);
-    });
-
-    function done() {
-      remaining--;
-      if (remaining <= 0) {
-        loading = false;
-        // کمی فاصله تا مرورگر رندر کند، بعد بسته بعدی
-        setTimeout(loadNext, 60);
-      }
-    }
-  }
-
-  function start() {
-    if (started) return;
-    started = true;
-    loadNext();
-  }
-
-  // بهترین حالت: وقتی مرورگر بیکار شد، شروع کن
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(start, { timeout: 1500 });
-  } else {
-    window.addEventListener('load', function () {
-      setTimeout(start, 800);
-    });
-  }
-
-  // پشتیبان: اگر کاربر سریع اسکرول کرد
-  window.addEventListener('scroll', start, { passive: true, once: true });
-  window.addEventListener('touchstart', start, { passive: true, once: true });
-})();
-</script>
 </body>
 </html>
